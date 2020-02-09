@@ -1,0 +1,927 @@
+aaa accounting
+aaa authentication dot1x
+aaa authentication enable
+aaa authentication login
+aaa authorization
+aaa ias-user username
+aaa session-id
+absolute
+access-list
+accounting 
+acl-trapflags
+addport
+arp
+arp access-list
+arp cachesize
+arp dynamicrenew
+arp purge
+arp resptime
+arp retries
+arp timeout
+assign-queue
+authorization 
+authorization network radius
+auto-negotiate
+auto-negotiate all
+auto-voip
+auto-voip oui
+auto-voip oui-based priority
+auto-voip protocol-based
+auto-voip vlan
+boot autoinstall start
+boot autoinstall stop
+boot host auto-save
+boot host dhcp
+boot host retry-count
+
+boot system
+bootfile
+bootpdhcprelay cidoptmode
+bootpdhcprelay maxhopcount
+bootpdhcprelay minwaittime
+bridge aging-time
+cablestatus
+capture file size
+capture line wrap
+capture remote port
+class
+class-map
+class-map rename
+classofservice dot1p-mapping
+classofservice ip-dscp-mapping
+classofservice trust
+clear aaa ias-users
+clear arp-cache
+clear arp-switch
+clear config
+clear counters
+clear dot1x authentication-history
+clear dot1x statistics
+clear eventlog
+clear green-mode statistics
+clear host
+clear igmpsnooping
+clear ip address-conflict-detect
+clear ip arp inspection statistics
+clear ip dhcp binding
+clear ip dhcp conflict
+clear ip dhcp server statistics
+clear ip dhcp snooping binding
+clear ip dhcp snooping statistics
+clear ip helper statistics
+clear ip route all
+clear ip route counters
+clear isdp counters
+clear isdp table
+clear lldp remote-data
+clear lldp statistics
+clear logging buffered
+clear logging email statistics
+
+clear mac-addr-table
+clear pass
+clear port-channel
+clear radius statistics
+clear traplog
+clear vlan
+client-identifier
+client-name
+clock set
+clock summer-time date
+clock summer-time recurring
+clock timezone
+configuration
+conform-color
+copy
+copy 
+cos-queue min-bandwidth
+cos-queue random-detect
+cos-queue strict
+crypto certificate generate
+crypto key generate dsa
+crypto key generate rsa
+debug aaa accounting
+debug aaa authorization
+debug arp
+debug auto-voip
+debug clear
+debug console
+debug crashlog
+debug dhcp packet
+debug dot1x packet
+debug igmpsnooping packet
+debug igmpsnooping packet receive
+debug igmpsnooping packet transmit
+debug ip acl
+debug ip dvmrp packet
+debug ip igmp packet
+debug ip mcache packet
+debug ip pimdm packet
+debug ip pimsm packet
+debug ip vrrp
+debug ipv6 dhcp
+debug ipv6 mcache packet
+debug ipv6 mld packet
+
+debug ipv6 ospfv3 packet
+debug ipv6 pimdm packet
+debug ipv6 pimsm packet
+debug isdp packet
+debug lacp packet
+debug mldsnooping packet
+debug ospf packet
+debug ping packet
+debug rip packet
+debug sflow packet
+debug spanning-tree bpdu
+debug spanning-tree bpdu receive
+debug spanning-tree bpdu transmit
+debug tacacs packet
+debug udld packet
+debug udld packet receive
+debug udld packet transmit
+default-router
+delete
+deleteport 
+deleteport 
+description
+dhcp client vendor-id-option
+dhcp client vendor-id-option-string
+dhcp l2relay
+dhcp l2relay circuit-id vlan
+dhcp l2relay remote-id vlan
+dhcp l2relay trust
+dhcp l2relay vlan
+diffserv
+dir usb
+disconnect
+dns-server
+domain-name 
+domain-name 
+domain-name enable 
+dos-control all
+dos-control firstfrag
+dos-control icmp
+dos-control icmpfrag
+dos-control icmpv4
+dos-control icmpv6
+dos-control l4port
+dos-control sipdip
+dos-control smacdmac
+
+dos-control tcpfinurgpsh
+dos-control tcpflag
+dos-control tcpflagseq
+dos-control tcpfrag
+dos-control tcpoffset
+dos-control tcpport
+dos-control tcpsyn
+dos-control tcpsynfin
+dos-control udpport
+dot1x dynamic-vlan enable
+dot1x eapolflood
+dot1x guest-vlan
+dot1x initialize
+dot1x mac-auth-bypass
+dot1x max-req
+dot1x max-users
+dot1x pae
+dot1x port-control
+dot1x port-control all
+dot1x re-authenticate
+dot1x re-authentication
+dot1x supplicant max-start
+dot1x supplicant port-control
+dot1x supplicant timeout auth-period
+dot1x supplicant timeout held-period
+dot1x supplicant timeout start-period
+dot1x supplicant user
+dot1x system-auth-control
+dot1x system-auth-control monitor
+dot1x timeout
+dot1x unauthenticated-vlan
+dot1x user
+drop
+dvlan-tunnel ethertype
+enable 
+enable authentication
+enable password
+encapsulation
+erase startup-config
+ezconfig
+filedescr
+flowcontrol
+green-mode eee
+green-mode eee-lpi-history
+
+green-mode energy-detect
+hardware-address
+host
+interface
+interface lag
+interface loopback
+interface vlan
+ip access-group
+ip access-list
+ip access-list rename
+ip accounting exec
+ip address
+ip address dhcp
+ip address-conflict-detect run
+ip arp inspection filter
+ip arp inspection limit
+ip arp inspection trust
+ip arp inspection validate
+ip arp inspection vlan
+ip arp inspection vlan logging
+ip default-gateway
+ip dhcp bootp automatic
+ip dhcp conflict logging
+ip dhcp excluded-address
+ip dhcp ping packets
+ip dhcp pool
+ip dhcp snooping
+ip dhcp snooping binding
+ip dhcp snooping database
+ip dhcp snooping database write-delay
+ip dhcp snooping limit
+ip dhcp snooping log-invalid
+ip dhcp snooping trust
+ip dhcp snooping verify mac-address
+ip dhcp snooping vlan
+ip domain list
+ip domain lookup
+ip domain name
+ip domain retry
+ip domain timeout
+ip helper enable
+ip helper-address 
+ip helper-address 
+ip helper-address discard
+ip host
+
+ip http authentication
+ip http java
+ip http secure-port
+ip http secure-protocol
+ip http secure-server
+ip http secure-session hard-timeout
+ip http secure-session maxsessions
+ip http secure-session soft-timeout
+ip http server
+ip http session hard-timeout
+ip http session maxsessions
+ip http session soft-timeout
+ip https authentication
+ip icmp echo-reply
+ip icmp error-interval
+ip local-proxy-arp
+ip management
+ip mtu
+ip name server
+ip netdirbcast
+ip proxy-arp
+ip redirects
+ip route
+ip route default
+ip route distance
+ip routing
+ip ssh
+ip ssh protocol
+ip ssh server enable
+ip telnet server enable
+ip unreachables
+ip verify binding
+ip verify source
+ipv6 access-list
+ipv6 access-list rename
+ipv6 host
+ipv6 traffic-filter
+isdp advertise-v2
+isdp enable
+isdp holdtime
+isdp run
+isdp timer
+key 
+lacp actor admin key
+
+lacp actor admin state individual
+lacp actor admin state longtimeout
+lacp actor admin state passive
+lacp actor port priority
+lacp actor system priority
+lacp admin key
+lacp collector max-delay
+lacp partner admin key
+lacp partner admin state individual
+lacp partner admin state longtimeout
+lacp partner admin state passive
+lacp partner port id
+lacp partner port priority
+lacp partner system id
+lacp partner system priority
+lease
+length
+line
+lldp med
+lldp med all
+lldp med confignotification
+lldp med confignotification all
+lldp med faststartrepeatcount
+lldp med transmit-tlv
+lldp med transmit-tlv all
+lldp notification
+lldp notification-interval
+lldp receive
+lldp timers
+lldp transmit
+lldp transmit-mgmt
+lldp transmit-tlv
+logging buffered
+logging buffered wrap
+logging cli-command
+logging console
+logging email
+logging email from-addr
+logging email logtime
+logging email message-type subject
+logging email message-type to-addr
+logging email test message-type
+logging email urgent
+logging host
+logging host remove
+
+logging persistent
+logging syslog
+logging syslog source-interface
+logging traps
+login authentication
+logout
+mac access-group
+mac access-list extended
+mac access-list extended rename
+mac address-table multicast forbidden-unregistered vlan
+mac address-table multicast forward-all vlan
+mac address-table multicast forward-unregistered vlan
+macfilter
+macfilter adddest
+macfilter adddest all
+macfilter addsrc
+macfilter addsrc all
+mail-server
+mark cos
+mark cos-as-sec-cos
+mark ip-dscp
+mark ip-precedence
+match any
+match class-map
+match cos
+match destination-address mac
+match dstip
+match dstip6
+match dstl4port
+match ethertype
+match ip dscp
+match ip precedence
+match ip tos
+match ip6flowlbl
+match protocol
+match secondary cos
+match secondary-vlan
+match source-address mac
+match srcip
+match srcip6
+match srcl4port
+match vlan
+memory free low-watermark processor
+mirror
+
+mode dot1q-tunnel
+mode dvlan-tunnel
+monitor session
+mtu
+mvr
+mvr group
+mvr immediate
+mvr mode
+mvr querytime
+mvr type
+mvr vlan
+mvr vlan group
+netbios-name-server
+netbios-node-type
+network 
+network javamode
+network mac-address
+network mac-type
+network mgmt_vlan
+next-server
+no clock summer-time
+option
+password 
+password 
+passwords aging
+passwords history
+passwords lock-out
+passwords min-length
+passwords strength exclude-keyword
+passwords strength maximum consecutive-characters
+passwords strength maximum repeated-characters
+passwords strength minimum character-classes
+passwords strength minimum lowercase-letters
+passwords strength minimum numeric-characters
+passwords strength minimum special-characters
+passwords strength minimum uppercase-letters
+passwords strength-check
+periodic time
+periodic
+permit ip host mac host
+ping
+poe
+poe detection
+poe high-power
+poe power limit
+
+poe power management
+poe priority
+poe reset
+poe timer schedule name
+poe traps
+poe usagethreshold
+police-simple
+police-two-rate
+policy-map
+policy-map rename
+port 
+port 
+port lacpmode
+port lacpmode enable all
+port lacptimeout 
+port lacptimeout 
+port-channel adminmode
+port-channel linktrap
+port-channel load-balance
+port-channel local-preference
+port-channel name
+port-channel static
+port-channel system priority
+port-security
+port-security mac-address
+port-security mac-address move
+port-security mac-address sticky
+port-security max-dynamic
+port-security max-static
+priority 
+private-vlan
+process cpu threshold
+protocol group
+protocol vlan group
+protocol vlan group all
+quit
+radius accounting mode
+radius server attribute
+radius server host
+radius server key
+radius server msgauth
+radius server primary
+radius server retransmit
+radius server timeout
+
+random-detect exponential weighting-constant
+random-detect queue-parms
+redirect
+release dhcp
+reload
+remote-span
+renew dhcp
+rmon alarm
+rmon collection history
+rmon event
+rmon hcalarm
+routing
+save
+script apply
+script delete
+script list
+script show
+script validate
+security 
+serial baudrate
+serial timeout
+service dhcp
+service-policy
+session-limit
+session-timeout
+set clibanner
+set garp timer join
+set garp timer leave
+set garp timer leaveall
+set gmrp adminmode
+set gmrp interfacemode
+set gvrp adminmode
+set gvrp interfacemode
+set igmp
+set igmp fast-leave
+set igmp groupmembership-interval
+set igmp header-validation
+set igmp interfacemode
+set igmp maxresponse
+set igmp mcrtrexpiretime
+set igmp mrouter
+set igmp mrouter interface
+set igmp querier
+set igmp querier election participate
+set igmp querier query-interval
+
+set igmp querier timer expiry
+set igmp querier version
+set igmp report-suppression
+set mld
+set mld fast-leave
+set mld groupmembership-interval
+set mld interfacemode
+set mld maxresponse
+set mld mcrtexpiretime
+set mld mrouter
+set mld mrouter interface
+set mld querier
+set mld querier election participate
+set mld querier query_interval
+set mld querier timer expiry
+set prompt
+sflow poller
+sflow receiver
+sflow sampler
+show aaa ias-users
+show access-lists
+show accounting
+show accounting methods
+show arp
+show arp access-list
+show arp brief
+show arp switch 
+show arp switch 
+show authentication methods
+show authorization methods
+show autoinstall
+show auto-voip
+show auto-voip oui-table
+show bootpdhcprelay
+show bootvar
+show capture packets
+show class-map
+show classofservice dot1p-mapping
+show classofservice ip-dscp-mapping
+show classofservice ip-precedence-mapping
+show classofservice trust
+show clock
+show dhcp client vendor-id-option
+show dhcp l2relay agent-option vlan
+
+show dhcp l2relay all
+show dhcp l2relay interface
+show dhcp l2relay stats interface
+show dhcp lease
+show diffserv
+show diffserv service
+show diffserv service brief
+show domain-name
+show dos-control
+show dot1q-tunnel
+show dot1x
+show dot1x authentication-history
+show dot1x clients
+show dot1x users
+show dvlan-tunnel
+show eventlog
+show fiber-ports optics
+show fiber-ports optics-info
+show flowcontrol
+show forwardingdb agetime
+show garp
+show gmrp configuration
+show green-mode
+show green-mode eee-lpi-history interface
+show gvrp configuration
+show hardware
+show hosts
+show igmpsnooping
+show igmpsnooping mrouter interface
+show igmpsnooping mrouter vlan
+show igmpsnooping querier
+show interface
+show interface counters
+show interface ethernet
+show interface ethernet switchport
+show interface loopback
+show interfaces cos-queue
+show interfaces random-detect
+show interfaces switchport
+show interfaces switchport 
+show ip access-lists
+show ip address-conflict
+show ip arp inspection
+show ip arp inspection interfaces
+show ip arp inspection statistics
+
+show ip brief
+show ip dhcp binding
+show ip dhcp conflict
+show ip dhcp global configuration
+show ip dhcp pool configuration
+show ip dhcp server statistics
+show ip dhcp snooping
+show ip dhcp snooping binding
+show ip dhcp snooping database
+show ip dhcp snooping interfaces
+show ip dhcp snooping statistics
+show ip helper statistics
+show ip helper-address
+show ip http
+show ip interface
+show ip interface brief
+show ip protocols
+show ip route
+show ip route ecmp-groups
+show ip route preferences
+show ip route summary
+show ip source binding
+show ip ssh
+show ip stats
+show ip verify source
+show ip vlan
+show ipv6 access-lists
+show isdp
+show isdp entry
+show isdp interface
+show isdp neighbors
+show isdp traffic
+show lacp actor
+show lacp partner
+show lldp
+show lldp interface
+show lldp local-device
+show lldp local-device detail
+show lldp med
+show lldp med interface
+show lldp med local-device detail
+show lldp med remote-device
+show lldp med remote-device detail
+show lldp remote-device
+
+show lldp remote-device detail
+show lldp statistics
+show logging
+show logging buffered
+show logging email config
+show logging email statistics
+show logging hosts
+show logging traplogs
+show loginsession
+show mac access-lists
+show mac address-table multicast filtering
+show mac-address-table gmrp
+show mac-address-table igmpsnooping
+show mac-address-table mldsnooping
+show mac-address-table multicast
+show mac-address-table static
+show mac-address-table staticfiltering
+show mac-address-table stats
+show mac-addr-table
+show mail-server config
+show mbuf total
+show mldsnooping
+show mldsnooping mrouter interface
+show mldsnooping mrouter vlan
+show mldsnooping querier
+show monitor session
+show mvr
+show mvr interface
+show mvr members
+show mvr traffic
+show network
+show passwords configuration
+show passwords result
+show poe
+show poe pd
+show poe port configuration
+show poe port info
+show policy-map
+show policy-map interface
+show port
+show port advertise
+show port description
+show port protocol
+show port status
+show port-channel
+
+show port-channel brief
+show port-channel system priority
+show port-security
+show port-security dynamic
+show port-security static
+show port-security violation
+show process cpu
+show radius
+show radius accounting
+show radius accounting statistics
+show radius servers
+show radius statistics
+show rmon
+show rmon collection history
+show rmon events
+show rmon hcalarms
+show rmon history
+show rmon log
+show rmon statistics interface
+show routing heap summary
+show running-config
+show running-config interface
+show serial
+show service-policy
+show sflow agent
+show sflow pollers
+show sflow receivers
+show sflow samplers
+show snmpcommunity
+show snmptrap
+show sntp
+show sntp client
+show sntp server
+show spanning-tree
+show spanning-tree brief
+show spanning-tree interface
+show spanning-tree mst port detailed
+show spanning-tree mst port summary
+show spanning-tree mst port summary active
+show spanning-tree mst summary
+show spanning-tree summary
+show spanning-tree vlan
+show storm-control
+show switchport protected
+
+show sysinfo
+show tacacs
+show tech-support
+show telnet
+show telnetcon
+show terminal length
+show time-range
+show trapflags
+show udld
+show usb device
+show users
+show users accounts
+show users accounts detail
+show users login-history
+show users long
+show version
+show vlan
+show vlan association mac
+show vlan association subnet
+show vlan brief
+show vlan port
+show vlan private-vlan
+show vlan remote-span
+show voice vlan
+shutdown
+shutdown all
+snmp trap link-status
+snmp trap link-status all
+snmp-server
+snmp-server community
+snmp-server community ipaddr
+snmp-server community ipmask
+snmp-server community mode
+snmp-server community ro
+snmp-server community rw
+snmp-server enable traps
+snmp-server enable traps linkmode
+snmp-server enable traps multiusers
+snmp-server enable traps stpmode
+snmp-server enable traps violation
+snmptrap
+snmptrap ipaddr
+snmptrap mode
+snmptrap snmpversion
+sntp broadcast client poll-interval
+
+sntp client mode
+sntp client port
+sntp server
+sntp unicast client poll-interval
+sntp unicast client poll-retry
+sntp unicast client poll-timeout
+spanning-tree
+spanning-tree auto-edge
+spanning-tree bpdufilter
+spanning-tree bpdufilter default
+spanning-tree bpduflood
+spanning-tree bpduforwarding
+spanning-tree bpduguard
+spanning-tree bpdumigrationcheck
+spanning-tree configuration name
+spanning-tree configuration revision
+spanning-tree edgeport
+spanning-tree edgeport all
+spanning-tree forceversion
+spanning-tree forward-time
+spanning-tree guard
+spanning-tree max-age
+spanning-tree max-hops
+spanning-tree mst
+spanning-tree mst instance
+spanning-tree mst priority
+spanning-tree mst vlan
+spanning-tree port mode
+spanning-tree port mode all
+spanning-tree tcnguard
+speed
+speed all
+sshcon maxsessions
+sshcon timeout
+storm-control broadcast 
+storm-control broadcast 
+storm-control broadcast level 
+storm-control broadcast level 
+storm-control broadcast rate 
+storm-control broadcast rate 
+storm-control multicast 
+storm-control multicast 
+storm-control multicast level 
+storm-control multicast level 
+
+storm-control multicast rate 
+storm-control multicast rate 
+storm-control unicast 
+storm-control unicast 
+storm-control unicast level 
+storm-control unicast level 
+storm-control unicast rate 
+storm-control unicast rate 
+switchport access vlan
+switchport mode
+switchport mode private-vlan
+switchport private-vlan
+switchport protected 
+switchport protected 
+switchport trunk allowed vlan
+switchport trunk native vlan
+tacacs-server host
+tacacs-server key
+tacacs-server keystring
+tacacs-server source interface
+tacacs-server timeout
+telnet
+telnetcon maxsessions
+telnetcon timeout
+terminal length
+timeout 
+time-range
+traceroute
+traceroute ipv6
+traffic-shape
+transport input telnet
+transport output telnet
+udld enable 
+udld enable 
+udld message time
+udld port
+udld reset
+udld timeout interval
+update bootcode
+username 
+username 
+username name nopassword
+username snmpv3 accessmode
+username snmpv3 authentication
+username snmpv3 encryption
+
+username unlock
+vlan
+vlan 
+vlan acceptframe
+vlan association mac
+vlan association subnet
+vlan database
+vlan ingressfilter
+vlan makestatic
+vlan name
+vlan participation
+vlan participation all
+vlan port acceptframe all
+vlan port ingressfilter all
+vlan port priority all
+vlan port pvid all
+vlan port tagging all
+vlan priority
+vlan protocol group
+vlan protocol group add protocol
+vlan protocol group name
+vlan pvid
+vlan routing
+vlan tagging
+voice vlan 
+voice vlan 
+voice vlan data priority
+write memory
