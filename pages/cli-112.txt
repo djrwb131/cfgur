@@ -1,0 +1,41 @@
+                           M4100 Series ProSAFE Managed Switches
+
+lacp actor admin state longtimeout
+Use this command to set LACP actor admin state to longtimeout.
+
+ Format       lacp actor admin state longtimeout
+
+ Mode         Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp actor admin state longtimeout
+
+Use this command to set the LACP actor admin state to short timeout.
+
+ Format       no lacp actor admin state longtimeout
+
+ Mode         Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+lacp actor admin state passive
+Use this command to set the LACP actor admin state to passive.
+
+ Format       lacp actor admin state passive
+
+ Mode         Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp actor admin state passive
+
+Use this command to set the LACP actor admin state to active.
+
+ Format       no lacp actor admin state passive
+
+ Mode         Interface Config
+
+                                  Switching Commands
+                                      112
+

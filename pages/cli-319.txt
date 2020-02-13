@@ -1,0 +1,47 @@
+                         M4100 Series ProSAFE Managed Switches
+
+poe detection
+Use this command to configure the detection type on a global basis or per interface. It is used
+to configure which types of PDs will be detected and powered by the switch. There are three
+options:
+·   ieee. Detect resistive-type devices (IEEE standard)
+·   pre-ieee. Legacy capacitive detection only (nonstandard)
+·   auto. Perform resistive detection first (IEEE standard) and capacitive detection
+    (pre-IEEE standard)
+
+ Default       auto
+
+ Format        poe detection {ieee | pre-ieee | auto}
+
+ Mode          · Global Config
+               · Interface Config
+
+no poe detection
+
+Use this command to set the detection mode to the default on a global basis or per interface.
+
+ Format        no poe detection
+
+ Mode          · Global Config
+               · Interface Config
+
+poe high-power
+Use this command to switch a port from 802.3af mode to high-power mode. This mode is
+used to power up devices that require more power than the current IEEE 802.3af power
+(more than 12.95 watts at the PD). There are three options:
+·   legacy. Use this mode if the device can power up (more than 12.95 watts) with higher
+    current and it cannot identify itself as a Class 4 device.
+·   pre-dot3at. Use this mode if the device cannot identify itself as a Class 4 device and it
+    does not have LLDP support.
+·   dot3at. Use this mode if the device is a Class 4 device capable of figuring out power
+    requirements through 2-event classification or LLDP.
+
+ Default       dot3at
+
+ Format        poe high-power {legacy | pre-dot3at | dot3at}
+
+ Mode          Interface Config
+
+                                Power over Ethernet Commands
+                                           319
+

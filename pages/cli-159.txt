@@ -1,0 +1,53 @@
+                           M4100 Series ProSAFE Managed Switches
+
+set igmp mrouter
+This command configures the VLAN ID (<vlan id>) for which the multicast router mode
+enabled.
+
+ Format       set igmp mrouter <vlan id>
+
+ Mode         Interface Config
+
+no set igmp mrouter
+
+This command disables multicast router mode for a particular VLAN ID (<vlan id>).
+
+ Format       no set igmp mrouter <vlan id>
+
+ Mode         Interface Config
+
+set igmp mrouter interface
+This command configures the interface as a multicast router interface. When configured as a
+multicast router interface, the interface is treated as a multicast router interface in all VLANs.
+
+ Default      disabled
+
+ Format       set igmp mrouter interface
+
+ Mode         Interface Config
+
+no set igmp mrouter interface
+
+This command disables the status of the interface as a statically configured multicast router
+interface.
+
+ Format       no set igmp mrouter interface
+
+ Mode         Interface Config
+
+set igmp report-suppression
+Use this command to suppress the IGMP reports on a VLAN. In order to optimize the number
+of reports traversing the network with no added benefits, a Report Suppression mechanism is
+implemented. When more than one client responds to an MGMD query for the same
+Multicast Group address within the max-response-time, only the first response is forwarded
+to the query and others are suppressed at the switch.
+
+ Default      Disabled
+
+ Format       set igmp report-suppression <1-4093>
+
+ Mode         VLAN Config
+
+                               Switching Commands
+                                         159
+

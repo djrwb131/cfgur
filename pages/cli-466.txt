@@ -1,0 +1,56 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ip http secure-port
+Use this command to set the SSL port where port can be 1-65535 and the default is port 443.
+
+ Default      443
+
+ Format       ip http secure-port <portid>
+
+ Mode         Privileged EXEC
+
+no ip http secure-port
+
+Use this command to reset the SSL port to the default value.
+
+ Format       no ip http secure-port
+
+ Mode         Privileged EXEC
+
+ip http secure-protocol
+Use this command to set protocol levels (versions). The protocol level can be set to TLS1,
+SSL3 or to both TLS1 and SSL3.
+
+ Default      SSL3 and TLS1
+
+ Format       ip http secure-protocol [SSL3] [TLS1]
+
+ Mode         Privileged EXEC
+
+show ip http
+Use this command to display the http settings for the switch.
+
+ Format       show ip http
+
+ Mode         Privileged EXEC
+
+ Term                       Definition
+
+ HTTP Mode (Unsecure)       The unsecure HTTP server administrative mode.
+
+ Java Mode                  The java applet administrative mode which applies to both secure and
+                            unsecure web connections.
+
+ Maximum Allowable HTTP     The number of allowable unsecure http sessions.
+ Sessions
+
+ HTTP Session Hard          The hard time-out for unsecure http sessions in hours.
+ Timeout
+
+ HTTP Session Soft Timeout  The soft time-out for unsecure http sessions in minutes.
+
+ HTTP Mode (Secure)         The secure HTTP server administrative mode.
+
+                               Management Commands
+                                           466
+

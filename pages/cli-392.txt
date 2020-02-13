@@ -1,0 +1,56 @@
+                              M4100 Series ProSAFE Managed Switches
+
+clear ip dhcp conflict
+The command is used to clear an address conflict from the DHCP Server database. The
+server detects conflicts using a ping. DHCP server clears all conflicts If the asterisk (*)
+character is used as the address parameter.
+
+ Default      none
+
+ Format       clear ip dhcp conflict {<address> | *}
+
+ Mode         Privileged EXEC
+
+show ip dhcp binding
+This command displays address bindings for the specific IP address on the DHCP server. If
+no IP address is specified, the bindings corresponding to all the addresses are displayed.
+
+ Format       show ip dhcp binding [<address>]
+
+ Modes        ·    Privileged EXEC
+              ·    User EXEC
+
+ Term              Definition
+
+ IP address        The IP address of the client.
+
+ Hardware          The MAC Address or the client identifier.
+ Address
+
+ Lease expiration  The lease expiration time of the IP address assigned to the client.
+
+ Type              The manner in which IP address was assigned to the client.
+
+show ip dhcp global configuration
+This command displays address bindings for the specific IP address on the DHCP server. If
+no IP address is specified, the bindings corresponding to all the addresses are displayed.
+
+ Format       show ip dhcp global configuration
+
+ Modes        ·    Privileged EXEC
+              ·    User EXEC
+
+ Term              Definition
+
+ Service DHCP      The field to display the status of dhcp protocol.
+
+ Number of Ping    The maximum number of Ping Packets that will be sent to verify that an ip address id not
+ Packets           already assigned.
+
+ Conflict Logging  Shows whether conflict logging is enabled or disabled.
+
+ BootP Automatic   Shows whether BootP for dynamic pools is enabled or disabled.
+
+                                          Utility Commands
+                                                  392
+

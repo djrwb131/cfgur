@@ -1,0 +1,55 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ip dhcp ping packets
+Use this command to specify the number of packets, in a range from 2-10, that a DHCP
+server sends to a pool address as part of a ping operation. By default, the number of packets
+sent to a pool address is 2, which is the smallest allowed number when sending packets.
+Setting the number of packets to 0 disables this command.
+
+ Default      2
+
+ Format       ip dhcp ping packets <range>
+
+ Mode         Global Config
+
+no ip dhcp ping packets
+
+This command prevents the server from pinging pool addresses and sets the number of
+packets to 0.
+
+ Default      0
+
+ Format       no ip dhcp ping packets
+
+ Mode         Global Config
+
+service dhcp
+This command enables the DHCP server.
+
+ Default      disabled
+
+ Format       service dhcp
+
+ Mode         Global Config
+
+no service dhcp
+
+This command disables the DHCP server.
+
+ Format       no service dhcp
+
+ Mode         Global Config
+
+ip dhcp bootp automatic
+This command enables the allocation of the addresses to the bootp client. The addresses are
+from the automatic address pool.
+
+ Default      disabled
+
+ Format       ip dhcp bootp automatic
+
+ Mode         Global Config
+
+                                    Utility Commands
+                                       390
+

@@ -1,0 +1,53 @@
+                              M4100 Series ProSAFE Managed Switches
+
+no clock summer-time
+Use this command to reset the summertime offset.
+
+ Format           no clock summer-time
+
+ Mode             Global Config
+
+Command example:
+(NETGEAR Switch)(config)#no clock summer-time
+
+show sntp
+This command is used to display SNTP settings and status.
+
+ Format       show sntp
+
+ Mode         Privileged EXEC
+
+ Term              Definition
+
+ Last Update       Time of last clock update.
+ Time
+
+ Last Unicast      Time of last transmit query (in unicast mode).
+ Attempt Time
+
+ Last Attempt      Status of the last SNTP request (in unicast mode) or unsolicited message (in broadcast
+ Status            mode).
+
+ Broadcast Count   Current number of unsolicited broadcast messages that have been received and
+                   processed by the SNTP client since last reboot.
+
+ Multicast Count   Current number of unsolicited multicast messages that have been received and
+                   processed by the SNTP client since last reboot.
+
+show sntp client
+This command is used to display SNTP client settings.
+
+ Format       show sntp client
+
+ Mode         Privileged EXEC
+
+ Term              Definition
+
+ Client Supported  Supported SNTP Modes (Broadcast, Unicast, or Multicast).
+ Modes
+
+ SNTP Version      The highest SNTP version the client supports.
+
+                                     Utility Commands
+                                                   380
+

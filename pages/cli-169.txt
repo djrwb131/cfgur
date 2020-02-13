@@ -1,0 +1,47 @@
+                              M4100 Series ProSAFE Managed Switches
+
+set mld interfacemode
+Use this command to enable MLD Snooping on all interfaces. If an interface has MLD
+Snooping enabled and you enable this interface for routing or enlist it as a member of a
+port-channel (LAG), MLD Snooping functionality is disabled on that interface. MLD Snooping
+functionality is re-enabled if you disable routing or remove port-channel (LAG) membership
+from an interface that has MLD Snooping enabled.
+
+ Default       disabled
+
+ Format        set mld interfacemode
+
+ Mode          Global Config
+
+no set mld interfacemode
+
+Use this command to disable MLD Snooping on all interfaces.
+
+ Format        no set mld interfacemode
+
+ Mode          Global Config
+
+set mld fast-leave
+Use this command to enable MLD Snooping fast-leave admin mode on a selected interface
+or VLAN. Enabling fast-leave allows the switch to immediately remove the Layer 2 LAN
+interface from its forwarding table entry upon receiving and MLD done message for that
+multicast group without first sending out MAC-based general queries to the interface.
+
+    Note: You should enable fast-leave admin mode only on VLANs where only
+            one host is connected to each Layer 2 LAN port. This prevents the
+            inadvertent dropping of the other hosts that were connected to the
+            same layer 2 LAN port but were still interested in receiving multicast
+            traffic directed to that group.
+
+    Note: Fast-leave processing is supported only with MLD version 1 hosts.
+
+ Default       disabled
+
+ Format        set mld fast-leave <vlan-id>
+
+ Mode          ·   Interface Config
+               ·   VLAN Mode
+
+                                         Switching Commands
+                                              169
+

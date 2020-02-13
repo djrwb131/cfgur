@@ -1,0 +1,44 @@
+                            M4100 Series ProSAFE Managed Switches
+
+Static and dynamic modes differ in how the available power is calculated, as follows:
+·   Static Power Management
+   Available power = power limit of the source - total allocated power where total allocated
+    power is calculated as the power limit configured on the port.
+·   Dynamic Power Management
+   Available power = power limit of the source - total allocated power, where total allocated
+    power is calculated as the amount of power consumed by the port.
+For example, assume that the power limit of the source is 300 watts. One port is powered up
+and is drawing 3 watts of power. The power limit defined on the port is user-defined as
+15 watts. In this case, the available power for static and dynamic would be as follows:
+·   Static Power Management
+   Available power = 300 watts - 15 watts = 285 watts
+·   Dynamic Power Management
+   Available power = 300 watts - 3 watts = 297 watts
+
+ Default     dynamic
+
+ Format      poe power management {<unit> | all} {dynamic | static}
+
+ Mode        Global Config
+
+no poe power management
+
+Use this command to set the power management mode to the default.
+
+ Format      no poe power management {<unit> | all}
+
+ Mode        Global Config
+
+poe priority
+Use this command to configure the priority on a specific port. This is used for power
+management purposes. The switch might not be able to supply power to all connected
+devices, so the port priority is used to determine which ports will supply power if adequate
+power capacity is not available for all enabled ports. For ports that have the same priority
+level, the lower numbered port will have higher priority. There are three options:
+·   crit. Critical priority
+·   high. High priority
+·   low. Low priority
+
+                              Power over Ethernet Commands
+                                      321
+

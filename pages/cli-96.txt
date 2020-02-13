@@ -1,0 +1,51 @@
+                            M4100 Series ProSAFE Managed Switches
+
+dot1x supplicant timeout start-period
+Use this command to configure the start period timer interval in seconds to wait for the EAP
+identity request from the authenticator.
+
+ Default       30 seconds
+
+ Format        dot1x supplicant timeout start-period <1-65535>
+
+ Mode          Interface Config
+
+no dot1x supplicant timeout start-period
+
+Use this command to set the start-period value to the default.
+
+ Format        no dot1x supplicant timeout start-period
+
+ Mode          Interface Config
+
+dot1x supplicant timeout held-period
+Use this command to configure the held period timer interval in seconds to wait for the next
+authentication on previous authentication fail.
+
+ Default       30 seconds
+
+ Format        dot1x supplicant timeout held-period <1-65535>
+
+ Mode          Interface Config
+
+no dot1x supplicant timeout held-period
+
+Use this command to set the held-period value to the default value.
+
+ Format        no dot1x supplicant timeout held-period
+
+ Mode          Interface Config
+
+dot1x supplicant timeout auth-period
+Use this command to configure the authentication period timer interval in seconds to wait for
+the next EAP request challenge from the authenticator.
+
+ Default       30 seconds
+
+ Format        dot1x supplicant timeout auth-period <1-65535>
+
+ Mode          Interface Config
+
+                                        Switching Commands
+                                         96
+

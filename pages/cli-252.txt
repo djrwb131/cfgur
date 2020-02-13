@@ -1,0 +1,50 @@
+                                  M4100 Series ProSAFE Managed Switches
+
+   no vlan routing
+
+   This command deletes routing on a VLAN. The <vlanid> value has a range from 1 to 4093.
+
+     Format      no vlan routing <vlan-id>
+
+     Mode        VLAN Config
+
+   show ip vlan
+   This command displays the VLAN routing information for all VLANs with routing enabled.
+
+     Format      show ip vlan
+
+     Modes       ·     Privileged EXEC
+                 ·     User EXEC
+
+     Term              Definition
+
+     MAC Address       The MAC Address associated with the internal bridge-router interface (IBRI). The same
+     used by Routing   MAC Address is used by all VLAN routing interfaces. It will be displayed above the
+     VLANs             per-VLAN information.
+
+     VLAN ID           The identifier of the VLAN.
+
+     Logical Interface The logical slot/port associated with the VLAN routing interface.
+
+     IP Address        The IP address associated with this VLAN.
+
+     Subnet Mask       The subnet mask that is associated with this VLAN.
+
+DHCP and BOOTP Relay Commands
+
+   This section describes the commands you use to configure BootP/DHCP Relay on the
+   switch. A DHCP relay agent operates at Layer 3 and forwards DHCP requests and replies
+   between clients and servers when they are not on the same physical subnet.
+
+   bootpdhcprelay cidoptmode
+   This command enables the circuit ID option mode for BootP/DHCP Relay on the system.
+
+     Default     disabled
+
+     Format      bootpdhcprelay cidoptmode
+
+     Mode        Global Config
+
+                                              Routing Commands
+                                                    252
+

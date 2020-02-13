@@ -1,0 +1,46 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ipv6 access-list
+This command creates an IPv6 access control list (ACL) identified by <name>, consisting of
+classification fields defined for the IP header of an IPv6 frame. The <name> parameter is a
+case-sensitive alphanumeric string from 1 to 31 characters uniquely identifying the IPv6
+access list.
+If an IPv6 ACL by this name exists, this command enters IPv6-Access-List config mode to
+allow updating the existing IPv6 ACL.
+
+    Note: The CLI mode changes to IPv6-Access-List Config mode when you
+             successfully execute this command.
+
+ Format       ipv6 access-list <name>
+
+ Mode         Global Config
+
+no ipv6 access-list
+
+This command deletes the IPv6 ACL identified by <name> from the system.
+
+ Format       no ipv6 access-list <name>
+
+ Mode         Global Config
+
+ipv6 access-list rename
+This command changes the name of an IPv6 ACL. The <name> parameter is the name of an
+existing IPv6 ACL. The <newname> parameter is a case-sensitive alphanumeric string from 1
+to 31 characters uniquely identifying the IPv6 access list.
+This command fails is an IPv6 ACL by the name <newname> already exists.
+
+ Format       ipv6 access-list rename <name> <newname>
+
+ Mode         Global Config
+
+{deny | permit} (IPv6)
+This command creates a new rule for the current IPv6 access list. Each rule is appended to
+the list of configured rules for the list.
+
+    Note: The no form of this command is not supported because the rules
+             within an IPv6 ACL cannot be deleted individually. Rather, the entire
+             IPv6 ACL must be deleted and respecified.
+
+                              Quality of Service Commands
+                                           306
+

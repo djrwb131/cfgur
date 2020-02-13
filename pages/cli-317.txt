@@ -1,0 +1,8 @@
+6. Power over Ethernet Commands                        6
+
+   This chapter contains the following sections:
+      ·   About PoE
+      ·   PoE Commands
+
+                                                  317
+

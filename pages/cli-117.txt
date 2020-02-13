@@ -1,0 +1,48 @@
+                          M4100 Series ProSAFE Managed Switches
+
+lacp partner system id
+Use this command to configure the 6-octet MAC Address value representing the
+administrative value of the Aggregation Port's protocol Partner's System ID. The valid range
+of <system-id> is 00:00:00:00:00:00 - FF:FF:FF:FF:FF.
+
+ Default       00:00:00:00:00:00
+
+ Format        lacp partner system id <system-id>
+
+ Mode          Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp partner system id
+
+Use this command to configure the default value representing the administrative value of the
+Aggregation Port's protocol Partner's System ID.
+
+ Format        no lacp partner system id
+
+ Mode          Interface Config
+
+lacp partner system priority
+Use this command to configure the administrative value of the priority associated with the
+Partner's System ID. The valid range for <priority> is 0­65535.
+
+ Default       0x0
+
+ Format        lacp partner system priority <priority>
+
+ Mode          Interface Config
+
+    Note: This command is applicable only to physical interfaces.
+
+no lacp partner system priority
+
+Use this command to configure the default administrative value of priority associated with the
+Partner's System ID.
+
+ Format        no lacp partner system priority
+
+ Mode          Interface Config
+
+                                 Switching Commands
+                                          117
+

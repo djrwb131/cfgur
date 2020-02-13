@@ -1,0 +1,55 @@
+                          M4100 Series ProSAFE Managed Switches
+
+Table 32. 802.1Q Log Messages
+
+ Component      Message                                     Cause
+
+ 802.1Q         dot1qIssueCmd: Unable to send message       dot1qMsgQueue is full.
+                %d to dot1qMsgQueue for vlan %d - %d
+                msgs in queue
+
+ 802.1Q         dot1qVlanCreateProcess: Attempt to          Accommodates for reserved vlan ids. that
+                create a vlan with an invalid vlan id %d ;  is, 4094 - x
+                VLAN %d not in range,
+
+ 802.1Q        dot1qMapIntfIsConfigurable: Error            A default configuration does not exist for
+               accessing DOT1Q config data for              this interface. Typically a case when a new
+               interface %d in                              interface is created and has no
+               dot1qMapIntfIsConfigurable.                  pre-configuration.
+
+ 802.1Q         dot1qVlanDeleteProcess: Deleting the        Typically encountered during clear Vlan
+                default VLAN                                and clear config
+
+ 802.1Q         dot1qVlanMemberSetModify,                   If this vlan is a learnt via GVRP then, we
+                dot1qVlanTaggedMemberSetModify:             cannot modify its member set via
+                Dynamic entry %d can only be modified       management.
+                after it is converted to static
+
+Table 33. 802.1S Log Messages
+
+ Component      Message                                     Cause
+
+ 802.1S         dot1sIssueCmd: Dot1s Msg Queue is           The message Queue is full.
+                full!!!!Event: %u, on interface: %u, for
+                instance: %u
+
+ 802.1S         dot1sStateMachineRxBpdu(): Rcvd BPDU        The current conditions, like port is not
+                Discarded                                   enabled or we are currently not finished
+                                                            processing another BPDU on the same
+                                                            interface, does not allow us to process this
+                                                            BPDU
+
+ 802.1S         dot1sBpduTransmit(): could not get a buffer Out of system buffers
+
+Table 34. Port Mac Locking Log Message
+
+ Component      Message                                     Cause
+
+ Port Mac       pmlMapIntfIsConfigurable: Error accessing   A default configuration does not exist for
+ Locking        PML config data for interface %d in         this interface. Typically a case when a new
+                pmlMapIntfIsConfigurable.                   interface is created and has no
+                                                            pre-configuration.
+
+                                          Log Messages
+                                                546
+

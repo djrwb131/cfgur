@@ -1,0 +1,49 @@
+                          M4100 Series ProSAFE Managed Switches
+
+vlan tagging
+This command configures the tagging behavior for a specific interface in a VLAN to enabled.
+If tagging is enabled, traffic is transmitted as tagged frames. If tagging is disabled, traffic is
+transmitted as untagged frames. The vlan-list contains VlanId's in range <1-4093>. Separate
+non-consecutive IDs with ',' and no spaces and no zeros in between the range; Use '-' for
+range.
+
+ Format       vlan tagging <vlan-list>
+
+ Mode         Interface Config
+
+no vlan tagging
+
+This command configures the tagging behavior for a specific interface in a VLAN to disabled.
+If tagging is disabled, traffic is transmitted as untagged frames. The vlan-list contains VlanId's
+in range <1-4093>. Separate non-consecutive IDs with ',' and no spaces and no zeros in
+between the range; Use '-' for range.
+
+ Format       no vlan tagging <vlan-list>
+
+ Mode         Interface Config
+
+vlan association subnet
+This command associates a VLAN to a specific IP-subnet.
+
+ Format       vlan association subnet <ipaddr> <netmask> <1-4093>
+
+ Mode         VLAN Config
+
+no vlan association subnet
+
+This command removes association of a specific IP-subnet to a VLAN.
+
+ Format       no vlan association subnet <ipaddr> <netmask>
+
+ Mode         VLAN Config
+
+vlan association mac
+This command associates a MAC address to a VLAN.
+
+ Format       vlan association mac <macaddr> <1-4093>
+
+ Mode         VLAN database
+
+                                     Switching Commands
+                                          55
+

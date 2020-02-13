@@ -1,0 +1,52 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+show lldp
+Use this command to display a summary of the current LLDP configuration.
+
+ Format        show lldp
+
+ Mode          Privileged Exec
+
+ Term               Definition
+
+ Transmit Interval  How frequently the system transmits local data LLDPDUs, in seconds.
+
+ Transmit Hold      The multiplier on the transmit interval that sets the TTL in local data LLDPDUs.
+ Multiplier
+
+ Re-initialization  The delay before re-initialization, in seconds.
+ Delay
+
+ Notification       How frequently the system sends remote data change notifications, in seconds.
+ Interval
+
+show lldp interface
+Use this command to display a summary of the current LLDP configuration for a specific
+interface or for all interfaces.
+
+ Format        show lldp interface {<slot/port> | all}
+
+ Mode          Privileged Exec
+
+ Term               Definition
+
+ Interface          The interface in a slot/port format.
+
+ Link               Shows whether the link is up or down.
+
+ Transmit           Shows whether the interface transmits LLDPDUs.
+
+ Receive            Shows whether the interface receives LLDPDUs.
+
+ Notify             Shows whether the interface sends remote data change notifications.
+
+ TLVs               Shows whether the interface sends optional TLVs in the LLDPDUs. The TLV codes can
+                    be 0 (Port Description), 1 (System Name), 2 (System Description), or 3 (System
+                    Capability).
+
+ Mgmt               Shows whether the interface transmits system management address information in the
+                    LLDPDUs.
+
+                                       Switching Commands
+                                               186
+

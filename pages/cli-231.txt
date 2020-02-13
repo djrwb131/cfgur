@@ -1,0 +1,51 @@
+                              M4100 Series ProSAFE Managed Switches
+
+no arp retries
+
+This command configures the default ARP count of maximum request for retries.
+
+ Format        no arp retries
+
+ Mode          Global Config
+
+arp timeout
+This command configures the ARP entry ageout time.
+The value for <seconds> is a valid positive integer, which represents the IP ARP entry
+ageout time in seconds. The range for <seconds> is between 15-21600 seconds.
+
+ Default       1200
+
+ Format        arp timeout <seconds>
+
+ Mode          Global Config
+
+no arp timeout
+
+This command configures the default ARP entry ageout time.
+
+ Format        no arp timeout
+
+ Mode          Global Config
+
+clear arp-cache
+This command causes all ARP entries of type dynamic to be removed from the ARP cache. If
+the gateway keyword is specified, the dynamic entries of type gateway are purged as well.
+
+ Format        clear arp-cache [gateway]
+
+ Mode          Privileged EXEC
+
+clear arp-switch
+Use this command to clear the contents of the switch's Address Resolution Protocol (ARP)
+table that contains entries learned through the Management port. To observe whether this
+command is successful, ping from the remote system to the DUT. Issue the show arp
+switch command to see the ARP entries. Then issue the clear arp-switch command
+and check the show arp switch entries. There will be no more arp entries.
+
+ Format        clear arp-switch
+
+ Mode          Privileged EXEC
+
+                                    Routing Commands
+                                          231
+

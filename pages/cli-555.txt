@@ -1,0 +1,64 @@
+                         M4100 Series ProSAFE Managed Switches
+
+Table 54. System General Error Messages
+
+ Component      Message                                      Cause
+
+ OS             USL: A Trunk being created by bcmx           Possible synchronization issue between
+                already existed in USL                       the application, hardware, and sync layer
+
+ OS             USL: A Trunk being destroyed doesn't exist   Possible synchronization issue between
+                in USL                                       the application, hardware, and sync layer.
+
+ OS             USL: A Trunk being set doesn't exist in      Possible synchronization issue between
+                USL                                          the application, hardware, and sync layer.
+
+ OS             USL: failed to sync trunk table on unit=x    Could not synchronize unit x due to a
+                                                             transport failure or API issue on remote
+                                                             unit. A synchronization retry will be issued
+
+ OS             USL: Mcast entry not found on a join         Possible synchronization issue between
+                                                             the application, hardware, and sync layer
+
+ OS             USL: Mcast entry not found on a leave        Possible synchronization issue between
+                                                             the application, hardware, and sync layer
+
+ OS             USL: failed to sync dvlan data on unit=x     Could not synchronize unit x due to a
+                                                             transport failure or API issue on remote
+                                                             unit. A synchronization retry will be issued
+
+ OS             USL: failed to sync policy table on unit=x   Could not synchronize unit x due to a
+                                                             transport failure or API issue on remote
+                                                             unit. A synchronization retry will be issued
+
+ OS             USL: failed to sync VLAN table on unit=x     Could not synchronize unit x due to a
+                                                             transport failure or API issue on remote
+                                                             unit. A synchronization retry will be issued
+
+ OS             Invalid LAG id x                             Possible synchronization issue between
+                                                             the BCM driver and HAPI
+
+ OS             Invalid uport calculated from the BCM uport  Uport not valid from BCM driver.
+                bcmx_l2_addr->lport = x
+
+ OS             Invalid USP calculated from the BCM          USP not able to be calculated from the
+                uport\nbcmx_l2_addr->lport = x               learn event for BCM driver.
+
+ OS             Unable to insert route R/P                   Route `R' with prefix `P' could not be
+                                                             inserted in the hardware route table. A retry
+                                                             will be issued.
+
+ OS             Unable to Insert host H                      Host `H' could not be inserted in hardware
+                                                             host table. A retry will be issued.
+
+ OS             USL: failed to sync L3 Intf table on unit=x  Could not synchronize unit x due to a
+                                                             transport failure or API issue on remote
+                                                             unit. A synchronization retry will be issued
+
+ OS             USL: failed to sync L3 Host table on unit=x  Could not synchronize unit x due to a
+                                                             transport failure or API issue on remote
+                                                             unit. A synchronization retry will be issued
+
+                                           Log Messages
+                                               555
+

@@ -1,0 +1,57 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Term               Definition
+
+(continued)        ·   Packets Received 512­1023 Octets - The total number of packets (including bad packets)
+                       received that were from 512 through 1023 octets in length inclusive (excluding framing bits
+                       but including FCS octets).
+                   ·   Packets Received 1024­1518 Octets - The total number of packets (including bad
+                       packets) received that were from 1024 through 1518 octets in length inclusive (excluding
+                       framing bits but including FCS octets).
+                   ·   Packets Received > 1518 Octets - The total number of packets received that were longer
+                       than 1522 octets (excluding framing bits, but including FCS octets) and were otherwise well
+                       formed.
+                   ·   Packets RX and TX 64 Octets - The total number of packets (including bad packets)
+                       received and transmitted that were 64 octets in length (excluding framing bits but including
+                       FCS octets).
+                   ·   Packets RX and TX 65­127 Octets - The total number of packets (including bad packets)
+                       received and transmitted that were from 65 through 127 octets in length inclusive
+                       (excluding framing bits but including FCS octets).
+                   ·   Packets RX and TX 128­255 Octets - The total number of packets (including bad
+                       packets) received and transmitted that were from 128 through 255 octets in length inclusive
+                       (excluding framing bits but including FCS octets).
+                   ·   Packets RX and TX 256­511 Octets - The total number of packets (including bad packets)
+                       received and transmitted that were from 256 through 511 octets in length inclusive
+                       (excluding framing bits but including FCS octets).
+                   ·   Packets RX and TX 512­1023 Octets - The total number of packets (including bad
+                       packets) received and transmitted that were from 512 through 1023 octets in length
+                       inclusive (excluding framing bits but including FCS octets).
+                   ·   Packets RX and TX 1024­1518 Octets - The total number of packets (including bad
+                       packets) received and transmitted that were from 1024 through 1518 octets in length
+                       inclusive (excluding framing bits but including FCS octets).
+                   ·   Packets RX and TX 1519­1522 Octets - The total number of packets (including bad
+                       packets) received and transmitted that were from 1519 through 1522 octets in length
+                       inclusive (excluding framing bits but including FCS octets).
+                   ·   Packets RX and TX 1523­2047 Octets - The total number of packets received and
+                       transmitted that were from 1523 through 2047 octets in length inclusive (excluding framing
+                       bits, but including FCS octets) and were otherwise well formed.
+                   ·   Packets RX and TX 2048­4095 Octets - The total number of packets received that were
+                       from 2048 through 4095 octets in length inclusive (excluding framing bits, but including
+                       FCS octets) and were otherwise well formed.
+                   ·   Packets RX and TX 4096­9216 Octets - The total number of packets received that were
+                       from 4096 through 9216 octets in length inclusive (excluding framing bits, but including
+                       FCS octets) and were otherwise well formed.
+
+Packets Received   ·   Total Packets Received Without Error - The total number of packets received that were
+Successfully           without errors.
+                   ·   Unicast Packets Received - The number of subnetwork-unicast packets delivered to a
+                       higher-layer protocol.
+                   ·   Multicast Packets Received - The total number of good packets received that were
+                       directed to a multicast address. Note that this number does not include packets directed to
+                       the broadcast address.
+                   ·   Broadcast Packets Received - The total number of good packets received that were
+                       directed to the broadcast address. Note that this does not include multicast packets.
+
+                                          Utility Commands
+                                                338
+

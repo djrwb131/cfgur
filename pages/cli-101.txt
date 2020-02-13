@@ -1,0 +1,54 @@
+                           M4100 Series ProSAFE Managed Switches
+
+storm-control multicast (Interface Config)
+This command enables multicast storm recovery mode for an interface. If the mode is
+enabled, multicast storm recovery is active, and if the rate of L2 multicast traffic ingressing on
+an interface increases beyond the configured threshold, the traffic will be dropped. Therefore,
+the rate of multicast traffic will be limited to the configured threshold.
+
+ Default     disabled
+
+ Format      storm-control multicast
+
+ Mode        Interface Config
+
+no storm-control multicast
+
+This command disables multicast storm recovery mode for an interface.
+
+ Format      no storm-control multicast
+
+ Mode        Interface Config
+
+storm-control multicast level (Interface Config)
+This command configures the multicast storm recovery threshold for an interface as a
+percentage of link speed and enables multicast storm recovery mode. If the mode is enabled,
+multicast storm recovery is active, and if the rate of L2 multicast traffic ingressing on an
+interface increases beyond the configured threshold, the traffic will be dropped. Therefore,
+the rate of multicast traffic will be limited to the configured threshold.
+
+ Default     5
+
+ Format      storm-control multicast level <0-100>
+
+ Mode        Interface Config
+
+no storm-control multicast level
+
+This command sets the multicast storm recovery threshold to the default value for an
+interface and disables multicast storm recovery.
+
+ Format      no storm-control multicast level <0-100>
+
+ Mode        Interface Config
+
+storm-control multicast rate (Interface Config)
+Use this command to configure the multicast storm recovery threshold for an interface in
+packets per second. If the mode is enabled, multicast storm recovery is active, and if the rate
+of L2 broadcast traffic ingressing on an interface increases beyond the configured threshold,
+the traffic is dropped. Therefore, the rate of multicast traffic is limited to the configured
+threshold.
+
+                                  Switching Commands
+                                        101
+

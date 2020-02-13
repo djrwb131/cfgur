@@ -1,0 +1,52 @@
+                             M4100 Series ProSAFE Managed Switches
+
+show isdp interface
+This command displays ISDP settings for the specified interface.
+
+ Format        show isdp interface {all | <slot/port>}
+
+ Mode          Privileged EXEC
+
+ Term             Definition
+
+ Mode             ISDP mode enabled/disabled status for the interface(s).
+
+show isdp entry
+This command displays ISDP entries. If the device id is specified, then only entries for that
+device are shown.
+
+ Format        show isdp entry {all | deviceid}
+
+ Mode          Privileged EXEC
+
+ Term             Definition
+
+ Device ID        The device ID associated with the neighbor which advertised the information.
+
+ IP Addresses     The IP address(es) associated with the neighbor.
+
+ Platform         The hardware platform advertised by the neighbor.
+
+ Interface        The interface (slot/port) on which the neighbor's advertisement was received.
+
+ Port ID          The port ID of the interface from which the neighbor sent the advertisement.
+
+ Hold Time        The hold time advertised by the neighbor.
+
+ Version          The software version that the neighbor is running.
+
+ Advertisement    The version of the advertisement packet received from the neighbor.
+ Version
+
+ Capability       ISDP Functional Capabilities advertised by the neighbor.
+
+show isdp neighbors
+This command displays the list of neighboring devices.
+
+ Format        show isdp neighbors [<slot/port> | detail]
+
+ Mode          Privileged EXEC
+
+                                      Switching Commands
+                                              216
+

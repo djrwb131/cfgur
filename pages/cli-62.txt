@@ -1,0 +1,44 @@
+                         M4100 Series ProSAFE Managed Switches
+
+Command example:
+(NETGEAR Switch) #show interfaces switchport 1/0
+Port: 1/0
+VLAN Membership Mode: General
+Access Mode VLAN: 1 (default)
+General Mode PVID: 1 (default)
+General Mode Ingress Filtering: Disabled
+General Mode Acceptable Frame Type: Admit all
+General Mode Dynamically Added VLANs:
+General Mode Untagged VLANs: 1
+General Mode Tagged VLANs:
+General Mode Forbidden VLANs:
+Trunking Mode Native VLAN: 1 (default)
+Trunking Mode Native VLAN tagging: Disable
+Trunking Mode VLANs Enabled: All
+Protected Port: False
+
+Command example:
+(NETGEAR Switch) #show interfaces switchport access 1/0
+
+Intf      PVID
+--------- ----
+1/0       1
+
+Command example:
+(NETGEAR Switch) #show interfaces switchport trunk 1/6
+
+Intf      PVID  Allowed Vlans List
+--------- ----- -------------------
+1/6       1     All
+
+Command example:
+(NETGEAR Switch) #show interfaces switchport general 1/5
+
+Intf      PVID  Ingress    Acceptable  Untagged  Tagged    Forbidden Dynamic
+                Filtering  Frame Type  Vlans     Vlans     Vlans      Vlans
+--------- ----- ---------- ----------- --------- --------- --------- ---------
+1/5       1     Enabled    Admit All   7         10-50,55  9,100-200 88,96
+
+                                 Switching Commands
+                                         62
+

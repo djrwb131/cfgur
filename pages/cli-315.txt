@@ -1,0 +1,45 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Field             Description
+
+ Class Value       ·  If the Prioritization Type is configured as traffic-class, this value is the queue value.
+                   ·  If the Prioritization Type is configured as remark, this value is 802.1p priority used
+                      to remark the voice traffic.
+
+ Priority         The 802.1p priority. This field is valid for OUI auto VoIP.
+
+ AutoVoIPMode     The Auto VoIP mode on the interface.
+
+Command example:
+(NETGEAR Switch)# show auto-voip protocol-based interface all
+
+VoIP VLAN Id................................... 2
+Prioritization Type............................ traffic-class
+Class Value.................................... 7
+
+Interface Auto VoIP     Operational Status
+Mode
+---------    --------------    ------------------
+0/1          Disabled          Down
+0/2          Disabled          Down
+0/3          Disabled          Down
+0/4          Disabled          Down
+
+Command example:
+(Netgear Switch)# show auto-voip oui-based interface all
+
+VoIP VLAN Id................................... 2
+Priority....................................... 7
+
+Interface Auto VoIP     Operational Status
+Mode
+---------    --------------    ------------------
+0/1          Disabled          Down
+0/2          Disabled          Down
+0/3          Disabled          Down
+0/4          Disabled          Down
+0/5          Disabled          Down
+
+                                 Quality of Service Commands
+                                           315
+

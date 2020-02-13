@@ -1,0 +1,49 @@
+                          M4100 Series ProSAFE Managed Switches
+
+    Note: An implicit deny all IPv6 rule always terminates the access list.
+
+A rule might either deny or permit traffic according to the specified classification fields. At a
+minimum, either the every keyword or the protocol, source address, and destination
+address values must be specified. The source and destination IPv6 address fields might be
+specified using the any keyword to indicate a match on any value in that field. The remaining
+command parameters are all optional, but the most frequently used parameters appear in the
+same relative order as shown in the command format.
+The assign-queue parameter allows specification of a particular hardware queue for handling
+traffic that matches this rule. The allowed <queue-id> value is 0-(n-1), where n is the
+number of user configurable queues available for the hardware platform. The
+assign-queue parameter is valid only for a permit rule.
+The mirror parameter allows the traffic matching this rule to be copied to the specified
+<slot/port>, while the redirect parameter allows the traffic matching this rule to be
+forwarded to the specified <slot/port>. The assign-queue and redirect parameters
+are only valid for a permit rule.
+The time-range parameter allows imposing time limitation on the IPv6 ACL rule as defined
+by the parameter <time-range-name>. If a time range with the specified name does not
+exist and the IPv6 ACL containing this ACL rule is applied to an interface or bound to a
+VLAN, then the ACL rule is applied immediately. If a time range with specified name exists
+and the IPv6 ACL containing this ACL rule is applied to an interface or bound to a VLAN, then
+the ACL rule is applied when the time-range with specified name becomes active. The ACL
+rule is removed when the time-range with specified name becomes inactive.
+
+ Format       {deny | permit} {every | {icmp | igmp | ipv6 | tcp | udp | <number>}}
+              [log] [timerange <time-range-name>] [assign-queue <queue-id>]
+              [{mirror | redirect} <slot/port>]
+
+ Mode         IPv6-Access-List Config
+
+ipv6 traffic-filter
+This command either attaches a specific IPv6 ACL identified by <name> to an interface or
+associates with a VLAN ID in a specific direction. The <name> parameter must be the name
+of an existing IPv6 ACL.
+An optional sequence number might be specified to indicate the order of this mac access list
+relative to other IPv6 access lists already assigned to this interface and direction. A lower
+number indicates higher precedence order. If a sequence number is already in use for this
+interface and direction, the specifiedIPv6 access list replaces the currently attached IPv6
+access list using that sequence number. If the sequence number is not specified for this
+command, a sequence number that is one greater than the highest sequence number
+currently in use for this interface and direction is used.
+This command specified in Interface Config mode only affects a single interface, whereas the
+Global Config mode setting is applied to all interfaces. The vlan keyword is valid only in the
+
+                                  Quality of Service Commands
+                                               307
+

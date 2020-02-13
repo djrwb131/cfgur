@@ -1,0 +1,51 @@
+                          M4100 Series ProSAFE Managed Switches
+
+absolute
+Use this command to add an absolute time entry to a time range. Only one absolute time
+entry is allowed per time-range. The <time> parameters are based on the currently
+configured time zone. The [start <time> <date>] parameters indicate the time and
+date at which the configuration that referenced the time range starts going into effect. The
+time is expressed in a 24-hour clock, in the form of hours:minutes. For example, 8:00 is 8:00
+am and 20:00 is 8:00 pm. The date is expressed in the format day month year. If no start time
+and date are specified, the configuration statement is in effect immediately. The [end
+<time> <date>] parameters indicate the time and date at which the configuration that
+referenced the time range is no longer in effect. The end time and date must be after the start
+time and date. If no end time and date are specified, the configuration statement is in effect
+indefinitely.
+
+ Format       absolute {[start <time> <date>] [end <time> <date>]}
+
+ Mode         Time-Range Config
+
+no absolute
+
+Use this command to delete the absolute time entry in the time range.
+
+ Format       no absolute
+
+ Mode         Time-Range Config
+
+periodic
+Use this command to add a periodic time entry to a time range. The <time> parameters are
+based off the currently configured time zone. The first occurrence of the
+<days-of-the-week> argument is the starting day(s) from which the configuration that
+referenced the time range starts going into effect. The second occurrence is the ending day
+or days from which the configuration that referenced the time range is no longer in effect. If
+the end days-of-the-week are the same as the start, they can be omitted This argument can
+be any single day or combinations of days: Monday, Tuesday, Wednesday, Thursday, Friday,
+Saturday, Sunday. Other possible values are:
+·   daily--Monday through Sunday
+·   weekdays--Monday through Friday
+·   weekend--Saturday and Sunday
+If the ending days of the week are the same as the starting days of the week, they can be
+omitted. The first occurrence of the <time> argument is the starting hours:minutes which
+the configuration that referenced the time range starts going into effect. The second
+occurrence is the ending hours:minutes at which the configuration that referenced the time
+range is no longer in effect. The hours:minutes are expressed in a 24-hour clock. For
+example, 8:00 is 8:00 am and 20:00 is 8:00 pm
+The frequency is how often this periodic entry will become active. If the value is set to 0, the
+timer schedule will be treated as absolute.
+
+                                 Quality of Service Commands
+                                            310
+

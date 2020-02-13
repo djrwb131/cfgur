@@ -1,0 +1,52 @@
+                                M4100 Series ProSAFE Managed Switches
+
+     Term            Definition
+
+     VLAN Assigned   The reason the VLAN identified in the VLAN ID field has been assigned to the port.
+                     Possible values are RADIUS, Unauthenticated VLAN, or Default. When the VLAN
+                     Assigned reason is Default, it means that the VLAN was assigned to the port because
+                     the PVID of the port was that VLAN ID.
+
+     Session Timeout This value indicates the time for which the session is valid. The time period in seconds is
+                     returned by the RADIUS server on authentication of the port. This value is valid for the
+                     port only when the port-control mode is not MAC-based.
+
+     Session         This value indicates the action to be taken once the session timeout expires. Possible
+     Termination     values are Default and Radius-Request. If the value is Default, the session is terminated
+     Action          and client details are cleared. If the value is Radius-Request, a reauthentication of the
+                     client is performed.
+
+   show dot1x users
+   This command displays 802.1x port security user information for locally configured users.
+
+     Format      show dot1x users <slot/port>
+
+     Mode        Privileged EXEC
+
+     Term            Definition
+
+     Users           Users configured locally to have access to the specified port.
+
+802.1X Supplicant Commands
+
+   802.1X ("dot1x") supplicant functionality is on point-to-point ports. The administrator can
+   configure the user name and password used in authentication and capabilities of the
+   supplicant port.
+
+   dot1x pae
+   Use this command to set the port's dot1x role. The port can serve as either a supplicant or an
+   authenticator.
+
+     Format      dot1x pae {supplicant | authenticator}
+
+     Mode        Interface Config
+
+   dot1x supplicant port-control
+   Use this command to set the ports authorization state (Authorized or Unauthorized) either
+   manually or by setting the port to auto-authorize upon startup. By default all the ports are
+   authenticators. If the port's attribute must be moved from authenticator to supplicant or
+   supplicant to authenticator, use this command.
+
+                                            Switching Commands
+                                                94
+

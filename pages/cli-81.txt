@@ -1,0 +1,50 @@
+                             M4100 Series ProSAFE Managed Switches
+
+clear radius statistics
+This command is used to clear all RADIUS statistics.
+
+ Format        clear radius statistics
+
+ Mode          Privileged EXEC
+
+dot1x eapolflood
+Use this command to enable EAPOL flood support on the switch.
+
+ Default       Disabled
+
+ Format        dot1x eapolflood
+
+ Mode          Global Config
+
+no dot1x eapolflood
+
+This command disables EAPOL flooding on the switch.
+
+ Format        no dot1x eapolflood
+
+ Mode          Global Config
+
+dot1x guest-vlan
+This command configures VLAN as guest vlan on a per port basis. The command specifies
+an active VLAN as an IEEE 802.1x guest VLAN. The range is 1 to the maximum VLAN ID
+supported by the platform.
+
+ Default       disabled
+
+ Format        dot1x guest-vlan <vlan-id>
+
+ Mode          Interface Config
+
+no dot1x guest-vlan
+
+This command disables Guest VLAN on the interface.
+
+ Default       disabled
+
+ Format        no dot1x guest-vlan
+
+ Mode          Interface Config
+
+                                   Switching Commands
+                                          81
+

@@ -1,0 +1,42 @@
+                          M4100 Series ProSAFE Managed Switches
+
+no telnetcon maxsessions
+
+Use this command to set the maximum number of Telnet connection sessions that can be
+established to the default value.
+
+ Format        no telnetcon maxsessions
+
+ Mode          Privileged EXEC
+
+telnetcon timeout
+Use this command to set the Telnet connection session time-out value, in minutes. A session
+is active as long as the session has not been idle for the value set. The time is a decimal
+value from 1 to 160.
+
+    Note: When you change the time-out value, the new value is applied to all
+            active and inactive sessions immediately. Any sessions that have
+            been idle longer than the new time-out value are disconnected
+            immediately.
+
+ Default       5
+
+ Format        telnetcon timeout <1-160>
+
+ Mode          Privileged EXEC
+
+no telnetcon timeout
+
+Use this command to set the Telnet connection session timeout value to the default.
+
+    Note: Changing the time-out value for active sessions does not become
+            effective until the session is reaccessed. Also, any keystroke activates
+            the new time-out duration.
+
+ Format        no telnetcon timeout
+
+ Mode          Privileged EXEC
+
+                                   Management Commands
+                                          455
+

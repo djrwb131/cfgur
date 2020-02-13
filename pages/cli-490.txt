@@ -1,0 +1,47 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Parameter      Definition
+
+ common         Use the same session ID for all AAA Service types.
+
+ unique         Use a unique session ID for AAA Service types.
+
+no aaa session-id
+
+This command resets the AAA session ID behavior to default.
+
+ Format      no aaa session-id [unique]
+
+ Mode        Global Config
+
+password (AAA IAS User Configuration)
+Use this command to specify a password for a user in the IAS database.
+
+ Format      password <password> [encrypted]
+
+ Mode       AAA IAS User Config
+
+ Parameter          Definition
+
+ <password>         Password for this level. Range: 8-64 characters.
+
+ encrypted          Encrypted password to be entered, copied from another switch configuration.
+
+no password (AAA IAS User Configuration)
+
+Use this command to remove a password for a user in the IAS database.
+
+ Format      no password
+
+ Mode       AAA IAS User Config
+
+clear aaa ias-users
+Use this command to remove all users from the IAS database.
+
+ Format      clear aaa ias-users
+
+ Mode        Privileged EXEC
+
+                                  Management Commands
+                                        490
+

@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no ip helper-address (Global Config)
+
+Use this command to remove the IP address from the previously configured list. The no
+command without an <ip-address> argument removes the entire list of helper addresses
+on that interface.
+
+ Format      no ip helper-address <ip-address> {<dest-udp-port> | dhcp | domain |
+             isakmp | mobile-ip | nameserver | netbios-dgm | netbios-ns | ntp |
+             pim-auto-rip | rip | tacacs | tftp | time}
+
+ Mode        GlobalConfig
+
+ip helper enable
+Use this command to enable relay of UDP packets. This command can be used to
+temporarily disable IP helper without deleting all IP helper addresses. This command
+replaces the bootpdhcprelay enable command, but affects not only relay of DHCP
+packets, but also relay of any other protocols for which an IP helper address has been
+configured.
+
+ Default     disabled
+
+ Format      ip helper enable
+
+ Mode        Global Config
+
+no ip helper enable
+
+Use this command to disable relay of all UDP packets.
+
+ Format      no ip helper enable
+
+ Mode        Global Config
+
+ip helper-address (Interface Config)
+Use this command to add a unicast helper address to the list of helper addresses on an
+interface. This is the address of a DHCP server. This command can be applied multiple times
+on the routing interface to form the helper addresses list until the list reaches the maximum
+supported helper addresses.
+
+ Default     No helper addresses are configured.
+
+ Format      ip helper-address <ip-address> [<dest-udp-port> | dhcp | domain |
+             isakmp | mobile-ip | nameserver | netbios-dgm | netbios-ns | ntp |
+             pim-auto-rip | rip | tacacs | tftp | time]
+
+ Mode        Interface Config
+
+                                  Routing Commands
+                                         256
+

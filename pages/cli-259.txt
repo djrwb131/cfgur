@@ -1,0 +1,60 @@
+                             M4100 Series ProSAFE Managed Switches
+
+show ip helper statistics
+Use this command to display the number of DHCP and other UDP packets processed and
+relayed by the UDP relay agent.
+
+ Format          show ip helper statistics
+
+ Mode            Privileged EXEC
+
+ Term                  Definition
+
+ DHCP client           The number of valid messages received from a DHCP client. The count is
+ messages received     incremented only if IP helper is enabled globally, the ingress routing interface is up,
+                       and the packet passes a number of validity checks, such as having a TTL>1 and
+                       having valid source and destination IP addresses.
+
+ DHCP client           The number of DHCP client messages relayed to a server. If a message is relayed
+ messages relayed      to multiple servers, the count is incremented once for each server.
+
+ DHCP server           The number of DHCP responses received from the DHCP server. This count
+ messages received     includes only messages that the DHCP server unicasts to the relay agent for relay
+                       to the client.
+
+ DHCP server           The number of DHCP server messages relayed to a client.
+ messages relayed
+
+ UDP clients           The number of valid UDP packets received. This count includes DHCP messages
+ messages received     and all other protocols relayed. Conditions are similar to those for the first statistic in
+                       this table.
+
+ UDP clients           The number of UDP packets relayed. This count includes DHCP messages relayed
+ messages relayed      as well as all other protocols. The count is incremented for each server to which a
+                       packet is sent.
+
+ DHCP message hop      The number of DHCP client messages received whose hop count is larger than the
+ count exceeded max    maximum allowed. The maximum hop count is a configurable value listed in show
+                       bootpdhcprelay. A log message is written for each such failure. The DHCP relay
+                       agent does not relay these packets.
+
+ DHCP message with     The number of DHCP client messages received whose secs field is less than the
+ secs field below min  minimum value. The minimum secs value is a configurable value and is displayed in
+                       show bootpdhcprelay. A log message is written for each such failure. The DHCP
+                       relay agent does not relay these packets.
+
+ DHCP message with     The number of DHCP client messages received whose gateway address, giaddr, is
+ giaddr set to local   already set to an IP address configured on one of the relay agent's own IP
+ address               addresses. In this case, another device is attempting to spoof the relay agent's
+                       address. The relay agent does not relay such packets. A log message gives details
+                       for each occurrence.
+
+ Packets with expired  The number of packets received with TTL of 0 or 1 that might otherwise have been
+ TTL                   relayed.
+
+ Packets that matched  The number of packets ignored by the relay agent because they match a discard
+ a discard entry       relay entry.
+
+                                          Routing Commands
+                                             259
+

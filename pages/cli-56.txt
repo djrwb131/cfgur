@@ -1,0 +1,41 @@
+                        M4100 Series ProSAFE Managed Switches
+
+no vlan association mac
+
+This command removes the association of a MAC address to a VLAN.
+
+ Format    no vlan association mac <macaddr>
+
+ Mode      VLAN database
+
+remote-span
+This command identifies the VLAN as the RSPAN VLAN.
+
+ Format    remote span
+
+ Mode      VLAN configuration
+
+show vlan
+This command displays a list of all configured VLANs or detailed information for a specific
+VLAN.
+
+ Format    show vlan [<vlanid>]
+
+ Mode      · Privileged EXEC
+           · User EXEC
+
+ Term        Definition
+
+ VLAN ID     A VLAN Identifier (VID) is associated with each VLAN. The range of the VLAN ID is
+             1­4093.
+
+ VLAN Name   A string associated with this VLAN as a convenience. It can be up to 32 alphanumeric
+             characters long, including blanks. The default is blank. VLAN ID 1 always has a name of
+             "Default." This field is optional.
+
+ VLAN Type   Type of VLAN, which can be Default (VLAN ID = 1) or static (one that is configured and
+             permanently defined), or Dynamic (one that is created by GVRP registration).
+
+                                  Switching Commands
+                                                  56
+

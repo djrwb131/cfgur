@@ -1,0 +1,44 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Command example:
+(NETGEAR Switch) #show ip dhcp snooping binding
+
+Total number of bindings: 2
+
+MAC Address           IP Address   VLAN      Interface Type  Lease (Secs)
+------------------   ------------  ----      --------- ---- -------------
+00:02:B3:06:60:80    210.1.1.3      10       0/1             86400
+00:0F:FE:00:13:04    210.1.1.4      10       0/1             86400
+
+show ip dhcp snooping database
+Use this command to display the DHCP Snooping configuration related to the database
+persistency.
+
+ Format      show ip dhcp snooping database
+
+ Mode        ·   Privileged EXEC
+             ·   User EXEC
+
+ Term           Definition
+
+ Agent URL      Bindings database agent URL.
+
+ Write Delay    The maximum write time to write the database into local or remote.
+
+Command example:
+(NETGEAR Switch) #show ip dhcp snooping database
+
+agent url:   /10.131.13.79:/sai1.txt
+
+write-delay:   5000
+
+show ip dhcp snooping interfaces
+Use this command to show the DHCP Snooping status of the interfaces.
+
+ Format      show ip dhcp snooping interfaces
+
+ Mode        Privileged EXEC
+
+                                  Switching Commands
+                                              144
+

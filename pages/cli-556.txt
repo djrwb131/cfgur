@@ -1,0 +1,59 @@
+                             M4100 Series ProSAFE Managed Switches
+
+    Table 54. System General Error Messages
+
+     Component      Message                                         Cause
+
+     OS             USL: failed to sync L3 Route table on unit=     Could not synchronize unit x due to a
+                    x                                               transport failure or API issue on remote
+                                                                    unit. A synchronization retry will be issued
+
+     OS             USL: failed to sync initiator table on unit=x   Could not synchronize unit x due to a
+                                                                    transport failure or API issue on remote
+                                                                    unit. A synchronization retry will be issued
+
+     OS             USL: failed to sync terminator table on         Could not synchronize unit x due to a
+                    unit=x                                          transport failure or API issue on remote
+                                                                    unit. A synchronization retry will be issued
+
+     OS             USL: failed to sync ip-multicast table on       Could not synchronize unit x due to a
+                    unit=x                                          transport failure or API issue on remote
+                                                                    unit. A synchronization retry will be issued
+
+O/S Support
+
+    Table 55. OSAPI Log Messages
+
+     Component      Message                                         Cause
+
+     OSAPI          ftruncate failed ­ File resides on a            ftruncate is called to correctly set the file's
+                    read-only file system.                          size in the file system after a write. The file
+                                                                    system is R/W so this msg indicates that
+                                                                    the file system may be corrupted.
+
+     OSAPI          ftruncate failed ­ File is open for reading     ftruncate is called to correctly set the file's
+                    only.                                           size in the file system after a write. The file
+                                                                    is opened for R/W so this msg indicates
+                                                                    that the file system may be corrupted.
+
+     OSAPI          ftruncate failed ­ File descriptor refers to a  ftruncate is called to correctly set the file's
+                    file on which this operation is impossible.     size in the file system after a write. This
+                                                                    msg indicates that the file system may be
+                                                                    corrupted.
+
+     OSAPI          ftruncate failed ­ Returned an unknown          ftruncate is called to correctly set the file's
+                    code in errno.                                  size in the file system after a write. This
+                                                                    msg indicates that the file system may be
+                                                                    corrupted.
+
+     OSAPI          ping: bad host!                                 The address requested to ping cannot be
+                                                                    converted to an Internet address.
+
+     OSAPI          osapiTaskDelete: Failed for (XX) error YYY      The requested task cannot be deleted
+                                                                    because: the requested deletion is called
+                                                                    from an ISR, the task is already deleted, or
+                                                                    the task ID is invalid.
+
+                                               Log Messages
+                                             556
+

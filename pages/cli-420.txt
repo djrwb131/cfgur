@@ -1,0 +1,48 @@
+                         M4100 Series ProSAFE Managed Switches
+
+no debug rip packet
+
+This command disables tracing of RIP requests and responses.
+
+ Format        no debug rip packet
+
+ Mode          Privileged EXEC
+
+debug sflow packet
+Use this command to enable sFlow debug packet trace.
+
+ Default       disabled
+
+ Format        debug sflow packet
+
+ Mode          Privileged EXEC
+
+no debug sflow packet
+
+Use this command to disable sFlow debug packet trace.
+
+ Format        no debug sflow packet
+
+ Mode          Privileged EXEC
+
+debug spanning-tree bpdu
+This command enables tracing of spanning tree BPDUs received and transmitted by the
+switch.
+
+ Default       disabled
+
+ Format        debug spanning-tree bpdu
+
+ Mode          Privileged EXEC
+
+no debug spanning-tree bpdu
+
+This command disables tracing of spanning tree BPDUs.
+
+ Format        no debug spanning-tree bpdu
+
+ Mode          Privileged EXEC
+
+                                     Utility Commands
+                                          420
+

@@ -1,0 +1,47 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ Term            Definition
+
+ Port Role       The role of the specified port within the spanning tree.
+
+ Desc            Indicates whether the port is in loop inconsistent state or not. This field is blank if the loop
+                 guard feature is not available.
+
+show spanning-tree mst port summary active
+This command displays settings for the ports within the specified multiple spanning tree
+instance that are active links.
+
+ Format       show spanning-tree mst port summary <mstid> active
+
+ Mode         ·   Privileged EXEC
+              ·   User EXEC
+
+ Term            Definition
+
+ mstid           The ID of the existing MST instance.
+
+ Interface       slot/port
+
+ STP Mode        Indicates whether spanning tree is enabled or disabled on the port.
+
+ Type            Currently not used.
+
+ STP State       The forwarding state of the port in the specified spanning tree instance.
+
+ Port Role       The role of the specified port within the spanning tree.
+
+ Desc            Indicates whether the port is in loop inconsistent state or not. This field is blank if the loop
+                 guard feature is not available.
+
+show spanning-tree mst summary
+This command displays summary information about all multiple spanning tree instances in
+the switch. On execution, the following details are displayed.
+
+ Format       show spanning-tree mst summary
+
+ Mode         ·   Privileged EXEC
+              ·   User EXEC
+
+                                       Switching Commands
+                                                  44
+

@@ -1,0 +1,54 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no aaa authorization
+
+This command deletes the authorization method list.
+
+ Format      no aaa authorization {exec | commands} {default | <list-name>}
+             <method1> [<method2>...]
+
+ Mode        Global Config
+
+authorization (console/Telnet/SSH)
+To apply the command authorization method list to an access method (console/Telnet/SSH).
+Apply this command in the line configuration mode.
+
+ Format      authorization {commands | exec} {default | <list-name>}
+
+ Mode        ·  Line console
+             ·  Line telnet
+             ·  Line SSH
+
+no authorization (console/Telnet/SSH)
+
+This command is used to remove command authorization from a line configuration mode.
+
+ Format      no authorization {commands| exec}
+
+ Mode        ·  Line console
+             ·  Line telnet
+             ·  Line SSH
+
+show authorization methods
+This command displays the configured authorization method lists.
+
+ Format      show authorization methods
+
+ Mode        Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #show authorization methods
+
+Command Authorization List            Method
+----------------------------          ------------------------------
+dfltCmdAuthList                       none     undefined          undefined  undefined
+
+Line            Command Method List
+---------       ---------------------
+Console         dfltCmdAuthList
+Telnet          dfltCmdAuthList
+SSH             dfltCmdAuthList
+
+                                 Management Commands
+                                           487
+

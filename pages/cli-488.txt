@@ -1,0 +1,47 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Exec Authorization List             Method
+----------------------------        ------------------------------
+dfltExecAuthList                    none             undefined    undefined  undefined
+
+Line             Exec Method List
+---------        ---------------------
+Console         dfltExecAuthList
+Telnet          dfltExecAuthList
+SSH             dfltExecAuthList
+
+domain-name (Global Config)
+The managed switch supports authentication based on domain name, in addition to the user
+name and password. This command allows the switch to be configured in a domain. Users
+can enable or disable domain functionality:
+·   Domain enabled. In this case, when the user enters only the user name, the managed
+    switch sends the domain name that is configured on the switch and the user name that
+    the user enters in the format "domainname\username" to the RADIUS server.
+    If the user enters the domain name and user name, the managed switch sends the
+    domain name and user name that the user enters in the format "domainname\username"
+    to the RADIUS server.
+·   Domain disabled. In this case, the domain name is not included when the user name is
+    sent to the RADIUS server.
+
+ Format      domain-name <name>
+
+ Mode        Global Config
+
+no domain-name
+
+This command is used to disable the domain-name in the managed switch.
+
+ Format      no domain-name
+
+ Mode        Global Config
+
+domain-name enable (Global Config)
+This command enables the domain name functionality.
+
+ Format      domain-name enable
+
+ Mode        Global Config
+
+                                 Management Commands
+                                            488
+

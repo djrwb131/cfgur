@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Parameter       Description
+
+ default         Uses the listed authentication methods that follow this argument as the default list of
+                 methods, when using higher privilege levels.
+
+ <list-name>     Character string used to name the list of authentication methods activated, when using
+                 access higher privilege levels. Range: 1-12 characters.
+
+ <method1>       Specify at least one from the following:
+ [<method2>...]  ·   deny. Used to deny access.
+                 ·   enable. Uses the enable password for authentication.
+                 ·   line. Uses the line password for authentication.
+                 ·   none. Uses no authentication.
+                 ·   radius. Uses the list of all RADIUS servers for authentication. Uses the user name
+                     $enabx$, in which x is the requested privilege level.
+                 ·   tacacs. Uses the list of all TACACS+ servers for authentication. Uses the user
+                     name $enabx$, in which x is the requested privilege level.
+
+no aaa authentication enable
+
+Use this command to remove the authentication method.
+
+ Format      no aaa authentication enable {default | <list-name>} <method1>
+             [<method2>...]
+
+ Mode        Global Config
+
+aaa authentication dot1x
+Use this command to set authentication for dot1x users. The method argument identifies the
+list of methods that the authentication algorithm tries in the sequence. The additional
+methods of authentication are used only if the previous method returns an error, not if there is
+an authentication failure. To ensure that the authentication succeeds even if all methods
+return an error, specify none as the final method in the command line. For example if none is
+specified as an authentication method after radius, no authentication is used if the RADIUS
+server is down.
+The possible methods are as follows:
+·   ias. Uses the internal authentication server users database for authentication. This
+    method can be used in conjunction with any one of the existing methods such as local
+    or radius.
+·   local. Uses the local user name database for authentication.
+·   none. Uses no authentication.
+·   radius. Uses the list of all RADIUS servers for authentication.
+
+ Format      aaa authentication dot1x default <method1> [<method2>...]
+
+ Mode        Global Config
+
+                               Management Commands
+                                          482
+

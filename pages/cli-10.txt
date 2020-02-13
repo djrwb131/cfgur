@@ -1,0 +1,51 @@
+                              M4100 Series ProSAFE Managed Switches
+
+Slot/Port Naming Convention
+
+   Managed switch software references physical entities such as cards and ports by using a
+   slot/port naming convention. The software also uses this convention to identify certain logical
+   entities, such as port-channel interfaces.
+   The slot number has two uses. In the case of physical ports, it identifies the card containing
+   the ports. In the case of logical and CPU ports it also identifies the type of interface or port.
+    Table 3. Type of slots
+
+     Slot Type             Description
+
+     Physical slot numbers Physical slot numbers begin with zero, and are allocated up to the maximum
+                           number of physical slots.
+
+     Logical slot numbers  Logical slots immediately follow physical slots and identify port-channel (LAG) or
+                           router interfaces.
+
+     CPU slot numbers      The CPU slots immediately follow the logical slots.
+
+   The port identifies the specific physical port or logical interface being managed on a slot.
+    Table 4. Type of ports
+
+     Port Type             Description
+
+     Physical Ports        The physical ports for each slot are numbered sequentially starting from zero.
+
+     Logical Interfaces    Port-channel or link aggregation group (LAG) interfaces are logical interfaces that
+                           are only used for bridging functions.
+                           VLAN routing interfaces are only used for routing functions.
+                           Loopback interfaces are logical interfaces that are always up.
+                           Tunnel interfaces are logical point-to-point links that carry encapsulated packets.
+
+     CPU ports             CPU ports are handled by the driver as one or more physical entities located on
+                           physical slots.
+
+       Note: In the CLI, loopback and tunnel interfaces do not use the slot/port
+                format. To specify a loopback interface, you use the loopback ID. To
+                specify a tunnel interface, you use the tunnel ID.
+
+Using a Command's "No" Form
+
+   The no keyword is a specific form of an existing command and does not represent a new or
+   distinct command. Almost every configuration command has a no form. In general, use the
+   no form to reverse the action of a command or reset a value back to the default. For example,
+   the no shutdown configuration command reverses the shutdown of an interface. Use the
+
+                                  Using the Command-Line Interface
+                                                     10
+

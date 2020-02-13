@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+TCP Sequence Number set to 0 or having TCP Flags SYN and FIN both set, the packets will
+be dropped if the mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control tcpflagseq
+
+ Mode          Global Config
+
+no dos-control tcpflagseq
+
+This command sets disables TCP Flag and Sequence Denial of Service protection.
+
+ Format        no dos-control tcpflagseq
+
+ Mode          Global Config
+
+dos-control tcpoffset
+This command enables TCP Offset Denial of Service protection. If the mode is enabled,
+Denial of Service prevention is active for this type of attack. If packets ingress having TCP
+Header Offset equal to one (1), the packets will be dropped if the mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control tcpoffset
+
+ Mode          Global Config
+
+no dos-control tcpoffset
+
+This command disabled TCP Offset Denial of Service protection.
+
+ Format        no dos-control tcpoffset
+
+ Mode          Global Config
+
+dos-control tcpsyn
+This command enables TCP SYN and L4 source = 0-1023 Denial of Service protection. If the
+mode is enabled, Denial of Service prevention is active for this type of attack. If packets
+ingress having TCP flag SYN set and an L4 source port from 0 to 1023, the packets will be
+dropped if the mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control tcpsyn
+
+ Mode          Global Config
+
+                                   Switching Commands
+                                          207
+

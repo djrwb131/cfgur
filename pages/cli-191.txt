@@ -1,0 +1,48 @@
+                                  M4100 Series ProSAFE Managed Switches
+
+     Term              Definition
+
+     System            Describes the local system by identifying the system name and versions of hardware,
+     Description       operating system, and networking software supported in the device.
+
+     Port Description  Describes the port in an alpha-numeric format.
+
+     System            Indicates the primary function(s) of the device.
+     Capabilities
+     Supported
+
+     System            Shows which of the supported system capabilities are enabled.
+     Capabilities
+     Enabled
+
+     Management        The type of address and the specific address the local LLDP agent uses to send and
+     Address           receive information.
+
+LLDP-MED Commands
+
+   Link Layer Discovery Protocol - Media Endpoint Discovery (LLDP-MED) (ANSI-TIA-1057)
+   provides an extension to the LLDP standard. Specifically, LLDP-MED provides extensions for
+   network configuration and policy, device location, Power over Ethernet (PoE) management
+   and inventory management.
+
+   lldp med
+   Use this command to enable MED. By enabling MED, you will be effectively enabling the
+   transmit and receive function of LLDP.
+
+     Default      enabled
+
+     Format       lldp med
+
+     Mode         Interface Config
+
+   no lldp med
+
+   Use this command to disable MED.
+
+     Format       no lldp med
+
+     Mode         Interface Config
+
+                                            Switching Commands
+                                                191
+

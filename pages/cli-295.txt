@@ -1,0 +1,54 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ibmsna, ipv4, ipv6, ipx, mplsmcast, mplsucast, netbios, novell, pppoe, and
+rarp. Each of these translates into its equivalent Ethertype value or values.
+The time-range parameter allows imposing time limitation on the MAC ACL rule as
+defined by the parameter <time-range-name>. If a time range with the specified name
+does not exist and the MAC ACL containing this ACL rule is applied to an interface or bound
+to a VLAN, then the ACL rule is applied immediately. If a time range with a specified name
+exists and the MAC ACL containing this ACL rule is applied to an interface or bound to a
+VLAN, then the ACL rule is applied when the time range with a specified name becomes
+active. The ACL rule is removed when the time range with a specified name becomes
+inactive.
+
+ Ethertype Keyword          Corresponding Value
+
+ appletalk                  0x809B
+
+ arp                        0x0806
+
+ ibmsna                     0x80D5
+
+ ipv4                       0x0800
+
+ ipv6                       0x86DD
+
+ ipx                        0x8037
+
+ mplsmcast                  0x8848
+
+ mplsucast                  0x8847
+
+ netbios                    0x8191
+
+ novell                     0x8137, 0x8138
+
+ pppoe                      0x8863, 0x8864
+
+ rarp                       0x8035
+
+The vlan and cos parameters refer to the VLAN identifier and 802.1p user priority fields,
+respectively, of the VLAN tag. For packets containing a double VLAN tag, this is the first (or
+outer) tag.
+The assign-queue parameter allows specification of a particular hardware queue for handling
+traffic that matches this rule. The allowed <queue-id> value is 0-(n-1), where n is the
+number of user configurable queues available for the hardware platform. The
+assign-queue parameter is valid only for a permit rule.
+
+      Note: The special command form {deny | permit} any any is used to
+            match all Ethernet layer 2 packets, and is the equivalent of the IP
+            access list match every rule.
+
+                                Quality of Service Commands
+                                           295
+

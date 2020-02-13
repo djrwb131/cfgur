@@ -1,0 +1,52 @@
+                              M4100 Series ProSAFE Managed Switches
+
+snmp-server enable traps linkmode
+Use this command to enable Link Up/Down traps for the entire switch. When enabled, link
+traps are sent only if the Link Trap flag setting associated with the port is enabled. For more
+information, see snmp trap link-status on page 498.
+
+ Default       enabled
+
+ Format        snmp-server enable traps linkmode
+
+ Mode          Global Config
+
+no snmp-server enable traps linkmode
+
+Use this command to disable Link Up/Down traps for the entire switch.
+
+ Format        no snmp-server enable traps linkmode
+
+ Mode          Global Config
+
+snmp-server enable traps multiusers
+Use this command to enable Multiple User traps. When the traps are enabled, a Multiple
+User Trap is sent when a user logs in to the terminal interface (EIA 232 or Telnet) and there
+is an existing terminal interface session.
+
+ Default       enabled
+
+ Format        snmp-server enable traps multiusers
+
+ Mode          Global Config
+
+no snmp-server enable traps multiusers
+
+Use this command to disable Multiple User traps.
+
+ Format        no snmp-server enable traps multiusers
+
+ Mode          Global Config
+
+snmp-server enable traps stpmode
+Use this command to enable sending new root traps and topology change notification traps.
+
+ Default       enabled
+
+ Format        snmp-server enable traps stpmode
+
+ Mode          Global Config
+
+                                     Management Commands
+                                           495
+

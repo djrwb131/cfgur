@@ -1,0 +1,49 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Command example:
+(NETGEAR Switch) #show poe
+
+Firmware Version............................... 1.0.0.2
+PSE Main Operational Status.................... ON
+Total Power (Main AC).......................... 380
+Total Power (RPS).............................. 300
+Total Power (PD) .............................. 25
+Power Source................................... Main AC
+Threshold Power................................ 342
+Total Power Consumed........................... 7
+Usage Threshold................................ 90
+Power Management Mode.......................... Dynamic
+Configure port Auto Reset Mode................. Disable
+Traps.......................................... Enable
+
+show poe port configuration
+Use this command to see how the PoE ports are configured. You can display information
+based on each individual port or all the ports collectively.
+
+ Format        show poe port configuration [<port> | all]
+
+ Mode          ·   Privileged EXEC
+               ·   User EXEC
+
+Command example:
+(NETGEAR Switch) #show poe port configuration all
+
+         Admin             Power   Power Limit    High Power          Detection
+Intf     Mode    Priority  Limit   Type           Mode                Type
+                             (W)
+------ ------- -------- ------     -------------- ------------- ---------------------
+  0/1   Enable      Low    15.400  User Defined   Disable             Auto
+  0/2   Enable      Low    15.400  User Defined   Disable             Auto
+
+Command example:
+(NETGEAR Switch) #show poe port configuration 0/2
+
+         Admin             Power   Power Limit    High Power          Detection
+Intf     Mode    Priority  Limit   Type           Mode                Type
+                             (W)
+------ ------- -------- ------     -------------- ------------- ---------------------
+  0/2   Enable      Low    15.400  User Defined   Disable             Auto
+
+                               Power over Ethernet Commands
+                                           325
+

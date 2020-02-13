@@ -1,0 +1,49 @@
+                                   M4100 Series ProSAFE Managed Switches
+
+     Term              Definition
+
+     Max MFDB          The total number of entries that can possibly be in the Multicast Forwarding Database
+     Table Entries     table.
+
+     Most MFDB         The largest number of entries that have been present in the Multicast Forwarding
+     Entries Since     Database table. This value is also known as the MFDB high-water mark.
+     Last Reset
+
+     Current Entries   The current number of entries in the MFDB.
+
+ISDP Commands
+
+   This section describes the commands you use to configure the industry standard Discovery
+   Protocol (ISDP).
+
+   isdp run
+   This command enables ISDP on the switch.
+
+     Default         Enabled
+
+     Format          isdp run
+
+     Mode            Global Config
+
+   no isdp run
+
+   This command disables ISDP on the switch.
+
+     Format          no isdp run
+
+     Mode            Global Config
+
+   isdp holdtime
+   This command configures the hold time for ISDP packets that the switch transmits. The hold
+   time specifies how long a receiving device should store information sent in the ISDP packet
+   before discarding it. You must enter the range in seconds.
+
+     Default         180 seconds
+
+     Format          isdp holdtime <10-255>
+
+     Mode            Global Config
+
+                                            Switching Commands
+                                                213
+

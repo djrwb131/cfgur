@@ -1,0 +1,50 @@
+                       M4100 Series ProSAFE Managed Switches
+
+key (TACACS Config)
+Use the key command in TACACS Configuration mode to specify the authentication and
+encryption key for all TACACS communications between the device and the TACACS server.
+This key must match the key used on the TACACS daemon. The <key-string> parameter
+specifies the key name. For an empty string use " ". The range is 0­128 characters.
+Text-based configuration supports TACACS server's secrets in encrypted and non-encrypted
+format. When you save the configuration, these secret keys are stored in encrypted format
+only. If you want to enter the key in encrypted format, enter the key along with the encrypted
+keyword. In the output of the show running config command, these secret keys are
+displayed in encrypted format. You cannot show these keys in plain text format.
+
+ Format        key [<key-string> | encrypted <key-string>]
+
+ Mode          TACACS Config
+
+port (TACACS Config)
+Use this command in TACACS Configuration mode to specify a server port number. The
+server <number> range is 0­65535.
+
+ Default       49
+
+ Format        port <number>
+
+ Mode          TACACS Config
+
+priority (TACACS Config)
+Use this command in TACACS Configuration mode to specify the order in which servers are
+used, where 0 (zero) is the highest priority. The <priority> parameter specifies the priority
+for servers. The highest priority is 0 (zero), and the range is 0 - 65535.
+
+ Default       0
+
+ Format        priority <priority>
+
+ Mode          TACACS Config
+
+timeout (TACACS Config)
+Use this command in TACACS Configuration mode to specify the time-out value in seconds.
+If no time-out value is specified, the global value is used. The <timeout> parameter has a
+range of 1-30 seconds.
+
+ Format        timeout <timeout>
+
+ Mode          TACACS Config
+
+                                 Management Commands
+                                        517
+

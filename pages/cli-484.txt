@@ -1,0 +1,54 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no aaa accounting
+
+This command deletes the accounting method list.
+
+ Format      no aaa accounting {exec | commands} {default | <list-name>}
+
+ Mode        Global Config
+
+accounting (console/Telnet/SSH)
+This command applies the accounting method list to a line configuration
+(console/Telnet/SSH). Apply this command in Line Config mode.
+
+ Format      accounting {exec | commands} [default | <list-name>]
+
+ Mode        Line Config
+
+ Term               Definition
+
+ exec               Configures accounting for an EXEC session.
+
+ commands           Configures accounting for each command execution attempt.
+
+                    Note: If a user is enabling accounting for exec mode for the current type of line
+                    configuration, they are logged out.
+
+ default            The default list of methods for authorization services.
+
+ <list-name>        Alphanumeric character string used to name the list of authorization methods.
+
+no accounting (console/Telnet/SSH)
+
+This command is used to remove accounting from a line configuration mode.
+
+ Format      no accounting {exec | commands}
+
+ Mode        Line Config
+
+ip accounting exec
+This command applies user exec accounting list to the line methods HTTP and HTTPs
+methods.
+
+ Format      ip {http | https} accounting exec {default | <list-name>}
+
+ Mode        Global Config
+
+ Term               Definition
+
+ {http | https}     Line method for which the list needs to be applied.
+
+                                  Management Commands
+                                    484
+

@@ -1,0 +1,54 @@
+                              M4100 Series ProSAFE Managed Switches
+
+permit ip host mac host
+Use this command to configure a rule for a valid IP address and MAC address combination
+used in ARP packet validation.
+
+ Format         permit ip host <sender-ip> mac host <sender-mac>
+
+ Mode           ARP Access-list Config
+
+no permit ip host mac host
+
+Use this command to delete a rule for a valid IP and MAC combination.
+
+ Format         no permit ip host <sender-ip> mac host <sender-mac>
+
+ Mode           ARP Access-list Config
+
+show ip arp inspection
+Use this command to display the Dynamic ARP Inspection global configuration and
+configuration on all the VLANs. With the <vlan-list> argument (that is, comma-separated
+VLAN ranges), the command displays the global configuration and configuration on all the
+VLANs in the VLAN list. The global configuration includes the source mac validation,
+destination mac validation, and invalid IP validation information.
+
+ Format         show ip arp inspection [vlan <vlan-list>]
+
+ Mode           ·  Privileged EXEC
+                ·  User EXEC
+
+ Term              Definition
+
+ Source MAC        Displays whether Source MAC Validation of ARP frame is enabled or disabled.
+ Validation
+
+ Destination MAC   Displays whether Destination MAC Validation is enabled or disabled.
+ Validation
+
+ IP Address        Displays whether IP Address Validation is enabled or disabled.
+ Validation
+
+ VLAN              The VLAN ID for each displayed row.
+
+ Configuration     Displays whether DAI is enabled or disabled on the VLAN.
+
+ Log Invalid       Displays whether logging of invalid ARP packets is enabled on the VLAN.
+
+ ACL Name          The ARP ACL Name, if configured on the VLAN.
+
+ Static Flag       If the ARP ACL is configured static on the VLAN.
+
+                                         Switching Commands
+                                                 151
+

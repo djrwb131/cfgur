@@ -1,0 +1,49 @@
+                       M4100 Series ProSAFE Managed Switches
+
+sshcon maxsessions
+Use this command to specify the maximum number of SSH connection sessions that can be
+established. A value of 0 indicates that no ssh connection can be established. The range is
+0­5.
+
+ Default      5
+
+ Format       sshcon maxsessions <0-5>
+
+ Mode         Privileged EXEC
+
+no sshcon maxsessions
+
+Use this command to set the maximum number of allowed SSH connection sessions to the
+default value.
+
+ Format       no sshcon maxsessions
+
+ Mode         Privileged EXEC
+
+sshcon timeout
+Use this command to set the SSH connection session time-out value, in minutes. A session is
+active as long as the session has been idle for the value set. The time is a decimal value from
+1 to 160.
+Changing the time-out value for active sessions does not become effective until the session
+is re accessed. Also, any keystroke activates the new time-out duration.
+
+ Default      5
+
+ Format       sshcon timeout <1-160>
+
+ Mode         Privileged EXEC
+
+no sshcon timeout
+
+Use this command to set the SSH connection session timeout value, in minutes, to the
+default.
+Changing the timeout value for active sessions does not become effective until the session is
+re accessed. Also, any keystroke activates the new timeout duration.
+
+ Format       no sshcon timeout
+
+ Mode         Privileged EXEC
+
+                                 Management Commands
+                                         458
+

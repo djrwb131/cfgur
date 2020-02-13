@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+passwords strength maximum repeated-characters
+Use this command to enforce a maximum number of repeated characters that a password
+should contain. An example of repeated characters is aaaa. The valid range is 0-16. If a
+password has a repetition of characters more than the configured limit, it fails to configure.
+The default is 0. A maximum of 0 means no restriction on that set of characters.
+
+ Default       0
+
+ Format        passwords strength maximum repeated-characters <number>
+
+ Mode          Global Config
+
+no passwords strength maximum repeated-characters
+
+Use this command to reset the maximum number of repeated-characters to the default value.
+
+ Format        no passwords strength maximum repeated-characters
+
+ Mode          Global Config
+
+passwords strength minimum character-classes
+Use this command to enforce a minimum number of characters classes that a password
+should contain. Character classes are uppercase letters, lowercase letters, numeric
+characters, and special characters. The valid range is 0-4. The default is 4.
+
+ Default       4
+
+ Format        passwords strength minimum character-classes <number>
+
+ Mode          Global Config
+
+no passwords strength minimum character-classes
+
+Use this command to reset the minimum number of character classes to the default value.
+
+ Format        no passwords strength minimum character-classes
+
+ Mode          Global Config
+
+passwords strength exclude-keyword
+Use this command to exclude the specified keyword while configuring the password. The
+password does not accept the keyword in any form (in between the string, case insensitive
+and reverse) as a substring. User can configure up to a maximum of three keywords.
+
+ Format        passwords strength exclude-keyword <keyword>
+
+ Mode          Global Config
+
+                                     Management Commands
+                                               478
+

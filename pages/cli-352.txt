@@ -1,0 +1,43 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Format        terminal length <number>
+
+ Mode          Privileged EXEC
+
+no terminal length
+
+Use this command to set the terminal length to the default value of 24 lines.
+
+ Format        no terminal length
+
+ Mode          Privileged EXEC
+
+show terminal length
+Use this command to display the value of the user-configured terminal length size.
+
+ Format        show terminal length
+
+ Mode          Privileged EXEC
+
+memory free low-watermark processor
+Use this command to get notifications when the CPU free memory falls below the configured
+threshold. A notification is generated when the free memory falls below the threshold.
+Another notification is generated once the available free memory rises to 10 percent above
+the specified threshold. To prevent generation of excessive notifications when the CPU free
+memory fluctuates around the configured threshold, only one Rising or Falling memory
+notification is generated over a period of 60 seconds. The threshold is specified in kilobytes.
+The CPU free memory threshold configuration is saved across a switch reboot.
+
+ Format        memory free low-watermark processor <1-1034956>
+
+ Mode          Global Config
+
+ Parameter          Description
+
+ low-watermark      When CPU free memory falls below this threshold, a notification message is triggered.
+                    The range is 1 to the maximum available memory on the switch. The default is 0
+                    (disabled).
+
+                                    Utility Commands
+                                          352
+

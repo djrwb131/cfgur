@@ -1,0 +1,54 @@
+                         M4100 Series ProSAFE Managed Switches
+
+Table 16. WEB Log Messages
+
+ Component    Message                                    Cause
+
+ WEB          Max clients exceeded                       This message is shown when the maximum
+                                                         allowed java client connections to the
+                                                         switch is exceeded.
+
+ WEB          Error on send to sockfd XXXX, closing      Failed to send data to the java clients
+              connection                                 through the socket.
+
+ WEB          # (XXXX) Form Submission Failed. No        The form submission failed and no action is
+              Action Taken.                              taken. XXXX indicates the file under
+                                                         consideration.
+
+ WEB          ewaFormServe_file_download() - WEB         Unknown error returned while downloading
+              Unknown return code from tftp download     file using TFTP from web interface
+              result
+
+ WEB          ewaFormServe_file_upload() - Unknown       Unknown error returned while uploading file
+              return code from tftp upload result        using TFTP from web interface.
+
+ WEB          Web UI Screen with unspecified access      Failed to get application-specific
+              attempted to be brought up                 authorization handle provided to
+                                                         EmWeb/Server by the application in
+                                                         ewsAuthRegister(). The specified web
+                                                         page will be served in read-only mode.
+
+Table 17. CLI_WEB_MGR Log Messages
+
+ Component    Message                                    Cause
+
+ CLI_WEB_MGR  File size is greater than 2K               The banner file size is greater than 2K
+                                                         bytes.
+
+ CLI_WEB_MGR  No. of rows greater than allowed maximum   When the number of rows exceeds the
+              of XXXX                                    maximum allowed rows
+
+Table 18. SSHD Log Messages
+
+ Component    Message                                    Cause
+
+ SSHD         SSHD: Unable to create the global (data)   Failed to create semaphore for global data
+              semaphore                                  protection.
+
+ SSHD         SSHD: Msg Queue is full, event = XXXX      Failed to send the message to the SSHD
+                                                         message queue as message queue is full.
+                                                         XXXX indicates the event to be sent
+
+                                           Log Messages
+                                             539
+

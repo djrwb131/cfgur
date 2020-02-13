@@ -1,0 +1,53 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ Format          logging syslog source-interface {<slot/port> | {loopback
+                 <loopback-id>} | {vlan <vlan-id>}}
+
+ Mode            Global Config
+
+ Parameter           Description
+
+ <slot/port>         VLAN or port-based routing interface.
+
+ loopback            Configures the loopback interface to use as the source IP address. The range of
+ <loopback-id>       the loopback ID is 0 to 7.
+
+ vlan <vlan-id>      Configures the VLAN interface to use as the source IP address. The range of the
+                     VLAN ID is 1 to 4093.
+
+show logging
+This command displays logging configuration information.
+
+ Format          show logging
+
+ Mode            Privileged EXEC
+
+ Term            Definition
+
+ Logging Client  The port on the collector/relay to which syslog messages are sent.
+ Local Port
+
+ CLI Command     Shows whether CLI Command logging is enabled.
+ Logging
+
+ Console Logging Shows whether console logging is enabled.
+
+ Console Logging The minimum severity to log to the console log. Messages with an equal or lower
+ Severity Filter numerical severity are logged.
+
+ Buffered Logging Shows whether buffered logging is enabled.
+
+ Syslog Logging  Shows whether syslog logging is enabled.
+
+ Log Messages    Number of messages received by the log process. This includes messages that are
+ Received        dropped or ignored.
+
+ Log Messages    Number of messages that could not be processed due to error or lack of resources.
+ Dropped
+
+ Log Messages    Number of messages sent to the collector/relay.
+ Relayed
+
+                                        Utility Commands
+                                                 356
+

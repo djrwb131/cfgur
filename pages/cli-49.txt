@@ -1,0 +1,49 @@
+                              M4100 Series ProSAFE Managed Switches
+
+vlan participation
+This command configures the degree of participation for a specific interface in a VLAN. The
+ID is a valid VLAN identification number, and the interface is a valid interface number.
+
+ Format        vlan participation {exclude | include | auto} <1-4093>
+
+ Mode          Interface Config
+
+Participation options are:
+
+ Participation     Definition
+ Options
+
+ include          The interface is always a member of this VLAN. This is equivalent to registration fixed.
+
+ exclude          The interface is never a member of this VLAN. This is equivalent to registration
+                   forbidden.
+
+ auto             The interface is dynamically registered in this VLAN by GVRP. The interface will not
+                   participate in this VLAN unless a join request is received on this interface. This is
+                   equivalent to registration normal.
+
+vlan participation all
+This command configures the degree of participation for all interfaces in a VLAN. The ID is a
+valid VLAN identification number.
+
+ Format        vlan participation all {exclude | include | auto} <1-4093>
+
+ Mode          Global Config
+
+You can use the following participation options:
+
+ Participation     Definition
+ Options
+
+ include          The interface is always a member of this VLAN. This is equivalent to registration fixed.
+
+ exclude          The interface is never a member of this VLAN. This is equivalent to registration
+                   forbidden.
+
+ auto             The interface is dynamically registered in this VLAN by GVRP. The interface will not
+                   participate in this VLAN unless a join request is received on this interface. This is
+                   equivalent to registration normal.
+
+                                   Switching Commands
+                                                      49
+

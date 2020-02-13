@@ -1,0 +1,53 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no passwords strength exclude-keyword
+
+Use this command to reset the restriction for the specified keyword or all the keywords
+configured.
+
+ Format      no passwords strength exclude-keyword [<keyword>]
+
+ Mode        Global Config
+
+show passwords configuration
+Use this command to display the configured password management settings.
+
+ Format      show passwords configuration
+
+ Mode        Privileged EXEC
+
+ Term                    Definition
+
+ Minimum Password        Minimum number of characters required when changing passwords.
+ Length
+
+ Password History        Number of passwords to store for reuse prevention.
+
+ Password Aging          Length in days that a password is valid.
+
+ Lockout Attempts        Number of failed password login attempts before lockout.
+
+ Minimum Password        Minimum number of uppercase characters required when configuring passwords.
+ Uppercase Letters
+
+ Minimum Password        Minimum number of lowercase characters required when configuring passwords.
+ Lowercase Letters
+
+ Minimum Password        Minimum number of numeric characters required when configuring passwords.
+ Numeric Characters
+
+ Maximum Password        Maximum number of consecutive characters required that the password should
+ Consecutive Characters  contain when configuring passwords.
+
+ Maximum Password        Maximum number of repetitions of characters that the password should contain
+ Repeated Characters     when configuring passwords.
+
+ Minimum Password        Minimum number of character classes (uppercase, lowercase, numeric, and
+ Character Classes       special) required when configuring passwords.
+
+ Password Exclude-       The set of keywords to be excluded from the configured password when strength
+ Keywords                checking is enabled.
+
+                                      Management Commands
+                                              479
+

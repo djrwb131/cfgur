@@ -1,0 +1,58 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Parameter            Description
+
+ Metric Type          The metric type to advertise for redistributed routes of this type
+
+ Subnets              Whether OSPF redistributes subnets of classful addresses, or only classful prefixes
+
+ Dist List            A distribute list used to filter routes of this type. Only routes that pass the distribute
+                      list are redistributed
+
+ Number of Active     The number of OSPF areas with at least one interface running on this router. Also
+ Areas                broken down by area type
+
+ ABR Status           Whether the router is an area border router. A router is an area border router if it has
+                      interfaces that are up in more than one area
+
+ ASBR Status          Whether the router is an autonomous system boundary router. The router is an
+                      ASBR if it is redistributing any routes or originating a default route
+
+ RIP
+
+ Split Horizon Mode   Whether RIP advertises routes on the interface where they were received
+
+ Default Metric       The metric assigned to redistributed routes
+
+ Default Route        Whether this router is originating a default route
+ Advertise
+
+ Distance             The administrative distance for RIP routes
+
+ Redistribution       A table showing information for each source protocol (connected, static, BGP, and
+                      OSPF). For each of these sources the distribution list and metric are shown. Fields
+                      which are not configured are left blank. For ospf, configured ospf match parameters
+                      are also shown
+
+ Interface            The interfaces where RIP is enabled and the version sent and accepted on each
+                      interface
+
+show ip route
+This command displays the routing table. The <ip-address> specifies the network for
+which the route is to be displayed and displays the best matching best-route for the address.
+The <mask> specifies the subnet mask for the <ip-address>. When you use the
+longer-prefixes keyword, the <ip-address> and <mask> pair becomes the prefix, and
+the command displays the routes to the addresses that match that prefix. Use the
+<protocol> parameter to specify the protocol that installed the routes. The value for
+<protocol> can be connected, ospf, rip, or static. Use the all parameter to display
+all routes including best and non-best routes. If you do not use the all parameter, the
+command only displays the best route.
+A "T" flag appended to a route indicates that it is an ECMP route, but only one of its next hops
+has been installed in the forwarding table. The forwarding table might limit the number of
+ECMP routes or the number of ECMP groups. When an ECMP route cannot be installed
+because such a limit is reached, the route is installed with a single next hop. Such truncated
+routes can be identified by a "T" after the interface name.
+
+                                             Routing Commands
+                                                245
+

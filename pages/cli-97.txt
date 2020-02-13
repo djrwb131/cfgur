@@ -1,0 +1,50 @@
+                             M4100 Series ProSAFE Managed Switches
+
+   no dot1x supplicant timeout auth-period
+
+   Use this command to set the auth-period value to the default value.
+
+     Format     no dot1x supplicant timeout auth-period
+
+     Mode       Interface Config
+
+   dot1x supplicant user
+   Use this command to map the user to the port.
+
+     Format     dot1x supplicant user
+
+     Mode       Interface Config
+
+Storm-Control Commands
+
+   This section describes commands you use to configure storm control and view storm control
+   configuration information. A traffic storm is a condition that occurs when incoming packets
+   flood the LAN, which creates performance degradation in the network. The storm control
+   feature protects against this condition.
+   The switch provides broadcast, multicast, and unicast story recovery for individual interfaces.
+   Unicast storm control protects against traffic whose MAC addresses are not known by the
+   system. For broadcast, multicast, and unicast storm control, if the rate of traffic ingressing on
+   an interface increases beyond the configured threshold for that type, the traffic is dropped.
+   To configure storm control, you can enable the feature for all interfaces or for individual
+   interfaces, and you can set the threshold (storm-control level), beyond which the broadcast,
+   multicast, or unicast traffic is dropped. The storm control feature allows you to limit the rate of
+   specific types of packets through the switch on a per-port, per-type, basis.
+   Configuring a storm-control level also enables that form of storm control. Disabling a
+   storm-control level (using the no version of the command) sets the storm control level back to
+   the default value and disables that form of storm control. Using the no version of the
+   storm-control command (without stating a level) disables that form of storm control but
+   maintains the configured level (to be active the next time that form of storm control is
+   enabled.)
+
+       Note: The actual rate of ingress traffic required to activate storm control is
+             based on the size of incoming packets and the hard-coded average
+             packet size of 512 bytes--used to calculate a packet-per-second
+             (pps) rate--as the forwarding-plane requires pps versus an absolute
+             rate kbps. For example, if the configured limit is 10 percent, this is
+             converted to ~25000 pps, and this pps limit is set in forwarding plane
+             (hardware). You get the approximate desired output when 512 bytes
+             packets are used.
+
+                                      Switching Commands
+                                            97
+

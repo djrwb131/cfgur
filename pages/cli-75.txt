@@ -1,0 +1,47 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Default       60
+
+ Format        set garp timer leave <20-600>
+
+ Mode          ·  Interface Config
+               ·  Global Config
+
+no set garp timer leave
+
+This command sets the GVRP leave time on all ports or a single port to the default and only
+has an effect when GVRP is enabled.
+
+ Format        no set garp timer leave
+
+ Mode          ·  Interface Config
+               ·  Global Config
+
+set garp timer leaveall
+This command sets how frequently Leave All PDUs are generated. A Leave All PDU
+indicates that all registrations will be unregistered. Participants would need to rejoin in order
+to maintain registration. The value applies per port and per GARP participation. The time
+may range from 200 to 6000 (centiseconds). The value 1000 centiseconds is 10 seconds.
+You can use this command on all ports (Global Config mode) or a single port (Interface
+Config mode), and it only has an effect only when GVRP is enabled.
+
+ Default       1000
+
+ Format        set garp timer leaveall <200-6000>
+
+ Mode          ·  Interface Config
+               ·  Global Config
+
+no set garp timer leaveall
+
+This command sets how frequently Leave All PDUs are generated the default and only has
+an effect when GVRP is enabled.
+
+ Format        no set garp timer leaveall
+
+ Mode          ·  Interface Config
+               ·  Global Config
+
+                                    Switching Commands
+                                          75
+

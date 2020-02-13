@@ -1,0 +1,50 @@
+                            M4100 Series ProSAFE Managed Switches
+
+Command example:
+(NETGEAR Switch) #show ip dhcp snooping
+
+DHCP snooping is Disabled
+DHCP snooping source MAC verification is enabled
+DHCP snooping is enabled on the following VLANs:
+11 - 30, 40
+
+Interface    Trusted     Log Invalid Pkts
+---------    --------    ----------------
+0/1           Yes                No
+0/2           No                 Yes
+0/3           No                 Yes
+0/4           No                 No
+0/6           No                 No
+
+show ip dhcp snooping binding
+Use this command to display the DHCP Snooping binding entries. To restrict the output, use
+the following options:
+·   Dynamic: Restrict the output based on DCHP snooping.
+·   Interface: Restrict the output based on a specific interface.
+·   Static: Restrict the output based on static entries.
+·   VLAN: Restrict the output based on VLAN.
+
+ Format      show ip dhcp snooping binding [static | dynamic] [interface
+             <slot/port>] [<vlan id>]
+
+ Mode        ·   Privileged EXEC
+             ·   User EXEC
+
+ Term            Definition
+
+ MAC Address     Displays the MAC address for the binding that was added. The MAC address is the key
+                 to the binding database.
+
+ IP Address      Displays the valid IP address for the binding rule.
+
+ VLAN            The VLAN for the binding rule.
+
+ Interface       The interface to add a binding into the DHCP snooping interface.
+
+ Type            Binding type; statically configured from the CLI or dynamically learned.
+
+ Lease (sec)     The remaining lease time for the entry.
+
+                                     Switching Commands
+                                                 143
+

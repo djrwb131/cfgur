@@ -1,0 +1,51 @@
+                           M4100 Series ProSAFE Managed Switches
+
+debug dot1x packet
+Use this command to enable dot1x packet debug trace.
+
+ Default       disabled
+
+ Format        debug dot1x
+
+ Mode          Privileged EXEC
+
+no debug dot1x packet
+
+Use this command to disable dot1x packet debug trace.
+
+ Format        no debug dot1x
+
+ Mode          Privileged EXEC
+
+debug igmpsnooping packet
+This command enables tracing of IGMP Snooping packets received and transmitted by the
+switch.
+
+ Default       disabled
+
+ Format        debug igmpsnooping packet
+
+ Mode          Privileged EXEC
+
+no debug igmpsnooping packet
+
+This command disables tracing of IGMP Snooping packets.
+
+ Format        no debug igmpsnooping packet
+
+ Mode          Privileged EXEC
+
+debug igmpsnooping packet transmit
+This command enables tracing of IGMP Snooping packets transmitted by the switch.
+Snooping should be enabled on the device and the interface in order to monitor packets for a
+particular interface.
+
+ Default       disabled
+
+ Format        debug igmpsnooping packet transmit
+
+ Mode          Privileged EXEC
+
+                                 Utility Commands
+                                          406
+

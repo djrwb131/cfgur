@@ -1,0 +1,57 @@
+                          M4100 Series ProSAFE Managed Switches
+
+ Term          Definition
+
+ Model Name    Shows the model name of the remote device.
+
+ Asset ID      Shows the asset id of the remote device.
+
+ Sub Type      Shows the type of location information.
+
+ Location      Shows the location information as a string for a type of location ID.
+ Information
+
+ Device Type   Shows the remote device's PoE device type connected to this port.
+
+ Available     Shows the remote port's PSE power value in tenths of a watt.
+
+ Source        Shows the remote port's PSE power source.
+
+ Priority      Shows the remote port's PSE priority.
+
+ Required      Shows the remote port's PD power requirement.
+
+ Source        Shows the remote port's PD power source.
+
+ Priority      Shows the remote port's PD power priority.
+
+Command example:
+(NETGEAR Switch) #show lldp med remote-device detail 0/8
+
+LLDP MED Remote Device Detail
+
+Local Interface: 0/8
+Remote Identifier: 18
+Capabilities
+MED Capabilities Supported: capabilities, networkpolicy, location, extendedpse
+MED Capabilities Enabled: capabilities, networkpolicy
+Device Class: Endpoint Class I
+
+Network Policies
+Media Policy Application Type : voice
+Vlan ID: 10
+Priority: 5
+DSCP: 1
+Unknown: False
+Tagged: True
+
+Media Policy Application Type : streamingvideo
+Vlan ID: 20
+Priority: 1
+DSCP: 2
+Unknown: False
+Tagged: True
+
+                                 Switching Commands
+                                         200
+

@@ -1,0 +1,50 @@
+                           M4100 Series ProSAFE Managed Switches
+
+serial baudrate
+Use this command to specify the communication rate of the terminal interface. The supported
+rates are 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200.
+
+ Default       115200
+
+ Format        serial baudrate {1200 | 2400 | 4800 | 9600 | 19200 | 38400 | 57600 |
+               115200}
+
+ Mode          Line Config
+
+no serial baudrate
+
+Use this command to set the communication rate of the terminal interface.
+
+ Format        no serial baudrate
+
+ Mode          Line Config
+
+serial timeout
+Use this command to specify the maximum connect time (in minutes) without console activity.
+A value of 0 indicates that a console can be connected indefinitely. The time range is 0­160.
+
+ Default       5
+
+ Format        serial timeout <0-160>
+
+ Mode          Line Config
+
+no serial timeout
+
+Use this command to set the maximum connect time (in minutes) without console activity.
+
+ Format        no serial timeout
+
+ Mode          Line Config
+
+login authentication
+Use this command in line configuration mode to specify a login authentication method list for
+remote telnet or console.
+
+ Format        login authentication {default | <list-name>}
+
+ Mode          Line Config
+
+                                  Management Commands
+                                          450
+

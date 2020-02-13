@@ -1,0 +1,51 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Parameter       Description
+
+ Device Status   This field specifies the current status of device. Following are possible device status
+                 states:
+                 ·  Active. Device is plugged in and the device is recognized if device is not mounted.
+                 ·   Inactive. Device is not mounted.
+                 ·   Invalid. Device is not present or invalid device is plugged in.
+
+ Manufacturer    Manufacturer details.
+
+ Serial Number   Serial number of the device.
+
+ USB Version     Version of the USB device.
+ Compliance
+
+ Class Code      Device Class
+
+ Subclass Code   Device SubClass
+
+ Protocol        Device Protocol
+
+ Vendor ID       Vendor specifies details of device-Vendor ID
+
+ Product ID      Vendor specifies details of device-Product ID
+
+Command example:
+The following is the output if the device is plugged into the USB slot.
+(NETGEAR Switch) #show USB device
+
+Device Status......................................................... Active
+Manufacturer............................................................ xxxx
+Serial Number......................................................... yyyyy
+USB Version Compliance.............................. 2.0
+Class Code.................................................................. abc
+Subclass Code......................................................... acb
+Protocol........................................................................ 0x0
+Vendor ID..................................................................... zzzzz
+Product ID.................................................................. aaaaa
+
+dir usb
+This command displays USB device contents and memory statistics.
+
+ Format        dir usb
+
+ Mode          Privileged EXEC
+
+                                        Utility Commands
+                                                                                      441
+

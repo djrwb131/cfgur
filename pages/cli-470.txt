@@ -1,0 +1,54 @@
+                             M4100 Series ProSAFE Managed Switches
+
+username snmpv3 accessmode
+Use this command to specify the SNMPv3 access privileges for the specified login user. The
+valid accessmode values are readonly and readwrite. The <username> is the login
+user name for which the specified access mode applies. The default is readwrite for the
+"admin" user and readonly for all other users. You must enter the <username> in the same
+case you used when you added the user. To see the case of the <username>, enter the
+show users command.
+
+ Defaults      ·   admin - readwrite
+               ·   other - readonly
+
+ Format        username snmpv3 accessmode <username> {readonly | readwrite}
+
+ Mode          Global Config
+
+no username snmpv3 accessmode
+
+Use this command to set the SNMPv3 access privileges for the specified user as
+readwrite for the "admin" user and readonly for all other users. The <username> value
+is the user name to which the specified access mode applies.
+
+ Format        no username snmpv3 accessmode <username>
+
+ Mode          Global Config
+
+username snmpv3 authentication
+Use this command to specify the authentication protocol to be used for the specified user.
+The valid authentication protocols are none, md5, and sha. If you specify md5 or sha, the
+login password is also used as the SNMPv3 authentication password and therefore must be
+at least eight characters in length. The <username> is the user name associated with the
+authentication protocol. You must enter the <username> in the same case you used when
+you added the user. To see the case of the <username>, enter the show users command.
+
+ Default       no authentication
+
+ Format        username snmpv3 authentication <username> {none | md5 | sha}
+
+ Mode          Global Config
+
+no username snmpv3 authentication
+
+Use this command to set the authentication protocol to be used for the specified user to
+none. The <username> is the user name for which the specified authentication protocol is
+used.
+
+ Format        no username snmpv3 authentication <username>
+
+ Mode          Global Config
+
+                                       Management Commands
+                                      470
+

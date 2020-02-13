@@ -1,0 +1,50 @@
+                            M4100 Series ProSAFE Managed Switches
+
+   no boot host retry-count
+
+   This command is used to reset the number to the default. The default number is 3.
+
+     Format      no boot host retry-count
+
+     Mode        Privileged EXEC
+
+   boot host dhcp
+   This command is used to enable AutoInstall on the switch for the next reboot cycle. The
+   command does not change the current behavior of AutoInstall and saves the command to
+   NVRAM.
+
+     Default     Enabled
+
+     Format      boot host dhcp
+
+     Mode        Privileged EXEC
+
+   no boot host dhcp
+
+   This command is used to disable AutoInstall on the switch for the next reboot cycle. The
+   command does not change the current behavior of AutoInstall and saves the command to
+   NVRAM
+
+     Format      no boot host dhcp
+
+     Mode        Privileged EXEC
+
+   erase startup-config
+   Use this command to erase the text-based configuration file stored in non-volatile memory. If
+   the switch boots and no startup-config file is found, the AutoInstall process automatically
+   begins.
+
+     Format      erase startup-config
+
+     Mode        Privileged EXEC
+
+Dual Image Commands
+
+   The software supports a dual image feature that allows the switch to have two software
+   images in the permanent storage. You can specify which image is the active image to be
+   loaded in subsequent reboots. This feature allows reduced down-time when you upgrade or
+   downgrade the software.
+
+                                      Utility Commands
+                                            331
+

@@ -1,0 +1,47 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Term                        Definition
+
+ ISDPv1 Packets Received     Total number of ISDPv1 packets received
+
+ ISDPv1 Packets Transmitted  Total number of ISDPv1 packets transmitted
+
+ ISDPv2 Packets Received     Total number of ISDPv2 packets received
+
+ ISDPv2 Packets Transmitted  Total number of ISDPv2 packets transmitted
+
+ ISDP Bad Header             Number of packets received with a bad header
+
+ ISDP Checksum Error         Number of packets received with a checksum error
+
+ ISDP Transmission Failure   Number of packets which failed to transmit
+
+ ISDP Invalid Format         Number of invalid packets received
+
+ ISDP Table Full             Number of times a neighbor entry was not added to the table due to a full
+                             database
+
+ ISDP IP Address Table Full  Displays the number of times a neighbor entry was added to the table
+                             without an IP address.
+
+debug isdp packet
+This command enables tracing of ISDP packets processed by the switch. ISDP must be
+enabled on both the device and the interface in order to monitor packets for a particular
+interface.
+
+ Format      debug isdp packet [receive | transmit]
+
+ Mode        Privileged EXEC
+
+no debug isdp packet
+
+This command disables tracing of ISDP packets on the receive or the transmit sides or on
+both sides.
+
+ Format      no debug isdp packet [receive | transmit]
+
+ Mode        Privileged EXEC
+
+                                        Switching Commands
+                                               218
+

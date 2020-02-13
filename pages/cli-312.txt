@@ -1,0 +1,45 @@
+                           M4100 Series ProSAFE Managed Switches
+
+AutoVoIP Commands
+
+   AutoVoIP detects the VoIP streams and put the VoIP streams in the specific VLAN (auto-voip
+   VLAN) and provides higher Class of Service to the VoIP streams automatically (both data
+   and signaling). It detects the VoIP streams in two modes.
+   ·   Protocol-based Auto VoIP. In a VoIP system, various signaling protocols are used to
+       establish the connection between two VoIP devices. The supported signaling protocols
+       are SIP, H.323, and SCCP.
+   ·   OUI-based Auto VoIP. The OUI-based Auto VoIP feature prioritizes VoIP packets based
+       on the OUI bytes in the source MAC address. A default list of OUIs is maintained. User is
+       also allowed to configure OUIs that need prioritization apart from the default OUI list. Up
+       to 128 OUIs are allowed on the device or system, including the default OUIs.
+
+       Note: If voice VLAN and Auto-VoIP are enabled at the same time, one of
+                them is operational. If the connected phone is LLDP-MED capable,
+                voice VLAN has precedence over the Auto VoIP and Auto VoIP is
+                operational if the phone does not support LLDP-MED.
+
+   auto-voip
+   This command is used to configure auto VoIP mode. The supported modes are
+   protocol-based and OUI-based. Protocol-based auto VoIP prioritizes the voice data based on
+   the layer 4 port used for the voice session. OUI-based auto VOIP prioritizes the phone traffic
+   based on the known OUI of the phone.
+
+     Default   oui-based
+
+     Format    auto-voip {protocol-based | oui-based}
+
+     Mode      ·   Global Config
+               ·   Interface Config
+
+   no auto-voip {protocol-based | oui-based}
+
+   This command is used to set default mode.
+
+     Format    no auto-voip {protocol-based | oui-based}
+
+     Mode      ·   Global Config
+               ·   Interface Config
+
+                                    Quality of Service Commands
+                                           312
+

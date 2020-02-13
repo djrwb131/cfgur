@@ -1,0 +1,50 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Term             Definition
+
+ Tacacs           Uses the list of all TACACS servers for authentication.
+
+ None             Uses no authentication.
+
+no ip http authentication
+
+Use this command to restore the authentication methods to the default.
+
+ Format        no ip http authentication <method1> [<method2> ...]
+
+ Mode          Global Config
+
+ip http session maxsessions
+Use this command to limit the number of allowable unsecure HTTP sessions. Zero is the
+configurable minimum.
+
+ Default       16
+
+ Format        ip http session maxsessions <0-16>
+
+ Mode          Privileged EXEC
+
+no ip http session maxsessions
+
+Use this command to restore the number of allowable unsecure HTTP sessions to the default
+value.
+
+ Format        no ip http session maxsessions
+
+ Mode          Privileged EXEC
+
+ip http session soft-timeout
+Use this command to configure the soft time-out for unsecure HTTP sessions in minutes.
+Configuring this value to zero sets an infinite soft time-out. When this time-out expires the
+user must reauthenticate. This timer begins on initiation of the web session and is restarted
+with each access to the switch.
+
+ Default       5
+
+ Format        ip http session soft-timeout <0-60>
+
+ Mode          Privileged EXEC
+
+                                 Management Commands
+                                                463
+

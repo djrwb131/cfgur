@@ -1,0 +1,54 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no lldp med faststartrepeatcount
+
+Use this command to return to the factory default value.
+
+ Format      no lldp med faststartrepeatcount
+
+ Mode        Global Config
+
+lldp med transmit-tlv all
+Use this command to specify which optional Type Length Values (TLVs) in the LLDP MED
+set will be transmitted in the Link Layer Discovery Protocol Data Units (LLDPDUs).
+
+ Default     By default, the capabilities and network policy TLVs are included.
+
+ Format      lldp med transmit-tlv all [capabilities] [ex-pd] [ex-pse]
+             [inventory] [location] [network-policy]
+
+ Mode        Global Config
+
+ Parameter       Definition
+
+ capabilities    Transmit the LLDP capabilities TLV.
+
+ ex-pd           Transmit the LLDP extended PD TLV.
+
+ ex-pse          Transmit the LLDP extended PSE TLV.
+
+ inventory       Transmit the LLDP inventory TLV.
+
+ location        Transmit the LLDP location TLV.
+
+ network-policy  Transmit the LLDP network policy TLV.
+
+no lldp med transmit-tlv
+
+Use this command to remove a TLV.
+
+ Format      no lldp med transmit-tlv all [capabilities] [network-policy]
+             [ex-pse] [ex-pd] [location] [inventory]
+
+ Mode        Global Config
+
+show lldp med
+Use this command to display a summary of the current LLDP MED configuration.
+
+ Format      show lldp med
+
+ Mode        Privileged Exec
+
+                                 Switching Commands
+                                        194
+

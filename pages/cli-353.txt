@@ -1,0 +1,46 @@
+                                  M4100 Series ProSAFE Managed Switches
+
+Logging Commands
+
+   This section describes the commands you use to configure system logging, and to view logs
+   and the logging settings.
+
+   logging buffered
+   This command enables logging to an in-memory log that keeps up to 128 logs.
+
+     Default       disabled; critical when enabled
+
+     Format        logging buffered
+
+     Mode          Global Config
+
+   no logging buffered
+
+   This command disables logging to in-memory log.
+
+     Format        no logging buffered
+
+     Mode          Global Config
+
+   logging buffered wrap
+   This command enables wrapping of in-memory logging when the log file reaches full
+   capacity. Otherwise when the log file reaches full capacity, logging stops.
+
+     Default       enabled
+
+     Format        logging buffered wrap
+
+     Mode          Privileged EXEC
+
+   no logging buffered wrap
+
+   This command disables wrapping of in-memory logging and configures logging to stop when
+   the log file capacity is full.
+
+     Format        no logging buffered wrap
+
+     Mode          Privileged EXEC
+
+                                        Utility Commands
+                                                     353
+

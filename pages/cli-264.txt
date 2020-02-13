@@ -1,0 +1,47 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no classofservice ip-dscp-mapping
+
+ This command maps each IP DSCP value to its default internal traffic class value.
+
+ Format       no classofservice ip-dscp-mapping
+
+ Modes        Global Config
+
+classofservice trust
+This command sets the Class of Service trust mode of an interface. You can set the mode to
+trust one of the Dot1p (802.1p), IP DSCP, or IP Precedence packet markings. You can also
+set the interface mode to untrusted. If you configure an interface to use Dot1p, the mode
+does not appear in the output of the show running config command because Dot1p is
+the default.
+
+ Default      dot1p
+
+ Format       classofservice trust {dot1p | ip-dscp | ip-precedence | untrusted}
+
+ Modes        ·   Global Config
+              ·   Interface Config
+
+no classofservice trust
+
+This command sets the interface mode to the default value.
+
+ Format       no classofservice trust
+
+ Modes        ·   Global Config
+              ·   Interface Config
+
+cos-queue min-bandwidth
+This command specifies the minimum transmission bandwidth guarantee for each interface
+queue. The total number of queues supported per interface is platform-specific. A value from
+0­100 (percentage of link rate) must be specified for each supported queue, with 0 indicating
+no guaranteed minimum bandwidth. The sum of all values entered must not exceed 100.
+
+ Format       cos-queue min-bandwidth <bw-0> <bw-1> ... <bw-n>
+
+ Modes        ·   Global Config
+              ·   Interface Config
+
+                                    Quality of Service Commands
+                                         264
+

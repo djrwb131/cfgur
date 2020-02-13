@@ -1,0 +1,18 @@
+4. Routing Commands                                                                 4
+
+   This chapter describes the routing commands.
+   The chapter contains the following sections:
+      ·   Address Resolution Protocol (ARP) Commands
+      ·   IP Routing Commands
+      ·   Virtual LAN Routing Commands
+      ·   DHCP and BOOTP Relay Commands
+      ·   IP Helper Commands
+      ·   ICMP Throttling Commands
+   The commands in this chapter are in three functional groups:
+      ·   Show commands display switch settings, statistics, and other information.
+      ·   Configuration commands configure features and options of the switch. Every switch
+          command has a show command that displays the configuration setting.
+      ·   Clear commands clear some or all of the settings to factory defaults.
+
+                                                227
+

@@ -1,0 +1,60 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Term            Definition
+
+ Switch          Text used to identify the product name of this switch.
+ Description
+
+ Machine Type    The machine model as defined by the Vital Product Data.
+
+ Machine Model   The machine model as defined by the Vital Product Data
+
+ Serial Number   The unique box serial number for this switch.
+
+ FRU Number      The field replaceable unit number.
+
+ Manufacturer    Manufacturer descriptor field.
+
+ Burned in MAC   Universally assigned network address.
+ Address
+
+ Software Version The release.version.revision number of the code currently running on the switch.
+
+ Additional      The additional packages incorporated into this system.
+ Packages
+
+show interface
+This command displays a summary of statistics for a specific interface or a count of all CPU
+traffic based upon the argument.
+
+ Format         show interface {<slot/port> | switchport | lag <lag-intf-num>}
+
+ Mode           Privileged EXEC
+
+If the argument is <slot/port> or lag, the display parameters are as shown in the
+following table.
+
+ Parameters      Definition
+
+ Packets         The total number of packets (including broadcast packets and multicast packets)
+ Received        received by the processor.
+ Without Error
+
+ Packets         The number of inbound packets that contained errors preventing them from being
+ Received With   deliverable to a higher-layer protocol.
+ Error
+
+ Broadcast       The total number of packets received that were directed to the broadcast address. Note
+ Packets         that this does not include multicast packets.
+ Received
+
+ Packets         The total number of packets transmitted out of the interface.
+ Transmitted
+ Without Error
+
+ Transmit        The number of outbound packets that could not be transmitted because of errors.
+ Packets Errors
+
+                                    Utility Commands
+                                                  335
+

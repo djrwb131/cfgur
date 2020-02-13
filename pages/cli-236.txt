@@ -1,0 +1,49 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no ip address dhcp
+
+Use this command to release a leased address and disable DHCPv4 on an interface.
+
+ Format       no ip address dhcp
+
+ Mode         Interface Config
+
+ip default-gateway
+Use this command to manually configure a default gateway for the switch. Only one default
+gateway can be configured. If you use this command multiple times, each command replaces
+the previous value.
+
+ Format       ip default-gateway <ipaddr>
+
+ Mode         Global Config
+
+no ip default-gateway
+
+Use this command to remove the default gateway address from the configuration.
+
+ Format       no ip default-gateway <ipaddr>
+
+ Mode         Interface Config
+
+release dhcp
+Use this command to force the DHCPv4 client to release the leased address from the
+specified interface.
+
+ Format       release dhcp <slot/port>
+
+ Mode         Privileged EXEC
+
+renew dhcp
+Use this command to force the DHCPv4 client to immediately renew an IPv4 address lease
+on the specified interface.
+
+ Format       renew dhcp {<slot/port> | network-port}
+
+ Mode         Privileged EXEC
+
+    Note: This command can be used on in-band ports as well as network
+           (out-of-band) port.
+
+                                   Routing Commands
+                                         236
+

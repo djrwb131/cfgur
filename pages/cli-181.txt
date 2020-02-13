@@ -1,0 +1,53 @@
+                               M4100 Series ProSAFE Managed Switches
+
+no port-security mac-address sticky
+
+The no form removes the sticky mode. The sticky MAC address can be deleted by using the
+command no port-security mac-address <mac-address> <vid>.
+
+ Format         no port-security mac-address sticky [<mac-address> <vid>]
+
+ Modes          ·   Global Config
+                ·   Interface Config
+
+show port-security
+This command displays the port-security settings. If you do not use a parameter, the
+command displays the settings for the entire system. Use the optional parameters to display
+the settings on a specific interface or on all interfaces.
+
+ Format         show port-security [<slot/port> | all]
+
+ Mode           Privileged EXEC
+
+ Term              Definition
+
+ Admin Mode        Port Locking mode for the entire system. This field displays if you do not supply any
+                   parameters.
+
+For each interface, or for the interface you specify, the following information appears:
+
+ Term              Definition
+
+ Admin Mode        Port Locking mode for the Interface.
+
+ Dynamic Limit     Maximum dynamically allocated MAC Addresses.
+
+ Static Limit      Maximum statically allocated MAC Addresses.
+
+ Violation Trap    Whether violation traps are enabled.
+ Mode
+
+show port-security dynamic
+This command displays the dynamically locked MAC addresses for the port.
+
+ Format         show port-security dynamic [lag <lag-intf-num> | <slot/port>]
+
+ Mode           Privileged EXEC
+
+ Term              Definition
+
+ MAC Address       MAC Address of dynamically locked MAC.
+
+                                     Switching Commands
+                                         181
+

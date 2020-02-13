@@ -1,0 +1,43 @@
+                       M4100 Series ProSAFE Managed Switches
+
+ Default     1518 (untagged)
+
+ Format      mtu <1518-9216>
+
+ Mode        Interface Config
+
+no mtu
+
+This command sets the default MTU size (in bytes) for the interface.
+
+ Format      no mtu
+
+ Mode        Interface Config
+
+shutdown
+This command disables a port.
+
+    Note: You can use the shutdown command on physical and port-channel
+           (LAG) interfaces, but not on VLAN routing interfaces.
+
+ Format      shutdown
+
+ Mode        Interface Config
+
+no shutdown
+
+This command enables a port.
+
+ Format      no shutdown
+
+ Mode        Interface Config
+
+shutdown all
+This command disables all ports.
+
+    Note: You can use the shutdown all command on physical and
+           port-channel (LAG) interfaces, but not on VLAN routing interfaces.
+
+                                  Switching Commands
+                                           21
+

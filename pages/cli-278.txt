@@ -1,0 +1,45 @@
+                         M4100 Series ProSAFE Managed Switches
+
+denotes the bit positions in <tosbits> that are used for comparison against the IP TOS field
+in a packet. For example, to check for an IP TOS value having bits 7 and 5 set and bit 1 clear,
+where bit 7 is most significant, use a <tosbits> value of a0 (hex) and a <tosmask> of a2
+(hex).
+
+    Note: The match ip dscp, match ip precedence, and match ip
+           tos commands provide alternative ways to specify a match criterion
+           for the same Service Type field in the IP header, but each command
+           requires a slightly different user notation.
+
+    Note: This "free form" version of the IP DSCP, IP precedence, and IP ToS
+           match specification gives you complete control when specifying which
+           bits of the IP Service Type field must be checked.
+
+ Default      none
+
+ Format       match ip tos <tosbits> <tosmask>
+
+ Mode         Class-Map Config
+
+match protocol
+This command adds to the specified class definition a match condition based on the value of
+the IP Protocol field in a packet using a single keyword notation or a numeric value notation.
+To specify the match condition using a single keyword notation, the value for
+<protocol-name> is one of the supported protocol name keywords. The currently
+supported values are: icmp, igmp, ip, tcp, udp. A value of ip matches all protocol number
+values.
+To specify the match condition using a numeric value notation, the protocol number is a
+standard value assigned by IANA and is interpreted as an integer from 0 to 255.
+
+    Note: This command does not validate the protocol number value against
+           the current list defined by IANA.
+
+ Default      none
+
+ Format       match protocol {<protocol-name> | <0-255>}
+
+ Mode         ·   Class-Map Config
+              ·   Ipv6-Class-Map Config
+
+                                   Quality of Service Commands
+                                               278
+

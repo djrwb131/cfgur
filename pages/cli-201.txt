@@ -1,0 +1,48 @@
+                             M4100 Series ProSAFE Managed Switches
+
+    Inventory
+    Hardware Rev: xxx xxx xxx
+    Firmware Rev: xxx xxx xxx
+    Software Rev: xxx xxx xxx
+    Serial Num: xxx xxx xxx
+    Mfg Name: xxx xxx xxx
+    Model Name: xxx xxx xxx
+    Asset ID: xxx xxx xxx
+
+    Location
+    Subtype: elin
+    Info: xxx xxx xxx
+
+    Extended POE
+    Device Type: pseDevice
+
+    Extended POE PSE
+    Available: 0.3 Watts
+    Source: primary
+    Priority: critical
+
+    Extended POE PD
+
+    Required: 0.2 Watts
+    Source: local
+    Priority: low
+
+Denial of Service Commands
+
+   This section describes the commands you use to configure Denial of Service (DoS) Control.
+   The software provides support for classifying and blocking specific types of Denial of Service
+   attacks. You can configure your system to monitor and block these types of attacks:
+   ·   SIP=DIP: Source IP address = Destination IP address.
+   ·   First Fragment: TCP Header size smaller then configured value.
+   ·   TCP Fragment: IP Fragment Offset = 1.
+   ·   TCP Flag: TCP Flag SYN set and Source Port < 1024 or TCP Control Flags = 0 and TCP
+       Sequence Number = 0 or TCP Flags FIN, URG, and PSH set and TCP Sequence
+       Number = 0 or TCP Flags SYN and FIN set.
+   ·   L4 Port: Source TCP/UDP Port = Destination TCP/UDP Port.
+   ·   ICMP: Limiting the size of ICMP Ping packets.
+   ·   SMAC = DMAC: Source MAC address = Destination MAC address.
+   ·   TCP Port: Source TCP Port = Destination TCP Port.
+
+                                      Switching Commands
+                                              201
+

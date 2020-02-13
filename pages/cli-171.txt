@@ -1,0 +1,48 @@
+                       M4100 Series ProSAFE Managed Switches
+
+no set mld maxresponse
+
+Use this command to set the max response time (on the interface or VLAN) to the default
+value.
+
+ Format        no set mld maxresponse
+
+ Mode          ·  Global Config
+               ·  Interface Config
+               ·  VLAN Mode
+
+set mld mcrtexpiretime
+Use this command to set the Multicast Router Present Expiration time. The time is set for the
+system, on a particular interface or VLAN. This is the amount of time in seconds that a switch
+waits for a query to be received on an interface before the interface is removed from the list
+of interfaces with multicast routers attached. The range is 0­3600 seconds. A value of 0
+indicates an infinite timeout, that is, no expiration.
+
+ Default       0
+
+ Format        set mld mcrtexpiretime <vlan-id> <0-3600>
+
+ Mode          ·  Global Config
+               ·  Interface Config
+
+no set mld mcrtexpiretime
+
+Use this command to set the Multicast Router Present Expiration time to 0. The time is set for
+the system, on a particular interface or a VLAN.
+
+ Format        no set mld mcrtexpiretime <vlan-id>
+
+ Mode          ·  Global Config
+               ·  Interface Config
+
+set mld mrouter
+Use this command to configure the VLAN ID for the VLAN that has the multicast router
+attached mode enabled.
+
+ Format        set mld mrouter <vlan-id>
+
+ Mode          Interface Config
+
+                                        Switching Commands
+                                          171
+

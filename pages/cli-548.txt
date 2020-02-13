@@ -1,0 +1,57 @@
+                                M4100 Series ProSAFE Managed Switches
+
+    Table 38. DiffServ Log Messages
+
+     Component       Message                                         Cause
+
+     DiffServ        diffserv.c 165: diffServRestore Failed to       While attempting to clear the running
+                     reset DiffServ. Recommend resetting             configuration an error was encountered in
+                     device                                          removing the current settings. This might
+                                                                     lead to an inconsistent state in the system
+                                                                     and resetting is advised.
+
+     DiffServ        Policy invalid for service intf: "policy name,  The DiffServ policy definition is not
+                     intIfNum x, direction y                         compatible with the capabilities of the
+                                                                     interface specified. Check the platform
+                                                                     release notes for information about
+                                                                     configuration limitations.
+
+Routing/IPv6 Routing
+
+    Table 39. DHCP Relay Log Messages
+
+     Component       Message                                         Cause
+
+     DHCP relay      REQUEST hops field more than config             The DHCP relay agent has processed a
+                     value                                           DHCP request whose HOPS field is larger
+                                                                     than the maximum value allowed. The relay
+                                                                     agent will not forward a message with a
+                                                                     hop count greater than 4.
+
+     DHCP relay      Request's seconds field less than the           The DHCP relay agent has processed a
+                     config value                                    DHCP request whose SECS field is larger
+                                                                     than the configured minimum wait time
+                                                                     allowed.
+
+     DHCP relay      processDhcpPacket: invalid DHCP packet          The DHCP relay agent has processed an
+                     type: %u\n                                      invalid DHCP packet. Such packets are
+                                                                     discarded by the relay agent.
+
+    Table 40. OSPFv2 Log Messages
+
+     Component       Message                                         Cause
+
+     OSPFv2          Best route client deregistration failed for     OSPFv2 registers with the IPv4 routing
+                     OSPF Redist                                     table manager ("RTO") to be notified of best
+                                                                     route changes. There are cases where
+                                                                     OSPFv2 deregisters more than once,
+                                                                     causing the second deregistration to fail.
+                                                                     The failure is harmless.
+
+     OSPFv2          XX_Call() failure in _checkTimers for           An OSPFv2 timer has fired but the
+                     thread 0x869bcc0                                message queue that holds the event has
+                                                                     filled up. This is normally a fatal error.
+
+                                              Log Messages
+                                                   548
+

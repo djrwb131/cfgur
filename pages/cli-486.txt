@@ -1,0 +1,45 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Commands     UserCmdAudit        start-stop      TACACS
+
+Line      EXEC Method List         Command Method List
+--------- -------------------- --------------------
+Console   none                     none
+Telnet    none                     none
+SSH       none                     none
+HTTPS     none                     none
+HTTP      none                     none
+
+aaa authorization
+The command creates an authorization method list. This list is identified by the default
+keyword or by a user-specified <list-name>. If tacacs is specified as the authorization
+method, authorization commands are notified to a TACACS+ server. If radius is the
+specified authorization method, authorization commands are notified to a RADIUS server. If
+none is specified, command authorization is not applicable. You can create up to five
+authorization method lists for the commands type.
+
+     Note: The local method is not supported for command authorization.
+           Command authorization with RADIUS works only if the applied
+           authentication method is also RADIUS.
+
+ Format      aaa authorization {exec | commands} {default | <list-name>}
+             <method1> [<method2>...]
+
+ Mode        Global Config
+
+ Term                 Definition
+
+ exec                 Provides authorization for user EXEC terminal sessions.
+
+ commands             Provides authorization for all user-executed commands.
+
+ default              The default list of methods for authorization services.
+
+ <list-name>          Character string used to name the list of authorization methods.
+
+ <method1>            Use either tacacs or radius for authorization purpose.
+ [<method2>...]
+
+                                    Management Commands
+                                             486
+

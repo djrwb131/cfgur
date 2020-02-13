@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+If you enter the optional <vlanid> parameter, the command output also displays detailed
+information, including interface information, for a specific VLAN. The ID is a valid VLAN
+identification number.
+
+ Term             Definition
+
+ Interface        Valid slot and port number separated by forward slashes. It is possible to set the
+                  parameters for all ports by using the selectors on the top line.
+
+ Current          The degree of participation of this port in this VLAN. The permissible values are:
+                  · Include - This port is always a member of this VLAN. This is equivalent to
+                    registration fixed in the IEEE 802.1Q standard.
+                  · Exclude - This port is never a member of this VLAN. This is equivalent to
+                    registration forbidden in the IEEE 802.1Q standard.
+                  · Autodetect - To allow the port to be dynamically registered in this VLAN via GVRP.
+                    The port will not participate in this VLAN unless a join request is received on this
+                    port. This is equivalent to registration normal in the IEEE 802.1Q standard.
+
+ Configured       The configured degree of participation of this port in this VLAN. The permissible values
+                  are:
+                  · Include - This port is always a member of this VLAN. This is equivalent to
+                    registration fixed in the IEEE 802.1Q standard.
+                  · Exclude - This port is never a member of this VLAN. This is equivalent to
+                    registration forbidden in the IEEE 802.1Q standard.
+                  · Autodetect - To allow the port to be dynamically registered in this VLAN via GVRP.
+                    The port will not participate in this VLAN unless a join request is received on this
+                    port. This is equivalent to registration normal in the IEEE 802.1Q standard.
+
+ Tagging          The tagging behavior for this port in this VLAN.
+                  · Tagged - Transmit traffic for this VLAN as tagged frames.
+                  · Untagged - Transmit traffic for this VLAN as untagged frames.
+
+show vlan brief
+This command displays a list of all configured VLANs.
+
+ Format        show vlan brief
+
+ Mode          ·   Privileged EXEC
+               ·   User EXEC
+
+show vlan port
+This command displays VLAN port information.
+
+ Format        show vlan port {<slot/port> | all}
+
+ Mode          ·   Privileged EXEC
+               ·   User EXEC
+
+                                       Switching Commands
+                                                57
+

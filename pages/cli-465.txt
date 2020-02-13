@@ -1,0 +1,54 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ip http secure-session hard-timeout
+Use this command to configure the hard time-out for secure HTTP sessions in hours. When
+the time-out expires, the user must reauthenticate. This timer begins on initiation of the web
+session and is unaffected by the activity level of the connection. The secure session hard
+time-out cannot be set to zero (infinite).
+
+ Default       24
+
+ Format        ip http secure-session hard-timeout <1-168>
+
+ Mode          Privileged EXEC
+
+no ip http secure-session hard-timeout
+
+Use this command to reset the hard time-out for secure HTTP sessions to the default value.
+
+ Format        no ip http secure-session hard-timeout
+
+ Mode          Privileged EXEC
+
+ip https authentication
+Use this command to specify the authentication methods for http server users. The additional
+methods of authentication are used only if the previous method returns an error, not if it fails.
+To ensure that the authentication succeeds even if all methods return an error, specify none
+as the final method in the command line. If none is specified as an authentication method
+after radius, no authentication is used if the RADIUS server is down.
+
+ Format        ip https authentication <method1> [<method2> ...]
+
+ Mode          Global Config
+
+ Term             Definition
+
+ Local            Uses the local user name database for authentication.
+
+ Radius           Uses the list of all RADIUS servers for authentication.
+
+ Tacacs           Uses the list of all TACACS servers for authentication.
+
+ None             Uses no authentication.
+
+no ip https authentication
+
+Use this command to restore the authentication methods to the default for http server users.
+
+ Format        no ip https authentication <method1> [<method2> ...]
+
+ Mode          Global Config
+
+                                    Management Commands
+                                            465
+

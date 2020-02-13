@@ -1,0 +1,54 @@
+                                  M4100 Series ProSAFE Managed Switches
+
+     Term             Definition
+
+     Number of Traps  The number of traps since the last boot.
+     Since Last Reset
+
+     Trap Log         The number of traps the system can retain.
+     Capacity
+
+     Number of Traps  The number of new traps since the command was last executed.
+     Since Log Last
+     Viewed
+
+     Log              The log number.
+
+     System Time Up   How long the system had been running at the time the trap was sent.
+
+     Trap             The text of the trap message.
+
+   logging persistent
+   Use this command to configure the persistent logging for the switch. You can specify the
+   <severitylevel> value as either an integer from 0 to 7 or symbolically through one of the
+   following keywords: emergency (0), alert (1), critical (2), error (3), warning (4),
+   notice (5), info (6), or debug (7).
+
+     Default        Disable
+
+     Format         logging persistent <severitylevel>
+
+     Mode           Global Config
+
+   no logging persistent
+
+   Use this command to disable the persistent logging in the switch.
+
+     Format         no logging persistent
+
+     Mode           Global Config
+
+Email Alerting and Mail Server Commands
+
+   logging email
+   This command enables email alerting and sets the lowest severity level for which log
+   messages are emailed. If you specify a severity level, log messages at or above this severity
+   level, but below the urgent severity level, are emailed in a non-urgent manner by collecting
+   them together until the log time expires. You can specify the <severitylevel> value as
+   either an integer from 0 to 7 or symbolically through one of the following keywords:
+   emergency (0), alert (1), critical (2), error (3), warning (4), notice (5), info (6),
+   or debug (7).
+
+                                          Utility Commands
+                                                      358
+

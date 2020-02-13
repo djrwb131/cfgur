@@ -1,0 +1,58 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Parameters        Definition
+
+ Collisions        The best estimate of the total number of collisions on this Ethernet segment.
+ Frames
+
+ Time Since        The elapsed time, in days, hours, minutes, and seconds since the statistics for this port
+ Counters Last     were last cleared.
+ Cleared
+
+If the argument is switchport, the display parameters are as shown in the following table.
+
+ Term              Definition
+
+ Packets           The total number of packets (including broadcast packets and multicast packets)
+ Received          received by the processor.
+ Without Error
+
+ Broadcast         The total number of packets received that were directed to the broadcast address. Note
+ Packets           that this does not include multicast packets.
+ Received
+
+ Packets           The number of inbound packets that contained errors preventing them from being
+ Received With     deliverable to a higher-layer protocol.
+ Error
+
+ Packets           The total number of packets transmitted out of the interface.
+ Transmitted
+ Without Error
+
+ Broadcast         The total number of packets that higher-level protocols requested to be transmitted to the
+ Packets           Broadcast address, including those that were discarded or not sent.
+ Transmitted
+
+ Transmit Packet   The number of outbound packets that could not be transmitted because of errors.
+ Errors
+
+ Address Entries   The total number of Forwarding Database Address table entries now active on the
+ Currently In Use  switch, including learned and static entries.
+
+ VLAN Entries      The number of VLAN entries presently occupying the VLAN table.
+ Currently In Use
+
+ Time Since        The elapsed time, in days, hours, minutes, and seconds since the statistics for this
+ Counters Last     switch were last cleared.
+ Cleared
+
+show interface counters
+This command reports key summary statistics for all ports (physical, CPU, and port-channel).
+
+ Format        show interface counters
+
+ Mode          Privileged EXEC
+
+                                             Utility Commands
+                                                 336
+

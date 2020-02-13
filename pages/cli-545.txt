@@ -1,0 +1,48 @@
+                            M4100 Series ProSAFE Managed Switches
+
+Table 27. 802.3ad Log Messages
+
+ Component        Message                                      Cause
+
+ 802.3ad          dot3adReceiveMachine: received default       Received a LAG PDU and the RX state
+                  event %x                                     machine is ignoring this LAGPDU
+
+ 802.3ad          dot3adNimEventCompletionCallback,            The event sent to NIM was not completed
+                  dot3adNimEventCreateCompletionCallbac        successfully
+                  k: DOT3AD: notification failed for
+                  event(%d), intf(%d), reason(%d)
+
+Table 28. FDB Log Message
+
+ Component        Message                                      Cause
+
+ FDB              fdbSetAddressAgingTimeOut: Failure           Unable to set the age time in the hardware
+                  setting fid %d address aging timeout to %d
+
+Table 29. Double VLAN Tag Log Message
+
+ Component        Message                                      Cause
+
+ Double Vlan Tag  dvlantagIntfIsConfigurable: Error accessing  A default configuration does not exist for
+                  dvlantag config data for interface %d        this interface. Typically a case when a new
+                                                               interface is created and has no
+                                                               pre-configuration.
+
+Table 30. IPv6 Provisioning Log Message
+
+ Component        Message                                      Cause
+
+ IPV6             ipv6ProvIntfIsConfigurable: Error accessing A default configuration does not exist for
+ Provisioning     IPv6 Provisioning config data for interface  this interface. Typically a case when a new
+                  %d                                           interface is created and has no
+                                                               pre-configuration.
+
+Table 31. MFDB Log Message
+
+ Component        Message                                      Cause
+
+ MFDB             mfdbTreeEntryUpdate: entry does not exist    Trying to update a non-existing entry
+
+                                    Log Messages
+                                                  545
+

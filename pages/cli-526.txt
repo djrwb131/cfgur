@@ -1,0 +1,59 @@
+                            M4100 Series ProSAFE Managed Switches
+
+show green-mode
+This command displays the green mode configuration and operational status either for the
+whole system or for a port. This command can display the per-port configuration and
+operational status of the green mode. The status is shown only for the modes supported on
+the switch.
+
+ Format        show green-mode [<slot/port>]
+
+ Mode          Privileged Exec
+
+The following table shows the fields that display if you do not specify a slot and port.
+
+ Field                   Definition
+
+ Energy Detect
+
+ Energy-detect Config    Energy-detect Admin mode is enabled or disabled
+
+ Energy-detect Opr       Energy detect mode is currently active or inactive. The energy detect mode might be
+                         administratively enabled, but the operational status might be inactive.
+
+ EEE
+
+ EEE Config              EEE Admin Mode is enabled or disabled.
+
+ Global
+
+ Cumulative Energy       Estimated cumulative energy saved per stack in (watts * hours) due to all green
+ Saving per Stack        modes enabled
+
+ Current Power           Power consumption by all ports in stack in mWatts.
+ Consumption per Stack
+
+ Power Saving            Estimated percentage power saved on all ports in stack due to green mode(s)
+                         enabled.
+
+ Unit                    Unit index of the stack member
+
+ Green Ethernet Features List of green features supported on the unit which could be one or more of the
+ supported               following: Energy-Detect (Energy Detect), Short-Reach (Short Reach), EEE (Energy
+                         Efficient Ethernet), LPI-History (EEE Low Power Idle History), LLDP-Cap-Exchg
+                         (EEE LLDP Capability Exchange), Pwr-Usg-Est (Power Usage Estimates).
+
+The following table shows the fields that display if you specify a slot and port.
+
+ Field                   Definition
+
+ Energy-detect admin     Energy-detect mode is enabled or disabled.
+ mode
+
+ Energy-detect           Energy detect mode is currently active or inactive. The energy detect mode might be
+ operational status      administratively enabled, but the operational status might be inactive. The reasons
+                         for the same are described below.
+
+                                    Green Ethernet Commands
+                                             526
+

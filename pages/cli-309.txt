@@ -1,0 +1,52 @@
+                                   M4100 Series ProSAFE Managed Switches
+
+     Term              Definition
+
+     Log               Displays when you enable logging for the rule.
+
+     Assign Queue     The queue identifier to which packets matching this rule are assigned.
+
+     Mirror Interface The slot/port to which packets matching this rule are copied.
+
+     Redirect         The slot/port to which packets matching this rule are forwarded.
+     Interface
+
+     Time Range        Displays the name of the time-range if the IPv6 ACL rule has referenced a time range.
+     Name
+
+     Rule Status       Status (Active/Inactive) of the IPv6 ACL rule.
+
+Time Range Commands for Time-Based ACLs
+
+   Time-based ACLs allow one or more rules within an ACL to be based on time. Each ACL rule
+   within an ACL, except for the implicit deny all rule, can be configured to be active and
+   operational only during a specific time period. The time range commands allow you to define
+   specific times of the day and week to implement time-based ACLs. The time range is
+   identified by a name and can then be referenced by an ACL rule defined with in an ACL.
+
+   time-range
+   Use this command to create a time range identified by <name>, consisting of one absolute
+   time entry and/or one or more periodic time entries. The <name> parameter is a
+   case-sensitive, alphanumeric string from 1 to 31 characters that uniquely identifies the time
+   range. An alpha-numeric string is defined as consisting of only alphabetic, numeric, dash,
+   underscore, or space characters. If a time range by this name exists, this command enters
+   Time-Range config mode to allow updating the time range entries
+
+         Note: When you successfully execute this command, the CLI mode
+                 changes to Time-Range Config mode.
+
+     Format       time-range <name>
+
+     Mode         Global Config
+
+   no time-range
+
+   Use this command to delete a time-range identified by <name>.
+
+     Format       no time-range <name>
+
+     Mode         Global Config
+
+                                        Quality of Service Commands
+                                              309
+

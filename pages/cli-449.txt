@@ -1,0 +1,48 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+    Command example:
+   This output is for the network port:
+    (NETGEAR Switch) #show network
+
+    Interface Status............................... Always Up
+    IP Address..................................... 10.250.3.1
+    Subnet Mask.................................... 255.255.255.0
+    Default Gateway................................ 10.250.3.3
+    IPv6 Administrative Mode....................... Enabled
+    IPv6 Address/Length is ........................ FE80::210:18FF:FE82:337/64
+    IPv6 Address/Length is ........................ 3099::1/64
+    IPv6 Address/Length is ........................ 3099::210:18FF:FE82:337/64
+    IPv6 Default Router is ........................ FE80::204:76FF:FE73:423A
+    Burned In MAC Address.......................... 00:10:18:82:03:37
+    Locally Administered MAC Address............... 00:00:00:00:00:00
+    MAC Address Type............................... Burned In
+    Network Configuration Protocol Current......... None
+    Management VLAN ID............................. 1
+    Web Mode....................................... Enable
+    Java Mode...................................... Enable
+
+Console Port Access Commands
+
+   This section describes the commands you use to configure the console port. You can use a
+   serial cable to connect a management host directly to the console port of the switch.
+
+   configuration
+   Use this command to access Global Config mode. From Global Config mode, you can
+   configure various system settings, including user accounts. You can also enter other
+   command modes, including Line Config mode.
+
+     Format       configuration
+
+     Mode         Privileged EXEC
+
+   line
+   Use this command to access Line Config mode, which allows you to configure various Telnet
+   settings, ssh settings, and the console port.
+
+     Format       line {console | telnet | ssh}
+
+     Mode         Global Config
+
+                                    Management Commands
+                                                449
+

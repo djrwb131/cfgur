@@ -1,0 +1,47 @@
+                               M4100 Series ProSAFE Managed Switches
+
+   command without the keyword no to reenable a disabled feature or to enable a feature that
+   is disabled by default. Only the configuration commands are available in the no form.
+
+Managed Switch Modules
+
+   Managed switch software consists of flexible modules that can be applied in various
+   combinations to develop advanced Layer 2/3/4+ products. The commands and command
+   modes available on your switch depend on the installed modules. Additionally, for some
+   show commands, the output fields might change based on the modules included in the
+   software.
+   The software suite includes the following modules:
+   ·   Switching (Layer 2)
+   ·   Routing (Layer 3)
+   ·   Quality of Service
+   ·   Management (CLI, web UI, and SNMP)
+
+Command Modes
+
+   The CLI groups commands into modes according to the command function. Each of the
+   command modes supports specific software commands. The commands in one mode are
+   not available until you switch to that particular mode, except for the User EXEC mode
+   commands. You can execute the User EXEC mode commands in the Privileged EXEC
+   mode.
+   The command prompt changes in each command mode to help you identify the current
+   mode. The following table describes the command modes and the prompts visible in that
+   mode.
+
+       Note: The command modes available on your switch depend on the software
+               modules that are installed. For example, a switch that does not support
+               BGPv4 does not provide the Router BGPv4 Command Mode.
+
+    Table 5. CLI Command Modes
+
+     Command Mode      Prompt                             Mode Description
+
+     User EXEC         Switch>                            Contains a limited set of commands to view
+                                                          basic system information.
+
+     Privileged EXEC   Switch#                            Allows you to issue any EXEC command,
+                                                          enter the VLAN mode, or enter the Global
+                                                          Configuration mode.
+
+                                  Using the Command-Line Interface
+                                          11
+

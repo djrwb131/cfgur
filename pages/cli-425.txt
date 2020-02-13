@@ -1,0 +1,43 @@
+                     M4100 Series ProSAFE Managed Switches
+
+Cable Test Command
+
+   The cable test feature enables you to determine the cable connection status on a selected
+   port.
+
+       Note: The cable test feature is supported only for copper cable. It is not
+               supported for optical fiber cable. If the port has an active link while the
+               cable test is run, the link can go down for the duration of the test.
+
+   cablestatus
+   This command returns the status of the specified port.
+
+     Format        cablestatus <slot/port>
+
+     Mode          Privileged EXEC
+
+     Field         Description
+
+     Cable Status  One of the following statuses is returned:
+                   ·   Normal. The cable is working correctly.
+                   ·   Open. The cable is disconnected or there is a faulty connector.
+                   ·   Short. There is an electrical short in the cable.
+                   ·   Cable Test Failed. The cable status could not be determined. The cable may in fact
+                       be working.
+
+     Cable Length  If this feature is supported by the PHY for the current link speed, the cable length is
+                   displayed as a range between the shortest estimated length and the longest estimated
+                   length. Note that if the link is down and a cable is attached to a 10/100 Ethernet adapter,
+                   then the cable status may display as Open or Short because some Ethernet adapters
+                   leave unused wire pairs unterminated or grounded. Unknown is displayed if the cable
+                   length could not be determined.
+
+sFlow Commands
+
+   sFlow is the standard for monitoring high-speed switched and routed networks. sFlow
+   technology is built into network equipment and gives complete visibility into network activity,
+   enabling effective management and control of network resources.
+
+                                       Utility Commands
+                                                   425
+

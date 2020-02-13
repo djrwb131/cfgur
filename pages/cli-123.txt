@@ -1,0 +1,47 @@
+                                M4100 Series ProSAFE Managed Switches
+
+no port-channel system priority
+
+Use this command to configure the default port-channel system priority value.
+
+ Format          no port-channel system priority
+
+ Mode            Global Config
+
+show lacp actor
+Use this command to display LACP actor attributes.
+The interface is a logical <slot/port> for a configured port-channel. The option all
+displays the configuration for all the configured port-channels. Instead of <slot/port>, you
+can use lag <lag-group-id> as an alternate way to specify the LAG interface, in which
+<lag-group-id> is the LAG port number.
+
+ Format          show lacp actor {<slot/port> | lag <lag-group-id> | all}
+
+ Mode            Global Config
+
+The following output parameters are displayed.
+
+ Term              Description
+
+ System Priority   The system priority assigned to the Aggregation Port.
+
+ Admin Key         The administrative value of the Key.
+
+ Port Priority     The priority value assigned to the Aggregation Port.
+
+ Admin State       The administrative values of the actor state as transmitted by the Actor in LACPDUs.
+
+show lacp partner
+Use this command to display LACP partner attributes.
+The interface is a logical <slot/port> for a configured port-channel. The option all
+displays the configuration for all the configured port-channels. Instead of <slot/port>, you
+can use lag <lag-group-id> as an alternate way to specify the LAG interface, in which
+<lag-group-id> is the LAG port number.
+
+ Format          show lacp partner {<slot/port> | lag <lag-group-id> | all}
+
+ Mode            Privileged EXEC
+
+                                  Switching Commands
+                                          123
+

@@ -1,0 +1,56 @@
+                            M4100 Series ProSAFE Managed Switches
+
+show hosts
+Use this command to display the default domain name, a list of name server hosts, the static
+and the cached list of host names and addresses <name> ranges from 1-255 characters.
+This command displays both IPv4 and IPv6 entries.
+
+ Format        show hosts [<name>]
+
+ Mode          User EXEC
+
+ Field          Description
+
+ Host Name      Domain host name.
+
+ Default Domain Default domain name.
+
+ Default Domain Default domain list.
+ List
+
+ Domain Name    DNS client enabled/disabled.
+ Lookup
+
+ Number of      Number of time to retry sending Domain Name System (DNS) queries.
+ Retries
+
+ Retry Timeout  Amount of time to wait for a response to a DNS query.
+ Period
+
+ Name Servers   Configured name servers.
+
+Command example:
+<NETGEAR Switching> show hosts
+
+Host name......................... Device
+Default domain.................... gm.com
+Default domain list............... yahoo.com, Stanford.edu, rediff.com
+Domain Name lookup................ Enabled
+Number of retries................. 5
+Retry timeout period.............. 1500
+Name servers (Preference order)... 176.16.1.18 176.16.1.19
+DNS Client Source Interface....... (not configured)
+
+Configured host name-to-address mapping:
+
+Host                                 Addresses
+------------------------------ ------------------------------
+accounting.gm.com                    176.16.8.8
+
+Host                      Total       Elapsed         Type            Addresses
+---------------    --------          ------     --------       ---------------
+www.stanford.edu            72               3     IP                 171.64.14.203
+
+                                      Utility Commands
+                                               399
+

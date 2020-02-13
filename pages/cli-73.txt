@@ -1,0 +1,52 @@
+                              M4100 Series ProSAFE Managed Switches
+
+no private-vlan
+
+This command is used to restore normal VLAN configuration.
+
+ Format           no private-vlan {association}
+
+ Mode             VLAN Config
+
+vlan (Private VLAN)
+Use this command to enter the private vlan configuration. The VLAN range is 1-4094.
+
+ Format         vlan <vlan-list>
+
+ Mode           Global Config
+
+show vlan private-vlan
+This command displays information about the configured private VLANs including primary
+and secondary VLAN IDs, type (community, isolated, or primary) and the ports that belong to
+a private VLAN.
+
+ Format           show vlan private-vlan [type]
+
+ Mode             ·  Privileged EXEC
+                  ·  User EXEC
+
+ Term                Definition
+
+ Private -vlan       Displays information about the configured private VLANs
+
+ type                Displays only private VLAN ID and its type.
+
+ Primary             Displays primary VLAN ID
+
+ Secondary           Displays secondary VLAN ID
+
+ Type                Displays secondary VLAN type
+
+ Ports               Displays ports which are associated with a private VLAN
+
+show interface ethernet switchport
+This command displays the private VLAN mapping information for the switch interfaces.
+
+ Format           show interface ethernet <slot/port> switchport
+
+ Mode             ·  Privileged EXEC
+                  ·  User EXEC
+
+                                       Switching Commands
+                                                 73
+

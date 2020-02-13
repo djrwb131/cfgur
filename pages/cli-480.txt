@@ -1,0 +1,52 @@
+                            M4100 Series ProSAFE Managed Switches
+
+show passwords result
+Use this command to display the last password set result information.
+
+ Format      show passwords result
+
+ Mode        Privileged EXEC
+
+ Term                    Definition
+
+ Last User Whose         Shows the name of the user with the most recently set password.
+ Password Is Set
+
+ Password Strength       Shows whether password strength checking is enabled.
+ Check
+
+ Last Password Set       Shows whether the attempt to set a password was successful. If the attempt
+ Result                  failed, the reason for the failure is included.
+
+aaa authentication login
+Use this command to set authentication at login. The default and optional list names created
+with the command are used with the aaa authentication login command. Create a list
+by entering the aaa authentication login list-name method command, where
+list-name is any character string used to name this list. The method argument identifies
+the list of methods that the authentication algorithm tries in the sequence.
+The additional methods of authentication are used only if the previous method returns an
+error, not if an authentication failure occurs. To ensure that the authentication succeeds even
+if all methods return an error, specify none as the final method in the command line. For
+example, if none is specified as an authentication method after radius, no authentication is
+used if the RADIUS server is down.
+If you configure local as the first method in the list, the switch tries no other methods.
+
+ Default         ·  defaultList. Used by the console and only contains the method none.
+                 ·  networkList. Used by telnet and SSH and only contains the method local.
+
+ Format          aaa authentication login {default | <list-name>} <method1>
+                 [<method2>...]
+
+ Mode            Global Config
+
+ Parameter          Definition
+
+ default            Uses the listed authentication methods that follow this argument as the default list of
+                    methods when a user logs in.
+
+ <list-name>        Character string of up to 12 characters used to name the list of authentication methods
+                    activated when a user logs in.
+
+                                      Management Commands
+                                                   480
+

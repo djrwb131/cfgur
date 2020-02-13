@@ -1,0 +1,54 @@
+                        M4100 Series ProSAFE Managed Switches
+
+Three types of port designations exist within a private VLAN:
+·   Promiscuous Ports--An endpoint connected to a promiscuous port is allowed to
+    communicate with any endpoint within the private VLAN. Multiple promiscuous ports can
+    be defined for a single private VLAN domain.
+·   Isolated Ports--An endpoint connected to an isolated port is allowed to communicate
+    with endpoints connected to promiscuous ports only. Endpoints connected to adjacent
+    isolated ports cannot communicate with each other.
+·   Community Ports--An endpoint connected to a community port is allowed to
+    communicate with the endpoints within a community and with any configured
+    promiscuous port. The endpoints that belong to one community cannot communicate with
+    endpoints that belong to a different community or with endpoints connected to isolated
+    ports.
+The Private VLANs can be extended across multiple switches through inter-switch/stack links
+that transport primary, community, and isolated VLANs between devices.
+
+switchport private-vlan
+This command is used to define a private-VLAN association for an isolated or community
+port or a mapping for a promiscuous port.
+
+ Format        switchport private-vlan {host-association <primary-vlan-id>
+               <secondary-vlan-id> | mapping <primary-vlan-id> {add | remove}
+               <secondary-vlan-list>}
+
+ Mode          Interface Config
+
+ Parameter               Definition
+
+ host-association        Defines VLAN association for community or host ports.
+
+ <primary-vlan-id>       Primary VLAN ID of a private VLAN.
+
+ secondary-vlan-id       Secondary (isolated or community) VLAN ID of a private VLAN.
+
+ mapping                 Defines the private VLAN mapping for promiscuous ports.
+
+ add                     Associates the secondary VLAN with the primary one.
+
+ remove                  Deletes the secondary VLANs from the primary VLAN association.
+
+ <secondary-vlan-list>   A list of secondary VLANs to be mapped to a primary VLAN.
+
+no switchport private-vlan
+
+This command is used to remove the private-VLAN association or mapping from the port.
+
+ Format        no switchport private-vlan {host-association | mapping}
+
+ Mode          Interface Config
+
+                                     Switching Commands
+                                           71
+

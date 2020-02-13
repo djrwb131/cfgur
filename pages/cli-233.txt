@@ -1,0 +1,44 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Term             Definition
+
+ Age Time         The time it takes for an ARP entry to age out. This value is configurable. Age time is
+ (seconds)        measured in seconds.
+
+ Response Time    The time it takes for an ARP request timeout. This value is configurable. Response time
+ (seconds)        is measured in seconds.
+
+ Retries          The maximum number of times an ARP request is retried. This value is configurable.
+
+ Cache Size       The maximum number of entries in the ARP table. This value is configurable.
+
+ Dynamic Renew    Displays whether the ARP component automatically attempts to renew dynamic ARP
+ Mode             entries when they age out.
+
+ Total Entry      The total entries in the ARP table and the peak entry count in the ARP table.
+ Count Current /
+ Peak
+
+ Static Entry     The static entry count in the ARP table and maximum static entry count in the ARP table.
+ Count Current /
+ Max
+
+show arp switch (Address Resolution Protocol commands)
+This command displays the contents of the switch's Address Resolution Protocol (ARP)
+table.
+
+ Format       show arp switch
+
+ Mode         Privileged EXEC
+
+ Term             Definition
+
+ IP Address       The IP address of a device on a subnet attached to the switch.
+
+ MAC Address      The hardware MAC address of that device.
+
+ Interface        The routing slot/port associated with the device's ARP entry.
+
+                                        Routing Commands
+                                                 233
+

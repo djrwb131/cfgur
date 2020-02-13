@@ -1,0 +1,56 @@
+                                   M4100 Series ProSAFE Managed Switches
+
+     Term              Definition
+
+     Logical Interface Valid slot and port number separated by forward slashes.
+
+     Port-Channel      The name of this port-channel (LAG). You may enter any string of up to 15 alphanumeric
+     Name              characters.
+
+     Link State        Indicates whether the Link is up or down.
+
+     Admin Mode        May be enabled or disabled. The factory default is enabled.
+
+     Type              The status designating whether a particular port-channel (LAG) is statically or
+                       dynamically maintained.
+                       ·   Static - The port-channel is statically maintained.
+                       ·   Dynamic - The port-channel is dynamically maintained.
+
+     Mbr Ports         A listing of the ports that are members of this port-channel (LAG), in slot/port notation.
+                       There can be a maximum of eight ports assigned to a port-channel (LAG).
+
+     Device Timeout    For each port, lists the timeout (long or short) for Device Type (actor or partner).
+
+     Port Speed        Speed of the port-channel port.
+
+     Ports Active      This field lists the ports that are actively participating in the port-channel (LAG).
+
+     Load Balance      The load balance option associated with this LAG. See port-channel load-balance on
+     Option            page 121.
+
+     Local Preference  Indicates whether the local preference mode is enabled or disabled.
+     Mode
+
+   show port-channel system priority
+   Use this command to display the port-channel system priority.
+
+     Format       show port-channel system priority
+
+     Mode         Privileged EXEC
+
+Port Mirroring Commands
+
+   Port mirroring, which is also known as port monitoring, selects network traffic that you can
+   analyze with a network analyzer, such as a SwitchProbe device or other Remote Monitoring
+   (RMON) probe.
+
+   monitor session
+   This command configures a probe port and a monitored port for monitor session (port
+   monitoring). Use the source interface <slot/port> parameter to specify the interface
+   to monitor. Use rx to monitor only ingress packets or use tx to monitor only egress packets.
+   If you do not specify an rx or tx option, the destination port monitors both ingress and
+   egress packets.
+
+                                          Switching Commands
+                                                       125
+

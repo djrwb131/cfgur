@@ -1,0 +1,28 @@
+                          M4100 Series ProSAFE Managed Switches
+
+Switch Management CPU Commands
+
+   To manage the switch via the web GUI or telnet, an IP address needs to be assigned to the
+   switch management CPU. Whereas there are CLI commands that can be used to do this,
+   ezconfig simplifies the task. The tool allows you to configure the following parameters:
+   1.  The administrator's user password and administrator-enable password
+   2.  Management CPU IP address and network mask
+   3.  System name and location information
+   The tool is interactive and uses questions to guide you through the steps required to perform
+   its task. At the end of the session, it will ask you if you want to save the changed information.
+   To see exactly what has been changed by ezconfig at the end of the session, use the show
+   running-config command.
+   To perform any switch configuration other than the items listed above, use other CLI
+   commands or the web GUI.
+
+   ezconfig
+   This command sets the IP address, subnet mask, and gateway of the device. The IP address
+   and the gateway must be on the same subnet.
+
+     Format   ezconfig
+
+     Mode     Privileged EXEC
+
+                                   Management Commands
+                                             444
+

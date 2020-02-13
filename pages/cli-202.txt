@@ -1,0 +1,45 @@
+                             M4100 Series ProSAFE Managed Switches
+
+·   UDP Port: Source UDP Port = Destination UDP Port.
+·   TCP Flag & Sequence: TCP Flag SYN set and Source Port < 1024 or TCP Control Flags
+    = 0 and TCP Sequence Number = 0 or TCP Flags FIN, URG, and PSH set and TCP
+    Sequence Number = 0 or TCP Flags SYN and FIN set.
+·   TCP Offset: TCP Header Offset = 1.
+·   TCP SYN: TCP Flag SYN set.
+·   TCP SYN & FIN: TCP Flags SYN and FIN set.
+·   TCP FIN & URG & PSH: TCP Flags FIN and URG and PSH set and TCP Sequence
+    Number = 0.
+·   ICMP V6: Limiting the size of ICMPv6 Ping packets.
+·   ICMP Fragment: Checks for fragmented ICMP packets.
+
+dos-control all
+This command enables Denial of Service protection checks globally.
+
+ Default       disabled
+
+ Format        dos-control all
+
+ Mode          Global Config
+
+no dos-control all
+
+This command disables Denial of Service prevention checks globally.
+
+ Format        no dos-control all
+
+ Mode          Global Config
+
+dos-control sipdip
+This command enables Source IP address = Destination IP address (SIP=DIP) Denial of
+Service protection. If the mode is enabled, Denial of Service prevention is active for this type
+of attack. If packets ingress with SIP=DIP, the packets will be dropped if the mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control sipdip
+
+ Mode          Global Config
+
+                                  Switching Commands
+                                        202
+

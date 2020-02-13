@@ -1,0 +1,49 @@
+                            M4100 Series ProSAFE Managed Switches
+
+·  show version
+·  show sysinfo
+·  show port all
+·  show isdp neighbors
+·  show logging
+·  show event log
+·  show logging buffered
+·  show trap log
+
+ Format       show tech-support
+
+ Mode         Privileged EXEC
+
+length
+Use this command to set the pagination length to value number of lines for the sessions
+specified by configuring on different Line Config modes (telnet, ssh, and console) and is
+persistent. The <number> argument is a number in the range of 5­48 lines. Enter 0 to
+specify no pagination.
+
+ Default      24
+
+ Format       length <number>
+
+ Mode         Line Config
+
+no length value
+
+Use this command to set the pagination length to the default value of 24 number of lines.
+
+ Format       no length
+
+ Mode         Line Config
+
+terminal length
+Use this command to set the number of lines of output to be displayed on the screen, i.e.
+pagination, for the show running-config and show running-config all commands.
+The terminal length size is either zero or a number in the range of 5­48. After the
+user-configured number of lines is displayed in one page, the system prompts the user
+"--More-- or (q)uit." Press q or Q to quit, or press any key to display the next set
+of 5­48 lines. The command terminal length 0 disables pagination and, as a result,
+the output of the show running-config command is displayed immediately.
+
+ Default      24 lines per page
+
+                                   Utility Commands
+                                          351
+

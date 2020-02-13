@@ -1,0 +1,52 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ Term              Definition
+
+ Interface         The port on which multicast router information is being displayed.
+
+ Multicast Router  Indicates whether multicast router is statically enabled on the interface.
+ Attached
+
+ VLAN ID           The list of VLANs of which the interface is a member.
+
+show igmpsnooping mrouter vlan
+This command displays information about statically configured ports.
+
+ Format      show igmpsnooping mrouter vlan <slot/port>
+
+ Mode        Privileged EXEC
+
+ Term              Definition
+
+ Interface         The port on which multicast router information is being displayed.
+
+ VLAN ID           The list of VLANs of which the interface is a member.
+
+show mac-address-table igmpsnooping
+This command displays the IGMP Snooping entries in the MFDB table.
+
+ Format      show mac-address-table igmpsnooping
+
+ Mode        Privileged EXEC
+
+show mac address-table multicast filtering
+Use this command to display the multicast filtering details for a VLAN.
+
+ Format      show mac address-table multicast filtering <vlan-id>
+
+ Mode        Privileged EXEC
+
+ Field            Description
+
+ <vlan id>        A valid VLAN ID
+
+ mode             The filtering mode
+
+Command example:
+(NETGEAR Switch) #show mac address-table multicast filtering 1
+VLAN-ID....... 1
+Mode.......... Forward-Forbidden-Unregistered
+
+                                      Switching Commands
+                                       163
+

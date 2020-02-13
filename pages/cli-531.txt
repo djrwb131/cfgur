@@ -1,0 +1,42 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ Field                                       Description
+
+ Percentage LPI time per stack               Percentage of Total time spent in LPI mode by all port in stack
+                                             when compared to total time since reset.
+
+ Sample No                                   Sample Index
+
+ Sample Time                                 Time since last reset
+
+ %time spent in LPI mode since last sample   Percentage of time spent in LPI mode on this port when compared
+                                             to sampling interval
+
+ %time spent in LPI mode since last reset    Percentage of total time spent in LPI mode on this port when
+                                             compared to time since reset.
+
+Command example:
+(NETGEAR Switch)#show green-mode eee-lpi-history interface 0/1
+Sampling Interval (sec)........................ 30
+Total No. of Samples to Keep................... 168
+Percentage LPI time per stack.................. 29
+
+                                 Percentage of            Percentage of
+Sample       Time Since         Time spent in              Time spent in
+ No.         The Sample         LPI mode since            LPI mode since
+           Was Recorded           last sample              last reset
+------ --------------------     --------------           --------------
+10           0d:00:00:13                   3                       2
+9            0d:00:00:44                   3                       2
+8            0d:00:01:15                   3                       2
+7            0d:00:01:46                   3                       2
+6            0d:00:02:18                   3                       2
+5            0d:00:02:49                   3                       2
+4            0d:00:03:20                   3                       2
+3            0d:00:03:51                   3                       1
+2            0d:00:04:22                   3                       1
+1            0d:00:04:53                   3                       1
+
+                                  Green Ethernet Commands
+                                                  531
+

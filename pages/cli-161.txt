@@ -1,0 +1,54 @@
+                                M4100 Series ProSAFE Managed Switches
+
+mac address-table multicast forward-unregistered vlan
+Use this command to enable forwarding unregistered multicast address (in other words,
+unknown multicast traffic) on a VLAN.
+
+ Format       mac address-table multicast forward-unregistered vlan <1-4093>
+
+ Mode         Global Config
+
+mac address-table multicast forward-all vlan
+Use this command to enable forwarding of all multicast packets on a VLAN.
+
+ Format       mac address-table multicast forward-all vlan <1-4093>
+
+ Mode         Global Config
+
+no mac address-table multicast forward-all vlan
+
+Use this command to restore the system default.
+
+ Format       no mac address-table multicast forward-all vlan
+
+ Mode         Global Config
+
+show igmpsnooping
+This command displays IGMP Snooping information. Configured information is displayed
+whether or not IGMP Snooping is enabled.
+
+ Format       show igmpsnooping [<slot/port> | <vlan id>]
+
+ Mode         Privileged EXEC
+
+If you do not use the optional <slot/port> or <vlan id> argument, the command
+displays the information that is described in the following table.
+
+ Term               Definition
+
+ Admin Mode         Indicates whether or not IGMP Snooping is active on the switch.
+
+ Multicast Control  The number of multicast control frames that are processed by the CPU.
+ Frame Count
+
+ Interface          The list of interfaces on which IGMP Snooping is enabled.
+ Enabled for
+ IGMP Snooping
+
+ VLANS Enabled      The list of VLANS on which IGMP Snooping is enabled.
+ for IGMP
+ Snooping
+
+                                      Switching Commands
+                                         161
+

@@ -1,0 +1,48 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Term                      Definition
+
+ No of Email Sent          The number of email messages that were sent from the switch since the
+                           counter was cleared.
+
+ Time Since Last Email     The amount of time that has passed since the last email was sent from the
+ Sent                      switch.
+
+clear logging email statistics
+This command resets the email alerting statistics.
+
+ Format        clear logging email statistics
+
+ Mode          Privileged EXEC
+
+mail-server
+Use this command to configure the SMTP server to which the switch sends email alert
+messages and change the mode to Mail Server Configuration mode. The server address can
+be in the IPv4, IPv6, or DNS name format.
+
+ Format        mail-server {<ip-address> | <ipv6-address> | <hostname>}
+
+ Mode          Global Config
+
+no mail-server
+
+Use this command to remove the specified SMTP server from the configuration.
+
+ Format        no mail-server {<ip-address> | <ipv6-address> | <hostname>}
+
+ Mode          Global Config
+
+security (Mail Server Config)
+Use this command to set the email alerting security protocol by enabling the switch to use
+TLS authentication with the SMTP Server. If the TLS mode is enabled on the switch but the
+SMTP server does not support TLS mode, no email is sent to the SMTP server.
+
+ Default       none
+
+ Format        security {tlsv1 | none}
+
+ Mode          Mail Server Config
+
+                                      Utility Commands
+                                                363
+

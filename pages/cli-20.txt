@@ -1,0 +1,47 @@
+                         M4100 Series ProSAFE Managed Switches
+
+no auto-negotiate
+
+This command disables automatic negotiation on a port.
+
+    Note: Automatic sensing is disabled when automatic negotiation is disabled.
+
+auto-negotiate all
+This command enables automatic negotiation on all ports.
+
+ Default    enabled
+
+ Format     auto-negotiate all
+
+ Mode       Global Config
+
+no auto-negotiate all
+
+This command disables automatic negotiation on all ports.
+
+ Format     no auto-negotiate all
+
+ Mode       Global Config
+
+description
+Use this command to create an alpha-numeric description of the port.
+
+ Format     description <description>
+
+ Mode       Interface Config
+
+mtu
+Use the mtu command to set the maximum transmission unit (MTU) size, in bytes, for frames
+that ingress or egress the interface. You can use the mtu command to configure jumbo frame
+support for physical and port-channel (LAG) interfaces. The MTU size is a valid integer
+between 1522­9216 for tagged packets and a valid integer between 1518­9216 for untagged
+packets.
+
+    Note: To receive and process packets, the Ethernet MTU must include any
+          extra bytes that Layer-2 headers might require. To configure the IP
+          MTU size, which is the maximum size of the IP packet (IP Header + IP
+          payload), see ip mtu on page 239.
+
+                               Switching Commands
+                                      20
+

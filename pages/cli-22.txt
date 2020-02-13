@@ -1,0 +1,55 @@
+                         M4100 Series ProSAFE Managed Switches
+
+ Format         shutdown all
+
+ Mode           Global Config
+
+no shutdown all
+
+This command enables all ports.
+
+ Format         no shutdown all
+
+ Mode           Global Config
+
+speed
+This command sets the speed and duplex setting for the interface.
+
+ Format         speed [auto] [{<100 | 10 | 10G> {<half-duplex | full-duplex>}}]
+
+ Mode           Interface Config
+
+ Acceptable      Definition
+ Values
+
+ 100h            100BASE-T half duplex
+
+ 100f            100BASE-T full duplex
+
+ 10h             10BASE-T half duplex
+
+ 10f             10BASE-T full duplex
+
+ 10Gh            10GBase-T full duplex
+
+ 10Gf            10Gbase-T half duplex
+
+speed all
+This command sets the speed and duplex setting for all interfaces.
+
+ Format         speed all [auto] [{<100 | 10> {<half-duplex | full-duplex>}}]
+
+ Mode           Global Config
+
+ Acceptable      Definition
+ Values
+
+ 100h            100BASE-T half duplex
+
+ 100f            100BASE-T full duplex
+
+ 10h             10BASE-T half duplex
+
+                                   Switching Commands
+                                            22
+

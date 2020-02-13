@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no set igmp report-suppression
+
+Use this command to restore the system default.
+
+ Format      no set igmp report-suppression
+
+ Mode        VLAN Config
+
+set igmp header-validation
+If IGMP IP header validation is enabled, then 3 fields TTL (Time To Live), ToS (Type of
+Service), and Router Alert options are checked. The fields checked depend on the IGMP
+version. The TTL field is validated in all the versions (IGMPv1, IGMPv2 and IGMPv3). The
+Router Alert field is validated in IGMPv2 and IGMPv3. The ToS field is validated only in IGMP
+version3.
+
+ Default     Enabled
+
+ Format      set igmp header-validation
+
+ Mode        Global Config
+
+no set igmp header-validation
+
+This command disabled the IGMP IP header validation.
+
+ Format      no set igmp header-validation
+
+ Mode        Global Config
+
+mac address-table multicast forbidden-unregistered vlan
+Use this command to forbid forwarding unregistered multicast addresses (in other words,
+unknown multicast traffic) on a VLAN.
+
+ Default     Disabled
+
+ Format      mac address-table multicast forbidden-unregistered vlan <1-4093>
+
+ Mode        Global Config
+
+no mac address-table multicast forbidden-unregistered vlan
+
+Use this command to restore the default.
+
+ Format      mac address-table multicast forbidden-unregistered vlan
+
+ Mode        Global Config
+
+                                Switching Commands
+                                         160
+

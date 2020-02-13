@@ -1,0 +1,50 @@
+                             M4100 Series ProSAFE Managed Switches
+
+     Default  none
+
+     Format   match srcl4port {<portkey> | <0-65535>}
+
+     Mode     ·   Class-Map Config
+              ·   Ipv6-Class-Map Config
+
+   match vlan
+   This command adds to the specified class definition a match condition based on the value of
+   the layer 2 VLAN Identifier field (the 802.1Q tag of a VLAN tagged packet). The VLAN is an
+   integer from 0 to 4095.
+
+     Default  none
+
+     Format   match vlan <0-4095>
+
+     Mode     ·  Class-Map Config
+              ·  Ipv6-Class-Map Config
+
+   match secondary-vlan
+   This command adds to the specified class definition a match condition based on the value of
+   the layer 2 secondary VLAN Identifier field (the 802.1Q tag of a double VLAN tagged packet).
+   The VLAN is an integer from 0 to 4095.
+
+     Default  none
+
+     Format   match secondary-vlan <0-4095>
+
+     Mode     ·  Class-Map Config
+              ·  Ipv6-Class-Map Config
+
+DiffServ Policy Commands
+
+   Use the DiffServ policy commands to specify traffic conditioning actions, such as policing and
+   marking, to apply to traffic classes
+   Use the policy commands to associate a traffic class that you define by using the class
+   command set with one or more QoS policy attributes. Assign the class/policy association to
+   an interface to form a service. Specify the policy name when you create the policy.
+   Each traffic class defines a particular treatment for packets that match the class definition.
+   You can associate multiple traffic classes with a single policy. When a packet satisfies the
+   conditions of more than one class, preference is based on the order in which you add the
+   classes to the policy. The first class you add has the highest precedence.
+   This set of commands consists of policy creation/deletion, class addition/removal, and
+   individual policy attributes.
+
+                                   Quality of Service Commands
+                                           280
+

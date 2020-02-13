@@ -1,0 +1,52 @@
+                               M4100 Series ProSAFE Managed Switches
+
+IP Routing Commands
+
+   This section describes the commands you use to enable and configure IP routing on the
+   switch.
+
+   routing
+   This command enables IPv4 and IPv6 routing for an interface. You can view the current value
+   for this function with the show ip brief command. The value is labeled as "Routing
+   Mode."
+
+     Default     disabled
+
+     Format      routing
+
+     Mode        Interface Config
+
+   no routing
+
+   This command disables routing for an interface.
+   You can view the current value for this function with the show ip brief command. The
+   value is labeled as "Routing Mode."
+
+     Format      no routing
+
+     Mode        Interface Config
+
+   ip routing
+   This command enables the IP Router Admin Mode for the master switch.
+
+     Format      ip routing
+
+     Mode        Global Config
+
+   no ip routing
+
+   This command disables the IP Router Admin Mode for the master switch.
+
+     Format      no ip routing
+
+     Mode        Global Config
+
+   ip address
+   This command configures an IP address on an interface. You can also use this command to
+   configure one or more secondary IP addresses on the interface. The command supports
+   RFC 3021 and accepts using 31-bit prefixes on IPv4 point-to-point links. This command adds
+   the label IP address in show ip interface.
+
+                                       Routing Commands
+                                              234
+

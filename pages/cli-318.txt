@@ -1,0 +1,49 @@
+                             M4100 Series ProSAFE Managed Switches
+
+About PoE
+
+   Power over Ethernet (PoE) describes a technology to pass electrical power safely along with
+   data on existing Ethernet cabling. The PSE or power supply equipment is the device or
+   switch that delivers electrical power, and the PD or powered device is the end device that
+   powers up through the power delivered along the Ethernet cable.
+   This technology is governed by two standards:
+   ·   IEEE 802.3af-2003. This is the original standard, also known as the low-power standard,
+       which mandates delivery of up to 15.4 watts by the PSE. Because of power dissipation,
+       only 12.95 watts are assured to be available at the powered device (PD). The PD needs
+       to be designed so that it can accept power over Ethernet cabling. Category 3 cables can
+       be used to deliver power to the PD. However, with the advent of 802.11n, the newer
+       wireless APs required more power. To account for this, a newer standard was developed
+       in 2009, known as 802.3at.
+   ·   IEEE 802.3at-2009. This is the newer standard, also known as PoE+. This is also known
+       as the high-power standard, which mandates delivery of up to 34.2 watts by the PSE.
+       Because of power dissipation, PoE+ provides only a maximum of 25.5 watts at the
+       powered device. Some PSEs can provide up to 51 watts. Before this standard became
+       available in 2009, the industry started using different implementations to allow for more
+       power. All these needed to be brought under the purview of the newer 802.3at standard.
+
+PoE Commands
+
+   poe
+   Use this command to enable the Power over Ethernet (PoE) functionality on a global basis or
+   per interface.
+
+     Default      enabled
+
+     Format       poe
+
+     Mode         ·   Global Config
+                  ·   Interface Config
+
+   no poe
+
+   Use this command to disable the Power over Ethernet (PoE) functionality on a global basis or
+   per interface.
+
+     Format       no poe
+
+     Mode         ·   Global Config
+                  ·   Interface Config
+
+                                    Power over Ethernet Commands
+                                                  318
+

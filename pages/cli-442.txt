@@ -1,0 +1,26 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ Parameter       Description
+
+ Filename        File name
+
+ Filesize        File size
+
+ Total Size      USB flash device storage size
+
+ Bytes Used      Indicates size of memory used on the device.
+
+ Bytes Free      Indicates size of memory free on the device
+
+Command example:
+(NETGEAR Switch) #dir USB:
+Filename Filesize Modification Time
+F1.cfg      256   4/22/2009 8:00:12
+
+Total Size: xxxx
+Bytes Used: yyyy
+Bytes Free: zzzz
+
+                                     Utility Commands
+                                                442
+

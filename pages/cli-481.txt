@@ -1,0 +1,46 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ Parameter       Definition
+
+ <method1>       At least one from the following:
+ [<method2>...]  ·  enable. Uses the enable password for authentication.
+                 ·  line. Uses the line password for authentication.
+                 ·  local. Uses the local username database for authentication.
+                 ·  none. Uses no authentication.
+                 ·  radius. Uses the list of all RADIUS servers for authentication.
+                 ·  tacacs. Uses the list of all TACACS servers for authentication.
+
+Command example:
+(NETGEAR Switch)(config)# aaa authentication login default radius local enable none
+
+no aaa authentication login
+
+Use this command to remove authentication at login.
+
+ Format      no aaa authentication login {default | <list-name>}
+
+ Mode        Global Config
+
+aaa authentication enable
+Use this command to set authentication for accessing higher privilege levels. The default and
+optional list names that you can create with this command are used with the enable
+authentication command.
+Create a list by specifying the <list-name> argument, using any character string to name
+this list. The <method> arguments identify the list of methods that the authentication
+algorithm tries in the sequence. The additional methods of authentication are used only if the
+previous method returns an error, not if it fails. To ensure that the authentication succeeds
+even if all methods return an error, specify none as the final method in the command line.
+For example, if none is specified as an authentication method after radius, no
+authentication is used if the RADIUS server is down. \
+
+    Note: Requests sent by the switch to a RADIUS or TACACS server include
+           the username $enabx$, in which x is the requested privilege level.
+
+ Format      aaa authentication enable {default | <list-name>} <method1>
+             [<method2>...]
+
+ Mode        Global Config
+
+                             Management Commands
+                                       481
+

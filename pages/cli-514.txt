@@ -1,0 +1,52 @@
+                            M4100 Series ProSAFE Managed Switches
+
+    Access Accepts................................ 0
+    Access Rejects................................ 0
+    Access Challenges............................. 0
+    Malformed Access Responses.................... 0
+    Bad Authenticators............................ 0
+    Pending Requests.............................. 0
+    Timeouts...................................... 0
+    Unknown Types................................. 0
+    Packets Dropped............................... 0
+
+TACACS+ Commands
+
+   TACACS+ provides access control for networked devices via one or more centralized
+   servers. Similar to RADIUS, this protocol simplifies authentication by making use of a single
+   database that can be shared by many clients on a large network. TACACS+ is based on the
+   TACACS protocol (described in RFC1492) but additionally provides for separate
+   authentication, authorization, and accounting services. The original protocol was UDP based
+   with messages passed in clear text over the network. TACACS+ uses TCP to ensure reliable
+   delivery and a shared key configured on the client and daemon server to encrypt all
+   messages.
+
+   debug tacacs packet
+   Use this command to enable TACACS+ packet debugging.
+
+     Default  Disabled
+
+     Format   debug tacacs packet [receive | transmit]
+
+     Mode     Global Config
+
+   no debug tacacs packet
+
+   Use this command to disable TACACS+ packet debugging.
+
+     Format   no debug tacacs packet
+
+     Mode     Global Config
+
+   tacacs-server host
+   Use this command to configure a TACACS+ server. This command enters into the TACACS+
+   configuration mode. The <ip-address> or <hostname> parameter is the IP address or
+   host name of the TACACS+ server. To specify multiple hosts, repeat this command.
+
+     Format   tacacs-server host {<ip-address> | <hostname>}
+
+     Mode     Global Config
+
+                             Management Commands
+                                         514
+

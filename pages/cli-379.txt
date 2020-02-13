@@ -1,0 +1,43 @@
+                             M4100 Series ProSAFE Managed Switches
+
+·   week--Week of the month. (Range: 1-5, first, last)
+·   day--Day of the week. (Range: The first three letters by name; sun, for example.)
+·   month--Month. (Range: The first three letters by name; jan, for example.)
+·   hh:mm--Time in 24-hour format in hours and minutes. (Range: hh:0-23, mm: 0-59)
+·   offset--Number of minutes to add during the summertime. (Range:1-1440)
+·   acronym--The acronym for the time zone to be displayed when summertime is in effect.
+    (Range: Up to four characters)
+
+ Format        clock summer-time recurring {USA | EU | {<week> <day> <month>
+               <hh:mm> <week> <day> <month> <hh:mm>}} [offset <offset>] [zone
+               <acronym>]
+
+ Mode          Global Config
+
+Command example:
+(NETGEAR Switch)(Config)# clock summer-time recurring 1 sun jan
+00:10 2 mon mar 10:00 offset 1 zone ABC
+
+clock summer-time date
+Use this command to set the summertime offset to UTC. If the optional parameters are not
+specified, they are read as either 0 or \0, as appropriate.
+·   date--Day of the month. (Range: 1-31)
+·   month--Month. (Range: The first three letters by name; jan, for example.)
+·   year--Year. (Range: 2000-2097)
+·   hh:mm--Time in 24-hour format in hours and minutes. (Range: hh: 0-23, mm: 0-59)
+·   offset--Number of minutes to add during the summertime. (Range:1-1440)
+·   acronym--The acronym for the time zone to be displayed when summertime is in effect.
+    (Range: Up to four characters)
+
+ Format        clock summer-time date {<day> <month> <year> <hh:mm> <day> <month>
+               <year> <hh:mm>} [offset <offset>] [zone <acronym>]
+
+ Mode          Global Config
+
+Command example:
+(NETGEAR Switch)(config)# clock summer-time date 1 Apr 2007 02:00 28 Oct 2007 offset 90
+zone EST
+
+                                   Utility Commands
+                                         379
+

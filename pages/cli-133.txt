@@ -1,0 +1,50 @@
+                                M4100 Series ProSAFE Managed Switches
+
+DHCP L2 Relay Agent Commands
+
+   You can enable the switch to operate as a DHCP Layer 2 relay agent to relay DHCP requests
+   from clients to a Layer 3 relay agent or server. The Circuit ID and Remote ID can be added to
+   DHCP requests relayed from clients to a DHCP server. This information is included in DHCP
+   Option 82, as specified in sections 3.1 and 3.2 of RFC3046.
+
+   dhcp l2relay
+   Use this command to enable the DHCP Layer 2 Relay agent for an interface, a range of
+   interfaces, or all interfaces. The subsequent commands mentioned in this section can be
+   used only when the DHCP L2 relay is enabled.
+
+     Format      dhcp l2relay
+
+     Modes       · Global Config
+                 · Interface Config
+
+   no dhcp l2relay
+
+   Use this command to disable the DHCP Layer 2 relay agent for an interface or range of
+   interfaces.
+
+     Format      no dhcp l2relay
+
+     Modes       · Global Config
+                 · Interface Config
+
+   dhcp l2relay circuit-id vlan
+   Use this parameter to set the DHCP Option-82 Circuit ID for a VLAN. When enabled, the
+   interface number is added as the Circuit ID in DHCP option 82. Vlan-list range is 1­4093.
+   Separate non-consecutive IDs with a comma (,), and do not insert spaces or zeros in
+   between the range. Use a dash (­) for the range.
+
+     Format      dhcp l2relay circuit-id vlan <vlan-list>
+
+     Mode        Global Config
+
+   no dhcp l2relay circuit-id vlan
+
+   Use this parameter to clear the DHCP Option-82 Circuit ID for a VLAN.
+
+     Format      no dhcp l2relay circuit-id vlan <vlan-list>
+
+     Mode        Global Config
+
+                                      Switching Commands
+                                             133
+

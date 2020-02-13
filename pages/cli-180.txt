@@ -1,0 +1,44 @@
+                        M4100 Series ProSAFE Managed Switches
+
+port-security mac-address
+This command adds a MAC address to the list of statically locked MAC addresses. The
+<vid> is the VLAN ID.
+
+ Format       port-security mac-address <mac-address> <vid>
+
+ Mode         Interface Config
+
+no port-security mac-address
+
+This command removes a MAC address from the list of statically locked MAC addresses.
+
+ Format       no port-security mac-address <mac-address> <vid>
+
+ Mode         Interface Config
+
+port-security mac-address move
+This command converts dynamically locked MAC addresses to statically locked addresses.
+
+ Format       port-security mac-address move
+
+ Mode         Interface Config
+
+port-security mac-address sticky
+This command enables sticky mode Port MAC Locking on a port. If accompanied by a MAC
+address and a VLAN id (for interface config mode only), it adds a sticky MAC address to the
+list of statically locked MAC addresses. These sticky addresses are converted back to
+dynamically locked addresses if sticky mode is disabled on the port. The <vid> is the VLAN
+ID. The Global command applies the sticky mode to all valid interfaces (physical and LAG).
+There is no global sticky mode as such.
+Sticky addresses that are dynamically learned display in the output of the show running
+config command as port-security mac-address sticky <mac> <vid> entries.
+This distinguishes them from static entries.
+
+ Format       port-security mac-address sticky [<mac-address> <vid>]
+
+ Modes        ·   Global Config
+              ·   Interface Config
+
+                                    Switching Commands
+                                             180
+

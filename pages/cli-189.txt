@@ -1,0 +1,60 @@
+                               M4100 Series ProSAFE Managed Switches
+
+show lldp remote-device detail
+Use this command to display detailed information about remote devices that transmit current
+LLDP data to an interface on the system.
+
+ Format          show lldp remote-device detail <slot/port>
+
+ Mode            Privileged EXEC
+
+ Term              Definition
+
+ Local Interface   The interface that received the LLDPDU from the remote device.
+
+ Remote Identifier An internal identifier to the switch to mark each remote device to the system.
+
+ Chassis ID        The type of identification used in the Chassis ID field.
+ Subtype
+
+ Chassis ID        The chassis of the remote device.
+
+ Port ID Subtype   The type of port on the remote device.
+
+ Port ID           The port number that transmitted the LLDPDU.
+
+ System Name       The system name of the remote device.
+
+ System            Describes the remote system by identifying the system name and versions of hardware,
+ Description       operating system, and networking software supported in the device.
+
+ Port Description  Describes the port in an alpha-numeric format. The port description is configurable.
+
+ System            Indicates the primary function(s) of the device.
+ Capabilities
+ Supported
+
+ System            Shows which of the supported system capabilities are enabled.
+ Capabilities
+ Enabled
+
+ Management        For each interface on the remote device with an LLDP agent, lists the type of address the
+ Address           remote LLDP agent uses and specifies the address used to obtain information related to
+                   the device.
+
+ Time To Live      The amount of time (in seconds) the remote device's information received in the
+                   LLDPDU should be treated as valid information.
+
+Command example:
+(NETGEAR Switch) #show lldp remote-device detail 0/7
+
+LLDP Remote Device Detail
+
+Local Interface: 0/7
+
+Remote Identifier: 2
+Chassis ID Subtype: MAC Address
+
+                                  Switching Commands
+                                          189
+

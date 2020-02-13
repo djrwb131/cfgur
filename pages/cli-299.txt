@@ -1,0 +1,57 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Parameter                     Description
+ eq {<portkey> | <0-65535>}    Note: This option is available only if the protocol is tcp or udp.
+                               When eq is specified, an IP ACL rule matches only if the Layer 4
+                               port number is equal to the specified port number or port key.
+                               You can enter the port number, which ranges from 0-65535, or the
+                               port key, which can be one of the following keywords:
+                               For tcp protocol: bgp, domain, echo, ftp, ftp-data, http, smtp,
+                               telnet, www, pop2, or pop3.
+                               For udp protocol: domain, echo, ntp, rip, snmp, tftp, time, or
+                               who.
+                               Each of these keywords translates into its equivalent port number.
+
+                               Note: Port number matches-only apply to unfragmented or first
+                               fragments.
+
+                               Note: You can specify a port key or port number for the source and
+                               a port key or port number for the destination.
+
+ <dstip> <dstmask>             Specifies a destination IP address and netmask for match condition
+                               of the IP ACL rule.
+
+ [precedence <precedence> |    Specifies the ToS for an IP ACL rule depending on a match of
+ tos <tos> [<tosmask>] | dscp  precedence or DSCP values using the parameters precedence
+ <dscp>]                       <precedence>, tos <tos>, or dscp <dscp>.
+                               <tosmask> is an optional parameter.
+
+ [log]                         Specifies that this rule is to be logged.
+
+ [rate-limit <1-4294967295>    You can specify a simple rate limiter for packets matching an ACL
+ <1-128>]                      permit rule. You must specify the allowed rate of traffic in kbps
+                               (from 1-429496729) and burst size in kbytes (from 1-128). The
+                               conforming traffic is allowed to transmit and nonconforming traffic is
+                               dropped. This action is ignored for any deny rule, because, by
+                               definition, matching packets are dropped.
+
+ [assign-queue <queue-id>]     Specifies the assign-queue, which is the queue identifier to which
+                               packets matching this rule are assigned.
+
+ [{mirror | redirect}          Specifies the mirror or redirect interface, which is the <slot/port>
+ <slot/port>]                  to which packets matching this rule are copied or forwarded,
+                               respectively.
+
+no access-list
+
+This command deletes an IP ACL that is identified by the parameter <accesslistnumber>
+from the system. The range for <accesslistnumber> 1-99 for standard access lists and
+100-199 for extended access lists.
+
+ Format       no access-list <accesslistnumber>
+
+ Mode         Global Config
+
+                              Quality of Service Commands
+                                          299
+

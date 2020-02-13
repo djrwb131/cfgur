@@ -1,0 +1,61 @@
+                           M4100 Series ProSAFE Managed Switches
+
+show radius accounting statistics
+Use this command to display a summary of statistics for the configured RADIUS accounting
+servers.
+
+ Format       show radius accounting statistics {<ipaddr> |<dnsname> | name
+              <servername>}
+
+ Mode         Privileged EXEC
+
+ Field                Definition
+
+ RADIUS Accounting    The name of the accounting server.
+ Server Name
+
+ Server Host Address  The IP address of the host.
+
+ Round Trip Time      The time interval, in hundredths of a second, between the most recent
+                      Accounting-Response and the Accounting-Request that matched it from this
+                      RADIUS accounting server.
+
+ Requests             The number of RADIUS Accounting-Request packets sent to this server. This
+                      number does not include retransmissions.
+
+ Retransmission       The number of RADIUS Accounting-Request packets retransmitted to this RADIUS
+                      accounting server.
+
+ Responses            The number of RADIUS packets received on the accounting port from this server.
+
+ Malformed            The number of malformed RADIUS Accounting-Response packets received from this
+ Responses            server. Malformed packets include packets with an invalid length. Bad authenticators
+                      or signature attributes or unknown types are not included as malformed accounting
+                      responses.
+
+ Bad Authenticators   The number of RADIUS Accounting-Response packets containing invalid
+                      authenticators received from this accounting server.
+
+ Pending Requests     The number of RADIUS Accounting-Request packets sent to this server that have
+                      not yet timed out or received a response.
+
+ Timeouts             The number of accounting time-outs to this server.
+
+ Unknown Types        The number of RADIUS packets of unknown types, which were received from this
+                      server on the accounting port.
+
+ Packets Dropped      The number of RADIUS packets received from this server on the accounting port and
+                      dropped for some other reason.
+
+Command example:
+(NETGEAR Switch) #show radius accounting statistics 192.168.37.200
+
+RADIUS Accounting Server Name................. Default_RADIUS_Server
+Host Address.................................. 192.168.37.200
+Round Trip Time............................... 0.00
+Requests...................................... 0
+Retransmissions............................... 0
+
+                                     Management Commands
+                                                  511
+

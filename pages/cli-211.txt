@@ -1,0 +1,51 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+     Term           Definition
+
+     SMACDMAC       May be enabled or disabled. The factory default is disabled.
+     Mode
+
+     TCP Flag Mode  May be enabled or disabled. The factory default is disabled.
+
+     TCP FIN&URG&   May be enabled or disabled. The factory default is disabled.
+     PSH Mode
+
+     TCP Flag &     May be enabled or disabled. The factory default is disabled.
+     Sequence Mode
+
+     TCP SYN Mode   May be enabled or disabled. The factory default is disabled.
+
+     TCP SYN & FIN  May be enabled or disabled. The factory default is disabled.
+     Mode
+
+     TCP Fragment   May be enabled or disabled. The factory default is disabled.
+     Mode
+
+     TCP Offset Mode May be enabled or disabled. The factory default is disabled.
+
+MAC Database Commands
+
+   This section describes the commands you use to configure and view information about the
+   MAC databases.
+
+   bridge aging-time
+   This command configures the forwarding database address aging timeout in seconds. The
+   <seconds> parameter must be within the range of 10 to 1,000,000 seconds.
+
+     Default      300
+
+     Format       bridge aging-time <seconds>
+
+     Mode         Global Config
+
+   no bridge aging-time
+
+   This command sets the forwarding database address aging timeout to the default value.
+
+     Format       no bridge aging-time
+
+     Mode         Global Config
+
+                                          Switching Commands
+                                         211
+

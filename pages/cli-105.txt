@@ -1,0 +1,49 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no storm-control unicast rate
+
+This command sets the unicast storm recovery threshold to the default value for an interface
+and disables unicast storm recovery.
+
+ Format      no storm-control unicast rate
+
+ Mode        Interface Config
+
+storm-control unicast (Global Config)
+This command enables unicast storm recovery mode for all interfaces. If the mode is
+enabled, unicast storm recovery is active, and if the rate of unknown L2 unicast (destination
+lookup failure) traffic ingressing on an interface increases beyond the configured threshold,
+the traffic will be dropped. Therefore, the rate of unknown unicast traffic will be limited to the
+configured threshold.
+
+ Default     disabled
+
+ Format      storm-control unicast
+
+ Mode        Global Config
+
+no storm-control unicast
+
+This command disables unicast storm recovery mode for all interfaces.
+
+ Format      no storm-control unicast
+
+ Mode        Global Config
+
+storm-control unicast level (Global Config)
+This command configures the unicast storm recovery threshold for all interfaces as a
+percentage of link speed, and enables unicast storm recovery. If the mode is enabled, unicast
+storm recovery is active, and if the rate of unknown L2 unicast (destination lookup failure)
+traffic ingressing on an interface increases beyond the configured threshold, the traffic will be
+dropped. Therefore, the rate of unknown unicast traffic will be limited to the configured
+threshold.
+
+ Default     5
+
+ Format      storm-control unicast level <0-100>
+
+ Mode        Global Config
+
+                                  Switching Commands
+                                        105
+

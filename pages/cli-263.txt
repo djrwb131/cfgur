@@ -1,0 +1,47 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+Class of Service (CoS) Commands
+
+   This section describes the commands you use to configure and view Class of Service (CoS)
+   settings for the switch. The commands in this section allow you to control the priority and
+   transmission rate of traffic.
+
+       Note: Commands you issue in the Interface Config mode only affect a single
+               interface. Commands you issue in the Global Config mode affect all
+               interfaces.
+
+   classofservice dot1p-mapping
+   This command maps an 802.1p priority to an internal traffic class. The <userpriority>
+   values can range from 0-7. The <trafficclass> values range from 0-6, although the
+   actual number of available traffic classes depends on the platform. For more information
+   about 802.1p priority, see Voice VLAN Commands on page 65.
+
+     Format       classofservice dot1p-mapping <userpriority> <trafficclass>
+
+     Modes        ·   Global Config
+                  ·   Interface Config
+
+   no classofservice dot1p-mapping
+
+    This command maps each 802.1p priority to its default internal traffic class value.
+
+     Format       no classofservice dot1p-mapping
+
+     Modes        ·   Global Config
+                  ·   Interface Config
+
+   classofservice ip-dscp-mapping
+   This command maps an IP DSCP value to an internal traffic class. The <ipdscp> value is
+   specified as either an integer from 0 to 63, or symbolically through one of the following
+   keywords: af11, af12, af13, af21, af22, af23, af31, af32, af33, af41, af42, af43, be, cs0, cs1,
+   cs2, cs3, cs4, cs5, cs6, cs7, ef.
+   The <trafficclass> values can range from 0-6, although the actual number of available
+   traffic classes depends on the platform.
+
+     Format       classofservice ip-dscp-mapping <ipdscp> <trafficclass>
+
+     Modes        Global Config
+
+                                       Quality of Service Commands
+                                              263
+

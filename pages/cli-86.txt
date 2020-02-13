@@ -1,0 +1,53 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Tokens              Definition
+
+ quiet-period       The value, in seconds, of the timer used by the authenticator state machine on this port
+                     to define periods of time in which it will not attempt to acquire a supplicant. The
+                     quiet-period must be a value in the range 0 - 65535.
+
+ tx-period          The value, in seconds, of the timer used by the authenticator state machine on this port
+                     to determine when to send an EAPOL EAP Request/Identity frame to the supplicant. The
+                     quiet-period must be a value in the range 1 - 65535.
+
+ supp-timeout       The value, in seconds, of the timer used by the authenticator state machine on this port
+                     to timeout the supplicant. The supp-timeout must be a value in the range 1 - 65535.
+
+ server-timeout     The value, in seconds, of the timer used by the authenticator state machine on this port
+                     to timeout the authentication server. The supp-timeout must be a value in the range 1 -
+                     65535.
+
+no dot1x timeout
+
+This command sets the value, in seconds, of the timer used by the authenticator state
+machine on this port to the default values. Depending on the token used, the corresponding
+default values are set.
+
+ Format         no dot1x timeout {guest-vlan-period | reauth-period | quiet-period |
+                tx-period | supp-timeout | server-timeout}
+
+ Mode           Interface Config
+
+dot1x unauthenticated-vlan
+Use this command to configure the unauthenticated VLAN associated with that port. The
+unauthenticated VLAN ID can be a valid VLAN ID from 0-Maximum supported VLAN ID. The
+unauthenticated VLAN must be statically configured in the VLAN database to be operational.
+By default, the unauthenticated VLAN is 0, that is, invalid and not operational.
+
+ Default        0
+
+ Format         dot1x unauthenticated-vlan <vlan id>
+
+ Mode           Interface Config
+
+no dot1x unauthenticated-vlan
+
+This command resets the unauthenticated-vlan associated with the port to its default value.
+
+ Format         no dot1x unauthenticated-vlan
+
+ Mode           Interface Config
+
+                                 Switching Commands
+                                         86
+

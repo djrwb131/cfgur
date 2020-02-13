@@ -1,0 +1,55 @@
+                            M4100 Series ProSAFE Managed Switches
+
+·   If some, but not all, of the flags in that group are enabled, the command displays
+    trapflags groupname flag-name.
+
+ Format        show running-config [all | <scriptname>]
+
+ Mode          Privileged EXEC
+
+show running-config interface
+This command shows the current configuration on a particular interface. The interface could
+be a physical port or a virtual port--like a LAG or VLAN. The output captures how the
+configuration differs from the factory default value.
+
+ Format        show running-config interface {<slot/port>} | vlan <vlan-id> | lag
+               <lag-id>}
+
+ Mode          Interface Config
+
+show sysinfo
+This command displays switch information.
+
+ Format        show sysinfo
+
+ Mode          Privileged EXEC
+
+ Term            Definition
+
+ Switch          Text used to identify this switch.
+ Description
+
+ System Name     Name used to identify the switch. The factory default is blank. To configure the system
+                 name, see snmp-server on page 491.
+
+ System Location Text used to identify the location of the switch. The factory default is blank. To configure
+                 the system location, see snmp-server on page 491.
+
+ System Contact  Text used to identify a contact person for this switch. The factory default is blank. To
+                 configure the system location, see snmp-server on page 491.
+
+ System Object   The base object ID for the switch's enterprise MIB.
+ ID
+
+ System Up Time  The time in days, hours, and minutes since the last switch reboot.
+
+ MIBs Supported  A list of MIBs supported by this agent.
+
+show tech-support
+Use this command to display system and configuration information when you contact
+technical support. The output of this command combines the output of the following
+commands:
+
+                                         Utility Commands
+                                                    350
+

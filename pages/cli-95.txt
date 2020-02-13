@@ -1,0 +1,50 @@
+                        M4100 Series ProSAFE Managed Switches
+
+ Format       dot1x supplicant port-control {auto | force-authorized |
+              force_unauthorized}
+
+ Mode         Interface Config
+
+ Parameter            Description
+
+ auto                 The port is in the Unauthorized state until it presents its user name and
+                      password credentials to an authenticator. If the authenticator authorizes the
+                      port, then it is placed in the Authorized state.
+
+ force-authorized     Sets the authorization state of the port to Authorized, bypassing the
+                      authentication process.
+
+ force- unauthorized  Sets the authorization state of the port to Unauthorized, bypassing the
+                      authentication process.
+
+no dot1x supplicant port-control
+
+Use this command to set the port-control mode to the default, auto.
+
+ Default      Auto
+
+ Format       no dot1x supplicant port-control
+
+ Mode         Interface Config
+
+dot1x supplicant max-start
+Use this command to configure the number of attempts that the supplicant makes to find the
+authenticator before the supplicant assumes that there is no authenticator.
+
+ Default      3
+
+ Format       dot1x supplicant max-start <1-10>
+
+ Mode         Interface Config
+
+no dot1x supplicant max-start
+
+Use this command to set the max-start value to the default.
+
+ Format       no dot1x supplicant max-start
+
+ Mode         Interface Config
+
+                                  Switching Commands
+                                              95
+

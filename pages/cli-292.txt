@@ -1,0 +1,55 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Term             Definition
+
+ DiffServ Admin   The current setting of the DiffServ administrative mode. An attached policy is only active
+ Mode             on an interface while DiffServ is in an enabled mode.
+
+The information that is shown in the following table is repeated for each interface and
+direction (only those interfaces configured with an attached policy are shown).
+
+ Term             Definition
+
+ Interface        Valid slot and port number separated by forward slashes.
+
+ Direction        The traffic direction of this interface service.
+
+ OperStatus       The current operational status of this DiffServ service interface.
+
+ Policy Name      The name of the policy attached to the interface in the indicated direction.
+
+show policy-map interface
+This command displays policy-oriented statistics information for the specified interface and
+direction. The <slot/port> parameter specifies a valid interface for the system.
+
+    Note: This command is only allowed while the DiffServ administrative mode
+              is enabled.
+
+ Format         show policy-map interface <slot/port> [in | out]
+
+ Mode           Privileged EXEC
+
+ Term             Definition
+
+ Interface        Valid slot and port number separated by forward slashes.
+
+ Direction        The traffic direction of this interface service.
+
+ Operational      The current operational status of this DiffServ service interface.
+ Status
+
+ Policy Name      The name of the policy attached to the interface in the indicated direction.
+
+The information that is shown in the following table is repeated for each class instance within
+this policy.
+
+ Term             Definition
+
+ Class Name       The name of this class instance.
+
+ In Discarded     A count of the packets discarded for this class instance for any reason due to DiffServ
+ Packets          treatment of the traffic class.
+
+                                    Quality of Service Commands
+                                                   292
+

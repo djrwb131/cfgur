@@ -1,0 +1,41 @@
+                             M4100 Series ProSAFE Managed Switches
+
+RMON Stats and History Commands
+
+   The various MIBs within RFC 2819, 3273, and 3434 are arranged into groups. The managed
+   switch supports some of the groups in these RFCs but not all. The managed switch complies
+   with MODULE-COMPLIANCE and OBJECT-GROUP definitions within these RFCs for
+   supporting individual groups.
+   The managed switch supports the following groups:
+   ·   RFC 2819
+       -   Group 1 - Statistics
+           Contains cumulative traffic and error statistics.
+       -   Group 2 - History
+           Generates reports from periodic traffic sampling that are useful for analyzing trends.
+           This group includes History Control Group and Ethernet History Group.
+       -   Group 3 - Alarm
+           Enables the definition and setting of thresholds for various counters. Thresholds can
+           be passed in either a rising or falling direction on existing MIB objects, primarily those
+           in the Statistics group. An alarm is triggered when a threshold is crossed and the
+           alarm is passed to the Event group. The Alarm requires the Event Group.
+       -   Group 9 - Event
+           Controls the actions that are taken when an event occurs. RMON events occur when:
+           ·  A threshold (alarm) is exceeded
+           ·   There is a match on certain filters.
+   ·   RFC 3273
+       -   Group 1 - Media Independent Group
+           Contains media-independent statistics that provide information for full and/or
+           half-duplex links as well as high capacity links.
+       -   Group 2 - Ether Stats High Capacity Group
+           Contains the High Capacity RMON extensions to RMON-1 etherStatsTable (RFC
+           2819 Group 1).
+       -   Group 3 - Ether History High Capacity Group
+           Contains the High Capacity RMON extensions to RMON-1 etherHistoryTable (RFC
+           2819 Group 2).
+   ·   RFC 3434
+       -   Group 1 - High Capacity Alarm Control Group
+           Controls the configuration of alarms for high capacity MIB object instances.
+
+                                        Utility Commands
+                                              432
+

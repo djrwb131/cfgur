@@ -1,0 +1,43 @@
+                        M4100 Series ProSAFE Managed Switches
+
+ Term        Definition
+
+ File        The file in which the event originated.
+
+ Line        The line number of the event.
+
+ Task Id     The task ID of the event.
+
+ Code        The event code.
+
+ Time        The time this event occurred.
+
+ Unit        The unit for the event.
+
+      Note: Event log information is retained across a switch reset.
+
+show hardware
+This command displays inventory information for the switch.
+
+      Note: The show version command and the show hardware command
+            display the same information. In future releases of the software, the
+            show hardware command will not be available. For a description of
+            the command output, see the command show version on page 334.
+
+ Format        show hardware
+
+ Mode          Privileged EXEC
+
+show version
+This command displays inventory information for the switch.
+
+      Note: The show version command will replace the show hardware
+            command in future releases of the software.
+
+ Format        show version
+
+ Mode          Privileged EXEC
+
+                                       Utility Commands
+                                             334
+

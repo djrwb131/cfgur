@@ -1,0 +1,55 @@
+                         M4100 Series ProSAFE Managed Switches
+
+port-channel local-preference
+This command enables the local-preference mode on a port-channel (LAG) interface or
+range of interfaces. By default, the local-preference mode for a port-channel is disabled. This
+command can be used only on port-channel interfaces.
+
+ Default       disabled
+
+ Format        port-channel local-preference
+
+ Mode          Interface Config
+
+no port-channel local-preference
+
+This command disables the local-preference mode on a port-channel.
+
+ Format        no port-channel local-preference
+
+ Mode          Interface Config
+
+port-channel static
+This command enables the static mode on a port-channel (LAG) interface. By default the
+static mode for a new port-channel is disabled, which means the port-channel is dynamic.
+However if the maximum number of allowable dynamic port-channels are already present in
+the system, the static mode for a new port-channel enabled, which means the port-channel is
+static. You can only use this command on port-channel interfaces.
+
+ Default       disabled
+
+ Format        port-channel static
+
+ Mode          Interface Config
+
+no port-channel static
+
+This command sets the static mode on a particular port-channel (LAG) interface to the default
+value. This command will be executed only for interfaces of type port-channel (LAG).
+
+ Format        no port-channel static
+
+ Mode          Interface Config
+
+port lacpmode
+This command enables Link Aggregation Control Protocol (LACP) on a port.
+
+ Default       enabled
+
+ Format        port lacpmode
+
+ Mode          Interface Config
+
+                                   Switching Commands
+                                          118
+

@@ -1,0 +1,51 @@
+                           M4100 Series ProSAFE Managed Switches
+
+delete
+This command deletes the supplied image file from the permanent storage. The image to be
+deleted must be a backup image. If this image is the active image, or if this image is
+activated, an error message displays. The optional <unit> parameter is valid only on
+Stacks. Error will be returned, if this parameter is provided, on Standalone systems. In a
+stack, the <unit> parameter identifies the node on which this command must be executed.
+When this parameter is not supplied, the command is executed on all nodes in a Stack.
+
+ Format     delete [<unit>] {image1 | image2}
+
+ Mode       Privileged EXEC
+
+boot system
+This command activates the specified image. It will be the active-image for subsequent
+reboots and will be loaded by the boot loader. The current active-image is marked as the
+backup-image for subsequent reboots. The optional <unit> parameter is valid only in
+Stacking, where the <unit> parameter identifies the node on which this command must be
+executed. When this parameter is not supplied, the command is executed on all nodes in a
+Stack.
+
+ Format     boot system [<unit>] <image-file-name>
+
+ Mode       Privileged EXEC
+
+show bootvar
+This command displays the version information and the activation status for the current active
+and backup images on the supplied unit (node) of the Stack. If you do not specify a unit
+number, the command displays image details for all nodes on the Stack. The command also
+displays any text description associated with an image. This command, when used on a
+Standalone system, displays the switch activation status. For a standalone system, the unit
+parameter is not valid.
+
+ Format     show bootvar [<unit>]
+
+ Mode       Privileged EXEC
+
+filedescr
+This command associates a text description with an image. Any existing description will be
+replaced. For stacking, the [<unit>] parameter identifies the node on which this command
+must be executed. When this parameter is not supplied, the command is executed on all
+nodes in a Stack.
+
+ Format     filedescr [<unit>] {image1 | image2} <text-description>
+
+ Mode       Privileged EXEC
+
+                                  Utility Commands
+                                       332
+

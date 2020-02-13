@@ -1,0 +1,50 @@
+                              M4100 Series ProSAFE Managed Switches
+
+dos-control icmpv4
+This command enables Maximum ICMPv4 Packet Size Denial of Service protections. If the
+mode is enabled, Denial of Service prevention is active for this type of attack. If ICMPv4 Echo
+Request (PING) packets ingress having a size greater than the configured value, the packets
+will be dropped if the mode is enabled.
+
+ Default       disabled <512>
+
+ Format        dos-control icmpv4 <0-16384>
+
+ Mode          Global Config
+
+no dos-control icmpv4
+
+This command disables Maximum ICMP Packet Size Denial of Service protections.
+
+ Format        no dos-control icmpv4
+
+ Mode          Global Config
+
+dos-control icmpv6
+This command enables Maximum ICMPv6 Packet Size Denial of Service protections. If the
+mode is enabled, Denial of Service prevention is active for this type of attack. If ICMPv6 Echo
+Request (PING) packets ingress having a size greater than the configured value, the packets
+will be dropped if the mode is enabled.
+
+ Default       disabled <512>
+
+ Format        dos-control icmpv6 <0-16384>
+
+ Mode          Global Config
+
+no dos-control icmpv6
+
+This command disables Maximum ICMP Packet Size Denial of Service protections.
+
+ Format        no dos-control icmpv6
+
+ Mode          Global Config
+
+dos-control icmpfrag
+This command enables ICMP Fragment Denial of Service protection. If the mode is enabled,
+Denial of Service prevention is active for this type of attack. If packets ingress having
+fragmented ICMP packets, the packets will be dropped if the mode is enabled.
+
+                                      Switching Commands
+                                           209
+

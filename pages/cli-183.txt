@@ -1,0 +1,54 @@
+                            M4100 Series ProSAFE Managed Switches
+
+lldp receive
+Use this command to enable the LLDP receive capability.
+
+ Default     enabled
+
+ Format      lldp receive
+
+ Mode        Interface Config
+
+no lldp receive
+
+Use this command to return the reception of LLDPDUs to the default value.
+
+ Format      no lldp receive
+
+ Mode        Interface Config
+
+lldp timers
+Use this command to set the timing parameters for local data transmission on ports enabled
+for LLDP. The <interval-seconds> determines the number of seconds to wait between
+transmitting local data LLDPDUs. The range is 1-32768 seconds. The <hold-value> is the
+multiplier on the transmit interval that sets the TTL in local data LLDPDUs. The multiplier
+range is 2-10. The <reinit-seconds> is the delay before re-initialization, and the range is
+1-0 seconds.
+
+ Default     ·  interval--30 seconds
+             ·  hold--4
+             ·  reinit--2 seconds
+
+ Format      lldp timers [interval <interval-seconds>] [hold <hold-value>]
+             [reinit <reinit-seconds>]
+
+ Mode        Global Config
+
+no lldp timers
+
+Use this command to return any or all timing parameters for local data transmission on ports
+enabled for LLDP to the default values.
+
+ Format      no lldp timers [interval] [hold] [reinit]
+
+ Mode        Global Config
+
+lldp transmit-tlv
+Use this command to specify which optional type length values (TLVs) in the 802.1AB basic
+management set are transmitted in the LLDPDUs. Use sys-name to transmit the system
+name TLV. To configure the system name, see snmp-server on page 491. Use sys-desc to
+transmit the system description TLV. Use sys-cap to transmit the system capabilities TLV.
+
+                                     Switching Commands
+                                         183
+

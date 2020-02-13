@@ -1,0 +1,61 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Table 23. Mac-based VLANs Log Messages
+
+ Component       Message                                     Cause
+
+ Mac based       vlanMacVlanChangeCallback: Failed to        Appears when a dtl fails to add an entry for
+ VLANS           add an entry                                a VLAN add notify event.
+
+ Mac based       vlanMacVlanChangeCallback: Failed to        Appears when a dtl fails to delete an entry
+ VLANS           delete an entry                             for an VLAN delete notify event.
+
+Table 24. 802.1x Log Messages
+
+ Component       Message                                     Cause
+
+ 802.1X          function: Failed calling dot1xIssueCmd      802.1X message queue is full
+
+ 802.1X          function: EAP message not received from     RADIUS server did not send required EAP
+                 server                                      message
+
+ 802.1X          function: Out of System buffers             802.1X cannot process/transmit message
+                                                             due to lack of internal buffers
+
+ 802.1X          function: could not set state to            DTL call failed setting authorization state of
+                 <authorized/unauthorized>, intf xxx         the port
+
+ 802.1X          dot1xApplyConfigData: Unable to             DTL call failed enabling/disabling 802.1X
+                 <enable/disable> dot1x in driver
+
+ 802.1X          dot1xSendRespToServer:                      Failed sending message to RADIUS server
+                 dot1xRadiusAccessRequestSend failed
+
+ 802.1X          dot1xRadiusAcceptProcess: error calling     Failed sending accounting start to RADIUS
+                 radiusAccountingStart, ifIndex=xxx          server
+
+ 802.1X          function: failed sending terminate cause,   Failed sending accounting stop to RADIUS
+                 intf xxx                                    server
+
+Table 25. IGMP Snooping Log Messages
+
+ Component       Message                                     Cause
+
+ IGMP Snooping   function: osapiMessageSend failed           IGMP Snooping message queue is full
+
+ IGMP Snooping   Failed to set global igmp snooping mode to  Failed to set global IGMP Snooping mode
+                 xxx                                         due to message queue being full
+
+ IGMP Snooping   Failed to set igmp snooping mode xxx for    Failed to set interface IGMP Snooping
+                 interface yyy                               mode due to message queue being full
+
+ IGMP Snooping   Failed to set igmp mrouter mode xxx for     Failed to set interface multicast router
+                 interface yyy                               mode due to IGMP Snooping message
+                                                             queue being full
+
+ IGMP Snooping   Failed to set igmp snooping mode xxx for    Failed to set VLAN IGM Snooping mode
+                 VLAN yyy                                    due to message queue being full
+
+                                        Log Messages
+                                                  543
+

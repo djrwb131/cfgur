@@ -1,0 +1,42 @@
+                   M4100 Series ProSAFE Managed Switches
+
+   Enter a question mark (?) after each word you enter to display available command keywords
+   or parameters.
+    (NETGEAR Switch) #network ?
+
+    javamode                  Enable/Disable.
+    mgmt_vlan                 Configure the Management VLAN ID of the switch.
+    parms                     Configure Network Parameters of the router.
+    protocol                  Select DHCP, BootP, or None as the network config
+                              protocol.
+
+   If the help output shows a parameter in angle brackets, you must replace the parameter with
+   a value.
+    (NETGEAR Switch) #network parms ?
+
+    <ipaddr>                  Enter the IP address.
+
+   If there are no additional command keywords or parameters, or if more parameters are
+   optional, the following message appears in the output:
+    <cr>                      Press Enter to execute the command
+
+   You can also enter a question mark (?) after typing one or more characters of a word to list
+   the available command or parameters that begin with the letters, as shown in the following
+   example:
+    (NETGEAR Switch) #show m?
+
+    mac-addr-table            mac-address-table         monitor
+
+Accessing the CLI
+
+   You can access the CLI by using a direct console connection or by using a telnet or SSH
+   connection from a remote management host.
+   For the initial connection, you must use a direct connection to the console port. You cannot
+   access the system remotely until the system has an IP address, subnet mask, and default
+   gateway. You can set the network configuration information manually, or you can configure
+   the system to accept these settings from a BOOTP or DHCP server on your network. For
+   more information, see Management Interface Commands on page 446.
+
+                                Using the Command-Line Interface
+                                              16
+

@@ -1,0 +1,50 @@
+                       M4100 Series ProSAFE Managed Switches
+
+clear counters
+This command clears the statistics for a specified <slot/port>, for all the ports, or for the
+entire switch based upon the argument.
+
+ Format    clear counters {<slot/port> | all}
+
+ Mode      Privileged EXEC
+
+clear igmpsnooping
+This command clears the tables managed by the IGMP Snooping function and attempts to
+delete these entries from the Multicast Forwarding Database.
+
+ Format    clear igmpsnooping
+
+ Mode      Privileged EXEC
+
+clear pass
+This command resets all user passwords to the factory defaults without powering off the
+switch. You are prompted to confirm that the password reset should proceed.
+
+ Format    clear pass
+
+ Mode      Privileged EXEC
+
+clear port-channel
+This command clears all port-channels (LAGs).
+
+ Format    clear port-channel
+
+ Mode      Privileged EXEC
+
+clear traplog
+This command clears the trap log.
+
+ Format    clear traplog
+
+ Mode      Privileged EXEC
+
+clear vlan
+This command resets VLAN configuration parameters to the factory defaults.
+
+ Format    clear vlan
+
+ Mode      Privileged EXEC
+
+                                    Utility Commands
+                                         368
+

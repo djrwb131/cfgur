@@ -1,0 +1,50 @@
+                             M4100 Series ProSAFE Managed Switches
+
+sntp client port
+This command sets the SNTP client port id to a value from 1-65,535.
+
+ Default       123
+
+ Format        sntp client port <portid>
+
+ Mode          Global Config
+
+no sntp client port
+
+This command resets the SNTP client port back to its default value.
+
+ Format        no sntp client port
+
+ Mode          Global Config
+
+sntp unicast client poll-interval
+This command sets the poll interval for SNTP unicast clients in seconds as a power of two
+where <poll-interval> can be a value from 6 to 10.
+
+ Default       6
+
+ Format        sntp unicast client poll-interval <poll-interval>
+
+ Mode          Global Config
+
+no sntp unicast client poll-interval
+
+This command resets the poll interval for SNTP unicast clients to its default value.
+
+ Format        no sntp unicast client poll-interval
+
+ Mode          Global Config
+
+sntp unicast client poll-timeout
+This command will set the poll timeout for SNTP unicast clients in seconds to a value from
+1-30.
+
+ Default       5
+
+ Format        sntp unicast client poll-timeout <poll-timeout>
+
+ Mode          Global Config
+
+                                     Utility Commands
+                                          376
+

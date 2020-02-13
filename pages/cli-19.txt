@@ -1,0 +1,48 @@
+                              M4100 Series ProSAFE Managed Switches
+
+Port Configuration Commands
+
+   This section describes the commands you use to view and configure port settings.
+
+   interface
+   This command gives you access to the Interface Config mode, which allows you to enable or
+   modify the operation of an interface (port).
+
+     Format     interface <slot/port>
+
+     Mode       Global Config
+
+   interface vlan
+   This command gives you access to the vlan virtual interface mode, which allows certain port
+   configurations (for example, the IP address) to be applied to the VLAN interface. Type a
+   question mark (?) after entering the interface configuration mode to see the available options.
+
+     Format     interface vlan <vlan id>
+
+     Mode       Global Config
+
+   interface lag
+   This command gives you access to the LAG (link aggregation, or port channel) virtual
+   interface, which allows certain port configurations to be applied to the LAG interface. Type a
+   question mark (?) after entering the interface configuration mode to see the available options.
+
+       Note: The IP address cannot be assigned to a LAG virtual interface. The
+             interface must be put under a VLAN group and an IP address
+             assigned to the VLAN group.
+
+     Format     interface lag <lag id>
+
+     Mode       Global Config
+
+   auto-negotiate
+   This command enables automatic negotiation on a port.
+
+     Default    enabled
+
+     Format     auto-negotiate
+
+     Mode       Interface Config
+
+                                     Switching Commands
+                                                19
+

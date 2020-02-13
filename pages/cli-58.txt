@@ -1,0 +1,56 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ Term               Definition
+
+ Interface          Valid slot and port number separated by forward slashes. It is possible to set the
+                    parameters for all ports by using the selectors on the top line.
+
+ Port VLAN ID       The VLAN ID that this port will assign to untagged frames or priority tagged frames
+                    received on this port. The value must be for an existing VLAN. The factory default is 1.
+
+ Acceptable         The types of frames that may be received on this port. The options are 'VLAN only' and
+ Frame Types        'Admit All'. When set to 'VLAN only', untagged frames or priority tagged frames received
+                    on this port are discarded. When set to 'Admit All', untagged frames or priority tagged
+                    frames received on this port are accepted and assigned the value of the Port VLAN ID for
+                    this port. With either option, VLAN tagged frames are forwarded in accordance to the
+                    802.1Q VLAN specification.
+
+ Ingress Filtering  May be enabled or disabled. When enabled, the frame is discarded if this port is not a
+                    member of the VLAN with which this frame is associated. In a tagged frame, the VLAN is
+                    identified by the VLAN ID in the tag. In an untagged frame, the VLAN is the Port VLAN ID
+                    specified for the port that received this frame. When disabled, all frames are forwarded in
+                    accordance with the 802.1Q VLAN bridge specification. The factory default is disabled.
+
+ GVRP               May be enabled or disabled.
+
+ Default Priority   The 802.1p priority assigned to tagged packets arriving on the port.
+
+show vlan association subnet
+This command displays the VLAN associated with a specific configured IP-Address and net
+mask. If no IP address and net mask are specified, the VLAN associations of all the
+configured IP-subnets are displayed.
+
+ Format           show vlan association subnet [<ipaddr> <netmask>]
+
+ Mode             Privileged EXEC
+
+ Term               Definition
+
+ IP Subnet          The IP address assigned to each interface.
+
+ IP Mask            The subnet mask.
+
+ VLAN ID            A VLAN Identifier (VID) is associated with each VLAN.
+
+show vlan association mac
+This command displays the VLAN associated with a specific configured MAC address. If no
+MAC address is specified, the VLAN associations of all the configured MAC addresses are
+displayed.
+
+ Format           show vlan association mac [<macaddr>]
+
+ Mode             Privileged EXEC
+
+                                       Switching Commands
+                                                   58
+

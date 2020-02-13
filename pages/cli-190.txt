@@ -1,0 +1,54 @@
+                              M4100 Series ProSAFE Managed Switches
+
+Chassis ID: 00:FC:E3:90:01:0F
+Port ID Subtype: MAC Address
+Port ID: 00:FC:E3:90:01:11
+System Name:
+System Description:
+Port Description:
+System Capabilities Supported:
+System Capabilities Enabled:
+Time to Live: 24 seconds
+
+show lldp local-device
+Use this command to display summary information about the advertised LLDP local data.
+This command can display summary information or detail for each interface.
+
+ Format      show lldp local-device {<slot/port> | all}
+
+ Mode        Privileged EXEC
+
+ Term              Definition
+
+ Interface         The interface in a slot/port format.
+
+ Port ID           The port ID associated with this interface.
+
+ Port Description  The port description associated with the interface.
+
+show lldp local-device detail
+Use this command to display detailed information about the LLDP data a specific interface
+transmits.
+
+ Format      show lldp local-device detail <slot/port>
+
+ Mode        Privileged EXEC
+
+ Term              Definition
+
+ Interface         The interface that sends the LLDPDU.
+
+ Chassis ID        The type of identification used in the Chassis ID field.
+ Subtype
+
+ Chassis ID        The chassis of the local device.
+
+ Port ID Subtype   The type of port on the local device.
+
+ Port ID           The port number that transmitted the LLDPDU.
+
+ System Name       The system name of the local device.
+
+                               Switching Commands
+                                                    190
+

@@ -1,0 +1,47 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+IGMP Snooping Querier Commands
+
+   IGMP Snooping requires that one central switch or router periodically query all end-devices
+   on the network to announce their multicast memberships. This central device is the "IGMP
+   Querier". The IGMP query responses, known as IGMP reports, keep the switch updated with
+   the current multicast group membership on a port-by-port basis. If the switch does not
+   receive updated membership information in a timely fashion, it will stop forwarding multicast
+   to the port where the end device is located.
+   This section describes commands used to configure and display information about IGMP
+   Snooping Queriers on the network and, separately, on VLANs.
+
+   set igmp querier
+   Use this command to enable IGMP Snooping Querier on the system, using Global Config
+   mode, or on a VLAN. Using this command, you can specify the IP Address that the Snooping
+   Querier switch should use as the source address while generating periodic queries.
+   If a VLAN has IGMP Snooping Querier enabled and IGMP Snooping is operationally disabled
+   on it, IGMP Snooping Querier functionality is disabled on that VLAN. IGMP Snooping
+   functionality is re-enabled if IGMP Snooping is operational on the VLAN.
+
+       Note: The Querier IP Address assigned for a VLAN takes preference over
+                global configuration.
+
+   The IGMP Snooping Querier application supports sending periodic general queries on the
+   VLAN to solicit membership reports.
+
+     Default       disabled
+
+     Format        set igmp querier [<vlan-id>] [address <ipv4-address>]
+
+     Mode          ·   Global Config
+                   ·   VLAN Mode
+
+   no set igmp querier
+
+   Use this command to disable IGMP Snooping Querier on the system. Use the optional
+   address parameter to reset the querier address to 0.0.0.0.
+
+     Format        no set igmp querier [<vlan-id>] [address]
+
+     Mode          ·   Global Config
+                   ·   VLAN Mode
+
+                                         Switching Commands
+                                             164
+

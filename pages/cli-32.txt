@@ -1,0 +1,51 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no spanning-tree forward-time
+
+This command sets the Bridge Forward Delay parameter for the Common and Internal
+Spanning Tree to the default value.
+
+ Format        no spanning-tree forward-time
+
+ Mode          Global Config
+
+spanning-tree guard
+This command selects whether loop guard or root guard is enabled on an interface. If neither
+is enabled, the port operates in accordance with the multiple spanning tree protocol.
+
+ Default       none
+
+ Format        spanning-tree guard {none | root | loop}
+
+ Mode          Interface Config
+
+no spanning-tree guard
+
+This command disables loop guard or root guard on the interface.
+
+ Format        no spanning-tree guard
+
+ Mode          Interface Config
+
+spanning-tree tcnguard
+This command enables the propagation of received topology change notifications and topology
+changes to other ports.
+
+ Default       disable
+
+ Format        spanning-tree tcnguard
+
+ Mode          Interface Config
+
+no spanning-tree tcnguard
+
+This command disables the propagation of received topology change notifications and topology
+changes to other ports.
+
+ Format        no spanning-tree tcnguard
+
+ Mode          Interface Config
+
+                                  Switching Commands
+                                           32
+

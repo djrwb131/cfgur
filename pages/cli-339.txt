@@ -1,0 +1,51 @@
+                            M4100 Series ProSAFE Managed Switches
+
+Term               Definition
+
+Receive Packets    The number of inbound packets which were chosen to be discarded even though no errors had
+Discarded          been detected to prevent their being deliverable to a higher-layer protocol. One possible reason
+                   for discarding such a packet could be to free up buffer space.
+
+Packets Received   ·   Total Packets Received with MAC Errors - The total number of inbound packets that
+with MAC Errors        contained errors preventing them from being deliverable to a higher-layer protocol.
+                   ·   Jabbers Received - The total number of packets received that were longer than 1518
+                       octets (excluding framing bits, but including FCS octets), and had either a bad Frame
+                       Check Sequence (FCS) with an integral number of octets (FCS Error) or a bad FCS with a
+                       non-integral number of octets (Alignment Error). Note that this definition of jabber is
+                       different than the definition in IEEE-802.3 section 8.2.1.5 (10BASE5) and section 10.3.1.4
+                       (10BASE2). These documents define jabber as the condition where any packet exceeds 20
+                       ms. The allowed range to detect jabber is 20­150 ms.
+                   ·   Fragments/Undersize Received - The total number of packets received that were less
+                       than 64 octets in length (excluding framing bits but including FCS octets).
+                   ·  Alignment Errors - The total number of packets received that had a length (excluding
+                       framing bits, but including FCS octets) of from 64 through 1518 octets, inclusive, but had a
+                       bad Frame Check Sequence (FCS) with a non-integral number of octets.
+                   ·   Rx FCS Errors - The total number of packets received that had a length (excluding framing
+                       bits, but including FCS octets) of from 64 through 1518 octets, inclusive, but had a bad
+                       Frame Check Sequence (FCS) with an integral number of octets.
+                   ·   Overruns - The total number of frames discarded as this port was overloaded with
+                       incoming packets, and could not keep up with the inflow.
+
+Received Packets   ·   Total Received Packets Not Forwarded - A count of valid frames received which were
+Not Forwarded          discarded (in other words, filtered) by the forwarding process
+                   ·   Local Traffic Frames - The total number of frames dropped in the forwarding process
+                       because the destination address was located off of this port.
+                   ·   802.3x Pause Frames Received - A count of MAC Control frames received on this
+                       interface with an opcode indicating the PAUSE operation. This counter does not increment
+                       when the interface is operating in half-duplex mode.
+                   ·   Unacceptable Frame Type - The number of frames discarded from this port due to being
+                       an unacceptable frame type.
+                   ·   Multicast Tree Viable Discards - The number of frames discarded when a lookup in the
+                       multicast tree for a VLAN occurs while that tree is being modified.
+                   ·   Reserved Address Discards - The number of frames discarded that are destined to an
+                       IEEE 802.1 reserved address and are not supported by the system.
+                   ·   Broadcast Storm Recovery - The number of frames discarded that are destined for
+                       FF:FF:FF:FF:FF:FF when Broadcast Storm Recovery is enabled.
+                   ·   CFI Discards - The number of frames discarded that have CFI bit set and the addresses in
+                       RIF are in non-canonical format.
+                   ·   Upstream Threshold - The number of frames discarded due to lack of cell descriptors
+                       available for that packet's priority level.
+
+                                       Utility Commands
+                                              339
+

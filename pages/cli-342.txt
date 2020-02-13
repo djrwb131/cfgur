@@ -1,0 +1,63 @@
+                               M4100 Series ProSAFE Managed Switches
+
+When you specify switchport, the command output displays the information that is shown
+in the following table.
+
+ Term                 Definition
+
+ Octets Received      The total number of octets of data received by the processor (excluding framing bits but
+                      including FCS octets).
+
+ Total Packets        The total number of packets (including broadcast packets and multicast packets) received by
+ Received Without     the processor.
+ Error
+
+ Unicast Packets      The number of subnetwork-unicast packets delivered to a higher-layer protocol.
+ Received
+
+ Multicast Packets    The total number of packets received that were directed to a multicast address. Note that this
+ Received             number does not include packets directed to the broadcast address.
+
+ Broadcast Packets    The total number of packets received that were directed to the broadcast address. Note that
+ Received             this does not include multicast packets.
+
+ Receive Packets      The number of inbound packets which were chosen to be discarded even though no errors had
+ Discarded            been detected to prevent their being deliverable to a higher-layer protocol. A possible reason
+                      for discarding a packet could be to free up buffer space.
+
+ Octets Transmitted   The total number of octets transmitted out of the interface, including framing characters.
+
+ Packets              The total number of packets transmitted out of the interface.
+ Transmitted without
+ Errors
+
+ Unicast Packets      The total number of packets that higher-level protocols requested be transmitted to a
+ Transmitted          subnetwork-unicast address, including those that were discarded or not sent.
+
+ Multicast Packets    The total number of packets that higher-level protocols requested be transmitted to a Multicast
+ Transmitted          address, including those that were discarded or not sent.
+
+ Broadcast Packets    The total number of packets that higher-level protocols requested be transmitted to the
+ Transmitted          Broadcast address, including those that were discarded or not sent.
+
+ Most Address         The highest number of Forwarding Database Address Table entries that have been learned by
+ Entries Ever Used    this switch since the most recent reboot.
+
+ Address Entries in   The number of Learned and static entries in the Forwarding Database Address Table for this
+ Use                  switch.
+
+ Maximum VLAN         The maximum number of Virtual LANs (VLANs) allowed on this switch.
+ Entries
+
+ Most VLAN Entries    The largest number of VLANs that have been active on this switch since the last reboot.
+ Ever Used
+
+ Static VLAN          The number of presently active VLAN entries on this switch that have been created statically.
+ Entries
+
+ Dynamic VLAN         The number of presently active VLAN entries on this switch that have been created by GVRP
+ Entries              registration.
+
+                                             Utility Commands
+                                                   342
+

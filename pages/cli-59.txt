@@ -1,0 +1,44 @@
+                               M4100 Series ProSAFE Managed Switches
+
+     Term           Definition
+
+     MAC Address    A MAC address for which the switch has forwarding and or filtering information. The
+                    format is 6 or 8 two-digit hexadecimal numbers that are separated by colons, for example
+                    01:23:45:67:89:AB. In an IVL system the MAC address will be displayed as 8 bytes.
+
+     VLAN ID        A VLAN Identifier (VID) is associated with each VLAN.
+
+Switch Port Commands
+
+   This section describes the commands used for switch port mode.
+
+   switchport mode
+   Use this command to configure the mode of a switch port as access, trunk, or general:
+   ·   Trunk mode. In trunk mode, the port becomes a member of all VLANs on the switch
+       unless specified in the allowed list in the switchport trunk allowed vlan
+       command. The PVID of the port is set to the native VLAN as specified in the
+       switchport trunk native vlan command. This means that trunk ports accept both
+       tagged and untagged packets. Untagged packets are processed on the native VLAN and
+       tagged packets are processed on the VLAN for which the ID is contained in the packet.
+       MAC learning is performed on both tagged and untagged packets. Tagged packets that
+       are received with a VLAN ID of which the port is not a member are discarded and MAC
+       learning is not performed.
+       The trunk ports always transmit packets untagged on a native VLAN.
+   ·  Access mode. In access mode, the port becomes a member of only one VLAN. The port
+       sends and receives untagged traffic. The port can also receive tagged traffic. Ingress
+       filtering is enabled on the port. This means that when the VLAN ID of a received packet is
+       not identical to the access VLAN ID, the packet is discarded.
+   ·   General mode. In general mode, you can perform custom configuration of the VLAN
+       membership, PVID, tagging, ingress filtering, and so on. The general mode is legacy
+       behavior of the switch port configuration and you use legacy CLI commands to configure
+       the port in general mode.
+
+     Default     General mode
+
+     Format      switchport mode {access | trunk | general}
+
+     Mode        Interface Config
+
+                                       Switching Commands
+                                         59
+

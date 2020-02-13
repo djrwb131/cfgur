@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+debug ipv6 dhcp
+Use this command to display debug information about DHCPv6 client activities and trace
+DHCPv6 packets to and from the local DHCPv6 client.
+
+ Default       disabled
+
+ Format        debug ipv6 dhcp
+
+ Mode          Privileged EXEC
+
+no ipv6 debug dhcp
+
+Use this command to disable the display of debug trace output for DHCPv6 client activity.
+
+ Format        no debug ipv6 dhcp
+
+ Mode          Privileged EXEC
+
+debug ipv6 mcache packet
+Use this command to trace MDATAv6 packet reception and transmission. If you use the
+receive option, only received MDATAv6 packets are traced. If you use the transmit
+option, only transmitted MDATAv6 packets are traced. When neither keyword is used in the
+command, then all data packet traces are dumped. Vital information such as source address,
+destination address, packet length, and the interface on which the packet is received or
+transmitted is displayed on the console.
+
+ Default       disabled
+
+ Format        debug ipv6 mcache packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+no debug ipv6 mcache packet
+
+Use this command to disable debug tracing of MDATAv6 packet reception and transmission.
+
+ Format        no debug ipv6 mcache packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+debug ipv6 mld packet
+Use this command to trace MLDv6 packet reception and transmission. If you use the
+receive option, only received MLDv66 packets are traced. If you use the transmit option,
+only transmitted MLDv6 packets are traced. When neither keyword is used in the command,
+then all MLDv6 packet traces are dumped. Vital information such as source address,
+destination address, control packet type, packet length, and the interface on which the packet
+is received or transmitted is displayed on the console.
+
+                                    Utility Commands
+                                           412
+

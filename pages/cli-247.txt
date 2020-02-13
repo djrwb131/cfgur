@@ -1,0 +1,51 @@
+                       M4100 Series ProSAFE Managed Switches
+
+Command example:
+(NETGEAR Switch) #show ip route
+
+Route Codes: R - RIP Derived, O - OSPF Derived, C - Connected, S - Static
+        B - BGP Derived, IA - OSPF Inter Area
+        E1 - OSPF External Type 1, E2 - OSPF External Type 2
+        N1 - OSPF NSSA External Type 1, N2 - OSPF NSSA External Type 2
+
+C 1.1.1.0/24 [0/1] directly connected, 0/11
+C 2.2.2.0/24 [0/1] directly connected, 0/1
+C 5.5.5.0/24 [0/1] directly connected, 0/5
+S 7.0.0.0/8 [1/0] directly connected, Null0
+OIA 10.10.10.0/24 [110/6] via 5.5.5.2,    00h:00m:01s,  0/5
+C 11.11.11.0/24 [0/1] directly connected,    0/11
+S 12.0.0.0/8 [5/0] directly connected, Null0
+S 23.0.0.0/8 [3/0] directly connected, Null0
+
+show ip route ecmp-groups
+This command reports all current ECMP groups in the IPv4 routing table. An ECMP group is
+a set of two or more next hops used in one or more routes. The groups are numbered
+arbitrarily from 1 to n. The output indicates the number of next hops in the group and the
+number of routes that use the set of next hops. The output lists the IPv4 address and
+outgoing interface of each next hop in each group.
+
+ Format       show ip route ecmp-groups
+
+ Mode         Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #show ip route ecmp-groups
+
+ECMP Group 1 with 2 next hops (used by 1 route)
+  172.20.33.100 on interface 2/33
+  172.20.34.100 on interface 2/34
+
+ECMP Group 2 with 3 next hops (used by 1 route)
+  172.20.32.100 on interface 2/32
+  172.20.33.100 on interface 2/33
+  172.20.34.100 on interface 2/34
+
+ECMP Group 3 with 4 next hops (used by 1 route)
+  172.20.31.100 on interface 2/31
+  172.20.32.100 on interface 2/32
+  172.20.33.100 on interface 2/33
+  172.20.34.100 on interface 2/34
+
+                                  Routing Commands
+                                         247
+

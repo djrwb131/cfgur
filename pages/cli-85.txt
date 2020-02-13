@@ -1,0 +1,54 @@
+                                M4100 Series ProSAFE Managed Switches
+
+dot1x system-auth-control
+Use this command to enable the dot1x authentication support on the switch. While disabled,
+the dot1x configuration is retained and can be changed, but is not activated.
+
+ Default        disabled
+
+ Format         dot1x system-auth-control
+
+ Mode           Global Config
+
+no dot1x system-auth-control
+
+This command is used to disable the dot1x authentication support on the switch.
+
+ Format         no dot1x system-auth-control
+
+ Mode           Global Config
+
+dot1x timeout
+This command sets the value, in seconds, of the timer used by the authenticator state
+machine on this port. Depending on the token used and the value (in seconds) passed,
+various time-out configurable parameters are set.
+
+ Default        ·  guest-vlan-period: 90 seconds
+                ·  reauth-period: 3600 seconds
+                ·  quiet-period: 60 seconds
+                ·  tx-period: 30 seconds
+                ·  supp-timeout: 30 seconds
+                ·  server-timeout: 30 seconds
+
+ Format         dot1x timeout {{guest-vlan-period <seconds>} | {reauth-period
+                <seconds>} | {quiet-period <seconds>} | {tx-period <seconds>} |
+                {supp-timeout <seconds>} | {server-timeout <seconds>}}
+
+ Mode           Interface Config
+
+The following table describes the tokens that are supported.
+
+ Tokens              Definition
+
+ guest-vlan-period   The time, in seconds, for which the authenticator waits to see if any EAPOL packets are
+                     received on a port before authorizing the port and placing the port in the guest vlan (if
+                     configured). The guest vlan timer is only relevant when guest vlan has been configured
+                     on that specific port.
+
+ reauth-period       The value, in seconds, of the timer used by the authenticator state machine on this port
+                     to determine when re-authentication of the supplicant takes place. The reauth-period
+                     must be a value in the range 1 - 65535.
+
+                                            Switching Commands
+                                                  85
+

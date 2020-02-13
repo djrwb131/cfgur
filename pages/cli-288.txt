@@ -1,0 +1,50 @@
+                              M4100 Series ProSAFE Managed Switches
+
+show class-map
+This command displays all configuration information for the specified class. The
+<class-name> is the name of an existing DiffServ class.
+
+ Format         show class-map <class-name>
+
+ Modes          ·  Privileged EXEC
+                ·  User EXEC
+
+If the class-name is specified, the fields that are shown in the following table are displayed.
+
+ Term              Definition
+
+ Class Name        The name of this class.
+
+ Class Type        A class type of `all' means every match criterion defined for the class is evaluated
+                   simultaneously and must all be true to indicate a class match.
+
+ Class Layer3      The Layer 3 protocol for this class. Possible values are IPv4 and IPv6.
+ Protocol
+
+ Match Criteria    The Match Criteria fields are only displayed if they have been configured. Not all
+                   platforms support all match criteria values. They are displayed in the order entered by
+                   the user. The fields are evaluated in accordance with the class type. The possible Match
+                   Criteria fields are: Destination IP Address, Destination Layer 4 Port, Destination MAC
+                   Address, Ethertype, Source MAC Address, VLAN, Class of Service, Every, IP DSCP, IP
+                   Precedence, IP TOS, Protocol Keyword, Reference Class, Source IP Address, and
+                   Source Layer 4 Port.
+
+ Values            The values of the Match Criteria.
+
+If you do not specify the class name, this command displays a list of all defined DiffServ
+classes. The fields that are shown in the following table are displayed.
+
+ Term              Definition
+
+ Class Name        The name of this class. (Note that the order in which classes are displayed is not
+                   necessarily the same order in which they were created.)
+
+ Class Type        A class type of `all' means every match criterion defined for the class is evaluated
+                   simultaneously and must all be true to indicate a class match.
+
+ Reference Class   The name of an existing DiffServ class whose match conditions are being referenced by
+ Name              the specified class definition.
+
+                                   Quality of Service Commands
+                                                     288
+

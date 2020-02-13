@@ -1,0 +1,56 @@
+                               M4100 Series ProSAFE Managed Switches
+
+Command example:
+(NETGEAR Switch) #show ip brief
+
+Default Time to Live........................... 64
+Routing Mode................................... Disabled
+Maximum Next Hops.............................. 4
+Maximum Routes................................. 6000
+ICMP Rate Limit Interval....................... 1000 msec
+ICMP Rate Limit Burst Size..................... 100 messages
+ICMP Echo Replies.............................. Enabled
+ICMP Redirects................................. Enabled
+
+show ip interface
+This command displays all pertinent information about the IP interface.
+
+ Format         show ip interface {<slot/port> | vlan <1-4093> | loopback <0-7>}
+
+ Modes          ·   Privileged EXEC
+                ·   User EXEC
+
+ Term               Definition
+
+ Routing Interface  Determine the operational status of IPv4 routing Interface. The possible values are Up or
+ Status             Down.
+
+ Primary IP         The primary IP address and subnet masks for the interface. This value appears only if
+ Address            you configure it.
+
+ Secondary IP       One or more secondary IP addresses and subnet masks for the interface. This value
+ Address            appears only if you configure it.
+
+ Method             Shows whether the IP address was configured manually or acquired from a DHCP
+                    server.
+
+ Routing Mode       The administrative mode of router interface participation. The possible values are enable
+                    or disable. This value is configurable.
+
+ Administrative     The administrative mode of the specified interface. The possible values of this field are
+ Mode               enable or disable. This value is configurable.
+
+ Forward Net        Displays whether forwarding of network-directed broadcasts is enabled or disabled. This
+ Directed           value is configurable.
+ Broadcasts
+
+ Proxy ARP          Displays whether Proxy ARP is enabled or disabled on the system.
+
+ Local Proxy ARP    Displays whether Local Proxy ARP is enabled or disabled on the interface.
+
+ Active State       Displays whether the interface is active or inactive. An interface is considered active if its
+                    link is up and it is in forwarding state.
+
+                                             Routing Commands
+                                                      242
+

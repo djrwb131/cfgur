@@ -1,0 +1,50 @@
+                               M4100 Series ProSAFE Managed Switches
+
+Command example:
+The following example shows CLI output for the show ip arp inspection statistics
+command, which lists the summary of forwarded and dropped ARP packets on all
+DAI-enabled VLANs.
+VLAN  Forwarded      Dropped
+----  ---------      -------
+  10             90       14
+  20             10         3
+
+Command example:
+(NETGEAR Switch) #show ip arp inspection statistics vlan <vlan-list>
+
+VLAN       DHCP       ACL         DHCP    ACL                Bad Src         Bad Dest  Invalid
+           Drops      Drops       Permits Permits            MAC           MAC             IP
+----- -------- --------- ----------- --------- ---------- ----------- ---------
+10         11        1                65      25               1           1               0
+20          1        0                 8      2               0            1               1
+
+clear ip arp inspection statistics
+Use this command to reset the statistics for Dynamic ARP Inspection on all VLANs.
+
+ Default        none
+
+ Format         clear ip arp inspection statistics
+
+ Mode           Privileged EXEC
+
+show ip arp inspection interfaces
+Use this command to display the Dynamic ARP Inspection configuration on all the
+DAI-enabled interfaces. An interface is said to be enabled for DAI if at least one VLAN, that
+the interface is a member of, is enabled for DAI. If you enter the <slot/port> interface
+argument, the command displays the values for that interface whether the interface is
+enabled for DAI or not.
+
+ Format         show ip arp inspection interfaces [<slot/port>]
+
+ Mode           ·   Privileged EXEC
+                ·   User EXEC
+
+ Term               Definition
+
+ Interface          The interface ID for each displayed row.
+
+ Trust State        Whether the interface is trusted or untrusted for DAI.
+
+                                         Switching Commands
+                                            153
+

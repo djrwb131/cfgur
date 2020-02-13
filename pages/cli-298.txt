@@ -1,0 +1,48 @@
+                          M4100 Series ProSAFE Managed Switches
+
+·   Wildcard masking for ACLs operates differently from a subnet mask. A wildcard mask is
+    in essence the inverse of a subnet mask. With a subnet mask, the mask has ones (1's) in
+    the bit positions that are used for the network address, and has zeros (0's) for the bit
+    positions that are not used. In contrast, a wildcard mask has (0's) in a bit position that
+    must be checked. A `1' in a bit position of the ACL mask indicates the corresponding bit
+    can be ignored.
+
+access-list
+This command creates an IP access control list (ACL) that is identified by the access list
+number, which is 1-99 for standard ACLs or 100-199 for extended ACLs.
+IP Standard ACL:
+
+ Format     access-list <1-99> {deny | permit} {every | <srcip> <srcmask>} [log]
+            [rate-limit <1-4294967295> <1-128>][assign-queue <queue-id>]
+            [{mirror | redirect} <slot/port>]
+
+ Mode       Global Config
+
+IP Extended ACL:
+
+ Format     access-list <100-199> {deny | permit} {every | {{icmp | igmp | ip |
+            tcp | udp | <number>} {<srcip> <srcmask>} [eq {<portkey> |
+            <0-65535>}] {<dstip> <dstmask>} [eq {<portkey>| <0-65535>}]
+            [precedence <precedence> | tos <tos> <tosmask> | dscp <dscp>]}}
+            [log] [rate-limit <1-4294967295> <1-128>] [assign-queue <queue-id>]
+            [{mirror | redirect} <slot/port>]
+
+ Mode       Global Config
+
+ Parameter                     Description
+ <1-99> or <100-199>           Range 1­99 is the access list number for an IP standard ACL.
+                               Range 100­199 is the access list number for an IP extended ACL.
+
+ {deny | permit}               Specifies whether the IP ACL rule permits or denies an action.
+
+ every                         Match every packet
+
+ {icmp | igmp | ip | tcp |     Specifies the protocol to filter for an extended IP ACL rule.
+ udp | <number>}               <number> can be a value from 0-255.
+
+ <srcip> <srcmask>             Specifies a source IP address and source netmask for match
+                               condition of the IP ACL rule.
+
+                             Quality of Service Commands
+                                           298
+

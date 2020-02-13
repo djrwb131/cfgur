@@ -1,0 +1,54 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+    Table 20. User_Manager Log Messages
+
+     Component         Message                                       Cause
+
+     User_Manager      User Login Failed for XXXX                    Failed to authenticate user login. XXXX
+                                                                     indicates the user name to be
+                                                                     authenticated.
+
+     User_Manager      Access level for user XXXX could not be       Invalid access level specified for the user.
+                       determined. Setting to READ_ONLY.             The access level is set to READ_ONLY.
+                                                                     XXXX indicates the user name.
+
+     User_Manager      Could not migrate config file XXXX from       Failed to migrate the config file. XXXX is
+                       version YYYY to ZZZZ. Using defaults.         the config file name. YYYY is the old
+                                                                     version number and ZZZZ is the new
+                                                                     version number.
+
+Switching
+
+    Table 21. Protected Ports Log Messages
+
+     Component         Message                                       Cause
+
+     Protected Ports   Protected Port: failed to save configuration  Appears when the protected port
+                                                                     configuration cannot be saved
+
+     Protected Ports   protectedPortCnfgrInitPhase1Process:          Appears when protectedPortCfgRWLock
+                       Unable to create r/w lock for protectedPort   Fails
+
+     Protected Ports   protectedPortCnfgrInitPhase2Process:          Appears when nimRegisterIntfChange with
+                       Unable to register for VLAN change            VLAN fails
+                       callback
+
+     Protected Ports   Cannot add intIfNum xxx to group yyy          Appears when an interface could not be
+                                                                     added to a particular group.
+
+     Protected Ports   Unable to set protected port group            Appears when a dtl call fails to add
+                                                                     interface mask at the driver level
+
+     Protected Ports   Cannot delete intIfNum xxx from group yyy     Appears when a dtl call to delete an
+                                                                     interface from a group fails
+
+     Protected Ports   Cannot update group YYY after deleting        This message appears when an update
+                       interface XXX                                 group for an interface deletion fails
+
+     Protected Ports   Received an interface change callback         Appears when an interface change
+                       while not ready to receive it                 callback has come before the protected
+                                                                     port component is ready.
+
+                                               Log Messages
+                                                       541
+

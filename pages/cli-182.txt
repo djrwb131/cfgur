@@ -1,0 +1,52 @@
+                            M4100 Series ProSAFE Managed Switches
+
+   show port-security static
+   This command displays the statically locked MAC addresses for port.
+
+     Format      show port-security static [lag <lag-intf-num> | <slot/port>]
+
+     Mode        Privileged EXEC
+
+     Term        Definition
+
+     MAC Address MAC Address of statically locked MAC.
+
+   show port-security violation
+   This command displays the source MAC address of the last packet discarded on a locked
+   port.
+
+     Format      show port-security violation [lag <lag-intf-num> | <slot/port>]
+
+     Mode        Privileged EXEC
+
+     Term        Definition
+
+     MAC Address MAC Address of discarded packet on locked port.
+
+LLDP (802.1AB) Commands
+
+   This section describes the command you use to configure Link Layer Discovery Protocol
+   (LLDP), which is defined in the IEEE 802.1AB specification. LLDP allows stations on an 802
+   LAN to advertise major capabilities and physical descriptions. The advertisements allow a
+   network management system (NMS) to access and display this information.
+
+   lldp transmit
+   Use this command to enable the LLDP advertise capability.
+
+     Default     enabled
+
+     Format      lldp transmit
+
+     Mode        Interface Config
+
+   no lldp transmit
+
+   Use this command to return the local data transmission capability to the default.
+
+     Format      no lldp transmit
+
+     Mode        Interface Config
+
+                                  Switching Commands
+                                         182
+

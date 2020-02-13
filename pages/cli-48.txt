@@ -1,0 +1,54 @@
+                       M4100 Series ProSAFE Managed Switches
+
+vlan ingressfilter
+This command enables ingress filtering. If ingress filtering is disabled, frames received with
+VLAN IDs that do not match the VLAN membership of the receiving interface are admitted
+and forwarded to ports that are members of that VLAN.
+
+ Default  disabled
+
+ Format   vlan ingressfilter
+
+ Mode     Interface Config
+
+no vlan ingressfilter
+
+This command disables ingress filtering. If ingress filtering is disabled, frames received with
+VLAN IDs that do not match the VLAN membership of the receiving interface are admitted
+and forwarded to ports that are members of that VLAN.
+
+ Format   no vlan ingressfilter
+
+ Mode     Interface Config
+
+vlan makestatic
+This command changes a dynamically created VLAN (one that is created by GVRP
+registration) to a static VLAN (one that is permanently configured and defined). The ID is a
+valid VLAN identification number. VLAN range is 2-4093.
+
+ Format   vlan makestatic <2-4093>
+
+ Mode     VLAN Config
+
+vlan name
+This command changes the name of a VLAN. The name is an alphanumeric string of up to 32
+characters, and the ID is a valid VLAN identification number. ID range is 1-4093.
+
+ Default  ·    VLAN ID 1 - default
+          ·    other VLANS - blank string
+
+ Format   vlan name <1-4093> <name>
+
+ Mode     VLAN Config
+
+no vlan name
+
+This command sets the name of a VLAN to a blank string.
+
+ Format   no vlan name <1-4093>
+
+ Mode     VLAN Config
+
+                                    Switching Commands
+                                            48
+

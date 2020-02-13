@@ -1,0 +1,49 @@
+                         M4100 Series ProSAFE Managed Switches
+
+udld enable (Interface Config)
+This command enables UDLD on the specified interface.
+
+ Default   disabled
+
+ Format    udld enable
+
+ Mode      Interface Config
+
+no udld enable (Interface Config)
+
+This command disables UDLD on the specified interface.
+
+ Format    no udld enable
+
+ Mode      Interface Config
+
+udld port
+This command selects the UDLD mode operating on this interface. If you do not enter the
+aggressive keyword, the port operates in normal mode.
+
+ Default   normal
+
+ Format    udld port [aggressive]
+
+ Mode      Interface Config
+
+udld reset
+This command resets all interfaces that have been shutdown by UDLD.
+
+ Format    udld reset
+
+ Mode      Privileged EXEC
+
+show udld
+This command displays either the global UDLD settings or the UDLD settings for a specified
+<slot/port>. If the all keyword is entered, the command displays information for all
+ports.
+
+ Format    show udld [<slot/port> | all]
+
+ Mode      ·   Privileged EXEC
+           ·   User EXEC
+
+                                   Utility Commands
+                                      439
+

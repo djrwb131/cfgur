@@ -1,0 +1,54 @@
+                             M4100 Series ProSAFE Managed Switches
+
+vlan protocol group
+This command adds protocol-based VLAN groups to the system. When it is created, the
+protocol group will be assigned a unique number (1-128) that will be used to identify the
+group in subsequent commands.
+
+ Format        vlan protocol group <1-128>
+
+ Mode          Global Config
+
+no vlan protocol group
+
+This command removes a protocol group.
+
+ Format        no vlan protocol group <1-128>
+
+ Mode          Global Config
+
+vlan protocol group name
+This command assigns a name to a protocol-based VLAN group. The groupname variable
+can be a character string of 0­16 characters.
+
+ Format        vlan protocol group name <1-128> <groupname>
+
+ Mode          Global Config
+
+no vlan protocol group name
+
+This command removes the name from a protocol-based VLAN group.
+
+ Format        no vlan protocol group name <1-128>
+
+ Mode          Global Config
+
+vlan protocol group add protocol
+This command adds the protocol to the protocol-based VLAN identified by groupid. A group
+may have more than one protocol associated with it. Each interface and protocol combination
+can only be associated with one group. If adding a protocol to a group causes any conflicts
+with interfaces currently associated with the group, this command fails and the protocol is not
+added to the group. The possible values for protocol-list includes the keywords ip, arp, and
+ipx and hexadecimal or decimal values ranging from 0x0600 (1536) to 0xFFFF (65535). The
+protocol list can accept up to 16 protocols separated by a comma.
+
+ Default       none
+
+ Format        vlan protocol group add protocol <groupid> <ethertype>
+               {<protocol-list> | arp | ip | ipx}
+
+ Mode          Global Config
+
+                               Switching Commands
+                                           52
+

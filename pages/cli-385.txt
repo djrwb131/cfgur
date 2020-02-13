@@ -1,0 +1,52 @@
+                          M4100 Series ProSAFE Managed Switches
+
+hardware-address
+This command specifies the hardware address of a DHCP client. Hardware-address is the
+MAC address of the hardware platform of the client consisting of 6 bytes in dotted
+hexadecimal format. Type indicates the protocol of the hardware platform. It is 1 for 10 MB
+Ethernet and 6 for IEEE 802.
+
+ Default      ethernet
+
+ Format       hardware-address <hardwareaddress> <type>
+
+ Mode         DHCP Pool Config
+
+no hardware-address
+
+This command removes the hardware address of the DHCP client.
+
+ Format       no hardware-address
+
+ Mode         DHCP Pool Config
+
+host
+This command specifies the IP address and network mask for a manual binding to a DHCP
+client. Address and Mask are valid IP addresses; each made up of four decimal bytes
+ranging from 0 to 255. IP address 0.0.0.0 is invalid. The prefix length is an integer from 0
+to 32.
+
+ Default      none
+
+ Format       host <address> [<mask> | <prefix-length>]
+
+ Mode         DHCP Pool Config
+
+no host
+
+This command removes the IP address of the DHCP client.
+
+ Format       no host
+
+ Mode         DHCP Pool Config
+
+lease
+This command configures the duration of the lease for an IP address that is assigned from a
+DHCP server to a DHCP client. The overall lease time should be between 1-86400 minutes.
+If you specify infinite, the lease is set for 60 days. You can also specify a lease duration.
+<days> is an integer from 0 to 59. <hours> is an integer from 0 to 23. <minutes> is an
+integer from 0 to 59.
+
+                                   Utility Commands
+                                          385
+

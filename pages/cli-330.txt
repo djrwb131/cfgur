@@ -1,0 +1,53 @@
+                        M4100 Series ProSAFE Managed Switches
+
+boot host auto-save
+This command is used to enable automatically saving the downloaded configuration on the
+switch.
+
+ Default       Disabled
+
+ Format        boot host auto-save
+
+ Mode          Privileged EXEC
+
+no boot host auto-save
+
+This command is used to disable automatically saving the downloaded configuration on the
+switch.
+
+ Format        no boot host auto-save
+
+ Mode          Privileged EXEC
+
+boot autoinstall start
+The command is used to start Auto Install on the switch. Auto Install tries to download a
+config file from a TFTP server.
+
+ Format        boot autoinstall start
+
+ Mode          Privileged EXEC
+
+boot autoinstall stop
+The command is used to A user might terminate the Auto Install process at any time prior to
+the downloading of the config file. This is most optimally done when the switch is
+disconnected from the network, or if the requisite configuration files have not been configured
+on TFTP servers. Termination of the Auto Install process ends further periodic requests for a
+host-specific file.
+
+ Format        boot autoinstall stop
+
+ Mode          Privileged EXEC
+
+boot host retry-count
+This command is used to set the number of attempts to download a configuration. The valid
+range is from 1 to 6.
+
+ Default       3
+
+ Format        boot host retry-count <count>
+
+ Mode          Privileged EXEC
+
+                                     Utility Commands
+                                          330
+

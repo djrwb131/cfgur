@@ -1,0 +1,61 @@
+                             M4100 Series ProSAFE Managed Switches
+
+Table 6. CLI Mode Access and Exit (continued)
+
+ Command Mode       Access Method                         Exit or Access Previous Mode
+
+ Global Config      From the Privileged EXEC mode,        To exit to the Privileged EXEC mode, enter exit, or
+                    enter configure.                      press Ctrl-Z.
+
+ VLAN Config        From the Privileged EXEC mode,        To exit to the Privileged EXEC mode, enter exit, or
+                    enter vlan database.                  press Ctrl-Z.
+
+ Interface Config   From the Global Config mode,          To exit to the Global Config mode, enter exit. To
+                    enter                                 return to the Privileged EXEC mode, enter Ctrl-Z.
+                    interface <slot/port> or
+                    interface loopback <id> or
+                    interface tunnel <id>
+
+ Line Config        From the Global Config mode,          To exit to the Global Config mode, enter exit. To
+                    enter lineconfig.                     return to the Privileged EXEC mode, enter Ctrl-Z.
+
+ Policy-Map Config  From the Global Config mode,          To exit to the Global Config mode, enter exit. To
+                    enter policy-map <name>.              return to the Privileged EXEC mode, enter Ctrl-Z.
+
+ Policy-Class-Map   From the Policy Map mode enter        To exit to the Global Config mode, enter exit. To
+ Config             class.                                return to the Privileged EXEC mode, enter Ctrl-Z.
+
+ Class-Map Config   From the Global Config mode,          To exit to the Global Config mode, enter exit. To
+                    enter class-map, and specify the      return to the Privileged EXEC mode, enter Ctrl-Z.
+                    optional keyword ipv4 to specify
+                    the Layer 3 protocol for this class.
+                    See class-map on page 272 for
+                    more information.
+
+ Ipv6-Class-Map     From the Global Config mode,          To exit to the Global Config mode, enter exit. To
+ Config             enter class-map and specify the       return to the Privileged EXEC mode, enter Ctrl-Z.
+                    optional keyword ipv6 to specify
+                    the Layer 3 protocol for this class.
+                    See class-map on page 272 for
+                    more information.
+
+ MAC Access-list    From the Global Config mode,          To exit to the Global Config mode, enter exit. To
+ Config             enter mac access-list                 return to the Privileged EXEC mode, enter Ctrl-Z.
+                    extended <name>.
+
+ TACACS Config      From the Global Config mode,          To exit to the Global Config mode, enter exit. To
+                    enter tacacs-server host              return to the Privileged EXEC mode, enter Ctrl-Z.
+                    <ip-addr>, in which <ip-addr>
+                    is the IP address of the TACACS
+                    server on your network.
+
+ DHCP Pool Config   From the Global Config mode,          To exit to the Global Config mode, enter exit. To
+                    enter ip dhcp pool                    return to the Privileged EXEC mode, enter Ctrl-Z.
+                    <pool-name>.
+
+ ARP Access-List    From the Global Config mode,          To exit to the Global Config mode, enter exit. To
+ Config Mode        enter arp access-list.                return to the Privileged EXEC mode, enter Ctrl-Z.
+
+                                Using the Command-Line Interface
+                                                  13
+

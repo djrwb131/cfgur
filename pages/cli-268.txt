@@ -1,0 +1,52 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Format        show classofservice dot1p-mapping [<slot/port>]
+
+ Mode          Privileged EXEC
+
+The following information is repeated for each user priority.
+
+ Term             Definition
+
+ User Priority   The 802.1p user priority value.
+
+ Traffic Class   The traffic class internal queue identifier to which the user priority value is mapped.
+
+show classofservice ip-precedence-mapping
+This command displays the current IP Precedence mapping to internal traffic classes for a
+specific interface. The <slot/port> parameter is optional and is only valid on platforms
+that support independent per-port Class of Service mappings. If specified, the IP Precedence
+mapping table of the interface is displayed. If omitted, the most recent global configuration
+settings are displayed.
+
+ Format        show classofservice ip-precedence-mapping [<slot/port>]
+
+ Mode          Privileged EXEC
+
+The following information is repeated for each user priority.
+
+ Term             Definition
+
+ IP Precedence   The IP Precedence value.
+
+ Traffic Class   The traffic class internal queue identifier to which the IP Precedence value is mapped.
+
+show classofservice ip-dscp-mapping
+This command displays the current IP DSCP mapping to internal traffic classes for the global
+configuration settings.
+
+ Format        show classofservice ip-dscp-mapping
+
+ Mode          Privileged EXEC
+
+The following information is repeated for each user priority.
+
+ Term             Definition
+
+ IP DSCP         The IP DSCP value.
+
+ Traffic Class   The traffic class internal queue identifier to which the IP DSCP value is mapped.
+
+                                   Quality of Service Commands
+                                                  268
+

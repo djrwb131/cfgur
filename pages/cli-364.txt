@@ -1,0 +1,54 @@
+                             M4100 Series ProSAFE Managed Switches
+
+port (Mail Server Config)
+Use this command to configure the TCP port to use for communication with the SMTP server.
+For <portid>, you enter any nonstandard port in the range 1­65535. For TLSv1, the
+recommended port is number 465. If you do not use security, the recommended port is
+number 25.
+
+ Default      25
+
+ Format       port <portid>
+
+ Mode         Mail Server Config
+
+username (Mail Server Config)
+Use this command to configure the login ID that the switch uses to authenticate with the
+SMTP server.
+
+ Default      admin
+
+ Format       username <name>
+
+ Mode         Mail Server Config
+
+password (Mail Server Config)
+Use this command to configure the password that the switch uses to authenticate with the
+SMTP server.
+
+ Format       password <password>
+
+ Mode         Mail Server Config
+
+show mail-server config
+Use this command to display information about the email alert configuration.
+
+ Format       show mail-server {<ip-address> | <hostname> | all} config
+
+ Mode         Privileged EXEC
+
+ Term             Definition
+
+ No of mail       The number of SMTP servers configured on the switch.
+ servers
+ configured
+
+ Email Alert Mail The IPv4/IPv6 address or DNS host name of the configured SMTP server.
+ Server Address
+
+ Email Alert Mail The TCP port the switch uses to send email to the SMTP server.
+ Server Port
+
+                                   Utility Commands
+                                       364
+

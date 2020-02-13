@@ -1,0 +1,52 @@
+                         M4100 Series ProSAFE Managed Switches
+
+no ip http session soft-timeout
+
+Use this command to reset the soft time-out for unsecure HTTP sessions to the default value.
+
+ Format     no ip http session soft-timeout
+
+ Mode       Privileged EXEC
+
+ip http secure-session maxsessions
+Use this command to limit the number of secure HTTP sessions. Zero is the configurable
+minimum.
+
+ Default    16
+
+ Format     ip http secure-session maxsessions <0-16>
+
+ Mode       Privileged EXEC
+
+no ip http secure-session maxsessions
+
+Use this command to restore the number of allowable secure HTTP sessions to the default
+value.
+
+ Format     no ip http secure-session maxsessions
+
+ Mode       Privileged EXEC
+
+ip http secure-session soft-timeout
+Use this command to configure the soft time-out for secure HTTP sessions in minutes. When
+this time-out expires, you must reauthenticate. This timer begins on initiation of the web
+session and is restarted with each access to the switch. The secure session soft time-out
+cannot be set to zero (infinite).
+
+ Default    5
+
+ Format     ip http secure-session soft-timeout <1-60>
+
+ Mode       Privileged EXEC
+
+no ip http secure-session soft-timeout
+
+Use this command to restore the soft time-out for secure HTTP sessions to the default value.
+
+ Format     no ip http secure-session soft-timeout
+
+ Mode       Privileged EXEC
+
+                                  Management Commands
+                                       464
+

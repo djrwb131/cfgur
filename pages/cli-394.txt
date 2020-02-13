@@ -1,0 +1,59 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Field             Definition
+
+ Automatic         The number of IP addresses that have been automatically mapped to the MAC
+ Bindings          addresses of hosts that are found in the DHCP database.
+
+ Expired Bindings  The number of expired leases.
+
+ Malformed         The number of truncated or corrupted messages that were received by the DHCP server.
+ Bindings
+
+For Message Received, the fields that are shown in the following table are displayed.
+
+ Message           Definition
+
+ DHCP              The number of DHCPDISCOVER messages the server has received.
+ DISCOVER
+
+ DHCP              The number of DHCPREQUEST messages the server has received.
+ REQUEST
+
+ DHCP DECLINE      The number of DHCPDECLINE messages the server has received.
+
+ DHCP              The number of DHCPRELEASE messages the server has received.
+ RELEASE
+
+ DHCP INFORM       The number of DHCPINFORM messages the server has received.
+
+For Message Sent, the fields that are shown in the following table are displayed.
+
+ Message           Definition
+
+ DHCP OFFER        The number of DHCPOFFER messages the server sent.
+
+ DHCP ACK          The number of DHCPACK messages the server sent.
+
+ DHCP NACK         The number of DHCPNACK messages the server sent.
+
+show ip dhcp conflict
+This command displays address conflicts logged by the DHCP Server. If no IP address is
+specified, all the conflicting addresses are displayed.
+
+ Format         show ip dhcp conflict [<ip-address>]
+
+ Modes          ·  Privileged EXEC
+                ·  User EXEC
+
+ Term              Definition
+
+ IP address        The IP address of the host as recorded on the DHCP server.
+
+ Reporting Host    The hardware address of the host that reported the conflict.
+ Hardware
+ Address
+
+                                         Utility Commands
+                                                  394
+

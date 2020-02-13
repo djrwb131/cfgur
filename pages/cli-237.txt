@@ -1,0 +1,54 @@
+                          M4100 Series ProSAFE Managed Switches
+
+show dhcp lease
+Use this command to display a list of IPv4 addresses currently leased from a DHCP server
+on a specific in-band interface or all in-band interfaces. This command does not apply to
+service or network ports.
+
+ Format       show dhcp lease [interface <slot/port>]
+
+ Mode         Privileged EXEC
+
+ Term                Definition
+
+ IP address, Subnet  The IP address and network mask leased from the DHCP server.
+ mask
+
+ DHCP Lease          The IPv4 address of the DHCP server that leased the address.
+ server
+
+ State               State of the DHCPv4 Client on this interface.
+
+ DHCP transaction    The transaction ID of the DHCPv4 Client.
+ ID
+
+ Lease               The time (in seconds) that the IP address was leased by the server.
+
+ Renewal             The time (in seconds) when the next DHCP renew Request is sent by DHCPv4 Client
+                     to renew the leased IP address.
+
+ Rebind              The time (in seconds) when the DHCP Rebind process starts.
+
+ Retry count         Number of times the DHCPv4 client sends a DHCP REQUEST message before the
+                     server responds.
+
+ip route
+This command configures a static route.   The <ipaddr> parameter is a valid IP address,
+and <subnetmask> is a valid subnet mask. The <nexthopip> parameter is a valid IP
+address of the next hop router. Specifying Null0 as nexthop parameter adds a static reject
+route. The optional <preference> parameter is an integer (value from 1 to 255) that allows
+you to specify the preference value (sometimes called "administrative distance") of an
+individual static route. Among routes to the same destination, the route with the lowest
+preference value is the route entered into the forwarding database. By specifying the
+preference of a static route, you control whether a static route is more or less preferred than
+routes from dynamic routing protocols. The preference also controls whether a static route is
+more or less preferred than other static routes to the same destination. A route with a
+preference of 255 cannot be used to forward traffic.
+For the static routes to be visible, you must perform the following steps:
+·   Enable IP routing globally.
+·   Enable IP routing for the interface.
+·   Confirm that the associated link is also up
+
+                                         Routing Commands
+                                           237
+

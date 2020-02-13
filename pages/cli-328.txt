@@ -1,0 +1,31 @@
+7. Utility Commands                                                                 7
+
+   This chapter describes the utility commands available in the CLI.
+   The chapter contains the following sections:
+      ·   Auto Install Commands
+      ·   Dual Image Commands
+      ·   System Information and Statistics Commands
+      ·   Logging Commands
+      ·   Email Alerting and Mail Server Commands
+      ·   System Utility and Clear Commands
+      ·   Simple Network Time Protocol (SNTP) Commands
+      ·   DHCP Server Commands
+      ·   DNS Client Commands
+      ·   Packet Capture Commands
+      ·   Serviceability Packet Tracing Commands
+      ·   Cable Test Command
+      ·   sFlow Commands
+      ·   IP Address Conflict Commands
+      ·   RMON Stats and History Commands
+      ·   UniDirectional Link Detection Commands
+      ·   USB Commands
+   The commands in this chapter are in four functional groups:
+      ·   Show commands display switch settings, statistics, and other information.
+      ·   Configuration commands configure features and options of the switch. Every switch
+          command has a show command that displays the configuration setting.
+      ·   Copy commands transfer or save configuration and informational files to and from the
+          switch.
+      ·   Clear commands clear some or all of the settings to factory defaults.
+
+                                                 328
+

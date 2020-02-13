@@ -1,0 +1,53 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Command example:
+(Routing) #show interface counters
+Port       InOctets            InUcastPkts       InMcastPkts     InBcastPkts
+--------- ---------------- ---------------- ---------------- ----------------
+0/1        0                   0                 0               0
+0/2        0                   0                 0               0
+0/3        15098               0                 31              39
+0/4        0                   0                 0               0
+0/5        0                   0                 0               0
+0/6        0                   0                 0               0
+0/7        0                   0                 0               0
+0/8        0                   0                 0               0
+0/9        0                   0                 0               0
+0/10       0                   0                 0               0
+0/11       0                   0                 0               0
+
+show interface ethernet
+This command displays detailed statistics for a specific interface or for all CPU traffic based
+upon the argument.
+
+ Format       show interface ethernet {<slot/port> | switchport}
+
+ Mode         Privileged EXEC
+
+When you specify a value for <slot/port>, the command output displays the information
+that is shown in the following table.
+
+ Term              Definition
+
+ Packets Received  · Total Packets Received (Octets) - The total number of octets of data (including those in
+                     bad packets) received on the network (excluding framing bits but including Frame Check
+                     Sequence (FCS) octets). This object can be used as a reasonable estimate of Ethernet
+                     utilization. If greater precision is desired, the etherStatsPkts and etherStatsOctets objects
+                     should be sampled before and after a common interval. The result of this equation is the
+                     value Utilization which is the percent utilization of the Ethernet segment on a scale of
+                     0­100 percent.
+                   · Packets Received 64 Octets - The total number of packets (including bad packets)
+                     received that were 64 octets in length (excluding framing bits but including FCS octets).
+                   · Packets Received 65­127 Octets - The total number of packets (including bad packets)
+                     received that were from 65 through 127 octets in length inclusive (excluding framing bits
+                     but including FCS octets).
+                   · Packets Received 128­255 Octets - The total number of packets (including bad packets)
+                     received that were from 128 through 255 octets in length inclusive (excluding framing bits
+                     but including FCS octets).
+                   · Packets Received 256­511 Octets - The total number of packets (including bad packets)
+                     received that were from 256 through 511 octets in length inclusive (excluding framing bits
+                     but including FCS octets).
+
+                                      Utility Commands
+                                             337
+

@@ -1,0 +1,42 @@
+                            M4100 Series ProSAFE Managed Switches
+
+Port-Channel/LAG (802.3ad) Commands
+
+   This section describes the commands you use to configure port-channels, which are also
+   known as link aggregation groups (LAGs). Link aggregation allows you to combine multiple
+   full-duplex Ethernet links into a single logical link. Network devices treat the aggregation as if
+   it were a single link, which increases fault tolerance and provides load sharing. The LAG
+   feature initially load shares traffic based upon the source and destination MAC address.
+   Assign the port-channel (LAG) VLAN membership after you create a port-channel. If you do
+   not assign VLAN membership, the port-channel might become a member of the
+   management VLAN which can result in learning and switching issues.
+   A port-channel (LAG) interface can be either static or dynamic, but not both. All members of a
+   port channel must participate in the same protocols.) A static port-channel interface does not
+   require a partner system to be able to aggregate its member ports.
+
+       Note: If you configure the maximum number of dynamic port-channels
+            (LAGs) that your platform supports, additional port-channels that you
+            configure are automatically static.
+
+   addport
+   This command adds one port to the port-channel (LAG). The interface is a logical slot/port
+   number or a group ID of a configured port-channel.
+
+       Note: Before adding a port to a port-channel, set the physical mode of the
+            port. For more information, see speed on page 22.
+
+     Format    addport {<logical slot/port> | lag <lag-group-id>}
+
+     Mode      Interface Config
+
+   deleteport (Interface Config)
+   This command deletes the port from the port-channel (LAG). The interface is a logical
+   slot/port number or a group ID of a configured port-channel.
+
+     Format    deleteport {<logical slot/port> | lag <lag-group-id>}
+
+     Mode      Interface Config
+
+                                        Switching Commands
+                                       109
+

@@ -1,0 +1,47 @@
+                            M4100 Series ProSAFE Managed Switches
+
+Management Interface Commands
+
+   This section describes the commands you use to configure a logical interface for
+   management access.
+
+   enable (Privileged EXEC access)
+   Use this command to access the Privileged EXEC mode. From the Privileged EXEC mode,
+   you can configure the network interface.
+
+     Format     enable
+
+     Mode       User EXEC
+
+   ip management
+   Use this command to specify the source IP address for all applications (syslog, SNMP client,
+   and so on).
+
+     Default    vlan 1
+
+     Format     ip management [serviceport | vlan <number> | port <slot/port> |
+                loopback <number>]
+
+     Mode       User EXEC
+
+   no ip management
+
+   Use this command to specify the IP address of the management VLAN (VLAN 1) as the
+   source IP address for all applications (syslog, SNMP client, and so on).
+
+     Format     no ip management [serviceport | vlan <number> | port <slot/port> |
+                loopback <number>]
+
+     Mode       User EXEC
+
+   network mac-address
+   Use this command to set locally administered MAC addresses. The following rules apply:
+   ·   Bit 6 of byte 0 (called the U/L bit) indicates whether the address is universally
+       administered (b'0') or locally administered (b'1').
+   ·   Bit 7 of byte 0 (called the I/G bit) indicates whether the destination address is an
+       individual address (b'0') or a group address (b'1').
+   ·   The second character, of the twelve character macaddr, must be 2, 6, A or E.
+
+                                   Management Commands
+                                              446
+

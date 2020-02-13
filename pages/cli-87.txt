@@ -1,0 +1,49 @@
+                              M4100 Series ProSAFE Managed Switches
+
+dot1x user
+This command adds the specified user to the list of users with access to the specified port or
+all ports. The <user> parameter must be a configured user.
+
+ Format        dot1x user <user> {<slot/port> | all}
+
+ Mode          Global Config
+
+no dot1x user
+
+This command removes the user from the list of users with access to the specified port or all
+ports.
+
+ Format        no dot1x user <user> {<slot/port> | all}
+
+ Mode          Global Config
+
+clear dot1x authentication-history
+This command clears the authentication history table captured during successful and
+unsuccessful authentication on all interface or the specified interface.
+
+ Format        clear dot1x authentication-history [slot/port]
+
+ Mode          Global Config
+
+dot1x dynamic-vlan enable
+Use this command to enable the switch to create VLANs dynamically when a RADIUS
+assigned VLAN does not exist in the switch.
+
+ Format        dot1x dynamic-vlan enable
+
+ Mode          Global Config
+
+ Default       Disabled
+
+no dot1x dynamic-vlan enable
+
+Use this command to disable the switch from creating VLANs dynamically when a RADIUS
+assigned VLAN does not exist in the switch.
+
+ Format        no dot1x dynamic-vlan enable
+
+ Mode          Global Config
+
+                              Switching Commands
+                                         87
+

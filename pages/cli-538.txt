@@ -1,0 +1,53 @@
+                         M4100 Series ProSAFE Managed Switches
+
+Table 14. EmWeb Log Messages
+
+ Component      Message                                 Cause
+
+ EmWeb          EMWEB (Telnet): Max number of Telnet    A user attempted to connect via telnet
+                login sessions exceeded                 when the maximum number of telnet
+                                                        sessions were already active.
+
+ EmWeb          EMWEB (SSH): Max number of SSH login    A user attempted to connect via SSH when
+                sessions exceeded                       the maximum number of SSH sessions
+                                                        were already active.
+
+ EmWeb          Handle table overflow                   All the available EmWeb connection
+                                                        handles are being used and the connection
+                                                        could not be made.
+
+ EmWeb          ConnectionType EmWeb socket accept()    Socket accept failure for the specified
+                failed: errno                           connection type.
+
+ EmWeb          ewsNetHTTPReceive failure in            Socket receive failure.
+                NetReceiveLoop() - closing connection.
+
+ EmWeb          EmWeb: connection allocation failed     Memory allocation failure for the new
+                                                        connection.
+
+ EmWeb          EMWEB TransmitPending :                 Socket error on send.
+                EWOULDBLOCK error sending data
+
+ EmWeb          ewaNetHTTPEnd: internal error - handle  EmWeb handle index not valid.
+                not in Handle table
+
+ EmWeb          ewsNetHTTPReceive:recvBufCnt exceeds    The receive buffer limit has been reached.
+                MAX_QUEUED_RECV_BUFS!                   Bad request or DoS attack.
+
+ EmWeb          EmWeb accept: XXXX                      Accept function for new SSH connection
+                                                        failed. XXXX indicates the error info.
+
+Table 15. CLI_UTIL Log Messages
+
+ Component        Message                                       Cause
+
+ CLI_UTIL         Telnet Send Failed errno = 0x%x               Failed to send text string to the
+                                                                telnet client.
+
+ CLI_UTIL         osapiFsDir failed                             Failed to obtain the directory
+                                                                information from a volume's
+                                                                directory.
+
+                                         Log Messages
+                                             538
+

@@ -1,0 +1,53 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no domain-name enable
+
+This command disables the domain name functionality.
+
+ Format      no domain-name enable
+
+ Mode        Global Config
+
+show domain-name
+This command displays the configured domain-name.
+
+ Format      show domain-name
+
+ Mode        Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #show domain-name
+Domain               : Enable
+Domain-name          :abc
+
+aaa ias-user username
+The Internal Authentication Server (IAS) database is a dedicated internal database used for
+local authentication of users for network access through the IEEE 802.1X feature. Use this
+command to add the specified user to the internal user database. This command also
+changes the mode to AAA User Config mode.
+
+ Format      aaa ias-username <user>
+
+ Mode        Global Config
+
+no aaa ias-user username
+
+Use this command to remove an ias user.
+
+ Format      no aaa ias-username <user>
+
+ Mode        Global Config
+
+aaa session-id
+This global aaa command specifies whether the same session ID is used for authentication,
+authorization, and accounting service type within a session.s
+
+ Default     common
+
+ Format      aaa session-id [common | unique]
+
+ Mode        Global Config
+
+                                Management Commands
+                                        489
+

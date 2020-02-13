@@ -1,0 +1,48 @@
+                         M4100 Series ProSAFE Managed Switches
+
+ Acceptable      Definition
+ Values
+
+ 10f             10BASE-T full duplex
+
+ 10Gh            10GBase-T full duplex
+
+ 10Gf            10Gbase-T half duplex
+
+show port advertise
+Use this command to display the local administrative link advertisement configuration, local
+operational link advertisement, and the link partner advertisement for an interface. It also
+displays priority Resolution for speed and duplex as per 802.3 Annex 28B.3. It displays the
+autonegotiation state, Phy Master/Slave Clock configuration, and Link state of the port.
+If the link is down, the Clock is displayed as No Link, and a dash is displayed against the
+Oper Peer advertisement, and Priority Resolution. If autonegotiation is disabled, the admin
+Local Link advertisement, operational local link advertisement, operational peer
+advertisement, and Priority resolution fields are not displayed.
+If this command is executed without the optional slot/port parameter, it displays the
+autonegotiation state and operational Local link advertisement for all the ports. Operational
+link advertisement will display speed only if it is supported by both local as well as link
+partner. If autonegotiation is disabled, operational local link advertisement is not displayed.
+
+ Format       show port advertise [slot/port]
+
+ Mode         Privileged EXEC
+
+Command example:
+The following commands show the command output with and without the optional parameter:
+(NETGEAR Switch)#show port advertise 0/1
+
+Port: 0/1
+Type: Gigabit - Level
+Link State: Down
+Auto Negotiation: Enabled
+Clock: Auto
+                               1000f 1000h 100f 100h 10f 10h
+                               ----- ----- ---- ---- --- ---
+Admin Local Link Advertisement no        no   yes  no   yes no
+Oper Local Link Advertisement  no        no   yes  no   yes no
+Oper Peer Advertisement        no        no   yes  yes  yes yes
+Priority Resolution            -         -    yes   -    -   -
+
+                                  Switching Commands
+                                            23
+

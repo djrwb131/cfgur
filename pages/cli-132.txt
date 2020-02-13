@@ -1,0 +1,47 @@
+                            M4100 Series ProSAFE Managed Switches
+
+show mac-address-table static
+This command displays the static MAC filtering information for all static MAC filters. If you
+select all, all the static MAC filters in the system are displayed. If you supply a value for
+<macaddr>, you must also enter a value for <vlanid>, and the system displays static
+MAC filter information only for that MAC address and VLAN.
+
+ Format         show mac-address-table static {<macaddr> <vlanid> | all}
+
+ Mode           Privileged EXEC
+
+ Term            Definition
+
+ MAC Address     The MAC Address of the static MAC filter entry.
+
+ VLAN ID         The VLAN ID of the static MAC filter entry.
+
+ Source Port(s)  The source port filter set's slot and port(s).
+
+    Note: Only multicast address filters will have destination port lists.
+
+show mac-address-table staticfiltering
+This command displays the static filtering entries in the Multicast Forwarding Database
+(MFDB) table.
+
+ Format         show mac-address-table staticfiltering
+
+ Mode           Privileged EXEC
+
+ Term            Definition
+
+ Mac Address     A unicast MAC address for which the switch has forwarding and or filtering information.
+                 As the data is gleaned from the MFDB, the address will be a multicast address. The
+                 format is 6 or 8 two-digit hexadecimal numbers that are separated by colons, for example
+                 01:23:45:67:89:AB. In an IVL system the MAC address will be displayed as 8 bytes.
+
+ Type            The type of the entry. Static entries are those that are configured by the end user.
+                 Dynamic entries are added to the table as a result of a learning process or protocol.
+
+ Description     The text description of this multicast table entry.
+
+ Interfaces      The list of interfaces that are designated for forwarding (Fwd:) and filtering (Flt:).
+
+                                       Switching Commands
+                                    132
+

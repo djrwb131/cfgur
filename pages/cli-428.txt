@@ -1,0 +1,50 @@
+                         M4100 Series ProSAFE Managed Switches
+
+sflow poller
+A data source configured to collect counter samples is called a poller. Use this command to
+enable a new sFlow poller instance for this data source if <rcvr-idx> is valid.
+
+ Format         sflow poller {<rcvr-indx> | interval <poll-interval>}
+
+ Mode           Interface Config
+
+ Field          Description
+
+ Receiver Index Enter the sFlow Receiver associated with the sampler/poller. A value of zero (0) means
+                that no receiver is configured. The range is 1-8. The default is 0.
+
+ Poll Interval  Enter the sFlow instance polling interval. A poll interval of zero (0) disables counter
+                sampling. When set to zero (0), all the poller parameters are set to their corresponding
+                default value. The range is 0-86400. The default is 0. A value of N means once in N
+                seconds a counter sample is generated.
+
+no sflow poller
+
+Use this command to reset the sFlow poller instance to the default settings.
+
+ Format         no sflow poller {<rcvr-indx> | interval <poll-interval>}
+
+ Mode           Interface Config
+
+show sflow agent
+The sFlow agent collects time-based sampling of network interface statistics and flow-based
+samples. These are sent to the configured sFlow receivers. Use this command to display the
+sFlow agent information.
+
+ Format         show sflow agent
+
+ Mode           Privileged EXEC
+
+ Field          Description
+
+ sFlow Version  Uniquely identifies the version and implementation of this MIB. The version string must
+                have the following structure: MIB Version; Organization; Software Revision where:
+                ·   MIB Version: `1.3', the version of this MIB.
+                ·   Organization: Netgear.
+                ·   Revision: 1.0
+
+ IP Address     The IP address associated with this agent.
+
+                                       Utility Commands
+                                               428
+

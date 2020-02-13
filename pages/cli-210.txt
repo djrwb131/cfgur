@@ -1,0 +1,56 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Default        disabled
+
+ Format         dos-control icmpfrag
+
+ Mode           Global Config
+
+no dos-control icmpfrag
+
+This command disabled ICMP Fragment Denial of Service protection.
+
+ Format         no dos-control icmpfrag
+
+ Mode           Global Config
+
+show dos-control
+This command displays Denial of Service configuration information.
+
+ Format         show dos-control
+
+ Mode           Privileged EXEC
+
+      Note: Not all messages below might be displayed for the M4100 series
+           switches.
+
+ Term            Definition
+
+ First Fragment  May be enabled or disabled. The factory default is disabled.
+ Mode
+
+ Min TCP Hdr     The factory default is 20.
+ Size <0-255>
+
+ ICMP Mode       May be enabled or disabled. The factory default is disabled.
+
+ Max ICMPv4 Pkt  The range is 0-1023. The factory default is 512.
+ Size
+
+ Max ICMPv6 Pkt  The range is 0-16384. The factory default is 512.
+ Size
+
+ ICMP Fragment   May be enabled or disabled. The factory default is disabled.
+ Mode
+
+ L4 Port Mode    May be enabled or disabled. The factory default is disabled.
+
+ TCP Port Mode   May be enabled or disabled. The factory default is disabled.
+
+ UDP Port Mode   May be enabled or disabled. The factory default is disabled.
+
+ SIPDIP Mode     May be enabled or disabled. The factory default is disabled.
+
+                                    Switching Commands
+                                               210
+

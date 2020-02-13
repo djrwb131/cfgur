@@ -1,0 +1,47 @@
+                            M4100 Series ProSAFE Managed Switches
+
+    Note: The 31-bit subnet mask is only supported on routing interface. This
+           feature is not supported on a network port because it acts as a host,
+           not a router, on the management interface.
+
+ Format       ip address <ipaddr> {<subnetmask> | /<prefix-length>} [secondary]
+
+ Mode         Interface Config
+
+ Parameter       Description
+
+ <ipaddr>        The IP address of the interface.
+
+ <subnetmask>    A four-digit dotted-decimal number that represents the subnet mask of the interface
+
+ <prefix-length> Implements RFC 3021. Using the / notation of the subnet mask, this is an integer
+                 that indicates the length of the subnet mask. Range is 5­32 bits.
+
+no ip address
+
+This command deletes an IP address from an interface. The value for <ipaddr> is the IP
+address of the interface in a.b.c.d format where the range for a, b, c, and d is 1-255. The
+value for <subnetmask> is a 4-digit dotted-decimal number which represents the subnet
+mask of the interface. To remove all of the IP addresses (primary and secondary) configured
+on the interface, enter the command no ip address.
+
+ Format       no ip address [<ipaddr> {<subnetmask> | /<prefix-length>}
+              [secondary]]
+
+ Mode         Interface Config
+
+ip address dhcp
+Use this command to enable the DHCPv4 client on an in-band interface so that it can acquire
+network information, such as the IP address, subnet mask, and default gateway from a
+network DHCP server. When DHCP is enabled on the interface, the system automatically
+deletes all manually configured IPv4 addresses on the interface.
+
+ Default      disabled
+
+ Format       ip address dhcp
+
+ Mode         Interface Config
+
+                                    Routing Commands
+                                           235
+

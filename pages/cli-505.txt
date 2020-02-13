@@ -1,0 +1,53 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Parameter      Description
+
+ <ipaddr>       The IP address of the server.
+
+ <dnsname>      The DNS name of the server.
+
+ <password>     The password in encrypted format.
+
+Command example:
+radius server key acct 10.240.4.10 encrypted <encrypt-string>
+
+radius server msgauth
+Use this command to enable the message authenticator attribute to be used for the specified
+RADIUS Authenticating server.
+
+ Format      radius server msgauth {<ipaddr> | <dnsname>}
+
+ Mode        Global Config
+
+ Parameter      Description
+
+ <ipaddr>       The IP address of the server.
+
+ <dnsname>      The DNS name of the server.
+
+no radius server msgauth
+
+Use this command to disable the message authenticator attribute to be used for the specified
+RADIUS Authenticating server.
+
+ Format      no radius server msgauth {<ipaddr> | <dnsname>}
+
+ Mode        Global Config
+
+radius server primary
+Use this command to designate a configured server as the primary server in the group of
+servers that have the same server name. Multiple primary servers can be configured for each
+number of servers that have the same name. When the RADIUS client must perform
+transactions with an authenticating RADIUS server of specified name, the client uses the
+primary server that has the specified server name by default. If the RADIUS client fails to
+communicate with the primary server for any reason, the client uses the backup servers
+configured with the same server name. These backup servers are identified as the secondary
+type.
+
+ Format      radius server primary {<ipaddr> | <dnsname>}
+
+ Mode        Global Config
+
+                                Management Commands
+                                                505
+

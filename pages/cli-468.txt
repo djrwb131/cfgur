@@ -1,0 +1,50 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+     Field            Definition
+
+     Session Time     Total time this session has been connected.
+
+     Session Type     Shows the type of session, which can be HTTP, HTTPS, telnet, serial, or SSH.
+
+User Account Commands
+
+   This section describes the commands you use to add, manage, and delete system users.
+   The software has two default users: admin and guest. The admin user can view and
+   configure system settings, and the guest user can view settings.
+
+           Note: You cannot delete the admin user. There is only one user allowed with
+               read/write privileges. You can configure up to five read-only users on
+               the system.
+
+   username (Global Config)
+   Use this command to add a new user to the local user database. The default privilege level
+   is 1. Using the encrypted keyword allows the administrator to transfer local user passwords
+   between devices without having to know the passwords. When the password parameter is
+   used along with encrypted parameter, the password must be exactly 128 hexadecimal
+   characters in length. If the password strength feature is enabled, this command checks for
+   password strength and returns an appropriate error if it fails to meet the password strength
+   criteria. The optional override-complexity-check parameter disables the validation of
+   the password strength.
+
+     Format        username <name> {password <password> [encrypted
+                   [override-complexity-check] | level <level> [encrypted
+                   [override-complexity-check]] | override-complexity-check]} | {level
+                   <level> [override-complexity-check] password}
+
+     Mode          Global Config
+
+     Term               Definition
+
+     Name               The name of the user, up to 32 characters.
+
+     Password           The password for the users 8-64 characters. This value can be zero if the no
+                        passwords min-length command has been executed. The special characters allowed
+                        in the password include: ! # $ % & ' ( ) * + , - . / : ; < = > @ [ \ ] ^ _ ` { | } ~.
+
+     level              Specifies the user level. If not specified, the privilege level is 1. Level 0 can be
+                        assigned by a level 15 user to another user to suspend that user's access. Range
+                        0-15. Enter access level 1 for Read Access or 15 for Read/Write Access.
+
+                                    Management Commands
+                                       468
+

@@ -1,0 +1,48 @@
+                    M4100 Series ProSAFE Managed Switches
+
+match ip dscp
+This command adds to the specified class definition a match condition based on the value of
+the IP DiffServ Code Point (DSCP) field in a packet, which is defined as the high-order six
+bits of the Service Type octet in the IP header (the low-order two bits are not checked).
+The <dscpval> value is specified as either an integer from 0 to 63, or symbolically through
+one of the following keywords: af11, af12, af13, af21, af22, af23, af31, af32, af33, af41, af42,
+af43, be, cs0, cs1, cs2, cs3, cs4, cs5, cs6, cs7, ef.
+
+    Note: The match ip dscp, match ip precedence, and match ip
+            tos commands provide alternative ways to specify a match criterion
+            for the same Service Type field in the IP header, but each command
+            requires a slightly different user notation.
+
+ Default       none
+
+ Format        match ip dscp <dscpval>
+
+ Mode          · Class-Map Config
+               · Ipv6-Class-Map Config
+
+match ip precedence
+This command adds to the specified class definition a match condition based on the value of
+the IP Precedence field in a packet, which is defined as the high-order three bits of the
+Service Type octet in the IP header (the low-order five bits are not checked). The precedence
+value is an integer from 0 to 7.
+
+    Note: The match ip dscp, match ip precedence, and match ip
+            tos commands provide alternative ways to specify a match criterion
+            for the same Service Type field in the IP header, but each command
+            requires a slightly different user notation.
+
+ Default       none
+
+ Format        match ip precedence <0-7>
+
+ Mode          Class-Map Config
+
+match ip tos
+This command adds to the specified class definition a match condition based on the value of
+the IP ToS field in a packet, which is defined as all eight bits of the Service Type octet in the
+IP header. The value of <tosbits> is a two-digit hexadecimal number from 00 to ff. The
+value of <tosmask> is a two-digit hexadecimal number from 00 to ff. The <tosmask>
+
+                                  Quality of Service Commands
+                                          277
+

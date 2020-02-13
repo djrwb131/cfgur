@@ -1,0 +1,51 @@
+                          M4100 Series ProSAFE Managed Switches
+
+no arp dynamicrenew
+
+This command prevents dynamic ARP entries from renewing when they age out.
+
+ Format     no arp dynamicrenew
+
+ Mode       Privileged EXEC
+
+arp purge
+This command causes the specified IP address to be removed from the ARP cache. Only
+entries of type dynamic or gateway are affected by this command.
+
+ Format     arp purge <ipaddr>
+
+ Mode       Privileged EXEC
+
+arp resptime
+This command configures the ARP request response time-out.
+The value for <seconds> is a valid positive integer, which represents the IP ARP entry
+response time-out time in seconds. The range for <seconds> is between 1-10 seconds.
+
+ Default    1
+
+ Format     arp resptime <seconds>
+
+ Mode       Global Config
+
+no arp resptime
+
+This command configures the default ARP request response time-out.
+
+ Format     no arp resptime
+
+ Mode       Global Config
+
+arp retries
+This command configures the ARP count of maximum request for retries.
+The value for <retries> is an integer, which represents the maximum number of requests
+for retries. The range for <retries> is an integer between 0-10 retries.
+
+ Default    4
+
+ Format     arp retries <retries>
+
+ Mode       Global Config
+
+                                 Routing Commands
+                                       230
+

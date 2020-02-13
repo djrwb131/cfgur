@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Default       0
+
+ Format        storm-control multicast rate <0-14880000>
+
+ Mode          Interface Config
+
+no storm-control multicast rate
+
+This command sets the multicast storm recovery threshold to the default value for an
+interface and disables multicast storm recovery.
+
+ Format        no storm-control multicast rate
+
+ Mode          Interface Config
+
+storm-control multicast (Global Config)
+This command enables multicast storm recovery mode for all interfaces. If the mode is
+enabled, multicast storm recovery is active, and if the rate of L2 multicast traffic ingressing on
+an interface increases beyond the configured threshold, the traffic will be dropped. Therefore,
+the rate of multicast traffic will be limited to the configured threshold.
+
+ Default       disabled
+
+ Format        storm-control multicast
+
+ Mode          Global Config
+
+no storm-control multicast
+
+This command disables multicast storm recovery mode for all interfaces.
+
+ Format        no storm-control multicast
+
+ Mode          Global Config
+
+storm-control multicast level (Global Config)
+This command configures the multicast storm recovery threshold for all interfaces as a
+percentage of link speed and enables multicast storm recovery mode. If the mode is enabled,
+multicast storm recovery is active, and if the rate of L2 multicast traffic ingressing on an
+interface increases beyond the configured threshold, the traffic will be dropped. Therefore,
+the rate of multicast traffic will be limited to the configured threshold.
+
+ Default       5
+
+ Format        storm-control multicast level <0-100>
+
+ Mode          Global Config
+
+                                  Switching Commands
+                                          102
+

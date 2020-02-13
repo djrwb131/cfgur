@@ -1,0 +1,55 @@
+                         M4100 Series ProSAFE Managed Switches
+
+ Term              Definition
+
+ Unknown           Indicates if the policy type is unknown. In this case, the VLAN ID, Priority and DSCP
+                   are ignored.
+
+ Tagged            Indicates if the policy type is using tagged or untagged VLAN.
+
+ Hardware Rev      Shows the local hardware version.
+
+ Firmware Rev      Shows the local firmware version.
+
+ Software Rev      Shows the local software version.
+
+ Serial Num        Shows the local serial number.
+
+ Mfg Name          Shows the manufacture name.
+
+ Model Name        Shows the model name.
+
+Command example:
+(NETGEAR Switch) #show lldp med local-device detail 0/8
+
+LLDP MED Local Device Detail
+
+Interface: 0/8
+
+Network Policies
+Media Policy Application Type : voice
+Vlan ID: 10
+Priority: 5
+DSCP: 1
+Unknown: False
+Tagged: True
+
+Media Policy Application Type : streamingvideo
+Vlan ID: 20
+Priority: 1
+DSCP: 2
+Unknown: False
+Tagged: True
+
+Inventory
+Hardware Rev: xxx xxx xxx
+Firmware Rev: xxx xxx xxx
+Software Rev: xxx xxx xxx
+Serial Num: xxx xxx xxx
+Mfg Name: xxx xxx xxx
+Model Name: xxx xxx xxx
+Asset ID: xxx xxx xxx
+
+                                    Switching Commands
+                                           197
+

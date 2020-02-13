@@ -1,0 +1,55 @@
+                        M4100 Series ProSAFE Managed Switches
+
+ Format         periodic <frequency> {<days-of-the-week> <time>} to
+                {[<days-of-the-week>] <time>}
+
+ Mode           Time-Range Config
+
+no periodic
+
+Use this command to delete a periodic time entry from a time range.
+
+ Format         no periodic <frequency> {<days-of-the-week> <time>} to
+                {[<days-of-the-week>] <time>}
+
+ Mode           Time-Range Config
+
+periodic time
+Use this command to configure the start or end time for the time range.
+
+ Format         periodic {start | end} time
+
+ Mode           Time-Range Config
+
+show time-range
+Use this command to display a time range and all the absolute/periodic time entries that are
+defined for the time range. Use the [<name>] parameter to identify a specific time range to
+display. When [<name>] is not specified, all the time ranges defined in the system are
+displayed.
+
+ Format         show time-range [<name>]
+
+ Mode           Privileged EXEC
+
+ Term              Definition
+
+ Number of Time    Number of time ranges configured in the system.
+ Ranges
+
+ Time Range Name   Name of the time range.
+
+ Time Range Status Status of the time range (active/inactive).
+
+ Absolute start    Start time and day for absolute time entry.
+
+ Absolute end      End time and day for absolute time entry.
+
+ Periodic Entries  Number of periodic entries in a time-range.
+
+ Periodic start    Start time and day for periodic entry.
+
+ Periodic end      End time and day for periodic entry.
+
+                                  Quality of Service Commands
+                                           311
+

@@ -1,0 +1,47 @@
+                                M4100 Series ProSAFE Managed Switches
+
+   show service-policy
+   This command displays a summary of policy-oriented statistics information for all interfaces
+   in the specified direction.
+
+     Format       show service-policy {in | out}
+
+     Mode         Privileged EXEC
+
+   The information that is shown in the following table is repeated for each interface and
+   direction (only those interfaces configured with an attached policy are shown).
+
+     Term            Definition
+
+     Interface       Valid slot and port number separated by forward slashes.
+
+     Operational     The current operational status of this DiffServ service interface.
+     Status
+
+     Policy Name     The name of the policy attached to the interface.
+
+MAC Access Control List (ACL) Commands
+
+   This section describes the commands you use to configure MAC ACL settings. MAC ACLs
+   ensure that only authorized users have access to specific resources and block any
+   unwarranted attempts to reach network resources.
+   The following rules apply to MAC ACLs:
+   ·   The maximum number of ACLs you can create is hardware-dependent. The limit applies
+       to all ACLs, regardless of type.
+   ·   The system supports only Ethernet II frame types.
+   ·   The maximum number of rules per MAC ACL is hardware-dependent.
+
+   mac access-list extended
+   This command creates a MAC access control list (ACL) identified by <name>, consisting of
+   classification fields defined for the Layer 2 header of an Ethernet frame. The <name>
+   parameter is a case-sensitive alphanumeric string from 1 to 31 characters uniquely
+   identifying the MAC access list.
+   If a MAC ACL by this name exists, this command enters Mac-Access-List config mode to
+   allow updating the existing MAC ACL.
+
+       Note: The CLI mode changes to Mac-Access-List Config mode when you
+                 successfully execute this command.
+
+                                    Quality of Service Commands
+                                            293
+

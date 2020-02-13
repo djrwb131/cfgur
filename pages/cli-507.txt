@@ -1,0 +1,59 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no radius server timeout
+
+Use this command to set the timeout global parameter to the default value.
+
+ Format        no radius server timeout
+
+ Mode          Global Config
+
+show radius
+Use this command to display the values configured for the global parameters of the RADIUS
+client.
+
+ Format        show radius
+
+ Mode          Privileged EXEC
+
+ Field                     Definition
+
+ Number of Configured      The number of RADIUS Authentication servers that have been configured.
+ Authentication Servers
+
+ Number of Configured      The number of RADIUS Accounting servers that have been configured.
+ Accounting Servers
+
+ Number of Named           The number of configured named RADIUS server groups.
+ Authentication Server
+ Groups
+
+ Number of Named           The number of configured named RADIUS server groups.
+ Accounting Server Groups
+
+ Number of Retransmits     The configured value of the maximum number of times a request packet is
+                           retransmitted.
+
+ Time Duration             The configured timeout value, in seconds, for request retransmissions.
+
+ RADIUS Accounting Mode    A global parameter to indicate whether the accounting mode for all the servers
+                           is enabled or not.
+
+ RADIUS Attribute 4 Mode   A global parameter to indicate whether the NAS-IP-Address attribute has been
+                           enabled to use in RADIUS requests.
+
+ RADIUS Attribute 4 Value  A global parameter that specifies the IP address to be used in the
+                           NAS-IP-Address attribute to be used in RADIUS requests.
+
+Command example:
+(NETGEAR Switch)#show radius
+
+Number of Configured Authentication Servers............. 32
+Number of Configured Accounting Servers................. 32
+Number of Named Authentication Server Groups............ 15
+Number of Named Accounting Server Groups................ 3
+Number of Retransmits................................... 4
+
+                                      Management Commands
+                                                507
+

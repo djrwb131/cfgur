@@ -1,0 +1,50 @@
+                          M4100 Series ProSAFE Managed Switches
+
+A locally administered address must have bit 6 On (b'1') and bit 7 Off (b'0').
+
+ Format        network mac-address <macaddr>
+
+ Mode          Privileged EXEC
+
+network mac-type
+Use this command to specify whether the switch uses the burned in MAC address or the
+locally administered MAC address.
+
+ Default       burnedin
+
+ Format        network mac-type {local | burnedin}
+
+ Mode          Privileged EXEC
+
+no network mac-type
+
+Use this command to reset the value of MAC address to its default.
+
+ Format        no network mac-type
+
+ Mode          Privileged EXEC
+
+network javamode
+Use this command to specify whether the switch should allow access to the Java applet in
+the header frame of the Web interface. When access is enabled, the Java applet can be
+viewed from the Web interface. When access is disabled, the user cannot view the Java
+applet.
+
+ Default       enabled
+
+ Format        network javamode
+
+ Mode          Privileged EXEC
+
+no network javamode
+
+Use this command to disallow access to the Java applet in the header frame of the Web
+interface. When access is disabled, the user cannot view the Java applet.
+
+ Format        no network javamode
+
+ Mode          Privileged EXEC
+
+                                  Management Commands
+                                          447
+

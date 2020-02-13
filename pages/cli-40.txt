@@ -1,0 +1,54 @@
+                           M4100 Series ProSAFE Managed Switches
+
+show spanning-tree interface
+This command displays the settings and parameters for a specific switch port within the
+Common and Internal Spanning Tree. The <slot/port> is the desired switch port. The
+following details are displayed on execution of the command.
+
+ Format      show spanning-tree interface <slot/port>
+
+ Mode        ·    Privileged EXEC
+             ·    User EXEC
+
+ Term                   Definition
+
+ Hello Time             Admin hello time for this port.
+
+ Port Mode              Enabled or disabled.
+
+ BPDU Guard Effect      Enabled or disabled.
+
+ Root Guard             Enabled or disabled.
+
+ Loop Guard             Enabled or disabled.
+
+ TCN Guard              Enable or disable the propagation of received topology change notifications and
+                        topology changes to other ports.
+
+ BPDU Filter Mode       Enabled or disabled.
+
+ BPDU Flood Mode        Enabled or disabled.
+
+ Auto Edge              To enable or disable the feature that causes a port that has not seen a BPDU for
+                        `edge delay' time, to become an edge port and transition to forwarding faster.
+
+ Port Up Time Since     Time since port was reset, displayed in days, hours, minutes, and seconds.
+ Counters Last Cleared
+
+ STP BPDUs Transmitted  Spanning Tree Protocol Bridge Protocol Data Units sent.
+
+ STP BPDUs Received     Spanning Tree Protocol Bridge Protocol Data Units received.
+
+ RSTP BPDUs             Rapid Spanning Tree Protocol Bridge Protocol Data Units sent.
+ Transmitted
+
+ RSTP BPDUs Received    Rapid Spanning Tree Protocol Bridge Protocol Data Units received.
+
+ MSTP BPDUs             Multiple Spanning Tree Protocol Bridge Protocol Data Units sent.
+ Transmitted
+
+ MSTP BPDUs Received    Multiple Spanning Tree Protocol Bridge Protocol Data Units received.
+
+                                      Switching Commands
+                                                40
+

@@ -1,0 +1,54 @@
+                              M4100 Series ProSAFE Managed Switches
+
+disabled and port-channel (LAG) membership is removed from an interface that has GARP
+enabled.
+
+ Default       disabled
+
+ Format        set gmrp interfacemode
+
+ Mode          ·   Interface Config
+               ·   Global Config
+
+no set gmrp interfacemode
+
+This command disables GARP Multicast Registration Protocol on a single interface or all
+interfaces. If an interface which has GARP enabled is enabled for routing or is enlisted as a
+member of a port-channel (LAG), GARP functionality is disabled. GARP functionality is
+subsequently re-enabled if routing is disabled and port-channel (LAG) membership is
+removed from an interface that has GARP enabled.
+
+ Format        no set gmrp interfacemode
+
+ Mode          ·   Interface Config
+               ·   Global Config
+
+show gmrp configuration
+This command displays Generic Attributes Registration Protocol (GARP) information for one
+or all interfaces.
+
+ Format        show gmrp configuration {<slot/port> | all}
+
+ Mode          ·   Privileged EXEC
+               ·   User EXEC
+
+ Term              Definition
+
+ Interface         The slot/port of the interface that this row in the table describes.
+
+ Join Timer        The interval between the transmission of GARP PDUs registering (or re-registering)
+                   membership for an attribute. Current attributes are a VLAN or multicast group. There is
+                   an instance of this timer on a per-Port, per-GARP participant basis. Permissible values
+                   are 10­100 centiseconds (0.1 to 1.0 seconds). The factory default is 20 centiseconds
+                   (0.2 seconds). The finest granularity of specification is 1 centisecond (0.01 seconds).
+
+ Leave Timer       The period of time to wait after receiving an unregister request for an attribute before
+                   deleting the attribute. Current attributes are a VLAN or multicast group. This may be
+                   considered a buffer time for another station to assert registration for the same attribute in
+                   order to maintain uninterrupted service. There is an instance of this timer on a per-Port,
+                   per-GARP participant basis. Permissible values are 20­600 centiseconds (0.2 to 6.0
+                   seconds). The factory default is 60 centiseconds (0.6 seconds).
+
+                                        Switching Commands
+                                          79
+

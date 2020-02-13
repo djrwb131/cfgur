@@ -1,0 +1,53 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Protocol     Tells which protocol added the specified route. The possibilities are: local, static, OSPF, or
+              RIP.
+
+ Total Number The total number of routes.
+ of Routes
+
+clear ip route counters
+This command resets to zero the IPv4 routing table counters reported in the output of the
+show ip route summary command. The command resets only the event counters.
+Counters that report the current state of the routing table, such as the number of routes of
+each type, are not reset.
+
+ Format       clear ip route counters
+
+ Mode         Privileged EXEC
+
+show ip brief
+This command displays all the summary information of the IP, including the ICMP rate limit
+configuration and the global ICMP Redirect configuration.
+
+ Format       show ip brief
+
+ Modes        ·  Privileged EXEC
+              ·  User EXEC
+
+ Term                   Definition
+
+ Default Time to Live   The computed TTL (Time to Live) of forwarding a packet from the local router to the
+                        final destination.
+
+ Routing Mode           Shows whether the routing mode is enabled or disabled.
+
+ Maximum Next Hops      The maximum number of next hops the packet can travel.
+
+ Maximum Routes         The maximum number of routes the packet can travel.
+
+ ICMP Rate Limit        Shows how often the token bucket is initialized with burst-size tokens.
+ Interval               Burst-interval is from 0 to 2,147,483,647 milliseconds. The default burst-interval is
+                        1000 msec.
+
+ ICMP Rate Limit Burst  Shows the number of ICMPv4 error messages that can be sent during one
+ Size                   burst-interval. The range is from 1 to 200 messages. The default value is 100
+                        messages.
+
+ ICMP Echo Replies      Shows whether ICMP Echo Replies are enabled or disabled.
+
+ ICMP Redirects         Shows whether ICMP Redirects are enabled or disabled.
+
+                                           Routing Commands
+                                              241
+

@@ -1,0 +1,54 @@
+                             M4100 Series ProSAFE Managed Switches
+
+Command example:
+(NETGEAR Switch) #show poe port info 0/33
+
+          High      Max                         Output  Output
+Intf     Power     Power    Class   Power      Current Voltage          Status                           Fault
+                    (W)             (W)        (mA)    (volt)                                           Status
+------ -------     -----   -------  ------     -------  -------       ------------------              --------
+  0/33    No       18.0     2       04.400    84       53.3              Delivering Power             No Error
+
+show poe pd
+
+      Note: This command is supported on the M4100-D12G-POE+ (GSM5212P)
+             only.
+
+Use this command to get information about the PD ports. You can display information based
+on each individual port or all the PD ports collectively.
+
+ Format         show poe pd [<port> | all]
+
+ Mode           ·  Privileged EXEC
+                ·  User EXEC
+
+ Term                    Definition
+
+ Intf                    Show the PD device interface number, only 0/1 or 0/2 on the GSM5212P.
+                         In other devices, the table is empty. If <port-id> is not specified, all PD
+                         ports are displayed.
+
+ Mode                    Displays the port POE role and is always PD.
+
+ Class                   Displays the POE class.
+
+ Detection Mode          PD detection mode when getting power from the PSE:
+                         ·  1-event--PSE detects the PD in 1-event mode (802.1f)
+                         ·  2-event--PSE detects the PD in 2-event mode (802.1at)
+                         ·  LLDP--PSE detects the PD in LLDP mode (802.1at)
+
+ Status                  Shows whether the port 0/1 or 0/2 is providing power:
+                         ·  Powered--Receiving power from PSE
+                         ·  Off--No power from the PSE (when main AC is in used)
+
+Command example:
+(NETGEAR Switch) #show poe pd all
+
+Intf         Mode        Class      Detection Mode                    Status
+----         -----       ---------  ----------------                  ----------
+0/1          PD          class 4        2-event                         powered
+0/2          PD          class 4        LLDP                            powered
+
+                                Power over Ethernet Commands
+                                                 327
+

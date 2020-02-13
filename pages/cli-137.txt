@@ -1,0 +1,46 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+DHCP Client Commands
+
+   DHCP Client can include vendor and configuration information in DHCP client requests
+   relayed to a DHCP server. This information is included in DHCP Option 60, Vendor Class
+   Identifier. The information is a string of 128 octets.
+
+   dhcp client vendor-id-option
+   Use this command to enable the inclusion of DHCP Option-60, Vendor Class Identifier
+   included in the requests transmitted to the DHCP server by the DHCP client operating in the
+   switch.
+
+     Format       dhcp client vendor-id-option
+
+     Mode         Global Config
+
+   no dhcp client vendor-id-option
+
+   Use this command to disable the inclusion of DHCP Option-60, Vendor Class Identifier
+   included in the requests transmitted to the DHCP server by the DHCP client operating in the
+   switch.
+
+     Format       no dhcp client vendor-id-option
+
+     Mode         Global Config
+
+   dhcp client vendor-id-option-string
+   Use this command to set the DHCP Vendor Option-60 string to be included in requests
+   transmitted to the DHCP server by the DHCP client operating in the switch.
+
+     Format       dhcp client vendor-id-option-string <string>
+
+     Mode         Global Config
+
+   no dhcp client vendor-id-option-string
+
+   Use this command to clear the DHCP Vendor Option-60 string.
+
+     Format       no dhcp client vendor-id-option-string
+
+     Mode         Global Config
+
+                                    Switching Commands
+                                            137
+

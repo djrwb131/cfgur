@@ -1,0 +1,46 @@
+                               M4100 Series ProSAFE Managed Switches
+
+green-mode eee
+This command enables EEE low-power idle mode on an interface or on all interfaces. It
+allows both send and receive sides of a link to disable some functionality for power savings
+when the port is lightly loaded. Transition to Low-Power Mode does not change the link
+status. Frames in transit are not dropped or corrupted in transition to and from Low-Power
+Mode.
+
+ Default       Disabled
+
+ Format        green-mode eee
+
+ Mode          ·   Interface Config
+               ·   Interface Range Config
+
+no green-mode eee
+
+This command disables EEE.
+
+ Format        no green-mode eee
+
+ Mode          ·   Interface Config
+               ·   Interface Range Config
+
+clear green-mode statistics
+This command to clears the following for a specified <slot/port>, or for all ports:
+·   EEE LPI event count, and LPI duration
+·   EEE LPI history table entries
+·   Cumulative Power savings estimates
+
+ Format        clear green-mode statistics {<slot/port> | all}
+
+ Mode          Privileged Exec
+
+Command example:
+(NETGEAR Switch) #clear green-mode statistics 0/1
+Are you sure you want to clear the green mode port stats? (y/n)y
+Green Mode Stats Cleared.
+(NETGEAR Switch) #clear green-mode statistics all
+Are you sure you want to clear the green mode port stats? (y/n)y
+Green Mode Stats Cleared.
+
+                                    Green Ethernet Commands
+                                          525
+

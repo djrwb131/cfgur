@@ -1,0 +1,53 @@
+                              M4100 Series ProSAFE Managed Switches
+
+   show routing heap summary
+   This command displays a summary of the memory allocation from the routing heap. The
+   routing heap is a chunk of memory set aside when the system boots for use by the routing
+   applications.
+
+     Format      show routing heap summary
+
+     Mode        Privileged EXEC
+
+     Term                 Description
+
+     Heap Size            The amount of memory, in bytes, allocated at startup for the routing heap.
+
+     Memory In Use        The number of bytes currently allocated.
+
+     Memory on Free List  The number of bytes currently on the free list. When a chunk of memory from the
+                          routing heap is freed, it is placed on a free list for future reuse.
+
+     Memory Available in  The number of bytes in the original heap that have never been allocated.
+     Heap
+
+     In Use High Water    The maximum memory in use since the system last rebooted.
+     Mark
+
+    Command example:
+    (NETGEAR Switch) #show routing heap summary
+    Heap Size....................... 92594000 bytes
+    Memory In Use................... 149598 bytes (0%)
+    Memory on Free List............. 78721 bytes (0%)
+    Memory Available in Heap........ 92365249 bytes (99%)
+    In Use High Water Mark.......... 210788 bytes (0%)
+
+Virtual LAN Routing Commands
+
+   This section describes the commands you use to view and configure VLAN routing and to
+   view VLAN routing status information.
+
+   vlan routing
+   This command enables routing on a VLAN. The vlanid value has a range from 1 to 4093. The
+   [interface ID] value has a range from 1 to 128. Typically, you will not supply the interface ID
+   argument, and the system automatically selects the interface ID. However, if you specify an
+   interface ID that is already in use, the CLI displays an error message and does not create the
+   VLAN interface.
+
+     Format      vlan routing <vlan-id> [interface id]
+
+     Mode        VLAN Config
+
+                                       Routing Commands
+                                            251
+

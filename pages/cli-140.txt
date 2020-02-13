@@ -1,0 +1,46 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no ip dhcp snooping database write-delay
+
+Use this command to set the write delay value to the default value.
+
+ Format       no ip dhcp snooping database write-delay
+
+ Mode         Global Config
+
+ip dhcp snooping binding
+Use this command to configure static DHCP Snooping binding.
+
+ Format       ip dhcp snooping binding <mac-address> vlan <vlan id> <ip address>
+              interface <slot/port>
+
+ Mode         Global Config
+
+no ip dhcp snooping binding <mac-address>
+
+Use this command to remove the DHCP static entry from the DHCP Snooping database.
+
+ Format       no ip dhcp snooping binding <mac-address>
+
+ Mode         Global Config
+
+ip verify binding
+Use this command to configure static IP source guard (IPSG) entries.
+
+ Format       ip verify binding <mac-address> vlan <vlan id> <ip address>
+              interface <slot/port>
+
+ Mode         Global Config
+
+no ip verify binding
+
+Use this command to remove the IPSG static entry from the IPSG database.
+
+ Format       no ip verify binding <mac-address> vlan <vlan id> <ip address>
+              interface <slot/port>
+
+ Mode         Global Config
+
+                                Switching Commands
+                                         140
+

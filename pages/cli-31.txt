@@ -1,0 +1,49 @@
+                              M4100 Series ProSAFE Managed Switches
+
+no spanning-tree edgeport
+
+This command specifies that this port is not an Edge Port within the Common and Internal
+Spanning Tree.
+
+ Format          no spanning-tree edgeport
+
+ Mode            Interface Config
+
+spanning-tree forceversion
+This command sets the Force Protocol Version parameter to a new value.
+
+ Default       802.1s
+
+ Format        spanning-tree forceversion {802.1d | 802.1s | 802.1w}
+
+ Mode          Global Config
+
+·   Use 802.1d to specify that the switch transmits ST BPDUs rather than MST BPDUs
+    (IEEE 802.1d functionality supported).
+·   Use 802.1s to specify that the switch transmits MST BPDUs (IEEE 802.1s functionality
+    supported).
+·   Use 802.1w to specify that the switch transmits RST BPDUs rather than MST BPDUs
+    (IEEE 802.1w functionality supported).
+
+no spanning-tree forceversion
+
+This command sets the Force Protocol Version parameter to the default value.
+
+ Format        no spanning-tree forceversion
+
+ Mode          Global Config
+
+spanning-tree forward-time
+This command sets the Bridge Forward Delay parameter to a new value for the Common and
+Internal Spanning Tree. The forward-time value is in seconds within a range of 4­30, with the
+value being greater than or equal to "(Bridge Max Age / 2) + 1".
+
+ Default       15
+
+ Format        spanning-tree forward-time <4-30>
+
+ Mode          Global Config
+
+                                  Switching Commands
+                                           31
+

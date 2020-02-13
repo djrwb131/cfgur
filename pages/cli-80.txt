@@ -1,0 +1,51 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+     Term             Definition
+
+     LeaveAll Timer   This Leave All Time controls how frequently LeaveAll PDUs are generated. A LeaveAll
+                      PDU indicates that all registrations will shortly be deregistered. Participants will need to
+                      rejoin in order to maintain registration. There is an instance of this timer on a per-Port,
+                      per-GARP participant basis. The Leave All Period Timer is set to a random value in the
+                      range of LeaveAllTime to 1.5*LeaveAllTime. Permissible values are 200­6000
+                      centiseconds (2­60 seconds). The factory default is 1000 centiseconds (10 seconds).
+
+     Port GMRP        The GMRP administrative mode for the port. It may be enabled or disabled. If this
+     Mode             parameter is disabled, Join Time, Leave Time, and Leave All Time have no effect.
+
+   show mac-address-table gmrp
+   This command displays the GMRP entries in the Multicast Forwarding Database (MFDB)
+   table.
+
+     Format         show mac-address-table gmrp
+
+     Mode           Privileged EXEC
+
+     Term             Definition
+
+     Mac Address      A unicast MAC address for which the switch has forwarding and or filtering information.
+                      The format is 6 or 8 two-digit hexadecimal numbers that are separated by colons, for
+                      example 01:23:45:67:89:AB. In an IVL system the MAC address is displayed as 8 bytes.
+
+     Type             The type of the entry. Static entries are those that are configured by the end user.
+                      Dynamic entries are added to the table as a result of a learning process or protocol.
+
+     Description      The text description of this multicast table entry.
+
+     Interfaces       The list of interfaces that are designated for forwarding (Fwd:) and filtering (Flt:).
+
+Port-Based Network Access Control Commands
+
+   This section describes the commands you use to configure port-based network access
+   control (802.1x). Port-based network access control allows you to permit access to network
+   services only to and devices that are authorized and authenticated.
+
+   clear dot1x statistics
+   This command resets the 802.1x statistics for the specified port or for all ports.
+
+     Format         clear dot1x statistics {<slot/port> | all}
+
+     Mode           Privileged EXEC
+
+                                           Switching Commands
+                                                80
+

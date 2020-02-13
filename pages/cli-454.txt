@@ -1,0 +1,54 @@
+                            M4100 Series ProSAFE Managed Switches
+
+session-limit
+Use this command to specify the maximum number of simultaneous outbound Telnet
+sessions. A value of 0 indicates that no outbound Telnet session can be established.
+
+ Default      5
+
+ Format       session-limit <0-5>
+
+ Mode         Line Config
+
+no session-limit
+
+Use this command to set the maximum number of simultaneous outbound Telnet sessions to
+the default value.
+
+ Format       no session-limit
+
+ Mode         Line Config
+
+session-timeout
+Use this command to set the Telnet session timeout value. The timeout value unit of time is
+minutes.
+
+ Default      5
+
+ Format       session-timeout <1-160>
+
+ Mode         Line Config
+
+no session-timeout
+
+Use this command to set the Telnet session timeout value to the default. The timeout value
+unit of time is minutes.
+
+ Format       no session-timeout
+
+ Mode         Line Config
+
+telnetcon maxsessions
+Use this command to specify the maximum number of Telnet connection sessions that can
+be established. A value of 0 indicates that no Telnet connection can be established. The
+range is 0-5.
+
+ Default      4
+
+ Format       telnetcon maxsessions <0-4>
+
+ Mode         Privileged EXEC
+
+                                 Management Commands
+                                         454
+

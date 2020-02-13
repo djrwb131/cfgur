@@ -1,0 +1,48 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no snmp-server community ipmask
+
+Use this command to set a client IP mask for an SNMP community to 0.0.0.0. The name is
+the applicable community name. The community name might be up to 16 alphanumeric
+characters.
+
+ Format      no snmp-server community ipmask <name>
+
+ Mode        Global Config
+
+snmp-server community mode
+Use this command to activate an SNMP community. If a community is enabled, an SNMP
+manager associated with this community manages the switch according to its access right. If
+the community is disabled, no SNMP requests using this community are accepted. In this
+case the SNMP manager associated with this community cannot manage the switch until the
+Status is changed back to Enable.
+
+ Default     ·   private and public communities - enabled
+             ·   other four - disabled
+
+ Format      snmp-server community mode <name>
+
+ Mode        Global Config
+
+no snmp-server community mode
+
+Use this command to deactivate an SNMP community. If the community is disabled, no
+SNMP requests using this community are accepted. In this case the SNMP manager
+associated with this community cannot manage the switch until the Status is changed back to
+Enable.
+
+ Format      no snmp-server community mode <name>
+
+ Mode        Global Config
+
+snmp-server community ro
+Use this command to restrict access to switch information. The access mode is read-only
+(also called public).
+
+ Format      snmp-server community ro <name>
+
+ Mode        Global Config
+
+                                       Management Commands
+                                            493
+

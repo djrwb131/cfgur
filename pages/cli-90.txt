@@ -1,0 +1,60 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ Term              Definition
+
+ Dynamic VLAN      Indicates whether the switch can dynamically create a RADIUS-assigned VLAN if it does
+ Creation Mode     not currently exist on the switch.
+
+ Monitor Mode      Indicates whether the Dot1x Monitor mode on the switch is enabled or disabled.
+
+If you use the optional parameter summary {<slot/port> | all}, the dot1x configuration
+for the specified port or all ports are displayed.
+
+ Term              Definition
+
+ Interface         The interface whose configuration is displayed.
+
+ Control Mode      The configured control mode for this port. Possible values are force-unauthorized |
+                   force-authorized | auto | mac-based | authorized | unauthorized.
+
+ Operating         The control mode under which this port is operating. Possible values are authorized |
+ Control Mode      unauthorized.
+
+ Reauthentication  Indicates whether re-authentication is enabled on this port.
+ Enabled
+
+ Port Status       Indicates whether the port is authorized or unauthorized. Possible values are authorized
+                   | unauthorized.
+
+If you use the optional parameter detail <slot/port>, the detailed dot1x configuration for
+the specified port is displayed.
+
+ Term               Definition
+
+ Port               The interface whose configuration is displayed.
+
+ Protocol Version   The protocol version associated with this port. The only possible value is 1,
+                    corresponding to the first version of the dot1x specification.
+
+ PAE Capabilities   The port access entity (PAE) functionality of this port. Possible values are Authenticator
+                    or Supplicant.
+
+ Control Mode       The configured control mode for this port. Possible values are force-unauthorized |
+                    force-authorized | auto | mac-based.
+
+ Authenticator PAE  Current state of the authenticator PAE state machine. Possible values are Initialize,
+ State              Disconnected, Connecting, Authenticating, Authenticated, Aborting, Held,
+                    ForceAuthorized, and ForceUnauthorized. When MAC-based authentication is enabled
+                    on the port, this parameter is deprecated.
+
+ Backend            Current state of the backend authentication state machine. Possible values are
+ Authentication     Request, Response, Success, Fail, Timeout, Idle, and Initialize. When MAC-based
+ State              authentication is enabled on the port, this parameter is deprecated.
+
+ Quiet Period       The timer used by the authenticator state machine on this port to define periods of time
+                    in which it will not attempt to acquire a supplicant. The value is expressed in seconds
+                    and will be in the range 0 and 65535.
+
+                                       Switching Commands
+                                                      90
+

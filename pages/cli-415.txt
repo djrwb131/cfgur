@@ -1,0 +1,50 @@
+                         M4100 Series ProSAFE Managed Switches
+
+ Default       disabled
+
+ Format        debug mldsnooping packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+no debug mldsnooping packet
+
+Use this command to disable debug tracing of MLD snooping packet reception and
+transmission.
+
+ Format        no debug mldsnooping packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+debug ospf packet
+This command enables tracing of OSPF packets received and transmitted by the switch.
+
+ Default       disabled
+
+ Format        debug ospf packet
+
+ Mode          Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #debug ospf packet
+
+<15> JAN 02 11:03:31 10.50.50.1-2 OSPF[46300472]: ospf_debug.c(297) 25430 % Pkt RX -
+Intf:2/0/48 Src
+Ip:192.168.50.2 DestIp:224.0.0.5 AreaId:0.0.0.0 Type:HELLO NetMask:255.255.255.0
+DesigRouter:0.0.0.0 Backup:0.0.0.0
+
+<15> JAN 02 11:03:35 10.50.50.1-2 OSPF[46300472]: ospf_debug.c(293) 25431 % Pkt TX -
+Intf:2/0/48 Src
+Ip:10.50.50.1 DestIp:192.168.50.2 AreaId:0.0.0.0 Type:DB_DSCR Mtu:1500 Options:E
+Flags: I/M/MS Seq:126166
+
+<15> JAN 02 11:03:36 10.50.50.1-2 OSPF[46300472]: ospf_debug.c(297) 25434 % Pkt RX -
+Intf:2/0/48 Src
+Ip:192.168.50.2 DestIp:192.168.50.1 AreaId:0.0.0.0 Type:LS_REQ Length: 1500
+
+<15> JAN 02 11:03:36 10.50.50.1-2 OSPF[46300472]: ospf_debug.c(293) 25435 % Pkt TX -
+Intf:2/0/48 Src
+Ip:10.50.50.1 DestIp:192.168.50.2 AreaId:0.0.0.0 Type:LS_UPD Length: 1500
+
+                                   Utility Commands
+                                        415
+

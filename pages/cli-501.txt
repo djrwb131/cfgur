@@ -1,0 +1,50 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+     Field           Definition
+
+     OSPFv2 Traps    Can be enabled or disabled. The factory default is disabled. Indicates whether OSPF
+                     traps are sent. If any of the OSPF trap flags are not enabled, the command displays
+                     disabled. Otherwise, the command shows all the enabled OSPF traps' information.
+
+     OSPFv3 Traps    Can be enabled or disabled. The factory default is disabled. Indicates whether OSPF
+                     traps are sent. If any of the OSPFv3 trap flags are not enabled, the command displays
+                     disabled. Otherwise, the command shows all the enabled OSPFv3 traps' information.
+
+     PIM Traps       Can be enabled or disabled. The factory default is disabled. Indicates whether PIM traps
+                     are sent.
+
+RADIUS Commands
+
+   This section describes the commands you use to configure the switch to use a Remote
+   Authentication Dial-In User Service (RADIUS) server on your network for authentication and
+   accounting.
+
+   authorization network radius
+   Use this command to enable the switch to accept VLAN assignment by the radius server.
+
+     Default      disable
+
+     Format       authorization network radius
+
+     Mode         Global Config
+
+   no authorization network radius
+
+   Use this command to disable the switch to accept VLAN assignment by the radius server.
+
+     Format       no authorization network radius
+
+     Mode         Global Config
+
+   radius accounting mode
+   Use this command to enable the RADIUS accounting function.
+
+     Default      disabled
+
+     Format       radius accounting mode
+
+     Mode         Global Config
+
+                                   Management Commands
+                                             501
+

@@ -1,0 +1,64 @@
+                              M4100 Series ProSAFE Managed Switches
+
+Term               Definition
+
+Transmit Period    The timer used by the authenticator state machine on the specified port to determine
+                   when to send an EAPOL EAP Request/Identity frame to the supplicant. The value is
+                   expressed in seconds and will be in the range of 1 and 65535.
+
+Guest-VLAN ID      The guest VLAN identifier configured on the interface.
+
+Guest VLAN         The time in seconds for which the authenticator waits before authorizing and placing the
+Period             port in the Guest VLAN, if no EAPOL packets are detected on that port.
+
+Supplicant         The timer used by the authenticator state machine on this port to timeout the supplicant.
+Timeout            The value is expressed in seconds and will be in the range of 1 and 65535.
+
+Server Timeout     The timer used by the authenticator on this port to timeout the authentication server.
+                   The value is expressed in seconds and will be in the range of 1 and 65535.
+
+Maximum            The maximum number of times the authenticator state machine on this port will
+Requests           retransmit an EAPOL EAP Request/Identity before timing out the supplicant. The value
+                   will be in the range of 1 and 10.
+
+VLAN Id            The VLAN assigned to the port by the radius server. This is only valid when the port
+                   control mode is not Mac-based.
+
+VLAN Assigned      The reason the VLAN identified in the VLAN Idfield has been assigned to the port.
+Reason             Possible values are RADIUS, Unauthenticated VLAN, Guest VLAN, default, and Not
+                   Assigned. When the VLAN Assigned Reason is `Not Assigned', it means that the port
+                   has not been assigned to any VLAN by dot1x. This only valid when the port control
+                   mode is not MAC-based.
+
+Reauthentication   The timer used by the authenticator state machine on this port to determine when
+Period             reauthentication of the supplicant takes place. The value is expressed in seconds and
+                   will be in the range of 1 and 65535.
+
+Reauthentication   Indicates if reauthentication is enabled on this port. Possible values are `True" or
+Enabled            "False".
+
+Key Transmission   Indicates if the key is transmitted to the supplicant for the specified port. Possible values
+Enabled            are True or False.
+
+Control Direction  The control direction for the specified port or ports. Possible values are both or in.
+
+Maximum Users      The maximum number of clients that can get authenticated on the port in the
+                   MAC-based dot1x authentication mode. This value is used only when the port control
+                   mode is not MAC-based.
+
+Unauthenticated    Indicates the unauthenticated VLAN configured for this port. This value is valid for the
+VLAN ID            port only when the port control mode is not MAC-based.
+
+Session Timeout    Indicates the time for which the session is valid. The time period in seconds is returned
+                   by the RADIUS server on authentication of the port. This value is valid for the port only
+                   when the port control mode is not MAC-based.
+
+Session            This value indicates the action to be taken once the session timeout expires. Possible
+Termination        values are Default, Radius-Request. If the value is Default, the session is terminated
+Action             the port goes into unauthorized state. If the value is Radius-Request, a reauthentication
+                   of the client authenticated on the port is performed. This value is valid for the port only
+                   when the port control mode is not MAC-based.
+
+                                        Switching Commands
+                                                     91
+

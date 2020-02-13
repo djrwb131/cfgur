@@ -1,0 +1,26 @@
+8. Management Commands                                                              8
+
+   This chapter describes the management commands available in the managed switch CLI.
+   The chapter contains the following sections:
+      ·   Switch Management CPU Commands
+      ·   Management Interface Commands
+      ·   Console Port Access Commands
+      ·   Telnet Commands
+      ·   Secure Shell (SSH) Commands
+      ·   Management Security Commands
+      ·   Hypertext Transfer Protocol (HTTP) Commands
+      ·   Access Commands
+      ·   User Account Commands
+      ·   SNMP Commands
+      ·   RADIUS Commands
+      ·   TACACS+ Commands
+      ·   Configuration Scripting Commands
+      ·   Pre-Login Banner and System Prompt Commands
+   The commands in this chapter are in three functional groups:
+      ·   Show commands display switch settings, statistics, and other information.
+      ·   Configuration commands configure features and options of the switch. Every switch
+          command has a show command that displays the configuration setting.
+      ·   Clear commands clear some or all of the settings to factory defaults.
+
+                                                443
+

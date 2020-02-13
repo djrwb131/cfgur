@@ -1,0 +1,51 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Format       no macfilter adddest all <macaddr> <vlanid>
+
+ Mode         Global Config
+
+macfilter addsrc
+This command adds the interface to the source filter set for the MAC filter with the MAC
+address of <macaddr> and VLAN of <vlanid>. The <macaddr> parameter must be specified
+as a 6-byte hexadecimal number in the format of b1:b2:b3:b4:b5:b6. The <vlanid>
+parameter must identify a valid VLAN.
+
+ Format       macfilter addsrc <macaddr> <vlanid>
+
+ Mode         Interface Config
+
+no macfilter addsrc
+
+This command removes a port from the source filter set for the MAC filter with the MAC
+address of <macaddr> and VLAN of <vlanid>.        The <macaddr> parameter must be
+specified as a 6-byte hexadecimal number in the format of b1:b2:b3:b4:b5:b6. The
+<vlanid> parameter must identify a valid VLAN.
+
+ Format       no macfilter addsrc <macaddr> <vlanid>
+
+ Mode         Interface Config
+
+macfilter addsrc all
+This command adds all interfaces to the source filter set for the MAC filter with the MAC
+address of <macaddr> and <vlanid>. You must specify the <macaddr> parameter as a
+6-byte hexadecimal number in the format of b1:b2:b3:b4:b5:b6. The <vlanid> parameter
+must identify a valid VLAN.
+
+ Format       macfilter addsrc all <macaddr> <vlanid>
+
+ Mode         Global Config
+
+no macfilter addsrc all
+
+This command removes all interfaces to the source filter set for the MAC filter with the MAC
+address of <macaddr> and VLAN of <vlanid>. You must specify the <macaddr>
+parameter as a 6-byte hexadecimal number in the format of b1:b2:b3:b4:b5:b6.
+The <vlanid> parameter must identify a valid VLAN.
+
+ Format       no macfilter addsrc all <macaddr> <vlanid>
+
+ Mode         Global Config
+
+                                      Switching Commands
+                                          131
+

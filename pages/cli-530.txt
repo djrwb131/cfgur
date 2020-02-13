@@ -1,0 +1,49 @@
+                              M4100 Series ProSAFE Managed Switches
+
+     Rx DLL enabled............................. Yes
+     Rx DLL ready............................... Yes
+
+Cumulative Energy Saving (W * H)............. XX
+Time Since Counters Last Cleared............... 1 day 20 hr 47 min 34 sec
+
+green-mode eee-lpi-history
+Configure the global EEE LPI history collection interval and buffer size using this command.
+This value is applied globally on all interfaces on the stack.
+
+    Note: The sampling interval configured by the user takes effect immediately.
+            The current and future samples are collected at this new sampling
+            interval.
+
+ Default       sampling-interval = 3600; max-samples = 168
+
+ Format        green-mode eee-lpi-history {sampling-interval <30-36000sec> |
+               max-samples <1-168>}
+
+ Mode          Global Config
+
+no green-mode eee-lpi-history
+
+Use this command to set the sampling interval or max-samples values to defaults:
+·   sampling-interval = 3600
+·   max-samples = 168
+
+ Format        no green-mode eee-lpi-history {sampling-interval | max-samples}
+
+ Mode          Global Config
+
+show green-mode eee-lpi-history interface
+This command displays the interface green-mode EEE LPI history.
+
+ Format        show green-mode eee-lpi-history interface <slot/port>
+
+ Mode          Privileged Exec
+
+ Field                               Description
+
+ Sampling Interval                   Interval at which EEE LPI statistics is collected.
+
+ Total No. of Samples to Keep        Maximum number of samples to keep
+
+                               Green Ethernet Commands
+                                           530
+

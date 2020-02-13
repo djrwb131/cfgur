@@ -1,0 +1,52 @@
+                            M4100 Series ProSAFE Managed Switches
+
+Command example:
+(NETGEAR Switch) #show ip arp inspection vlan 10-12
+
+Source Mac Validation         : Disabled
+Destination Mac Validation : Disabled
+IP Address Validation         : Disabled
+
+ Vlan            Configuration       Log Invalid      ACL Name   Static flag
+ ----            -------------       -----------      ---------  ----------
+   10              Enabled         Enabled            H2         Enabled
+   11             Disabled         Enabled
+   12             Enabled               Disabled
+
+show ip arp inspection statistics
+Use this command to display the statistics of the ARP packets processed by Dynamic ARP
+Inspection. Give the vlan-list argument and the command displays the statistics on all
+DAI-enabled VLANs in that list. Give the single vlan argument and the command displays the
+statistics on that VLAN. If no argument is included, the command lists a summary of the
+forwarded and dropped ARP packets.
+
+ Format       show ip arp inspection statistics [vlan <vlan-list>]
+
+ Mode         ·   Privileged EXEC
+              ·   User EXEC
+
+ Term            Definition
+
+ VLAN            The VLAN ID for each displayed row.
+
+ Forwarded       The total number of valid ARP packets forwarded in this VLAN.
+
+ Dropped         The total number of not valid ARP packets dropped in this VLAN.
+
+ DHCP Drops      The number of packets dropped due to DHCP snooping binding database match failure.
+
+ ACL Drops       The number of packets dropped due to ARP ACL rule match failure.
+
+ DHCP Permits    The number of packets permitted due to DHCP snooping binding database match.
+
+ ACL Permits     The number of packets permitted due to ARP ACL rule match.
+
+ Bad Src MAC     The number of packets dropped due to Source MAC validation failure.
+
+ Bad Dest MAC    The number of packets dropped due to Destination MAC validation failure.
+
+ Invalid IP      The number of packets dropped due to invalid IP checks.
+
+                                      Switching Commands
+                                            152
+

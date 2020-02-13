@@ -1,0 +1,43 @@
+                             M4100 Series ProSAFE Managed Switches
+
+dos-control tcpflag
+This command enables TCP Flag Denial of Service protections. If the mode is enabled,
+Denial of Service prevention is active for this type of attacks. If packets ingress having TCP
+Flag SYN set and a source port less than 1024 or having TCP Control Flags set to 0 and TCP
+Sequence Number set to 0 or having TCP Flags FIN, URG, and PSH set and TCP Sequence
+Number set to 0 or having TCP Flags SYN and FIN both set, the packets will be dropped if
+the mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control tcpflag
+
+ Mode          Global Config
+
+no dos-control tcpflag
+
+This command sets disables TCP Flag Denial of Service protections.
+
+ Format        no dos-control tcpflag
+
+ Mode          Global Config
+
+dos-control l4port
+This command enables L4 Port Denial of Service protections. If the mode is enabled, Denial
+of Service prevention is active for this type of attack. If packets ingress having Source
+TCP/UDP Port Number equal to Destination TCP/UDP Port Number, the packets will be
+dropped if the mode is enabled.
+
+    Note: Some applications mirror source and destination L4 ports - RIP for
+            example uses 520 for both. If you enable dos-control l4port,
+            applications such as RIP may experience packet loss which would
+            render the application inoperable.
+
+ Default       disabled
+ Format       dos-control l4port
+
+ Mode          Global Config
+
+                                   Switching Commands
+                                          204
+

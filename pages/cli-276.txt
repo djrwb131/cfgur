@@ -1,0 +1,54 @@
+                         M4100 Series ProSAFE Managed Switches
+
+00:11:22:dd:ee:ff). The <macmask> parameter is a layer 2 MAC address bit mask, which
+need not to be contiguous, and is formatted as six, two-digit hexadecimal numbers separated
+by colons (for example, ff:07:23:ff:fe:dc).
+
+ Default       none
+
+ Format        match destination-address mac <macaddr> <macmask>
+
+ Mode          · Class-Map Config
+               · Ipv6-Class-Map Config
+
+match dstip
+This command adds to the specified class definition a match condition based on the
+destination IP address of a packet. The <ipaddr> parameter specifies an IP address. The
+<ipmask> parameter specifies an IP address bit mask and must consist of a contiguous set
+of leading 1 bits.
+
+ Default       none
+
+ Format        match dstip <ipaddr> <ipmask>
+
+ Mode          Class-Map Config
+
+match dstip6
+This command adds to the specified class definition a match condition based on the
+destination IPv6 address of a packet.
+
+ Default       none
+
+ Format        match dstip6 <destination-ipv6-prefix/prefix-length>
+
+ Mode          Ipv6-Class-Map Config
+
+match dstl4port
+This command adds to the specified class definition a match condition based on the
+destination layer 4 port of a packet using a single keyword or numeric notation. To specify the
+match condition as a single keyword, the value for <portkey> is one of the supported port
+name keywords. The currently supported <portkey> values are: domain, echo, ftp,
+ftpdata, http, smtp, snmp, telnet, tftp, or www. Each of these translates into its
+equivalent port number. To specify the match condition using a numeric notation, one layer
+4-port number is required. The port number is an integer from 0 to 65535.
+
+ Default       none
+
+ Format        match dstl4port {<portkey> | <0-65535>}
+
+ Mode          · Class-Map Config
+               · Ipv6-Class-Map Config
+
+                                  Quality of Service Commands
+                                              276
+

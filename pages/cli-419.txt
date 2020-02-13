@@ -1,0 +1,55 @@
+                             M4100 Series ProSAFE Managed Switches
+
+debug rip packet
+This command turns on tracing of RIP requests and responses. This command takes no
+options. The output is directed to the log file.
+
+ Default      disabled
+
+ Format       debug rip packet
+
+ Mode         Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #debug rip packet
+
+<15> JAN 01 00:35:15 192.168.17.29-1 RIP[181783160]: rip_map_debug.c(96) 775 %
+Pkt RX on Intf: 0/1(1), Src_IP:43.1.1.1 Dest_IP:43.1.1.2
+Rip_Version: RIPv2 Packet_Type:RIP_RESPONSE
+ROUTE 1): Network: 10.1.1.0 Mask: 255.255.255.0 Metric: 1
+ROUTE 2): Network: 40.1.0.0 Mask: 255.255.0.0 Metric: 1
+ROUTE 3): Network: 10.50.50.0 Mask: 255.255.255.0 Metric: 1
+ROUTE 4): Network: 41.1.0.0 Mask: 255.255.0.0 Metric: 1
+ROUTE 5): Network:42.0.0.0 Mask:255.0.0.0 Metric:1
+Another 6 routes present in packet not displayed.
+
+The parameters that are shown in the following table are displayed in the trace message.
+
+ Parameter       Definition
+
+ TX/RX           TX refers to a packet transmitted by the device. RX refers to packets received by the
+                 device.
+
+ Intf            The interface that the packet came in or went out on. Format used is slot/port (internal
+                 interface number). Unit is always shown as 1 for interfaces on a non-stacking device.
+
+ Src_IP          The source IP address in the IP header of the packet.
+
+ Dest_IP         The destination IP address in the IP header of the packet.
+
+ Rip_Version     RIP version used <RIPv1 or RIPv2>.
+
+ Packet_Type     Type of RIP packet. <RIP_REQUEST or RIP_RESPONSE>.
+
+ Routes          Up to 5 routes in the packet are displayed in the following format:
+                 Network: <a.b.c.d> Mask <a.b.c.d> Next_Hop <a.b.c.d> Metric <a>
+                 The next hop is only displayed if it is different from 0.0.0.0.
+                 For RIPv1 packets, Mask is always 0.0.0.0.
+
+ Number of       Only the first five routes present in the packet are included in the trace. There is another
+ routes not      notification of the number of additional routes present in the packet that were not
+ printed         included in the trace.
+
+                                        Utility Commands
+                                              419
+

@@ -1,0 +1,51 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Default       disabled
+
+ Format        debug ipv6 pimsm packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+no debug ipv6 pimsm packet
+
+Use this command to disable debug tracing of PIMSMv6 packet reception and transmission.
+
+ Format        no debug ipv6 pimsm packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+debug lacp packet
+This command enables tracing of LACP packets received and transmitted by the switch.
+
+ Default       disabled
+
+ Format        debug lacp packet
+
+ Mode          Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #debug lacp packet
+
+<15> JAN 01 14:04:51 10.254.24.31-1 DOT3AD[183697744]: dot3ad_debug.c(385) 58 %%
+ Pkt TX - Intf: 0/1(1), Type: LACP, Sys: 00:11:88:14:62:e1, State: 0x47, Key:
+0x36
+
+no debug lacp packet
+
+This command disables tracing of LACP packets.
+
+ Format        no debug lacp packet
+
+ Mode          Privileged EXEC
+
+debug mldsnooping packet
+Use this command to trace MLD snooping packet reception and transmission. f you use the
+receive option, only received MLD packets are traced. If you use the transmit option,
+only transmitted MLD packets are traced. When neither keyword is used in the command,
+then all MLD snooping packet traces are dumped. Vital information such as source address,
+destination address, control packet type, packet length, and the interface on which the packet
+is received or transmitted is displayed on the console.
+
+                                    Utility Commands
+                                         414
+

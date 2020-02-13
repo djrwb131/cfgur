@@ -1,0 +1,46 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ip access-list
+This command creates an extended IP access control list (ACL) identified by <name>,
+consisting of classification fields defined for the IP header of an IPv4 frame. The <name>
+parameter is a case-sensitive alphanumeric string from 1 to 31 characters uniquely
+identifying the IP access list.
+If an IP ACL by this name exists, this command enters IPv4-Access List config mode to allow
+updating the existing IP ACL.
+
+    Note: The CLI mode changes to IPv4-Access-List Config mode when you
+           successfully execute this command.
+
+ Format       ip access-list <name>
+
+ Mode         Global Config
+
+no ip access-list
+
+This command deletes the IP ACL identified by <name> from the system.
+
+ Format       no ip access-list <name>
+
+ Mode         Global Config
+
+ip access-list rename
+This command changes the name of an IP access control list (ACL). The <name> parameter
+is the names of an existing IP ACL. The <newname> parameter is a case-sensitive
+alphanumeric string from 1 to 31 characters uniquely identifying the IP access list.
+This command fails is an IP ACL by the name <newname> exists.
+
+ Format       ip access-list rename <name> <newname>
+
+ Mode         Global Config
+
+{deny | permit} (IP ACL)
+This command creates a new rule for the current IP access list. Each rule is appended to the
+list of configured rules for the list.
+
+    Note: The no form of this command is not supported, since the rules within
+           an IP ACL cannot be deleted individually. Rather, the entire IP ACL
+           must be deleted and respecified.
+
+                                 Quality of Service Commands
+                                         300
+

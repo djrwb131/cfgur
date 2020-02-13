@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no debug ip pimdm packet
+
+Use this command to disable debug tracing of PIMDM packet reception and transmission.
+
+ Format        no debug ip pimdm packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+debug ip pimsm packet
+Use this command to trace PIMSM packet reception and transmission. Use this command to
+trace PIMSM packet reception and transmission. If you use the receive option, only
+received PIMSM packets are traced. If you use the transmit option, only transmitted
+PIMDM packets are traced. When neither keyword is used in the command, then all PIMSM
+packet traces are dumped. Vital information such as source address, destination address,
+control packet type, packet length, and the interface on which the packet is received or
+transmitted is displayed on the console.
+
+ Default       disabled
+
+ Format        debug ip pimsm packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+no debug ip pimsm packet
+
+Use this command to disable debug tracing of PIMSM packet reception and transmission.
+
+ Format        no debug ip pimsm packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+debug ip vrrp
+Use this command to enable VRRP debug protocol messages.
+
+ Default       disabled
+
+ Format        debug ip vrrp
+
+ Mode          Privileged EXEC
+
+no debug ip vrrp
+
+Use this command to disable VRRP debug protocol messages.
+
+ Format        no debug ip vrrp
+
+ Mode          Privileged EXEC
+
+                                     Utility Commands
+                                           411
+

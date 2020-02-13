@@ -1,0 +1,55 @@
+                               M4100 Series ProSAFE Managed Switches
+
+show logging buffered
+This command displays buffered logging (system startup and system operation logs).
+
+ Format         show logging buffered
+
+ Mode           Privileged EXEC
+
+ Term              Definition
+
+ Buffered          Shows whether the In-Memory log is enabled or disabled.
+ (In-Memory)
+ Logging
+
+ Buffered Logging  The behavior of the In Memory log when faced with a log full situation.
+ Wrapping
+ Behavior
+
+ Buffered Log      The count of valid entries in the buffered log.
+ Count
+
+show logging hosts
+This command displays all configured logging hosts.
+
+ Format         show logging hosts
+
+ Mode           Privileged EXEC
+
+ Term              Definition
+
+ Host Index        (Used for deleting hosts.)
+
+ IP Address /      IP address or hostname of the logging host.
+ Hostname
+
+ Severity Level    The minimum severity to log to the specified address. The possible values are
+                   emergency (0), alert (1), critical (2), error (3), warning (4), notice (5), info (6), or debug
+                   (7).
+
+ Port              The server port number, which is the port on the local host from which syslog messages
+                   are sent.
+
+ Host Status       The state of logging to configured syslog hosts. If the status is disable, no logging occurs.
+
+show logging traplogs
+This command displays SNMP trap events and statistics.
+
+ Format         show logging traplogs
+
+ Mode           Privileged EXEC
+
+                                     Utility Commands
+                                                   357
+

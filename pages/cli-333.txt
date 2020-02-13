@@ -1,0 +1,48 @@
+                                M4100 Series ProSAFE Managed Switches
+
+   update bootcode
+   This command updates the bootcode (boot loader) on the switch. The bootcode is read from
+   the active-image for subsequent reboots. The optional <unit> parameter is valid only on
+   Stacks. Error will be returned, if this parameter is provided, on Standalone systems. For
+   Stacking, the <unit> parameter identifies the node on which this command must be
+   executed. When this parameter is not supplied, the command is executed on all nodes in a
+   Stack.
+
+     Format      update bootcode [<unit>]
+
+     Mode        Privileged EXEC
+
+System Information and Statistics Commands
+
+   This section describes the commands you use to view information about system features,
+   components, and configurations.
+
+   show arp switch (system information and statistics commands)
+   This command displays the contents of the IP stack's Address Resolution Protocol (ARP)
+   table. The IP stack only learns ARP entries associated with the management interfaces
+   (network or service ports). ARP entries associated with routing interfaces are not listed.
+
+     Format      show arp switch
+
+     Mode        Privileged EXEC
+
+     Term           Definition
+
+     IP Address     IP address of the management interface or another device on the management network.
+
+     MAC Address    Hardware MAC address of that device.
+
+     Interface      For a service port the output is Management. For a network port, the output is the
+                    slot/port of the physical interface.
+
+   show eventlog
+   This command displays the event log, which contains error messages from the system. The
+   event log is not cleared on a system reset. The <unit> is the switch identifier.
+
+     Format      show eventlog [<unit>]
+
+     Mode        Privileged EXEC
+
+                                      Utility Commands
+                                            333
+

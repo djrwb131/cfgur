@@ -1,0 +1,47 @@
+                            M4100 Series ProSAFE Managed Switches
+
+vlan
+This command creates a new VLAN and assigns it an ID. The ID is a valid VLAN
+identification number (ID 1 is reserved for the default VLAN). The vlan-list contains VlanId's in
+range <1-4093>. Separate non-consecutive IDs with ',' and no spaces and no zeros in
+between the range; Use '-' for range.
+
+ Format        vlan <vlan-list>
+
+ Mode          VLAN Config
+
+no vlan
+
+This command deletes an existing VLAN. The ID is a valid VLAN identification number (ID 1
+is reserved for the default VLAN). The vlan-list contains VlanId's in range <1-4093>.
+Separate non-consecutive IDs with ',' and no spaces and no zeros in between the range; Use
+'-' for range.
+
+ Format        no vlan <vlan-list>
+
+ Mode          VLAN Config
+
+vlan acceptframe
+This command sets the frame acceptance mode per interface. For VLAN Only mode,
+untagged frames or priority frames received on this interface are discarded. For Admit All
+mode, untagged frames or priority frames received on this interface are accepted and
+assigned the value of the interface VLAN ID for this port. With either option, VLAN tagged
+frames are forwarded in accordance with the IEEE 802.1Q VLAN Specification.
+
+ Default       all
+
+ Format        vlan acceptframe {untaggedonly | vlanonly | all}
+
+ Mode          Interface Config
+
+no vlan acceptframe
+
+This command resets the frame acceptance mode for the interface to the default value.
+
+ Format        no vlan acceptframe
+
+ Mode          Interface Config
+
+                                   Switching Commands
+                                            47
+

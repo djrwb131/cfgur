@@ -1,0 +1,47 @@
+                         M4100 Series ProSAFE Managed Switches
+
+no cos-queue min-bandwidth
+
+This command restores the default for each queue's minimum bandwidth value.
+
+ Format       no cos-queue min-bandwidth
+
+ Modes        ·   Global Config
+              ·   Interface Config
+
+cos-queue strict
+This command activates the strict priority scheduler mode for each specified queue.
+
+ Format       cos-queue strict <queue-id-1> [<queue-id-2> ... <queue-id-n>]
+
+ Modes        ·   Global Config
+              ·   Interface Config
+
+no cos-queue strict
+
+This command restores the default weighted scheduler mode for each specified queue.
+
+ Format       no cos-queue strict <queue-id-1> [<queue-id-2> ... <queue-id-n>]
+
+ Modes        ·   Global Config
+              ·   Interface Config
+
+cos-queue random-detect
+This command activates weighted random early discard (WRED) for each specified queue
+on the interface. Specific WRED parameters are configured using the random-detect
+queue-parms and the random-detect exponential-weighting-constant commands. When
+specified in Interface Config mode, this command affects a single interface only, whereas in
+Global Config mode, it applies to all interfaces. At least one, but no more than n, queue-id
+values are specified with this command.
+Duplicate queue-id values are ignored. Each queue-id value ranges from 0 to (n-1), where n
+is the total number of queues supported per interface. The number n is platform dependant
+and corresponds to the number of supported queues (traffic classes).
+
+ Format       cos-queue random-detect <queue-id-1> [<queue-id-2> ... <queue-id-n>]
+
+ Modes        ·   Global Config
+              ·   Interface Config
+
+                                   Quality of Service Commands
+                                         265
+

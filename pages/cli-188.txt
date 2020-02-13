@@ -1,0 +1,53 @@
+                            M4100 Series ProSAFE Managed Switches
+
+show lldp remote-device
+Use this command to display summary information about remote devices that transmit
+current LLDP data to the system. You can show information about LLDP remote data
+received on all ports or on a specific port.
+
+ Format          show lldp remote-device {<slot/port> | all}
+
+ Mode            Privileged EXEC
+
+ Term            Definition
+
+ Local Interface The interface that received the LLDPDU from the remote device.
+
+ RemID           An internal identifier to the switch to mark each remote device to the system.
+
+ Chassis ID      The ID that is sent by a remote device as part of the LLDP message, it is usually a MAC
+                 address of the device.
+
+ Port ID         The port number that transmitted the LLDPDU.
+
+ System Name     The system name of the remote device.
+
+Command example:
+(NETGEAR Switch) #show lldp remote-device all
+
+LLDP Remote Device Summary
+
+Local
+Interface RemID   Chassis ID                  Port ID              System Name
+-------   ------- --------------------        ------------------   ------------------
+0/1
+0/2
+0/3
+0/4
+0/5
+0/6
+0/7          2    00:FC:E3:90:01:0F           00:FC:E3:90:01:11
+0/7          3    00:FC:E3:90:01:0F           00:FC:E3:90:01:12
+0/7          4    00:FC:E3:90:01:0F           00:FC:E3:90:01:13
+0/7          5    00:FC:E3:90:01:0F           00:FC:E3:90:01:14
+0/7          1    00:FC:E3:90:01:0F           00:FC:E3:90:03:11
+0/7          6    00:FC:E3:90:01:0F           00:FC:E3:90:04:11
+0/8
+0/9
+0/10
+0/11
+0/12
+
+                                        Switching Commands
+                                              188
+

@@ -1,0 +1,58 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no set mld querier election participate
+
+Use this command to set the snooping querier not to participate in querier election, but go
+into a non-querier mode as soon as it discovers the presence of another querier in the same
+VLAN.
+
+ Format          no set mld querier election participate
+
+ Mode            VLAN Config
+
+show mldsnooping querier
+Use this command to display MLD Snooping Querier information. Configured information is
+displayed whether or not MLD Snooping Querier is enabled.
+
+ Format          show mldsnooping querier [{detail | vlan <vlanid>}]
+
+ Mode            Privileged EXEC
+
+When the optional arguments vlandid are not used, the command displays the following
+information.
+
+ Term              Description
+
+ Admin Mode        Indicates whether or not MLD Snooping Querier is active on the switch.
+
+ Admin Version     Indicates the version of MLD that will be used while sending out the queries. This is
+                   defaulted to MLD v1 and it cannot be changed.
+
+ Querier Address   Shows the IP address which will be used in the IPv6 header while sending out MLD
+                   queries. It can be configured using the appropriate command.
+
+ Query Interval    Shows the amount of time in seconds that a Snooping Querier waits before sending
+                   out the periodic general query.
+
+ Querier Timeout   Displays the amount of time to wait in the Non-Querier operational state before moving
+                   to a Querier state.
+
+When you specify a value for vlanid, the following information appears.
+
+ Term              Description
+
+ VLAN Admin Mode   Indicates whether MLD Snooping Querier is active on the VLAN.
+
+ VLAN Operational  Indicates whether MLD Snooping Querier is in "Querier" or "Non-Querier" state. When
+ State             the switch is in Querier state, it will send out periodic general queries. When in
+                   Non-Querier state, it will wait for moving to Querier state and does not send out any
+                   queries.
+
+ Operational Max   Indicates the time to wait before removing a Leave from a host upon receiving a Leave
+ Response Time     request. This value is calculated dynamically from the Queries received from the
+                   network. If the Snooping Switch is in Querier state, then it is equal to the configured
+                   value.
+
+                                        Switching Commands
+                                           177
+

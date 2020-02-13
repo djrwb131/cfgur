@@ -1,0 +1,50 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+Energy Efficient Ethernet (EEE)
+
+   Energy Efficient Ethernet (EEE) combines MAC with ports that support operation in a
+   Low-Power Mode. This feature is defined by the IEEE 802.3az Energy Efficient Ethernet
+   Task Force. Lower Power Mode enables both send and receive sides of a link to disable
+   some port functionality to save power when the port is lightly loaded. Transition to Low-Power
+   Mode does not change the link status. Frames in transit are not dropped or corrupted during
+   transition to and from Low-Power Mode. This transition time is transparent to upper layer
+   protocols and applications.
+   EEE operation is subject to the following conditions:
+   ·  Autonegotiation must be enabled to use any of the EEE modes. EEE mode is disabled
+       automatically when autonegotiation is disabled.
+   ·   Enabling or Disabling EEE mode causes the port link to flap once as EEE capability
+       needs to be advertised. This restarts autonegotiation.
+   ·   EEE must be disabled while running hardware or software cable diagnostics.
+   ·   Combo (Combination) ports: Combo ports support both copper and fiber media. EEE
+       mode only applies to copper media. If Energy Detect mode is configured on a
+       combination port, it will only function when a copper media is active. EEE LPI statistics
+       are only collected if a copper media is used on the port. If the media on a port changes
+       from copper to fiber while EEE is enabled, LPI statistics collection stops until the media
+       changes back to copper. The outputs of the show green-mode <slot/port> and
+       show green-mode eee-lpi-history interface <slot/port> commands
+       display updated LPI statistics only if the medium is copper.
+
+Green Ethernet Commands
+
+   green-mode energy-detect
+   Use this command enables energy-detect mode on an interface or on all the interfaces.
+
+     Default       Disabled
+
+     Format        green-mode energy-detect
+
+     Mode          ·   Interface Config
+                   ·   Interface Range Config
+
+   no green-mode energy-detect
+
+   This command disables energy-detect mode on an interface or on all the interfaces.
+
+     Format        no green-mode energy-detect
+
+     Mode          ·   Interface Config
+                   ·   Interface Range Config
+
+                                        Green Ethernet Commands
+                                               524
+

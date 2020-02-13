@@ -1,0 +1,53 @@
+                                   M4100 Series ProSAFE Managed Switches
+
+     Term              Definition
+
+     Detection         The manner in which the IP address of the hosts were found on the DHCP Server.
+     Method
+
+     Detection time    The time when the conflict was found.
+
+DNS Client Commands
+
+   These commands are used in the Domain Name System (DNS), an Internet directory
+   service. DNS is how domain names are translated into IP addresses. When enabled, the
+   DNS client provides a hostname lookup service to other components.
+
+   ip domain lookup
+   Use this command to enable the DNS client.
+
+     Default        enabled
+
+     Format         ip domain lookup
+
+     Mode           Global Config
+
+   no ip domain lookup
+
+   Use this command to disable the DNS client.
+
+     Format         no ip domain lookup
+
+     Mode           Global Config
+
+   ip domain name
+   Use this command to define a default domain name that the software uses to complete
+   unqualified host names (names with a domain name). By default, no default domain name is
+   configured in the system. <name> may not be longer than 255 characters and should not
+   include an initial period. This <name> should be used only when the default domain name
+   list, configured using the ip domain list command, is empty.
+
+     Default        none
+
+     Format         ip domain name <name>
+
+     Mode           Global Config
+
+    Command example:
+   The CLI command ip domain name yahoo.com configures yahoo.com as a default
+   domain name. For an unqualified hostname xxx, a DNS query is made to find the IP address
+   corresponding to xxx.yahoo.com.
+
+                                         Utility Commands
+                                               395
+

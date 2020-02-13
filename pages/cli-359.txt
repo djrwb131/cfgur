@@ -1,0 +1,52 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Default       Disabled; when enabled, log messages at or above severity warning (4) are emailed
+
+ Format        logging email [<severitylevel>]
+
+ Mode          Global Config
+
+no logging email
+
+This command disables email alerting.
+
+ Format        no logging email
+
+ Mode          Global Config
+
+logging email urgent
+This command sets the lowest severity level at which log messages are emailed immediately
+in a single email message. You can specify the <severitylevel> value as either an
+integer from 0 to 7 or symbolically through one of the following keywords: emergency (0),
+alert (1), critical (2), error (3), warning (4), notice (5), info (6), or debug (7).
+Specify none to indicate that log messages are collected and sent in a batch email at a
+specified interval.
+
+ Default       Alert (1) and emergency (0) messages are sent immediately
+
+ Format        logging email urgent {<severitylevel> | none}
+
+ Mode          Global Config
+
+no logging email urgent
+
+This command resets the urgent severity level to the default value.
+
+ Format       no logging email urgent
+
+ Mode          Global Config
+
+logging email message-type to-addr
+This command configures the email address to which messages are sent. The message
+types supported are urgent, non-urgent, or both. For each supported severity level,
+multiple email addresses can be configured. The <to-email-addr> variable is a standard
+email address, for example admin@yourcompany.com.
+
+ Format        logging email message-type {urgent |non-urgent |both} to-addr
+               <to-email-addr>
+
+ Mode          Global Config
+
+                                     Utility Commands
+                                        359
+

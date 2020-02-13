@@ -1,0 +1,42 @@
+                          M4100 Series ProSAFE Managed Switches
+
+redirect
+This command specifies that all incoming packets for the associated traffic stream are
+redirected to a specific egress interface (physical port or port-channel).
+
+ Format               redirect <slot/port>
+
+ Mode                 Policy-Class-Map Config
+
+ Incompatibilities    Drop, Mirror
+
+conform-color
+Use this command to enable color-aware traffic policing and define the conform-color class
+map. Used with the police command where the fields for the conform level are specified. The
+<class-map-name> parameter is the name of an existing DiffServ class map.
+
+    Note: This command might only be used after specifying a police command
+         for the policy-class instance.
+
+ Format     conform-color <class-map-name>
+
+ Mode       Policy-Class-Map Config
+
+class
+This command creates an instance of a class definition within the specified policy for defining
+treatment of the traffic class through subsequent policy attribute statements. The
+<classname> is the name of an existing DiffServ class.
+
+    Note: This command causes the specified policy to create a reference to the
+         class definition.
+
+    Note: The CLI mode is changed to Policy-Class-Map Config when this
+         command is successfully executed.
+
+ Format     class <classname>
+
+ Mode       Policy-Map Config
+
+                                     Quality of Service Commands
+                                                282
+

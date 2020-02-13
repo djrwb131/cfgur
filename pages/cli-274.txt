@@ -1,0 +1,47 @@
+                      M4100 Series ProSAFE Managed Switches
+
+ Format   match ethertype {<keyword> | custom <range>}
+
+ Mode     ·   Class-Map Config
+          ·   Ipv6-Class-Map Config
+
+match any
+This command adds to the specified class definition a match condition whereby all packets
+are considered to belong to the class.
+
+ Default  none
+
+ Format   match any
+
+ Mode     ·  Class-Map Config
+          ·  Ipv6-Class-Map Config
+
+match class-map
+This command adds to the specified class definition the set of match conditions defined for
+another class. The <refclassname> is the name of an existing DiffServ class whose match
+conditions are being referenced by the specified class definition.
+
+ Default  none
+
+ Format   match class-map <refclassname>
+
+ Mode     ·  Class-Map Config
+          ·  Ipv6-Class-Map Config
+
+Note the following:
+·   The parameters <refclassname> and <class-map-name> cannot be the same.
+·   Only one other class might be referenced by a class.
+·  Any attempts to delete the <refclassname> class while the class is still referenced by
+    any <class-map-name> fails.
+·   The combined match criteria of <class-map-name> and <refclassname> must be an
+    allowed combination based on the class type.
+·  Any subsequent changes to the <refclassname> class match criteria must maintain
+    this validity, or the change attempt fails.
+·   The total number of class rules formed by the complete reference class chain (including
+    both predecessor and successor classes) must not exceed a platform-specific maximum.
+    In some cases, each removal of a refclass rule reduces the maximum number of
+    available rules in the class definition by one.
+
+                               Quality of Service Commands
+                                           274
+

@@ -1,0 +1,52 @@
+                         M4100 Series ProSAFE Managed Switches
+
+no bootfile
+
+This command deletes the boot image name.
+
+ Format      no bootfile
+
+ Mode        DHCP Pool Config
+
+domain-name (DHCP Pool Config)
+This command specifies the domain name for a DHCP client. The <domain> argument
+specifies the domain name string of the client.
+
+ Default     none
+
+ Format      domain-name <domain>
+
+ Mode        DHCP Pool Config
+
+no domain-name
+
+This command removes the domain name.
+
+ Format      no domain-name
+
+ Mode        DHCP Pool Config
+
+netbios-name-server
+This command configures NetBIOS Windows Internet Naming Service (WINS) name servers
+that are available to DHCP clients.
+One IP address is required, although one can specify up to eight addresses in one command
+line. Servers are listed in order of preference (address1 is the most preferred server,
+address2 is the next most preferred server, and so on).
+
+ Default     none
+
+ Format      netbios-name-server <address> [<address2>...<address8>]
+
+ Mode        DHCP Pool Config
+
+no netbios-name-server
+
+This command removes the NetBIOS name server list.
+
+ Format      no netbios-name-server
+
+ Mode        DHCP Pool Config
+
+                                    Utility Commands
+                                    387
+

@@ -1,0 +1,56 @@
+                          M4100 Series ProSAFE Managed Switches
+
+no switchport mode
+
+This command resets the switch port mode to its default value.
+
+ Format      no switchport mode
+
+ Mode        Interface Config
+
+switchport trunk allowed vlan
+Use this command to configure the list of allowed VLANs that can receive and send traffic on
+this interface in tagged format when in trunking mode. The default is all.
+You can modify the VLAN list by using the add and remove options and replace the VLAN
+list with another list by using the all or except options. If you use the all option, all VLANs
+are added to the list of allowed VLANs. The except option provides an exclusion list.
+
+ Default     all
+
+ Format      switchport trunk allowed vlan {<vlan-list> | all | {add <vlan-list>}
+             | {remove <vlan-list>} | {except <vlan-list>}}
+
+ Mode        Interface Config
+
+ Parameter    Description
+
+ all          Specifies all VLANs from 1 to 4093. This keyword is not allowed for commands that do not
+              permit all VLANs in the list to be set at the same time.
+
+ add          Adds the defined list of VLANs to those currently set instead of replacing the list.
+
+ remove       Removes the defined list of VLANs from those currently set instead of replacing the list.
+              Valid IDs are from 1 to 4093. Extended-range VLAN IDs of the form XY or X,Y,Z are valid in
+              this command
+
+ except       Lists the VLANs that must be calculated by inverting the defined list of VLANs. (VLANs are
+              added except the ones specified.)
+
+ <vlan-list>  Either a single VLAN number from 1 to 4093 or a continuous range of VLANs described by
+              two VLAN numbers, the lesser one first, separated by a hyphen.
+
+no switchport trunk allowed vlan
+
+This command resets the list of allowed VLANs on the trunk port to its default value.
+
+ Format      no switchport trunk allowed vlan
+
+ Mode        Interface Config
+
+switchport trunk native vlan
+Use this command to configure the trunk port native VLAN (PVID) parameter of the switch
+port. Any ingress untagged packets on the port are tagged with the value of the native VLAN.
+
+                                 Switching Commands
+                                                60
+

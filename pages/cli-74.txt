@@ -1,0 +1,51 @@
+                                   M4100 Series ProSAFE Managed Switches
+
+     Term                              Definition
+
+     Private-vlan host-association     Displays VLAN association for the private-VLAN host ports.
+
+     Private-vlan mapping              Displays VLAN mapping for the private-VLAN promiscuous ports
+
+GARP Commands
+
+   This section describes the commands you use to configure Generic Attribute Registration
+   Protocol (GARP) and view GARP status. The commands in this section affect both GARP
+   VLAN Registration Protocol (GVRP) and Garp Multicast Registration Protocol (GMRP).
+   GARP is a protocol that allows client stations to register with the switch for membership in
+   VLANS (by using GVMP) or multicast groups (by using GVMP).
+
+   set garp timer join
+   This command sets the GVRP join time for one port (Interface Config mode) or all (Global
+   Config mode) and per GARP. Join time is the interval between the transmission of GARP
+   Protocol Data Units (PDUs) registering (or re-registering) membership for a VLAN or
+   multicast group. This command has an effect only when GVRP is enabled. The time is from
+   10 to 100 (centiseconds). The value 20 centiseconds is 0.2 seconds.
+
+     Default       20
+
+     Format        set garp timer join <10-100>
+
+     Mode          ·  Interface Config
+                   ·  Global Config
+
+   no set garp timer join
+
+   This command sets the GVRP join time (for one or all ports and per GARP) to the default and
+   only has an effect when GVRP is enabled.
+
+     Format        no set garp timer join
+
+     Mode          ·  Interface Config
+                   ·  Global Config
+
+   set garp timer leave
+   This command sets the GVRP leave time for one port (Interface Config mode) or all ports
+   (Global Config mode) and only has an effect when GVRP is enabled. Leave time is the time
+   to wait after receiving a unregister request for a VLAN or a multicast group before deleting
+   the VLAN entry. This can be considered a buffer time for another station to assert registration
+   for the same attribute in order to maintain uninterrupted service. The leave time is 20­600
+   (centiseconds). The value 60 centiseconds is 0.6 seconds.
+
+                                            Switching Commands
+                                                  74
+

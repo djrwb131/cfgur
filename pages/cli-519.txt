@@ -1,0 +1,48 @@
+                           M4100 Series ProSAFE Managed Switches
+
+The following lines show an example of a script:
+! Script file for displaying management access
+
+show telnet !Displays the information about remote connections
+
+! Display information about direct connections
+
+show serial
+
+! End of the script file!
+
+To specify a blank password for a user in the configuration script, you must specify it as a
+space within quotes. For example, to change the password for user jane from a blank
+password to hello, the script entry is as follows:
+users passwd jane
+" "
+hello
+hello
+
+script apply
+Use this command to apply the commands in the script to the switch. The <scriptname>
+parameter is the name of the script to apply.
+
+ Format      script apply <scriptname>
+
+ Mode        Privileged EXEC
+
+script delete
+Use this command to delete a specified script, where the <scriptname> parameter is the
+name of the script to delete. The all option deletes all the scripts present on the switch.
+
+ Format      script delete {<scriptname> | all}
+
+ Mode        Privileged EXEC
+
+script list
+Use this command to list all scripts present on the switch as well as the remaining available
+space.
+
+ Format      script list
+
+ Mode        Global Config
+
+                                   Management Commands
+                                        519
+

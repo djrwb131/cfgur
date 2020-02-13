@@ -1,0 +1,53 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ Format         no snmp trap link-status all
+
+ Mode           Global Config
+
+show snmpcommunity
+Use this command to display SNMP community information. Six communities are supported.
+You can add, change, or delete communities. The switch does not need to be reset for
+changes to take effect.
+The SNMP agent of the switch complies with SNMP versions 1, 2 or 3. For more information
+about the SNMP specification, see the SNMP RFCs. The SNMP agent sends traps through
+TCP/IP to an external SNMP manager based on the SNMP configuration (the trap receiver
+and other SNMP community parameters).
+
+ Format         show snmpcommunity
+
+ Mode           Privileged EXEC
+
+ Field             Definition
+
+ SNMP              The community string to which this entry grants access. A valid entry is a case-sensitive
+ Community         alphanumeric string of up to 16 characters. Each row of this table must contain a unique
+ Name              community name.
+
+ Client IP         An IP address (or portion thereof) from which this device will accept SNMP packets with
+ Address           the associated community. The requesting entity's IP address is ANDed with the Subnet
+                   Mask before being compared to the IP address. Note: If the Subnet Mask is set to
+                   0.0.0.0, an IP address of 0.0.0.0 matches all IP addresses. The default value is 0.0.0.0.
+
+ Client IP Mask    A mask to be ANDed with the requesting entity's IP address before comparison with IP
+                   address. If the result matches with IP address then the address is an authenticated IP
+                   address. For example, if the IP address = 9.47.128.0 and the corresponding Subnet
+                   Mask = 255.255.255.0 a range of incoming IP addresses would match, i.e. the incoming
+                   IP address could equal 9.47.128.0 - 9.47.128.255. The default value is 0.0.0.0.
+
+ Access Mode       The access level for this community string.
+
+ Status            The status of this community access entry.
+
+show snmptrap
+Use this command to display SNMP trap receivers. Trap messages are sent across a
+network to an SNMP network manager. These messages alert the manager to events
+occurring within the switch or on the network. Six trap receivers are simultaneously
+supported.
+
+ Format         show snmptrap
+
+ Mode           Privileged EXEC
+
+                                   Management Commands
+                                      499
+

@@ -1,0 +1,50 @@
+                           M4100 Series ProSAFE Managed Switches
+
+traceroute ipv6
+Use the traceroute command to discover the routes that packets actually take when
+traveling to their destination through the network on a hop-by-hop basis. The IPv6 address or
+host name must be a valid. The optional <port> parameter is the UDP port used as the
+destination of packets sent as part of the traceroute. This port should be an unused port on
+the destination system. The range for <port> is zero (0) to 65535. The default value is
+33434.
+
+ Default       port: 33434
+
+ Format        traceroute ipv6 {<ipv6-address> | <hostname>} [port <port>]
+
+ Mode          Privileged EXEC
+
+clear config
+This command resets the configuration to the factory defaults without powering off the switch.
+When you issue this command, a prompt appears to confirm that the reset should proceed.
+When you enter y, you automatically reset the current configuration on the switch to the
+default values. It does not reset the switch.
+
+ Format        clear config
+
+ Mode          Privileged EXEC
+
+clear eventlog
+This command clears all event messages maintained in the switch.
+
+ Format        clear eventlog
+
+ Mode          Privileged EXEC
+
+clear mac-addr-table
+This command clears the dynamically learned MAC addresses of the switch.
+
+ Format        clear mac-addr-table
+
+ Mode          Privileged EXEC
+
+clear logging buffered
+This command clears the messages maintained in the system log.
+
+ Format        clear logging buffered
+
+ Mode          Privileged EXEC
+
+                                    Utility Commands
+                                          367
+

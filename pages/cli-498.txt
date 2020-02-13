@@ -1,0 +1,45 @@
+                            M4100 Series ProSAFE Managed Switches
+
+snmp trap link-status
+Use this command to enable link status traps by interface.
+
+    Note: This command is valid only when the Link Up/Down Flag is enabled.
+           For more information, see snmp-server enable traps linkmode on
+           page 495.
+
+ Format       snmp trap link-status
+
+ Mode         Interface Config
+
+no snmp trap link-status
+
+Use this command to disable link status traps by interface.
+
+    Note: This command is valid only when the Link Up/Down Flag is enabled.
+
+ Format       no snmp trap link-status
+
+ Mode         Interface Config
+
+snmp trap link-status all
+Use this command to enable link status traps for all interfaces.
+
+    Note: This command is valid only when the Link Up/Down Flag is enabled.
+           For more information, see snmp-server enable traps linkmode on
+           page 495.
+
+ Format       snmp trap link-status all
+
+ Mode         Global Config
+
+no snmp trap link-status all
+
+Use this command to disable link status traps for all interfaces.
+
+    Note: This command is valid only when the Link Up/Down Flag is enabled.
+           For more information, see snmp-server enable traps linkmode on
+           page 495.
+
+                                  Management Commands
+                                         498
+

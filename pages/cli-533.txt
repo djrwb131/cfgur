@@ -1,0 +1,55 @@
+                                M4100 Series ProSAFE Managed Switches
+
+Core
+
+    Table 3. BSP Log Messages
+
+     Component      Message                                         Cause
+
+     BSP            Event(0xaaaaaaaa)                               Switch has restarted.
+
+     BSP            Starting code...                                BSP initialization complete, starting
+                                                                    application.
+
+    Table 4. NIM Log Messages
+
+     Component      Message                                         Cause
+
+     NIM            NIM: L7_ATTACH out of order for                 Interface creation out of order
+                    intIfNum(x) unit x slot x port x
+
+     NIM            NIM: Failed to find interface at unit x slot x  There is no mapping between the USP and
+                    port x for event(x)                             Interface number
+
+     NIM            NIM: L7_DETACH out of order for                 Interface creation out of order
+                    intIfNum(x) unit x slot x port x
+
+     NIM            NIM: L7_DELETE out of order for                 Interface creation out of order
+                    intIfNum(x) unit x slot x port x
+
+     NIM            NIM: event(x),intf(x),component(x), in          An event was issued to NIM during the
+                    wrong phase                                     wrong configuration phase (probably Phase
+                                                                    1, 2, or WMU)
+
+     NIM            NIM: Failed to notify users of interface        Event was not propagated to the system
+                    change
+
+     NIM            NIM: failed to send message to NIM              NIM message queue full or non-existent
+                    message Queue.
+
+     NIM            NIM: Failed to notify the components of         Interface not created
+                    L7_CREATE event
+     NIM            NIM: Attempted event (x), on USP x.x.xbefore phase 3A component issued an interface eventduring the wrong initialization phase
+
+     NIM            NIM: incorrect phase for operation              An API call was made during the wrong
+                                                                    initialization phase
+
+     NIM            NIM: Component(x) failed on event(x) for        A component responded with a fail
+                    intIfNum(x)                                     indication for an interface event
+
+     NIM            NIM: Timeout event(x), intIfNum(x)              A component did not respond before the
+                    remainingMask = "xxxx"                          NIM timeout occurred
+
+                                             Log Messages
+                                                       533
+

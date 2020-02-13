@@ -1,0 +1,54 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no ip domain name
+
+Use this command to remove the default domain name configured using the ip domain
+name command.
+
+ Format        no ip domain name
+
+ Mode          Global Config
+
+ip domain list
+Use this command to define a list of default domain names to complete unqualified names.
+By default, the list is empty. Each name must be no more than 256 characters, and should
+not include an initial period. The default domain name, configured using the ip domain
+name command, is used only when the default domain name list is empty. A maximum of
+32 names can be entered in to this list.
+
+ Default       none
+
+ Format        ip domain list <name>
+
+ Mode          Global Config
+
+no ip domain list
+
+Use this command to delete a name from a list.
+
+ Format        no ip domain list <name>
+
+ Mode          Global Config
+
+ip name server
+Use this command to configure the available name servers. Up to eight servers can be
+defined in one command or by using multiple commands. The parameter
+<server-address> is a valid IPv4 or IPv6 address of the server. The preference of the
+servers is determined by the order they were entered.
+
+ Format        ip name-server <server-address1>
+               [<server-address2>...<server-address8>]
+
+ Mode          Global Config
+
+no ip name server
+
+Use this command to remove a name server.
+
+ Format        no ip name-server [<server-address1>...<server-address8>]
+
+ Mode          Global Config
+
+                                     Utility Commands
+                                           396
+

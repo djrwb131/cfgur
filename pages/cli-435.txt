@@ -1,0 +1,53 @@
+                            M4100 Series ProSAFE Managed Switches
+
+rmon event
+This command sets the RMON event entry in the RMON event MIB group.
+
+ Format      rmon event <event-number> [description <string> | log | owner
+             <string> | trap <community>]
+
+ Mode        Global Config
+
+ Parameter       Description
+
+ <event number>  An index number that uniquely identifies an entry in the event table. Each such entry
+                 defines one event that is to be generated when the appropriate conditions occur. The
+                 range is 1 to 65535.
+
+ description     A comment describing the event entry. The default is alarmEvent.
+ <string>
+
+ log             Creates a log entry
+
+ owner <string>  The owner string that is associated with the entry. The default is monitorEvent.
+
+ trap            The SNMP community, which is specified by an octet string that is used to send an
+ <community>     SNMP trap. The default is public.
+
+no rmon event
+
+This command deletes the RMON event entry.
+
+ Format      no rmon event <event number>
+
+ Mode        Global Config
+
+rmon collection history
+This command sets the history control parameters of the RMON historyControl MIB group.
+
+ Format      rmon collection history <index number> buckets <1-65535> | interval
+             <1-3600> | owner <owner>
+
+ Mode        Interface Config
+
+no rmon collection history
+
+This command deletes the history control group entry with the specified index number.
+
+ Format      no rmon collection history <index number>
+
+ Mode        Interface Config
+
+                                       Utility Commands
+                                        435
+

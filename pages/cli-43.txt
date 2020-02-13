@@ -1,0 +1,58 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ Term               Definition
+
+ Edge Port Status The derived value of the edge port status. True if operating as an edge port; false
+                    otherwise.
+
+ Point To Point     Derived value indicating if this port is part of a point to point link.
+ MAC Status
+
+ CST Regional       The regional root identifier in use for this port.
+ Root
+
+ CST Internal       The internal root path cost to the LAN by the designated external port.
+ Root Path Cost
+
+ Loop               The current loop inconsistent state of this port in this MST instance. When in loop
+ Inconsistent       inconsistent state, the port has failed to receive BPDUs while configured with loop guard
+ State              enabled. Loop inconsistent state maintains the port in a "blocking" state until a
+                    subsequent BPDU is received.
+
+ Transitions Into   The number of times this interface has transitioned into loop inconsistent state.
+ Loop
+ Inconsistent
+ State
+
+ Transitions Out    The number of times this interface has transitioned out of loop inconsistent state.
+ of Loop
+ Inconsistent
+ State
+
+show spanning-tree mst port summary
+This command displays the settings of one or all ports within the specified multiple spanning
+tree instance. The parameter <mstid> indicates a particular MST instance. The parameter
+{<slot/port> | all} indicates the desired switch port or all ports.
+If you specify 0 (defined as the default CIST ID) as the <mstid>, the status summary
+displays for one or all ports within the Common and Internal Spanning Tree.
+
+ Format          show spanning-tree mst port summary <mstid> {<slot/port> | all}
+
+ Mode            ·  Privileged EXEC
+                 ·  User EXEC
+
+ Term               Definition
+
+ MST Instance ID    The MST instance associated with this port.
+
+ Interface          Valid slot and port number separated by forward slashes.
+
+ STP Mode           Indicates whether spanning tree is enabled or disabled on the port.
+
+ Type               Currently not used.
+
+ STP State          The forwarding state of the port in the specified spanning tree instance.
+
+                                          Switching Commands
+                                                  43
+

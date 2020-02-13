@@ -1,0 +1,60 @@
+                             M4100 Series ProSAFE Managed Switches
+
+The show dot1x detail <slot/port> command displays the following MAC-based
+dot1x fields if the port-control mode for that specific port is MAC-based. For each client
+authenticated on the port, the show dot1x detail <slot/port> command displays the
+following MAC-based dot1x parameters if the port-control mode for that specific port is
+MAC-based.
+
+ Term             Definition
+
+ Supplicant      The MAC-address of the supplicant.
+ MAC-Address
+
+ Authenticator    Current state of the authenticator PAE state machine. Possible values are Initialize,
+ PAE State        Disconnected, Connecting, Authenticating, Authenticated, Aborting, Held,
+                  ForceAuthorized, and ForceUnauthorized.
+
+ Backend          Current state of the backend authentication state machine. Possible values are Request,
+ Authentication   Response, Success, Fail, Timeout, Idle, and Initialize.
+ State
+
+ VLAN-Assigned   The VLAN assigned to the client by the radius server.
+
+ Logical Port    The logical port number associated with the client.
+
+If you use the optional parameter statistics <slot/port>, the following dot1x statistics
+for the specified port appear.
+
+ Term             Definition
+
+ Port            The interface whose statistics are displayed.
+
+ EAPOL Frames    The number of valid EAPOL frames of any type that have been received by this
+ Received         authenticator.
+
+ EAPOL Frames    The number of EAPOL frames of any type that have been transmitted by this
+ Transmitted      authenticator.
+
+ EAPOL Start     The number of EAPOL start frames that have been received by this authenticator.
+ Frames
+ Received
+
+ EAPOL Logoff    The number of EAPOL logoff frames that have been received by this authenticator.
+ Frames
+ Received
+
+ Last EAPOL      The protocol version number carried in the most recently received EAPOL frame.
+ Frame Version
+
+ Last EAPOL      The source MAC address carried in the most recently received EAPOL frame.
+ Frame Source
+
+ EAP             The number of EAP response/identity frames that have been received by this
+ Response/Id      authenticator.
+ Frames
+ Received
+
+                                       Switching Commands
+                                               92
+

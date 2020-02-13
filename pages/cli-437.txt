@@ -1,0 +1,47 @@
+                             M4100 Series ProSAFE Managed Switches
+
+show rmon log
+This command displays the entries in the RMON log table.
+
+ Format      show rmon log
+
+ Mode        Privileged Exec
+
+Command example:
+(NETGEAR Switch) # show rmon log
+
+Maximum table size: 100
+
+Event    Description                 Time
+------------------------------------------------
+
+show rmon statistics interface
+This command displays the RMON statistics for the interface.
+
+ Format      show rmon statistics interface <slot/port>
+
+ Mode        Privileged Exec
+
+Command example:
+(NETGEAR Switch) # show rmon statistics interface 0/1
+Interface: 0/1
+Dropped: 0
+Octets: 0  Packets: 0
+Broadcast: 0  Multicast: 0
+CRC Align Errors: 0  Collisions: 0
+Undersize Pkts: 0 Oversize Pkts: 0
+Fragments: 0  Jabbers: 0
+64 Octets: 0  65 - 127 Octets: 0
+128 - 255 Octets: 0  256 - 511 Octets: 0
+512 - 1023 Octets: 0  1024 - 1518 Octets: 0
+
+show rmon hcalarms
+This command displays the entries in the RMON hcAlarmTable.
+
+ Format      show rmon hcalarms [<alarm index>]
+
+ Mode        Privileged Exec
+
+                                   Utility Commands
+                                         437
+

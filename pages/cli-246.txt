@@ -1,0 +1,52 @@
+                            M4100 Series ProSAFE Managed Switches
+
+     Note: If you use the connected keyword for <protocol>, the all option is
+            not available because there are no best or non-best connected routes.
+
+ Format        show ip route [{<ip-address> [<protocol>] | {<ip-address> <mask>
+               [longer-prefixes] [<protocol>] | <protocol>} [all] | all}]
+
+ Modes         · Privileged EXEC
+               · User EXEC
+
+ Term            Definition
+
+ Route Codes     The key for the routing protocol codes that might appear in the routing table output.
+
+The show ip route command displays the routing tables in the following format:
+Code    IP-Address/Mask [Preference/Metric] via Next-Hop, Route-Timestamp, Interface
+
+The columns for the routing table display the following information:
+
+ Term              Definition
+
+ Code              The codes for the routing protocols that created the routes.
+
+ IP-Address/Mask   The IP-Address and mask of the destination network corresponding to this route.
+
+ Preference        The administrative distance associated with this route. Routes with low values are
+                   preferred over routes with higher values.
+
+ Metric            The cost associated with this route.
+
+ via Next-Hop      The outgoing router IP address to use when forwarding traffic to the next router (if any)
+                   in the path toward the destination.
+
+ Route-Timestamp   The last updated time for dynamic routes. The format of Route-Timestamp will be
+                   ·   Days:Hours:Minutes if days > = 1
+                   ·   Hours:Minutes:Seconds if days < 1
+
+ Interface         The outgoing router interface to use when forwarding traffic to the next destination. For
+                   reject routes, the next hop interface would be Null0 interface.
+
+To administratively control the traffic destined to a particular network and prevent it from
+being forwarded through the router, you can configure a static reject route on the router. Such
+traffic would be discarded and the ICMP destination unreachable message is sent back to the
+source. This is typically used for preventing routing loops. The reject route added in the RTO
+is of the type OSPF Inter-Area. Reject routes (routes of REJECT type installed by any
+protocol) are not redistributed by OSPF/RIP. Reject routes are supported in both OSPFv2
+and OSPFv3.
+
+                                      Routing Commands
+                                             246
+

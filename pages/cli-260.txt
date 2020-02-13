@@ -1,0 +1,48 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+ICMP Throttling Commands
+
+   This section describes the commands you use to configure options for the transmission of
+   various types of ICMP messages.
+
+   ip unreachables
+   Use this command to enable the generation of ICMP Destination Unreachable messages. By
+   default, the generation of ICMP Destination Unreachable messages is enabled.
+
+     Default       enable
+
+     Format        ip unreachables
+
+     Mode          Interface Config
+
+   no ip unreachables
+
+   Use this command to prevent the generation of ICMP Destination Unreachable messages.
+
+     Format        no ip unreachables
+
+     Mode          Interface Config
+
+   ip redirects
+   Use this command to enable the generation of ICMP Redirect messages by the router. By
+   default, the generation of ICMP Redirect messages is disabled.
+
+     Default       disabled
+
+     Format        ip redirects
+
+     Mode          · Global Config
+                   · Interface Config
+
+   no ip redirects
+
+   Use this command to prevent the generation of ICMP Redirect messages by the router.
+
+     Format        no ip redirects
+
+     Mode          · Global Config
+                   · Interface Config
+
+                                       Routing Commands
+                                      260
+

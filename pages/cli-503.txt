@@ -1,0 +1,52 @@
+                            M4100 Series ProSAFE Managed Switches
+
+default names, respectively. The same name can be configured for more than one
+authenticating servers and the name should be unique for accounting servers. The RADIUS
+client allows the configuration of a maximum 32 authenticating and accounting servers.
+If you use the auth parameter, the command configures the IP address or host name to use
+to connect to a RADIUS authentication server. You can configure up to three servers per
+RADIUS client. If the maximum number of configured servers is reached, the command fails
+until you remove one of the servers by issuing the no form of the command. If you use the
+optional port parameter, the command configures the UDP port number to use when
+connecting to the configured RADIUS server. For the port keyword, the <number>
+argument must be a value in the range 0­65535, with 1813 being the default.
+
+    Note: To reconfigure a RADIUS authentication server to use the default
+           UDP port, set the <number> argument to 1812.
+
+If you use the acct token, the command configures the IP address or host name to use for
+the RADIUS accounting server. You can only configure one accounting server. If an
+accounting server is currently configured, use the no form of the command to remove it from
+the configuration. The IP address or host name you specify must match that of a previously
+configured accounting server. If you use the optional port parameter, the command
+configures the UDP port to use when connecting to the RADIUS accounting server. If a port
+is already configured for the accounting server, the new port replaces the previously
+configured port. For the port keyword, the <number> argument must be a value in the
+range 0­65535, with 1813 being the default.
+
+    Note: To reconfigure a RADIUS accounting server to use the default UDP
+           port, set the <number> argument to 1813.
+
+ Format      radius server host {auth | acct} {<ipaddr> | <dnsname>} [name
+             <servername>] [port <number>] [type <server-type>]
+
+ Mode        Global Config
+
+ Parameter      Description
+
+ <ipaddr>       The IP address of the server.
+
+ <dnsname>      The DNS name of the server.
+
+ <servername>   The alias name to identify the server.
+
+ <number>       The port number in the range 0­65535 to use to connect to the specified RADIUS
+                server.
+
+ <server-type>  Enter one of the following options:
+                ·   0. Specifies a standard server.
+                ·   1. Specifies a NETGEAR server.
+
+                                 Management Commands
+                                               503
+

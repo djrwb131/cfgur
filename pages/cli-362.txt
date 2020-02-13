@@ -1,0 +1,58 @@
+                              M4100 Series ProSAFE Managed Switches
+
+show logging email config
+This command displays information about the email alert configuration.
+
+ Format         show logging email config
+
+ Mode           Privileged EXEC
+
+ Term                       Definition
+
+ Email Alert Logging        The administrative status of the feature: enabled or disabled
+
+ Email Alert From Address   The email address of the sender (the switch).
+
+ Email Alert Urgent         The lowest severity level that is considered urgent. Messages of this type are
+ Severity Level             sent immediately.
+
+ Email Alert Non Urgent     The lowest severity level that is considered non-urgent. Messages of this type,
+ Severity Level             up to the urgent level, are collected and sent in a batch email. Log messages
+                            that are less severe are not sent in an email message at all.
+
+ Email Alert Trap Severity  The lowest severity level at which traps are logged.
+ Level
+
+ Email Alert Notification   The amount of time to wait between non-urgent messages.
+ Period
+
+ Email Alert To Address     The configured email recipients.
+ Table
+
+ Email Alert Subject Table  The subject lines included in urgent (Type 1) and non-urgent (Type 2)
+                            messages.
+
+ For Msg Type urgent,       The configured email subject for sending urgent messages.
+ subject is
+
+ For Msg Type non-urgent,   The configured email subject for sending non-urgent messages.
+ subject is
+
+show logging email statistics
+This command displays email alerting statistics.
+
+ Format         show logging email statistics
+
+ Mode           Privileged EXEC
+
+ Term                       Definition
+
+ Email Alert Operation      The operational status of the email alerting feature.
+ Status
+
+ No of Email Failures       The number of email messages that have attempted to be sent but were
+                            unsuccessful.
+
+                                           Utility Commands
+                                               362
+

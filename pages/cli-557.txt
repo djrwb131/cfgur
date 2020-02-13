@@ -1,0 +1,25 @@
+                         M4100 Series ProSAFE Managed Switches
+
+Table 55. OSAPI Log Messages (continued)
+
+ Component      Message                                 Cause
+
+ OSAPI          osapiCleanupIf: NetIPGet                During the call to remove the interface from
+                                                        the route table, the attempt to get an ipv4
+                                                        interface address from the stack failed.
+
+ OSAPI          osapiCleanupIf: NetMaskGet              During the call to remove the interface from
+                                                        the route table ,the attempt to get the ipv4
+                                                        interface mask from the stack failed.
+
+ OSAPI          osapiCleanupIf: NetIpDel                During the call to remove the interface from
+                                                        the route table, the attempt to delete the
+                                                        primary ipv4 address from the stack failed.
+
+ OSAPI          osapiSemaTake failed                    The requested semaphore cannot be taken
+                                                        because: the call is made from an ISR or
+                                                        the semaphore ID is invalid.
+
+                                         Log Messages
+                                             557
+

@@ -1,0 +1,51 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no cos-queue random-detect
+
+Use this command to disable WRED and restore the default tail drop operation for the
+specified queues on all interfaces or one interface.
+
+ Format        no cos-queue random-detect <queue-id-1> [<queue-id-2> ... <queue-id-n>]
+
+ Modes         ·  Global Config
+               ·  Interface Config
+
+random-detect exponential weighting-constant
+Use this command to configure the WRED decay exponent for a CoS queue interface.
+
+ Format        random-detect exponential-weighting-constant <0-15>
+
+ Modes         ·  Global Config
+               ·  Interface Config
+
+ Default       9
+
+no random-detect exponential weighting-constant
+
+Use this command to reset the WRED decay exponent to the default value on all interfaces
+or one interface.
+
+ Format        no random-detect exponential-weighting-constant
+
+ Modes         ·  Global Config
+               ·  Interface Config
+
+random-detect queue-parms
+Use this command to configure WRED parameters for each drop precedence level supported
+by a queue. Use it only when per-COS queue configuration is enabled (using the cos-queue
+random-detect command).
+·   <min-thresh> is the minimum threshold the queue depth (as a percentage) where
+    WRED starts marking and dropping traffic.
+·   <max-thresh> is the maximum threshold is the queue depth (as a percentage) above
+    which WRED marks or drops all traffic.
+·   <drop-probability> is the percentage probability that WRED marks or drops a
+    packet, when the queue depth is at the maximum threshold. (The drop probability
+    increases linearly from 0 just before the minimum threshold, to this value at the maximum
+    threshold, then goes to 100 percent for larger queue depths). Each parameter is specified
+    for each possible drop precedence (color of TCP traffic).
+The last precedence applies to all non-TCP traffic. For example, in a 3-color system, four of
+each parameter specified: green TCP, yellow TCP, red TCP, and non-TCP, respectively.
+
+                                   Quality of Service Commands
+                                           266
+

@@ -1,0 +1,53 @@
+                        M4100 Series ProSAFE Managed Switches
+
+RADIUS Attribute 4 Value .............. 192.168.37.60
+
+show radius accounting
+Use this command to display a summary of configured RADIUS accounting servers.
+
+ Format       show radius accounting name [<servername>]
+
+ Mode         Privileged EXEC
+
+ Field             Description
+
+ RADIUS Accounting A global parameter to indicate whether the accounting mode for all the servers is
+ Mode              enabled or not.
+
+If you do not specify any parameters, only the accounting mode and the RADIUS accounting
+server details are displayed.
+
+ Field               Definition
+
+ Host Address       The IP address of the host.
+
+ Server Name        The name of the accounting server.
+
+ Port               The port used for communication with the accounting server.
+
+ Secret Configured  Yes or No Boolean value indicating whether this server is configured with a
+                     secret.
+
+Command example:
+(NETGEAR Switch) #show radius accounting name
+
+Host Address            Server Name                       Port      Secret
+                                                                    Configured
+----------------------- --------------------------------- -------- -----------
+192.168.37.200          Network1_RADIUS_Server            1813      Yes
+192.168.37.201          Network2_RADIUS_Server            1813      No
+192.168.37.202          Network3_RADIUS_Server            1813      Yes
+192.168.37.203          Network4_RADIUS_Server            1813      No
+
+Command example:
+(NETGEAR Switch) #show radius accounting name Default_RADIUS_Server
+
+Server Name............................ Default_RADIUS_Server
+Host Address........................... 192.168.37.200
+RADIUS Accounting Mode................. Disable
+Port .................................. 1813
+Secret Configured ..................... Yes
+
+                                   Management Commands
+                                         510
+

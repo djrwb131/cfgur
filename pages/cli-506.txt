@@ -1,0 +1,48 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Parameter      Description
+
+ <ipaddr>       The IP address of the RADIUS Authenticating server.
+
+ <dnsname>      The DNS name of the server.
+
+radius server retransmit
+Use this command to configure the global parameter for the RADIUS client that specifies the
+number of transmissions of the messages to be made before attempting the fall back server
+upon unsuccessful communication with the current RADIUS authenticating server. When the
+maximum number of retries are exhausted for the RADIUS accounting server and no
+response is received, the client does not communicate with any other server.
+
+ Default     4
+
+ Format      radius server retransmit <retries>
+
+ Mode        Global Config
+
+ Parameter      Description
+
+ <retries>      The maximum number of transmission attempts in the range of 1­15.
+
+no radius server retransmit
+
+Use this command to set the value of this global parameter to the default value.
+
+ Format      no radius server retransmit
+
+ Mode        Global Config
+
+radius server timeout
+Use this command to configure the global parameter for the RADIUS client that specifies the
+time-out value (in seconds) after which a request must be retransmitted to the RADIUS
+server if no response is received. The time-out value is an integer in the range of 1­30
+seconds.
+
+ Default     5
+
+ Format      radius server timeout <seconds>
+
+ Mode        Global Config
+
+                                Management Commands
+                                              506
+

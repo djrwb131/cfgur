@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no ip dhcp snooping trust
+
+Use this command to configure the port as untrusted.
+
+ Format         no ip dhcp snooping trust
+
+ Mode           Interface Config
+
+ip verify source
+Use this command to configure the IPSG source ID attribute to filter the data traffic in the
+hardware. Source ID is the combination of IP address and MAC address. Normal command
+allows data traffic filtration based on the IP address. With the port-security option, the
+data traffic will be filtered based on the IP and MAC addresses.
+
+ Default        The source ID is the IP address
+
+ Format         ip verify source [port-security]
+
+ Mode           Interface Config
+
+no ip verify source
+
+Use this command to disable the IPSG configuration in the hardware. You cannot disable
+port-security alone if it is configured.
+
+ Format         no ip verify source
+
+ Mode           Interface Config
+
+show ip dhcp snooping
+Use this command to display the DHCP Snooping global configurations and per port
+configurations.
+
+ Format         show ip dhcp snooping
+
+ Mode           ·  Privileged EXEC
+                ·  User EXEC
+
+ Term             Definition
+
+ Interface        The interface for which data is displayed.
+
+ Trusted          If it is enabled, DHCP snooping considers the port as trusted. The factory default is
+                  disabled.
+
+ Log Invalid Pkts If it is enabled, DHCP snooping application logs invalid packets on the specified
+                  interface.
+
+                                    Switching Commands
+                                                 142
+

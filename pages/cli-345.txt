@@ -1,0 +1,47 @@
+                          M4100 Series ProSAFE Managed Switches
+
+ Field                            Description
+
+ BR, nominal                      The nominal bit (signaling) rate (BR, nominal) is specified in units of
+                                  100 MBd, rounded off to the nearest 100 MBd. The bit rate includes
+                                  those bits necessary to encode and delimit the signal as well as those
+                                  bits carrying data information. A value of 0 indicates that the bit rate is
+                                  not specified and must be determined from the transceiver technology.
+                                  The actual information transfer rate will depend on the encoding of the
+                                  data, as defined by the encoding value.
+
+ Vendor Rev                       The vendor revision number (vendor rev) contains ASCII characters,
+                                  left aligned and padded on the right with ASCII spaces (20h), defining
+                                  the vendor's product revision number. A value of all zero in this field
+                                  indicates that the vendor revision is unspecified.
+
+Command example:
+(NETGEAR Switch) #show fiber-ports optics-info all
+
+                      Link Link                                                      Nominal
+                        Length Length                                                     Bit
+                      50um 62.5um                                                       Rate
+Port      Vendor Name          [m] [m] Serial Number     Part Number                  [Mbps] Rev
+-------- ---------------- --- ---- ---------------- ---------------- ----- ----
+0/49      NETGEAR              8     3 A7N2018414        AXM761                        10300 10
+0/51      NETGEAR              8     3 A7N2018472        AXM761                        10300 10
+0/52      NETGEAR              8     3 A7N2018501        AXM761                        10300 10
+
+show mac-addr-table
+This command displays the forwarding database entries. These entries are used by the
+transparent bridging function to determine how to forward a received frame.
+Enter all or no parameter to display the entire table. Enter a MAC Address and VLAN ID to
+display the table entry for the requested MAC address on the specified VLAN. Enter the
+count parameter to view summary information about the forwarding database table. Use the
+interface <slot/port> parameter to view MAC addresses on a specific interface. Use
+the vlan <vlan-id> parameter to display information about MAC addresses on a specified
+VLAN.
+
+ Format        show mac-addr-table [{<macaddr> <vlan-id> | all | count | interface
+               <slot/port> | vlan <vlan-id>}]
+
+ Mode          Privileged EXEC
+
+                                       Utility Commands
+                                               345
+

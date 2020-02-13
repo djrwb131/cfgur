@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Table 42. Routing Table Manager Log Messages
+
+ Component        Message                                      Cause
+
+ Routing Table    RTO is full. Routing table contains 8000     The routing table manager, also called
+ Manager          best routes, 8000 total routes.              "RTO," stores a limited number of best
+                                                               routes, based on hardware capacity. When
+                                                               the routing table becomes full, RTO logs
+                                                               this alert. The count of total routes includes
+                                                               alternate routes, which are not installed in
+                                                               hardware.
+
+ Routing Table    RTO no longer full. Bad adds: 10. Routing    When the number of best routes drops
+ Manager          table contains 7999 best routes, 7999 total  below full capacity, RTO logs this notice.
+                  routes.                                      The number of bad adds might give an
+                                                               indication of the number of route adds that
+                                                               failed while RTO was full, but a full routing
+                                                               table is only one reason why this count is
+                                                               incremented.
+
+Table 43. VRRP Log Messages
+
+ Component        Message                                      Cause
+
+ VRRP             Changing priority to 255 for virtual router  When the router is configured with the
+                  with VRID 1 on interface 0/1                 address being used as the virtual router ID,
+                                                               the router's priority is automatically set to
+                                                               the maximum value to ensure that the
+                                                               address owner becomes the VRRP master.
+
+ VRRP             Changing priority to 100 for virtual router  When the router is no longer the address
+                  with VRID 1 on interface 0/1                 owner, Switch CLI reverts the router's
+                                                               priority to the default.
+
+ VRRP             vrrpPacketValidate: Invalid TTL              VRRP ignored an incoming message
+                                                               whose time to live (TTL) in the IP header
+                                                               was not 255.
+
+Table 44. ARP Log Message
+
+ Component        Message                                      Cause
+
+ ARP              ARP received mapping for IP address xxx      When we receive an ARP response with
+                  to MAC address yyy. This IP address might    different MAC address from another station
+                  be configured on two stations.               with the same IP address as ours. This
+                                                               might be a case of misconfiguration.
+
+                                   Log Messages
+                                                  550
+

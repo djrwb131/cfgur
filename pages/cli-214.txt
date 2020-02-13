@@ -1,0 +1,49 @@
+                         M4100 Series ProSAFE Managed Switches
+
+isdp timer
+This command sets the period of time between sending new ISDP packets. You must enter
+the range in seconds.
+
+ Default   30 seconds
+
+ Format    isdp timer <5-254>
+
+ Mode      Global Config
+
+isdp advertise-v2
+This command enables the sending of ISDP version 2 packets from the device.
+
+ Default   Enabled
+
+ Format    isdp advertise-v2
+
+ Mode      Global Config
+
+no isdp advertise-v2
+
+This command disables the sending of ISDP version 2 packets from the device.
+
+ Format    no isdp advertise-v2
+
+ Mode      Global Config
+
+isdp enable
+This command enables ISDP on the interface.
+
+ Default   Enabled
+
+ Format    isdp enable
+
+ Mode      Interface Config
+
+no isdp enable
+
+This command disables ISDP on the interface.
+
+ Format    no isdp enable
+
+ Mode      Interface Config
+
+                               Switching Commands
+                                       214
+

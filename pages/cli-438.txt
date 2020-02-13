@@ -1,0 +1,50 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+UniDirectional Link Detection Commands
+
+   The UDLD feature detects unidirectional links physical ports. A unidirectional link is a
+   forwarding anomaly in a Layer 2 communication channel in which a bidirectional link stops
+   passing traffic in one direction. UDLD must be enabled on both sides of the link in order to
+   detect a unidirectional link. The UDLD protocol operates by exchanging packets containing
+   information about neighboring devices.
+
+   udld enable (Global Config)
+   This command enables UDLD globally on the switch.
+
+     Default       disabled
+
+     Format        udld enable
+
+     Mode          Global Config
+
+   no udld enable (Global Config)
+
+   This command disables UDLD globally on the switch.
+
+     Format        no udld enable
+
+     Mode          Global Config
+
+   udld message time
+   This command configures the interval between UDLD probe messages on ports that are in
+   the advertisement phase. The range is from 7 to 90 seconds.
+
+     Default       15
+
+     Format        udld message time <interval>
+
+     Mode          Global Config
+
+   udld timeout interval
+   This command configures the time interval after which UDLD link is considered to be
+   unidirectional. The range is from 5 to 60 seconds.
+
+     Default       5
+
+     Format        udld timeout interval <interval>
+
+     Mode          Global Config
+
+                                    Utility Commands
+                                             438
+

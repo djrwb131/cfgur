@@ -1,0 +1,57 @@
+                              M4100 Series ProSAFE Managed Switches
+
+no acl-trapflags
+
+This command disables the ACL trap mode.
+
+ Format         no acl-trapflags
+
+ Mode           Global Config
+
+show ip access-lists
+This command displays an IP ACL <accesslistnumber> is the number used to identify
+the IP ACL.
+
+ Format         show ip access-lists <accesslistnumber>
+
+ Mode           Privileged EXEC
+
+    Note: Only the access list fields that you configure are displayed.
+
+ Term             Definition
+
+ Rule Number     The number identifier for each rule that is defined for the IP ACL.
+
+ Action          The action associated with each rule. The possible values are Permit or Deny.
+
+ Match All        Indicates whether this access list applies to every packet. Possible values are True or
+                  False.
+
+ Protocol        The protocol to filter for this rule.
+
+ Source IP       The source IP address for this rule.
+ Address
+
+ Source IP Mask  The source IP Mask for this rule.
+
+ Source L4 Port  The source port for this rule.
+ Keyword
+
+ Destination IP  The destination IP address for this rule.
+ Address
+
+ Destination IP  The destination IP Mask for this rule.
+ Mask
+
+ Destination L4  The destination port for this rule.
+ Port Keyword
+
+ IP DSCP         The value specified for IP DSCP.
+
+ IP Precedence   The value specified IP Precedence.
+
+ IP TOS          The value specified for IP TOS.
+
+                                 Quality of Service Commands
+                                                       304
+

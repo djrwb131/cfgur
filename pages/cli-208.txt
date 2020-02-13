@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no dos-control tcpsyn
+
+This command sets disables TCP SYN and L4 source = 0-1023 Denial of Service protection.
+
+ Format        no dos-control tcpsyn
+
+ Mode          Global Config
+
+dos-control tcpsynfin
+This command enables TCP SYN and FIN Denial of Service protection. If the mode is
+enabled, Denial of Service prevention is active for this type of attack. If packets ingress
+having TCP flags SYN and FIN set, the packets will be dropped if the mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control tcpsynfin
+
+ Mode          Global Config
+
+no dos-control tcpsynfin
+
+This command sets disables TCP SYN & FIN Denial of Service protection.
+
+ Format        no dos-control tcpsynfin
+
+ Mode          Global Config
+
+dos-control tcpfinurgpsh
+This command enables TCP FIN and URG and PSH and SEQ=0 checking Denial of Service
+protections. If the mode is enabled, Denial of Service prevention is active for this type of
+attack. If packets ingress having TCP FIN, URG, and PSH all set and TCP Sequence
+Number set to 0, the packets will be dropped if the mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control tcpfinurgpsh
+
+ Mode          Global Config
+
+no dos-control tcpfinurgpsh
+
+This command sets disables TCP FIN and URG and PSH and SEQ=0 checking Denial of
+Service protections.
+
+ Format        no dos-control tcpfinurgpsh
+
+ Mode          Global Config
+
+                                Switching Commands
+                                          208
+

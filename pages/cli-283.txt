@@ -1,0 +1,49 @@
+                      M4100 Series ProSAFE Managed Switches
+
+no class
+
+This command deletes the instance of a particular class and its defined treatment from the
+specified policy. <classname> is the names of an existing DiffServ class.
+
+    Note: This command removes the reference to the class definition for the
+         specified policy.
+
+ Format   no class <classname>
+
+ Mode     Policy-Map Config
+
+mark cos
+This command marks all packets for the associated traffic stream with the specified Class of
+Service value in the priority field of the 802.1p header (the only tag in a single tagged packet
+or the first or outer 802.1Q tag of a double VLAN tagged packet). If the packet does not
+already contain this header, one is inserted. The CoS value is an integer from 0 to 7.
+
+ Default            1
+
+ Format             mark-cos <0-7>
+
+ Mode               Policy-Class-Map Config
+
+ Incompatibilities  Drop, Mark IP DSCP, IP Precedence, Police
+
+mark cos-as-sec-cos
+This command marks outer VLAN tag priority bits of all packets as the inner VLAN tag
+priority, marking CoS as Secondary CoS. This essentially means that the inner VLAN tag
+CoS is copied to the outer VLAN tag CoS.
+
+ Format            mark-cos-as-sec-cos
+
+ Mode              Policy-Class-Map Config
+
+ Incompatibilities Drop, Mark IP DSCP, IP Precedence, Police
+
+mark ip-dscp
+This command marks all packets for the associated traffic stream with the specified IP DSCP
+value.
+The <dscpval> value is specified as either an integer from 0 to 63, or symbolically through
+one of the following keywords: af11, af12, af13, af21, af22, af23, af31, af32, af33,
+af41, af42, af43, be, cs0, cs1, cs2, cs3, cs4, cs5, cs6, cs7, or ef.
+
+                              Quality of Service Commands
+                                            283
+

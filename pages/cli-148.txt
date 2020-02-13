@@ -1,0 +1,55 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ip arp inspection vlan
+Use this command to enable Dynamic ARP Inspection on a list of comma-separated VLAN
+ranges.
+
+ Default      disabled
+
+ Format       ip arp inspection vlan <vlan-list>
+
+ Mode         Global Config
+
+no ip arp inspection vlan
+
+Use this command to disable Dynamic ARP Inspection on a list of comma-separated VLAN
+ranges.
+
+ Format       no ip arp inspection vlan <vlan-list>
+
+ Mode         Global Config
+
+ip arp inspection validate
+Use this command to enable additional validation checks like source-mac validation,
+destination-mac validation, and ip address validation on the received ARP packets. Each
+command overrides the configuration of the previous command. For example, if a command
+enables src-mac and dst-mac validations, and a second command enables IP validation only,
+the src-mac and dst-mac validations are disabled as a result of the second command.
+
+ Default      disabled
+
+ Format       ip arp inspection validate {[src-mac] [dst-mac] [ip]}
+
+ Mode         Global Config
+
+no ip arp inspection validate
+
+Use this command to disable the additional validation checks on the received ARP packets.
+
+ Format       no ip arp inspection validate {[src-mac] [dst-mac] [ip]}
+
+ Mode         Global Config
+
+ip arp inspection vlan logging
+Use this command to enable logging of invalid ARP packets on a list of comma-separated
+VLAN ranges.
+
+ Default      enabled
+
+ Format       ip arp inspection vlan <vlan-list> logging
+
+ Mode         Global Config
+
+                                  Switching Commands
+                                      148
+

@@ -1,0 +1,52 @@
+                               M4100 Series ProSAFE Managed Switches
+
+auto-voip oui
+This command is used to configure an OUI for Auto VoIP. The traffic from the configured OUI
+will get the highest priority over the other traffic.
+
+ Default         A list of known OUIs is present
+
+ Format          auto-voip oui <oui-prefix> oui-desc <string>
+
+ Mode            Global Config
+
+no auto-voip oui
+
+This command is to delete already configured OUI.
+
+ Format          no auto-voip oui <oui-prefix>
+
+ Mode            Global Config
+
+auto-voip vlan
+This command is used to configure the global auto VoIP VLAN ID. The VLAN behavior
+depends on the configured auto VoIP mode.
+
+ Default         None
+
+ Format          auto-voip vlan <vlan-id>
+
+ Mode            Global Config
+
+no auto-voip vlan
+
+This command is used to remove the configured auto VoIP mode.
+
+ Format          no auto-voip vlan
+
+ Mode            Global Config
+
+auto-voip oui-based priority
+This command is used to configure the global OUI based auto VoIP priority. If the phone OUI
+is matches one of the configured OUI, the priority of traffic from the phone is changed to OUI
+priority configured through this command.
+
+ Default         Highest available priority
+
+ Format          auto-voip oui-based priority <priority-value>
+
+ Mode            Global Config
+
+                                    Quality of Service Commands
+                                                 313
+

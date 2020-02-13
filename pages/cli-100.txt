@@ -1,0 +1,48 @@
+                             M4100 Series ProSAFE Managed Switches
+
+the rate of broadcast traffic will be limited to the configured threshold. This command also
+enables broadcast storm recovery mode for all interfaces.
+If the `shutdown' option is selected, and the broadcast traffic increases beyond the threshold,
+the interface shuts down instead of dropping packets. To recover the port, issue `no
+shutdown' under the port manually.
+
+ Default       5
+
+ Format        storm-control broadcast level <0-100>
+
+ Mode          Global Config
+
+no storm-control broadcast level
+
+This command sets the broadcast storm recovery threshold to the default value for all
+interfaces and disables broadcast storm recovery.
+
+ Format        no storm-control broadcast level
+
+ Mode          Global Config
+
+storm-control broadcast rate (Global Config)
+Use this command to configure the broadcast storm recovery threshold for all interfaces in
+packets per second. If the mode is enabled, broadcast storm recovery is active, and if the
+rate of L2 broadcast traffic ingressing on an interface increases beyond the configured
+threshold, the traffic is dropped. Therefore, the rate of broadcast traffic is limited to the
+configured threshold.
+
+ Default       0
+
+ Format        storm-control broadcast rate <0-14880000>
+
+ Mode          Global Config
+
+no storm-control broadcast rate
+
+This command sets the broadcast storm recovery threshold to the default value for all
+interfaces and disables broadcast storm recovery.
+
+ Format        no storm-control broadcast rate
+
+ Mode          Global Config
+
+                                 Switching Commands
+                                          100
+

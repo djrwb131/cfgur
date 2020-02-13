@@ -1,0 +1,47 @@
+                           M4100 Series ProSAFE Managed Switches
+
+mvr vlan
+This command sets the MVR multicast VLAN.
+
+ Default       1
+
+ Format        mvr vlan <1-4094>
+
+ Mode          Global Config
+
+no mvr vlan
+
+This command sets the MVR multicast VLAN to the default value.
+
+ Format        no mvr vlan
+
+ Mode          Global Config
+
+mvr immediate
+This command enables MVR immediate leave mode. MVR has two modes of operating with
+the IGMP Leave messages: normal leave and immediate leave:
+·   In normal leave mode, when a leave is received, the general IGMP query is sent from a
+    Layer 2 switch to the receiver port, where the leave was received. Then reports are
+    received from other interested hosts that are also connected to that port, for example,
+    using hub.
+·   In immediate leave mode, when a leave is received, the switch is immediately
+    reconfigured not to forward a specific multicast stream to the port where a message is
+    received. This mode is used only for ports where only one client might be connected.
+
+ Default       Disabled
+
+ Format        mvr immediate
+
+ Mode          Interface Config
+
+no mvr immediate
+
+This command sets the MVR multicast VLAN to the default value.
+
+ Format        no mvr immediate
+
+ Mode          Interface Config
+
+                             Multicast VLAN Registration Commands
+                                         222
+

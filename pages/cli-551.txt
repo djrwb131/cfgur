@@ -1,0 +1,51 @@
+                           M4100 Series ProSAFE Managed Switches
+
+    Table 45. RIP Log Message
+
+     Component    Message                                  Cause
+
+     RIP          RIP : discard response from xxx via      When RIP response is received with a
+                  unexpected interface                     source address not matching the incoming
+                                                           interface's subnet.
+
+    Table 46. DHCP6 Log Message
+
+     Component    Message                                  Cause
+
+     DHCP6        relay_to_server: Cannot relay to relay   Relay is enabled but neither the outgoing
+                  server intf xxx: not IPv6 enabled        interface nor the server IP address is
+                                                           specified.
+
+Multicast
+
+    Table 47. Cache Log Messages
+
+     Component    Message                                  Cause
+
+     Cache        Out of memory when creating entry.       When we run out of memory while creating
+                                                           a new cache (MFC) entry
+
+     Cache        Out of memory when creating cache.       When we run out of memory while creating
+                                                           the cache itself
+
+    Table 48. IGMP Log Messages
+
+     Component    Message                                  Cause
+
+     IGMP         Error creating IGMP pipe                 When we fail to create / open IGMP pipe for
+                  Error opening IGMP pipe                  Mcast control messages
+
+     IGMP         Error creating IGMP data pipe            When we fail to create / open IGMP data
+                  Error opening IGMP data pipe             pipe for Mcast data messages
+
+     IGMP         Error getting memory for source record   When we are unable to allocate memory for
+                                                           a source record in the received IGMP V3
+                                                           report
+
+     IGMP         Failed getting memory for new group      When we are unable to allocate memory for
+                                                           a group record in the received IGMP
+                                                           V3/V2/V1 report
+
+                                            Log Messages
+                                                    551
+

@@ -1,0 +1,53 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Parameter        Definition
+
+ 1                Source MAC, VLAN, EtherType, and incoming port associated with the packet
+
+ 2                Destination MAC, VLAN, EtherType, and incoming port associated with the packet
+
+ 3                Source/Destination MAC, VLAN, EtherType, and incoming port associated with the
+                  packet
+
+ 4                Source IP and Source TCP/UDP fields of the packet
+
+ 5                Destination IP and Destination TCP/UDP Port fields of the packet
+
+ 6                Source/Destination IP and source/destination TCP/UDP Port fields of the packet
+
+ 7                Enhanced Hashing Mode
+
+no port-channel load-balance
+
+This command reverts to the default load balancing configuration.
+
+ Format      no port-channel load-balance {<slot/port> | lag <lag-group-id> |
+             all}
+
+ Mode        Interface Config
+             Global Config
+
+port-channel name
+This command defines a name for the port-channel (LAG). Use <name> to specify an
+alphanumeric string up to 15 characters.
+The interface is a logical <slot/port> for a configured port-channel. Instead of
+<slot/port>, you can use lag <lag-group-id> as an alternate way to specify the LAG
+interface, in which <lag-group-id> is the LAG port number.
+
+ Format      port-channel name {<slot/port> | lag <lag-group-id> | <name>}
+
+ Mode        Global Config
+
+port-channel system priority
+Use this command to configure port-channel system priority. The valid range of <priority>
+is 0-65535.
+
+ Default     0x8000
+
+ Format      port-channel system priority <priority>
+
+ Mode        Global Config
+
+                                  Switching Commands
+                                           122
+

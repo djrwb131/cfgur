@@ -1,0 +1,54 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Term             Definition
+
+ MST Instance ID  List of multiple spanning trees IDs currently configured.
+ List
+
+ For each MSTID:
+ ·  Associated    ·   List of forwarding database identifiers associated with this instance.
+      FIDs
+                  ·   List of VLAN IDs associated with this instance.
+ ·  Associated
+      VLANs
+
+show spanning-tree summary
+This command displays spanning tree settings and parameters for the switch. The following
+details are displayed on execution of the command.
+
+ Format         show spanning-tree summary
+
+ Mode           ·  Privileged EXEC
+                ·  User EXEC
+
+ Term             Definition
+
+ Spanning Tree    Enabled or disabled.
+ Adminmode
+
+ Spanning Tree    Version of 802.1 currently supported (IEEE 802.1s, IEEE 802.1w, or IEEE 802.1d) based
+ Version          upon the Force Protocol Version parameter.
+
+ BPDU Guard       Enabled or disabled.
+ Mode
+
+ BPDU Filter      Enabled or disabled.
+ Mode
+
+ Configuration    Identifier used to identify the configuration currently being used.
+ Name
+
+ Configuration    Identifier used to identify the configuration currently being used.
+ Revision Level
+
+ Configuration    A generated Key used in the exchange of the BPDUs.
+ Digest Key
+
+ Configuration    Specifies the version of the configuration format being used in the exchange of BPDUs.
+ Format Selector  The default value is zero.
+
+ MST Instances    List of all multiple spanning tree instances configured on the switch.
+
+                                        Switching Commands
+                                             45
+

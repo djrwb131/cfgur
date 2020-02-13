@@ -1,0 +1,49 @@
+                               M4100 Series ProSAFE Managed Switches
+
+vlan port acceptframe all
+This command sets the frame acceptance mode for all interfaces.
+
+ Default        all
+
+ Format         vlan port acceptframe all {vlanonly | all}
+
+ Mode           Global Config
+
+The modes defined as follows:
+
+ Mode               Definition
+
+ VLAN Only          Untagged frames or priority frames received on this interface are discarded.
+ mode
+
+ Admit All mode     Untagged frames or priority frames received on this interface are accepted and assigned
+                    the value of the interface VLAN ID for this port.
+
+With either option, VLAN tagged frames are forwarded in accordance with the IEEE 802.1Q
+VLAN Specification.
+
+no vlan port acceptframe all
+
+This command sets the frame acceptance mode for all interfaces to Admit All. For Admit All
+mode, untagged frames or priority frames received on this interface are accepted and
+assigned the value of the interface VLAN ID for this port. With either option, VLAN tagged
+frames are forwarded in accordance with the IEEE 802.1Q VLAN Specification.
+
+ Format         no vlan port acceptframe all
+
+ Mode           Global Config
+
+vlan port ingressfilter all
+This command enables ingress filtering for all ports. If ingress filtering is disabled, frames
+received with VLAN IDs that do not match the VLAN membership of the receiving interface
+are admitted and forwarded to ports that are members of that VLAN.
+
+ Default        disabled
+
+ Format         vlan port ingressfilter all
+
+ Mode           Global Config
+
+                                   Switching Commands
+                                            50
+

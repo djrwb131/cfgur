@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no auto-voip oui-based priority
+
+This command is used to set the priority to the default value.
+
+ Format            no auto-voip oui-based priority <priority-value>
+
+ Mode              Global Config
+
+auto-voip protocol-based
+This command is used to configure the global protocol based auto-VoIP remarking
+priority/traffic-class. If the remark priority is configured, the voice data of the session is
+remarked with the priority configured through this command.
+
+    Note: You must enable tagging on auto-VoIP-enabled ports to remark the
+            voice data when it is egressed.
+
+ Default           Traffic-class 7
+
+ Format            auto-voip protocol-based {remark <remark-priority> | traffic-class
+                   <tc>}
+
+ Mode              ·   Global Config
+                   ·   Interface Config
+
+no auto-voip protocol-based {remark | traffic-class}
+
+This command is used to set the traffic-class to the default value.
+
+ Format            no auto-voip protocol-based {remark <remark-priority> |
+                   traffic-class <tc>}
+
+ Mode              ·   Global Config
+                   ·   Interface Config
+
+show auto-voip
+Use this command to display the auto VoIP settings on the interface or interfaces of the switch.
+
+ Format            show auto-voip {protocol-based | oui-based} interface {<slot/port>
+                   | all}
+
+ Mode              Privileged EXEC
+
+ Field                 Description
+
+ VoIP                  The global VoIP VLAN ID.
+
+ Prioritize Type       The type of prioritization used on voice traffic.
+
+                                        Quality of Service Commands
+                                                314
+

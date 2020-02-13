@@ -1,0 +1,50 @@
+                            M4100 Series ProSAFE Managed Switches
+
+mode dvlan-tunnel
+Use this command to enable Double VLAN Tunneling on the specified interface.
+
+    Note: When you use the mode dvlan-tunnel command on an interface,
+            it becomes a service provider port. Ports that do not have double
+            VLAN tunneling enabled are customer ports.
+
+ Default      disabled
+
+ Format       mode dvlan-tunnel
+
+ Mode         Interface Config
+
+no mode dvlan-tunnel
+
+This command is used to disable Double VLAN Tunneling on the specified interface. By
+default, Double VLAN Tunneling is disabled.
+
+ Format       no mode dvlan-tunnel
+
+ Mode         Interface Config
+
+show dot1q-tunnel
+Use this command without the optional parameters to display all interfaces enabled for
+Double VLAN Tunneling. Use the optional parameters to display detailed information about
+Double VLAN Tunneling for the specified interface or all interfaces.
+
+ Format       show dot1q-tunnel [interface {<slot/port> | all}]
+
+ Mode         ·   Privileged EXEC
+              ·   User EXEC
+
+ Term            Definition
+
+ Interface       Valid slot and port number separated by forward slashes.
+
+ Mode            The administrative mode through which Double VLAN Tunneling can be enabled or
+                 disabled. The default value for this field is disabled.
+
+ EtherType       A 2-byte hex EtherType to be used as the first 16 bits of the DVLAN tunnel. There are
+                 three different EtherType tags. The first is 802.1Q, which represents the commonly used
+                 value of 0x8100. The second is vMAN, which represents the commonly used value of
+                 0x88A8. If EtherType is not one of these two values, it is a custom tunnel value,
+                 representing any value in the range of 0­65535.
+
+                                    Switching Commands
+                                          64
+

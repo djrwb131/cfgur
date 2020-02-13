@@ -1,0 +1,62 @@
+                                M4100 Series ProSAFE Managed Switches
+
+ Term               Definition
+
+ EAP Response       The number of valid EAP response frames (other than resp/id frames) that have been
+ Frames             received by this authenticator.
+ Received
+
+ EAP Request/Id     The number of EAP request/identity frames that have been transmitted by this
+ Frames             authenticator.
+ Transmitted
+
+ EAP Request        The number of EAP request frames (other than request/identity frames) that have been
+ Frames             transmitted by this authenticator.
+ Transmitted
+
+ Invalid EAPOL      The number of EAPOL frames that have been received by this authenticator in which the
+ Frames             frame type is not recognized.
+ Received
+
+ EAP Length         The number of EAPOL frames that have been received by this authenticator in which the
+ Error Frames       frame type is not recognized.
+ Received
+
+show dot1x clients
+This command displays 802.1x client information. This command also displays information
+about the number of clients that are authenticated using Monitor mode and using 802.1x.
+
+ Format        show dot1x clients {<slot/port> | all}
+
+ Mode          Privileged EXEC
+
+ Term               Definition
+
+ Clients            Indicates the number of the Dot1x clients authenticated using Monitor mode.
+ Authenticated
+ using Monitor
+ Mode
+
+ Clients            Indicates the number of Dot1x clients authenticated using 802.1x authentication process.
+ Authenticated
+ using Dot1x
+
+ Logical Interface  The logical port number associated with a client.
+
+ Interface          The physical port to which the supplicant is associated.
+
+ User Name          The user name used by the client to authenticate to the server.
+
+ Supplicant MAC     The supplicant device MAC address.
+ Address
+
+ Session Time       The time since the supplicant is logged on.
+
+ Filter ID          Identifies the Filter ID returned by the RADIUS server when the client was authenticated.
+                    This is a configured DiffServ policy name on the switch.
+
+ VLAN ID            The VLAN assigned to the port.
+
+                                          Switching Commands
+                                                       93
+

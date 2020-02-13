@@ -1,0 +1,51 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Term              Definition
+
+ Interface         Shows the interface on which multicast router information is being displayed.
+
+ Multicast Router  Indicates whether multicast router is statically enabled on the interface.
+ Attached
+
+ VLAN ID           Displays the list of VLANs of which the interface is a member.
+
+show mldsnooping mrouter vlan
+Use this command to display information about statically configured multicast router-attached
+interfaces.
+
+ Format      show mldsnooping mrouter vlan <slot/port>
+
+ Mode        Privileged EXEC
+
+ Term              Definition
+
+ Interface         Shows the interface on which multicast router information is being displayed.
+
+ VLAN ID           Displays the list of VLANs of which the interface is a member.
+
+show mac-address-table mldsnooping
+Use this command to display the MLD Snooping entries in the Multicast Forwarding
+Database (MFDB) table.
+
+ Format      show mac-address-table mldsnooping
+
+ Mode        Privileged EXEC
+
+ Term              Definition
+
+ VLAN ID           The VLAN in which the MAC address is learned.
+
+ MAC Address       A multicast MAC address for which the switch has forwarding or filtering information. The
+                   format is 6 two-digit hexadecimal numbers that are separated by colons, for example
+                   01:23:45:67:89:AB.
+
+ Type              The type of entry, which is either static (added by the user) or dynamic (added to the
+                   table as a result of a learning process or protocol.)
+
+ Description       The text description of this multicast table entry.
+
+ Interfaces        The list of interfaces that are designated for forwarding (Fwd:) and filtering (Flt:).
+
+                                        Switching Commands
+                                         174
+

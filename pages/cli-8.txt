@@ -1,0 +1,49 @@
+                          M4100 Series ProSAFE Managed Switches
+
+Command Syntax
+
+   A command is one or more words that might be followed by one or more parameters.
+   Parameters can be required or optional values.
+   Some commands, such as show network and clear vlan, do not require parameters.
+   Other commands, such as network parms, require that you supply a value after the
+   command. You must type the parameter values in a specific order, and optional parameters
+   follow required parameters. The following example describes the network parms
+   command syntax:
+
+     Format       network parms <ipaddr> <netmask> [gateway]
+
+   ·   network parms is the command name.
+   ·   <ipaddr> and <netmask> are parameters and represent required values that you must
+       enter after you type the command keywords.
+   ·   [gateway] is an optional keyword, so you are not required to enter a value in place of
+       the keyword.
+   This command line reference manual lists each command by the command name and
+   provides a brief description of the command. Each command reference also contains the
+   following information:
+   ·   Format shows the command keywords and the required and optional parameters.
+   ·   Mode identifies the command mode you must be in to access the command.
+   ·   Default shows the default value, if any, of a configurable setting on the device.
+   The show commands also contain a description of the information that the command shows.
+
+Command Conventions
+
+   In this document, the command name is in bold font. Parameters are in <italic font>
+   between angle brackets. You must replace the parameter name with an appropriate value,
+   which might be a name or number. Parameters are order-dependent. Keyword choices are in
+   bold font.
+   The parameters for a command might include mandatory values, optional values, or keyword
+   choices. The following table describes the conventions this document uses to distinguish
+   between value types.
+    Table 1. Parameter Conventions
+
+     Symbol                Example                Description
+
+     italic font in        <value> or [<value>]   Indicates a variable value. You must replace the
+     angle brackets                               italicized text within angle brackets with a name or
+                                                  number.
+
+     [ ] square brackets   [keyword]              Indicates an optional parameter.
+
+                             Using the Command-Line Interface
+                                             8
+

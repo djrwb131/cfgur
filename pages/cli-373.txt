@@ -1,0 +1,65 @@
+                        M4100 Series ProSAFE Managed Switches
+
+Parameters for the copy command are listed in the following table.
+Table 1. Parameters for the copy command
+
+ Source                    Destination              Description
+
+ nvram:techsupport         <url>                    Uploads the Technical Support file.
+
+ nvram:backup-config       nvram:startup-config     Copies the backup configuration to the
+                                                    startup configuration.
+
+ nvram:clibanner           <url>                    Copies the CLI banner to a server.
+
+ nvram:cpupktcapture.pcap  <url>                    Uploads the CPU packets capture file.
+
+ nvram:errorlog            <url>                    Copies the error log file to a server
+
+ nvram:log                 <url>                    Copies the log file to a server.
+
+ nvram:script <scriptname> <url>                    Copies a specified configuration script
+                                                    file to a server.
+
+ nvram:startup-config      nvram:backup-config      Copies the startup configuration to the
+                                                    backup configuration.
+
+ nvram:startup-config      <url>                    Copies the startup configuration to a
+                                                    server.
+
+ nvram:traplog             <url>                    Copies the trap log file to a server.
+
+ system:running-config     nvram:startup-config     Saves the running configuration to
+                                                    nvram.
+
+ <url>                     nvram:clibanner          Downloads the CLI banner to the
+                                                    system.
+
+ <url>                     nvram:script             Downloads a configuration script file to
+                           <destfilename>           the system. During the download of a
+                                                    configuration script, the copy command
+                                                    validates the script. In case of any error,
+                                                    the command lists all the lines at the end
+                                                    of the validation process and prompts
+                                                    you to confirm before copying the script
+                                                    file.
+
+ <url>                     nvram:script             When you use this option, the copy
+                           <destfilename> noval     command does not validate the
+                                                    downloaded script file. An example of
+                                                    the CLI command follows:
+                                                    (NETGEAR Switch) #copy
+                                                    tftp://1.1.1.1/file.scr
+                                                    nvram:script file.scr
+
+ <url>                     nvram:sshkey-dsa         Downloads an SSH key file. For more
+                                                    information, see Secure Shell (SSH)
+                                                    Commands on page 457.
+
+ <url>                     nvram:sshkey-rsa1        Downloads an SSH key file.
+
+ <url>                     nvram:sshkey-rsa2        Downloads an SSH key file.
+
+                                 Utility Commands
+                                         373
+

@@ -1,0 +1,53 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ Term              Definition
+
+ MLD Control       Displays the number of MLD Control frames that are processed by the CPU.
+ Frame Count
+
+ VLANs Enabled     VLANs on which MLD Snooping is enabled.
+ for MLD
+ Snooping
+
+When you specify the <slot/port> values, the command output displays the information
+that is shown in the following table.
+
+ Term              Definition
+
+ MLD Snooping      Indicates whether MLD Snooping is active on the interface.
+ Admin Mode
+
+ Fast Leave        Indicates whether MLD Snooping Fast Leave is active on the VLAN.
+ Mode
+
+ Group             Shows the amount of time in seconds that a switch will wait for a report from a particular
+ Membership        group on a particular interface, which is participating in the VLAN, before deleting the
+ Interval          interface from the entry. This value may be configured.
+
+ Max Response      Displays the amount of time the switch waits after it sends a query on an interface,
+ Time              participating in the VLAN, because it did not receive a report for a particular group on that
+                   interface. This value may be configured.
+
+ Multicast Router  Displays the amount of time to wait before removing an interface that is participating in
+ Present           the VLAN from the list of interfaces with multicast routers attached. The interface is
+ Expiration Time   removed if a query is not received. This value may be configured.
+
+When you specify a value for <vlan-id>, the command output displays the information that
+is shown in the following table.
+
+ Term              Definition
+
+ VLAN Admin        Indicates whether MLD Snooping is active on the VLAN.
+ Mode
+
+show mldsnooping mrouter interface
+Use this command to display information about statically configured multicast router attached
+interfaces.
+
+ Format       show mldsnooping mrouter interface <slot/port>
+
+ Mode         Privileged EXEC
+
+                                    Switching Commands
+                                             173
+

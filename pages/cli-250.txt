@@ -1,0 +1,47 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ECMP Groups (High)............................. 2 (3)
+ECMP Routes.................................... 1001
+Truncated ECMP Routes.......................... 0
+ECMP Retries................................... 0
+Routes with 1 Next Hop......................... 31
+Routes with 2 Next Hops........................ 1
+Routes with 4 Next Hops........................ 1000
+
+show ip route preferences
+This command displays detailed information about the route preferences. Route preferences
+are used in determining the best route. Lower router preference values are preferred over
+higher router preference values. A route with a preference of 255 cannot be used to forward
+traffic.
+
+ Format        show ip route preferences
+
+ Modes         · Privileged EXEC
+               · User EXEC
+
+ Term            Definition
+
+ Local           The local route preference value.
+
+ Static          The static route preference value.
+
+ OSPF Intra      The OSPF Intra route preference value.
+
+ OSPF Inter      The OSPF Inter route preference value.
+
+ OSPF External   The OSPF External route preference value.
+
+ RIP             The RIP route preference value.
+
+show ip stats
+This command displays IP statistical information. Refer to RFC 1213 for more information
+about the fields that are displayed.
+
+ Format        show ip stats
+
+ Modes         · Privileged EXEC
+               · User EXEC
+
+                                     Routing Commands
+                                                 250
+

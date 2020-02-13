@@ -1,0 +1,56 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+show ip dhcp pool configuration
+This command displays pool configuration. If all is specified, configuration for all the pools
+is displayed.
+
+ Format            show ip dhcp pool configuration {<name> | all}
+
+ Modes             ·   Privileged EXEC
+                   ·   User EXEC
+
+ Field                Definition
+
+ Pool Name            The name of the configured pool.
+
+ Pool Type            The pool type.
+
+ Lease Time           The lease expiration time of the IP address assigned to the client.
+
+ DNS Servers          The list of DNS servers available to the DHCP client.
+
+ Default Routers      The list of the default routers available to the DHCP client.
+
+For the dynamic pool type, the fields that are shown in the following table are displayed.
+
+ Field                Definition
+
+ Network              The network number and the mask for the DHCP address pool.
+
+For the manual pool type, the fields that are shown in the following table are displayed.
+
+ Field                Definition
+
+ Client Name          The name of a DHCP client.
+
+ Client Identifier    The unique identifier of a DHCP client.
+
+ Hardware             The hardware address of a DHCP client.
+ Address
+
+ Hardware             The protocol of the hardware platform.
+ Address Type
+
+ Host                 The IP address and the mask for a manual binding to a DHCP client.
+
+show ip dhcp server statistics
+This command displays DHCP server statistics.
+
+ Format            show ip dhcp server statistics
+
+ Modes             ·   Privileged EXEC
+                   ·   User EXEC
+
+                                       Utility Commands
+                                                    393
+

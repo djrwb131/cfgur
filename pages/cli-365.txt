@@ -1,0 +1,56 @@
+                                    M4100 Series ProSAFE Managed Switches
+
+     Term               Definition
+
+     Email Alert        The security protocol (TLS or none) the switch uses to authenticate with the SMTP
+     Security Protocol  server.
+
+     Email Alert        The username the switch uses to authenticate with the SMTP server.
+     Username
+
+     Email Alert        The password the switch uses to authenticate with the SMTP server.
+     Password
+
+System Utility and Clear Commands
+
+   This section describes the commands you use to help troubleshoot connectivity issues and to
+   restore various configurations to their factory defaults.
+
+   traceroute
+   Use the this command to discover the routes that packets actually take when traveling to
+   their destination through the network on a hop-by-hop basis. Traceroute continues to provide
+   a synchronous response when initiated from the CLI.
+
+     Default     ·      count: 3 probes
+                 ·      interval: 3 seconds
+                 ·      size: 0 bytes
+                 ·      port: 33434
+                 ·      maxTtl: 30 hops
+                 ·      maxFail: 5 probes
+                 ·      initTtl: 1 hop
+
+     Format      traceroute {<ip-address> | <hostname>} [initTtl <initTtl>] [maxTtl
+                 <maxTtl>] [maxFail <maxFail>] [interval <interval>] [count <count>]
+                 [port <port>] [size <size>] [source {<ip-address> | <slot/port> |
+                 loopback <0-7>}]
+
+     Mode        Privileged EXEC
+
+   Using the options described below, you can specify the initial and maximum time-to-live
+   (TTL) in probe packets, the maximum number of failures before termination, the number of
+   probes sent for each TTL, and the size of each probe.
+
+     Parameter                                Description
+
+     {<ip-address> | <hostname>}              The <ip-address> value must be a valid IP address. The
+                                              <hostname> value must be a a valid host name.
+
+     [initTtl <initTtl>]                      As an option, specify the initial time-to-live (TTL), the maximum
+                                              number of router hops between the local and remote system.
+                                              Range is 0­255.
+
+     [maxTtl <maxTtl>]                        As an option, specify the maximum TTL. Range is 1­255.
+
+                                               Utility Commands
+                                                      365
+

@@ -1,0 +1,47 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no switchport protected (Global Config)
+
+Use this command to remove a protected port group. The <groupid> parameter identifies
+the set of protected ports. Use the name keyword to remove the name from the group.
+
+ Format       NO switchport protected <groupid> name
+
+ Mode         Global Config
+
+switchport protected (Interface Config)
+Use this command to add an interface to a protected port group. The <groupid> parameter
+identifies the set of protected ports to which this interface is assigned. You can only configure
+an interface as protected in one group.
+
+    Note: Port protection occurs within a single switch. Protected port configuration
+            does not affect traffic between ports on two different switches. No traffic
+            forwarding is possible between two protected ports.
+
+ Default      unprotected
+
+ Format       switchport protected <groupid>
+
+ Mode         Interface Config
+
+no switchport protected (Interface Config)
+
+Use this command to configure a port as unprotected. The <groupid> parameter identifies
+the set of protected ports to which this interface is assigned.
+
+ Format       no switchport protected <groupid>
+
+ Mode         Interface Config
+
+show switchport protected
+This command displays the status of all the interfaces, including protected and unprotected
+interfaces.
+
+ Format       show switchport protected <groupid>
+
+ Mode         ·   Privileged EXEC
+              ·   User EXEC
+
+                                   Switching Commands
+                                         69
+

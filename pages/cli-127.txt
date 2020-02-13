@@ -1,0 +1,45 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no monitor session
+
+Use this command without optional parameters to remove the monitor session (port
+monitoring) designation from the source probe port, the destination monitored port and all
+VLANs. Once the port is removed from the VLAN, you must manually add the port to any
+desired VLANs. Use the source interface <slot/port> parameter or destination
+interface to remove the specified interface from the port monitoring session. Use the
+mode parameter to disable the administrative mode of the session.
+
+    Note: Because the current version of NETGEAR Managed Switch SMB
+            software only supports one session, if you do not supply optional
+            parameters, the behavior of this command is similar to the behavior of
+            the no monitor command.
+
+ Format       no monitor session <session-id> [{source interface <slot/port> |
+              destination interface | mode}]
+
+ Mode         Global Config
+
+no monitor
+
+This command removes all the source ports and a destination port for the and restores the
+default value for mirroring session mode for all the configured sessions.
+
+    Note: This is a stand-alone no command. This command does not have a
+            normal form.
+
+ Default      enabled
+
+ Format       no monitor
+
+ Mode         Global Config
+
+show monitor session
+This command displays the Port monitoring information for a particular mirroring session.
+
+    Note: The <session-id> parameter is an integer value used to identify
+            the session. In the current version of the software, the
+            <session-id> parameter is always 1.
+
+                                    Switching Commands
+                                      127
+

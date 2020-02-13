@@ -1,0 +1,53 @@
+                         M4100 Series ProSAFE Managed Switches
+
+ip http server
+Use this command to enable access to the switch through the Web interface. When access is
+enabled, the user can login to the switch from the Web interface. When access is disabled,
+the user cannot login to the switch's web server. Disabling the Web interface takes effect
+immediately. All interfaces are affected.
+
+ Default       enabled
+
+ Format        ip http server
+
+ Mode          Privileged EXEC
+
+no ip http server
+
+Use this command to disable access to the switch through the Web interface. When access
+is disabled, the user cannot login to the switch's Web server.
+
+ Format        no ip http server
+
+ Mode          Privileged EXEC
+
+ip http secure-server
+Use this command to enable the secure socket layer for secure HTTP.
+
+ Default       disabled
+
+ Format        ip http secure-server
+
+ Mode          Privileged EXEC
+
+no ip http secure-server
+
+Use this command to disable the secure socket layer for secure HTTP.
+
+ Format        no ip http secure-server
+
+ Mode          Privileged EXEC
+
+ip http java
+Use this command to enable the Web Java mode. The Java mode applies to both secure and
+unsecure web connections.
+
+ Default       Enabled
+
+ Format        ip http java
+
+ Mode          Privileged EXEC
+
+                                 Management Commands
+                                            461
+

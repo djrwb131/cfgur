@@ -1,0 +1,54 @@
+                            M4100 Series ProSAFE Managed Switches
+
+The native VLAN must be in the allowed VLAN list for tagging of received untagged packets.
+Otherwise, untagged packets are discarded. Packets marked with the native VLAN are
+transmitted untagged from the trunk port. The default ID is 1, the default VLAN.
+
+ Default       1 (default VLAN)
+
+ Format        switchport trunk native vlan <vlan-id>
+
+ Mode          Interface Config
+
+no switchport trunk native vlan
+
+Use this command to reset the trunk mode native VLAN of the switch port to its default value.
+
+ Format        no switchport trunk native vlan
+
+ Mode          Interface Config
+
+switchport access vlan
+Use this command to configure the VLAN on the access port. You can assign one VLAN only
+to the access port. The access port is member of VLAN 1 by default. You can assign the
+access port to a VLAN other than VLAN 1. If you remove the access VLAN on the switch, the
+access port becomes a member of VLAN 1. If you configure the access port as a member of
+a VLAN that does not exist, an error occurs and the configuration does not change.
+
+ Default       1 (default VLAN)
+
+ Format        switchport access vlan <vlan-id>
+
+ Mode          Interface Config
+
+no switchport access vlan
+
+This command resets the switch port access mode VLAN to its default value.
+
+ Format        no switchport access vlan
+
+ Mode          Interface Config
+
+show interfaces switchport
+Use this command to either display the switch port status for all interfaces, for a specific
+interface, or for a specific mode (access, trunk, or general). If you select a mode but do not
+specify the interface for the mode, the selected mode is displayed for all interfaces.
+
+ Format        show interfaces switchport {[<slot/port>] | {access | trunk |
+               general} [<slot/port>]}
+
+ Mode          Privileged EXEC
+
+                                 Switching Commands
+                                          61
+

@@ -1,0 +1,49 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Default       disabled
+
+ Format        debug ipv6 mld packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+no debug ipv6 mld packet
+
+Use this command to disable debug tracing of MLDv6 packet reception and transmission.
+
+ Format        no debug ipv6 mld packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+debug ipv6 pimdm packet
+Use this command to trace PIMDMv6 packet reception and transmission. If you use the
+receive option, only received PIMDMv6 packets are traced. If you use the transmit
+option, only transmitted PIMDMv6 packets are traced. When neither keyword is used in the
+command, then all PIMDMv6 packet traces are dumped. Vital information such as source
+address, destination address, control packet type, packet length, and the interface on which
+the packet is received or transmitted is displayed on the console.
+
+ Default       disabled
+
+ Format        debug ipv6 pimdm packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+no debug ipv6 pimdm packet
+
+Use this command to disable debug tracing of PIMDMv6 packet reception and transmission.
+
+ Format        no debug ipv6 pimdm packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+debug ipv6 pimsm packet
+Use this command to trace PIMSMv6 packet reception and transmission. If you use the
+receive option, only received PIMSMv6 packets are traced. If you use the transmit
+option, only transmitted PIMSMv6 packets are traced.When neither keyword is used in the
+command, then all PIMSMv6 packet traces are dumped. Vital information such as source
+address, destination address, control packet type, packet length, and the interface on which
+the packet is received or transmitted is displayed on the console.
+
+                                   Utility Commands
+                                          413
+

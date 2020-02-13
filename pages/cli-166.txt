@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no set igmp querier version
+
+Use this command to set the IGMP Querier version to its default value.
+
+ Format        no set igmp querier version
+
+ Mode          Global Config
+
+set igmp querier election participate
+Use this command to enable the Snooping Querier to participate in the Querier Election
+process when it discovers the presence of another Querier in the VLAN. When this mode is
+enabled, if the Snooping Querier finds that the other Querier's source address is better (less)
+than the Snooping Querier's address, it stops sending periodic queries. If the Snooping
+Querier wins the election, then it will continue sending periodic queries.
+
+ Default       disabled
+
+ Format        set igmp querier election participate
+
+ Mode          VLAN Config
+
+no set igmp querier election participate
+
+Use this command to set the Snooping Querier not to participate in querier election but go
+into non-querier mode as soon as it discovers the presence of another querier in the same
+VLAN.
+
+ Format        no set igmp querier election participate
+
+ Mode          VLAN Config
+
+show igmpsnooping querier
+Use this command to display IGMP Snooping Querier information. Configured information is
+displayed whether or not IGMP Snooping Querier is enabled.
+
+ Format        show igmpsnooping querier [detail | vlan <vlan-id>]
+
+ Mode          Privileged EXEC
+
+If you do not use the optional <vlan-id> argument, the command displays the information
+that is shown in the following table.
+
+ Term             Description
+
+ Admin Mode       Indicates whether or not IGMP Snooping Querier is active on the switch.
+
+ Admin Version    The version of IGMP that will be used while sending out the queries.
+
+                                      Switching Commands
+                                          166
+

@@ -1,0 +1,55 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no dos-control sipdip
+
+This command disables Source IP address = Destination IP address (SIP=DIP) Denial of
+Service prevention.
+
+ Format        no dos-control sipdip
+
+ Mode          Global Config
+
+dos-control firstfrag
+This command enables Minimum TCP Header Size Denial of Service protection. If the mode
+is enabled, Denial of Service prevention is active for this type of attack. If packets ingress
+having a TCP Header Size smaller then the configured value, the packets will be dropped if
+the mode is enabled.The default is disabled. If you enable dos-control firstfrag, but do not
+provide a Minimum TCP Header Size, the system sets that value to 20.
+
+ Default       disabled <20>
+
+ Format        dos-control firstfrag [<0-255>]
+
+ Mode          Global Config
+
+no dos-control firstfrag
+
+This command sets Minimum TCP Header Size Denial of Service protection to the default
+value of disabled.
+
+ Format        no dos-control firstfrag
+
+ Mode          Global Config
+
+dos-control tcpfrag
+This command enables TCP Fragment Denial of Service protection. If the mode is enabled,
+Denial of Service prevention is active for this type of attack. If packets ingress having IP
+Fragment Offset equal to one (1), the packets will be dropped if the mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control tcpfrag
+
+ Mode          Global Config
+
+no dos-control tcpfrag
+
+This command disabled TCP Fragment Denial of Service protection.
+
+ Format        no dos-control tcpfrag
+
+ Mode          Global Config
+
+                                   Switching Commands
+                                          203
+

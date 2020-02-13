@@ -1,0 +1,43 @@
+                            M4100 Series ProSAFE Managed Switches
+
+2.  Policy
+    a.  Creating and deleting policies
+    b. Associating classes with a policy
+    c.  Defining policy statements for a policy/class combination
+3.  Service
+    a.  Adding and removing a policy to/from an inbound or outbound interface
+The DiffServ class defines the packet filtering criteria. The attributes of a DiffServ policy
+define the way the switch processes packets. You can define policy attributes on a per-class
+instance basis. The switch applies these attributes when a match occurs.
+Packet processing begins when the switch tests the match criteria for a packet. The switch
+applies a policy to a packet when it finds a class match within that policy.
+The following rules apply when you create a DiffServ class:
+·   Each class can contain a maximum of one referenced (nested) class
+·   Class definitions do not support hierarchical service policies
+A class definition can contain a maximum of one reference to another class. You can
+combine the reference with other match criteria. The referenced class is truly a reference and
+not a copy, because additions to a referenced class affect all classes that reference it.
+Changes to any class definition currently referenced by any other class must result in valid
+class definitions for all derived classes, otherwise the switch rejects the change. You can
+remove a class reference from a class definition.
+The only way to remove an individual match criterion from an existing class definition is to
+delete the class and re-create it.
+
+    Note: The mark possibilities for policing include CoS, IP DSCP, and IP
+            Precedence. While the latter two are only meaningful for IP packet
+            types, CoS marking is allowed for both IP and non-IP packets, since it
+            updates the 802.1p user priority field contained in the VLAN tag of the
+            layer 2 packet header.
+
+diffserv
+This command sets the DiffServ operational mode to active. While disabled, the DiffServ
+configuration is retained and can be changed, but it is not activated. When enabled, DiffServ
+services are activated.
+
+ Format      diffserv
+
+ Mode        Global Config
+
+                                 Quality of Service Commands
+                                          271
+

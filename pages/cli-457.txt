@@ -1,0 +1,49 @@
+                             M4100 Series ProSAFE Managed Switches
+
+Secure Shell (SSH) Commands
+
+   This section describes the commands you use to configure SSH access to the switch. Use
+   SSH to access the switch from a remote management host.
+
+       Note: The system allows a maximum of five SSH sessions.
+
+   ip ssh
+   Use this command to enable SSH access to the system. (This command is the short form of
+   the ip ssh server enable command.)
+
+     Default       disabled
+
+     Format        ip ssh
+
+     Mode          Privileged EXEC
+
+   ip ssh protocol
+   Use this command to set or remove protocol levels (or versions) for SSH. Either SSH1 (1),
+   SSH2 (2), or both SSH 1 and SSH 2 (1 and 2) can be set.
+
+     Default       1 and 2
+
+     Format        ip ssh protocol [1] [2]
+
+     Mode          Privileged EXEC
+
+   ip ssh server enable
+   Use this command to enable the IP secure shell server.
+
+     Default       disabled
+
+     Format        ip ssh server enable
+
+     Mode          Privileged EXEC
+
+   no ip ssh server enable
+
+   Use this command to disable the IP secure shell server.
+
+     Format        no ip ssh server enable
+
+     Mode          Privileged EXEC
+
+                                         Management Commands
+                                              457
+

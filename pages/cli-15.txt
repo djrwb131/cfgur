@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+    Table 8. CLI Editing Conventions (continued)
+
+     Key Sequence       Description
+
+     Ctrl-D             Delete current character
+
+     Ctrl-U, X          Delete to beginning of line
+
+     Ctrl-K             Delete to end of line
+
+     Ctrl-W             Delete previous word
+
+     Ctrl-T             Transpose previous character
+
+     Ctrl-P             Go to previous line in history buffer
+
+     Ctrl-R             Rewrites or pastes the line
+
+     Ctrl-N             Go to next line in history buffer
+
+     Ctrl-Y             Prints last deleted character
+
+     Ctrl-Q             Enables serial flow
+
+     Ctrl-S             Disables serial flow
+
+     Ctrl-Z             Return to root command prompt
+
+     Tab, <SPACE>       Command-line completion
+
+     Exit               Go to next lower command prompt
+
+     ?                  List available commands, keywords, or parameters
+
+Using CLI Help
+
+   Enter a question mark (?) at the command prompt to display the commands available in the
+   current mode.
+    (NETGEAR Switch) >?
+
+    enable                    Enter into user privilege mode.
+    help                      Display help for various special keys.
+    logout                    Exit this session. Any unsaved changes are lost.
+    ping                      Send ICMP echo packets to a specified IP address.
+    quit                      Exit this session. Any unsaved changes are lost.
+    show                      Display Switch Options and Settings.
+    telnet                    Telnet to a remote host.
+
+                                Using the Command-Line Interface
+                                                    15
+

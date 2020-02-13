@@ -1,0 +1,49 @@
+                          M4100 Series ProSAFE Managed Switches
+
+OSPF advertises the IP MTU in the Database Description packets it sends to its neighbors
+during database exchange. If two OSPF neighbors advertise different IP MTUs, they will not
+form an adjacency. (unless OSPF has been instructed to ignore differences in IP MTU with
+the ip ospf mtu-ignore command.)
+
+    Note: The IP MTU size refers to the maximum size of the IP packet (IP
+          Header + IP payload). It does not include any extra bytes that might
+          be required for Layer-2 headers. To receive and process packets, the
+          Ethernet MTU must take into account the size of the Ethernet header.
+
+ Default     1500 bytes
+
+ Format      ip mtu <68-9198>
+
+ Mode        Interface Config
+
+no ip mtu
+
+This command resets the IP MTU to the default value.
+
+ Format      no ip mtu
+
+ Mode        Interface Config
+
+encapsulation
+This command configures the link layer encapsulation type for the packet. The encapsulation
+type can be ethernet or snap.
+
+ Default     ethernet
+
+ Format      encapsulation {ethernet | snap}
+
+ Mode        Interface Config
+
+    Note: Routed frames are always Ethernet encapsulated when a frame is
+          routed to a VLAN.
+
+clear ip route all
+This command removes all the route entries learned over the network.
+
+ Format      clear ip route all
+
+ Mode        Privileged EXEC
+
+                                  Routing Commands
+                                   240
+

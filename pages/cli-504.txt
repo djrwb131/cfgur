@@ -1,0 +1,48 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no radius server host
+
+Use this command to delete the configured server entry from the list of configured RADIUS
+servers. If the RADIUS authenticating server being removed is the active server in the
+servers that are identified by the same server name, then the RADIUS client selects another
+server for making RADIUS transactions. If you use the auth parameter, the previously
+configured RADIUS authentication server is removed from the configuration. Similarly, If you
+use the acct parameter, the previously configured RADIUS accounting server is removed
+from the configuration. The <ipaddr> or <dnsname> parameter must match the IP address
+or DSN name of the previously configured RADIUS authentication or accounting server.
+
+ Format       no radius server host {auth | acct} {<ipaddr> | <dnsname>}
+
+ Mode         Global Config
+
+Command example:
+(NETGEAR Switch) (Config) #radius server host acct 192.168.37.60
+(NETGEAR Switch) (Config) #radius server host acct 192.168.37.60 port 1813
+(NETGEAR Switch) (Config) #radius server host auth 192.168.37.60 name
+Network1_RADIUS_Auth_Server port 1813
+(NETGEAR Switch) (Config) #radius server host acct 192.168.37.60 name
+Network2_RADIUS_Auth_Server
+(NETGEAR Switch) (Config) #no radius server host acct 192.168.37.60
+
+radius server key
+Use this command to configure the key to be used in RADIUS client communication with the
+specified server. Depending on whether the auth or acct keyword is used, the shared
+secret is configured for the RADIUS authentication or RADIUS accounting server. The IP
+address or host name provided must match a previously configured server. When this
+command is executed, the secret is prompted.
+Text-based configuration supports RADIUS server's secrets in encrypted and non-encrypted
+format. When you save the configuration, these secret keys are stored in encrypted format
+only. If you want to enter the key in encrypted format, enter the key along with the encrypted
+keyword. In the output of the show running config command, these secret keys are
+displayed in encrypted format. You cannot show these keys in plain text format.
+
+    Note: The secret must be an alphanumeric value not exceeding 16 characters.
+
+ Format       radius server key {auth | acct} {<ipaddr> | <dnsname>} encrypted
+              <password>
+
+ Mode         Global Config
+
+                                Management Commands
+                                         504
+

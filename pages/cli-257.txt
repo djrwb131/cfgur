@@ -1,0 +1,54 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Parameter           Description
+
+ <ip-address>        The IPv4 unicast or directed broadcast address to which relayed UDP broadcast
+                     packets are sent. The IP address cannot be in a subnet on the interface where the
+                     relay entry is configured, and cannot be an IP address configured on any interface
+                     of the local router.
+
+ <dest-udp-port>     A destination UDP port number from 0 to 65535.
+
+ port name options   The destination UDP port may be optionally specified by its name. Whether a port is
+                     specified by its number or its name has no effect on behavior. The names
+                     recognized are as follows:
+                     ·  dhcp (port 67)
+                     ·  domain (port 53)
+                     ·  isakmp (port 500)
+                     ·  mobile-ip (port 434)
+                     ·  nameserver (port 42)
+                     ·  netbios-dgm (port 138)
+                     ·  netbios-ns (port 137)
+                     ·  ntp (port 123)
+                     ·  pim-auto-rp (port 496)
+                     ·  rip (port 520)
+                     ·  tacacs (port 49)
+                     ·  tftp (port 69)
+                     ·  time (port 37)
+                     Other ports must be specified by number.
+
+no ip helper-address
+
+Use this command to remove the IP address from the previously configured list. The no
+command without an <ip-address> argument removes the entire list of helper addresses
+on that interface.
+
+ Format       no ip helper-address <ip-address> [<dest-udp-port> | dhcp | domain |
+              isakmp | mobile-ip | nameserver | netbios-dgm | netbios-ns | ntp |
+              pim-auto-rip | rip | tacacs | tftp | time]
+
+ Mode         Interface Config
+
+ip helper-address discard
+Use this command to drop matching packets. Matching packets are discarded rather than
+relayed, even if a global ip helper-address configuration matches the packet.
+
+ Format       ip helper-address discard [<dest-udp-port> | dhcp | domain | isakmp
+              | mobile-ip | nameserver | netbios-dgm | netbios-ns | ntp |
+              pim-auto-rip | rip | tacacs | tftp | time]
+
+ Mode         Interface Config
+
+                                          Routing Commands
+                                                257
+

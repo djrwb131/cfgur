@@ -1,0 +1,54 @@
+                               M4100 Series ProSAFE Managed Switches
+
+show spanning-tree mst port detailed
+This command displays the detailed settings and parameters for a specific switch port within
+a particular multiple spanning tree instance. The parameter <mstid> is a number that
+corresponds to the desired existing multiple spanning tree instance. The <slot/port> is
+the desired switch port.
+
+ Format          show spanning-tree mst port detailed <mstid> <slot/port>
+
+ Mode            ·  Privileged EXEC
+                 ·  User EXEC
+
+ Term               Definition
+
+ MST Instance ID    The ID of the existing MST instance.
+
+ Port Identifier    The port identifier for the specified port within the selected MST instance. It is made up
+                    from the port priority and the interface number of the port.
+
+ Port Priority      The priority for a particular port within the selected MST instance. The port priority is
+                    displayed in multiples of 16.
+
+ Port Forwarding    Current spanning tree state of this port.
+ State
+
+ Port Role          Each enabled MST Bridge Port receives a Port Role for each spanning tree. The port
+                    role is one of the following values: Root Port, Designated Port, Alternate Port, Backup
+                    Port, Master Port, or Disabled Port
+
+ Auto-Calculate     Indicates whether auto calculation for port path cost is enabled.
+ Port Path Cost
+
+ Port Path Cost     Configured value of the Internal Port Path Cost parameter.
+
+ Designated Root    The Identifier of the designated root for this port.
+
+ Root Path Cost     The path cost to get to the root bridge for this instance. The root path cost is zero if the
+                    bridge is the root bridge for that instance.
+
+ Designated         Bridge Identifier of the bridge with the Designated Port.
+ Bridge
+
+ Designated Port    Port on the Designated Bridge that offers the lowest cost to the LAN.
+ Identifier
+
+ Loop               The current loop inconsistent state of this port in this MST instance. When in loop
+ Inconsistent       inconsistent state, the port has failed to receive BPDUs while configured with loop guard
+ State              enabled. Loop inconsistent state maintains the port in a "blocking" state until a
+                    subsequent BPDU is received.
+
+                                        Switching Commands
+                                                   41
+

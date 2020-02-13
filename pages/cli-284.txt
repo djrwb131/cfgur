@@ -1,0 +1,46 @@
+                       M4100 Series ProSAFE Managed Switches
+
+ Format            mark ip-dscp <dscpval>
+
+ Mode              Policy-Class-Map Config
+
+ Incompatibilities Drop, Mark CoS, Mark IP Precedence, Police
+
+mark ip-precedence
+This command marks all packets for the associated traffic stream with the specified IP
+Precedence value. The IP Precedence value is an integer from 0 to 7.
+
+    Note: This command might not be used on IPv6 classes. IPv6 does not
+             have a precedence field.
+
+ Format            mark ip-precedence <0-7>
+
+ Mode              Policy-Class-Map Config
+
+ Incompatibilities Drop, Mark CoS, Mark IP Precedence, Police
+
+ Policy Type       In
+
+police-simple
+This command is used to establish the traffic policing style for the specified class. The simple
+form of the police command uses a single data rate and burst size, resulting in two outcomes:
+conform and violate. The conforming data rate is specified in kilobits-per-second (Kbps) and
+is an integer from 1 to 4294967295. The conforming burst size is specified in kilobytes (KB)
+and is an integer from 1 to 128.
+For each outcome, the only possible actions are drop, set-cos-transmit, set-dscp-transmit,
+set-prec-transmit, or transmit. In this simple form of the police command, the conform action
+defaults to transmit and the violate action defaults to drop.
+For set-cos-transmit, an 802.1p priority value is required and is specified as an integer
+from 0-7.
+For set-dscp-transmit, a <dscpval> value is required and is specified as either an
+integer from 0 to 63, or symbolically through one of the following keywords: af11, af12,
+af13, af21, af22, af23, af31, af32, af33, af41, af42, af43, be, cs0, cs1, cs2, cs3,
+cs4, cs5, cs6, cs7, or ef.
+For set-prec-transmit, an IP Precedence value is required and is specified as an
+integer from 0-7.
+For set-cos-transmit, an 802.1p priority value is required and is specified as an integer
+from 0-7.
+
+                                 Quality of Service Commands
+                                           284
+

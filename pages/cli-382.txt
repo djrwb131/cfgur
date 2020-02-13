@@ -1,0 +1,51 @@
+                                  M4100 Series ProSAFE Managed Switches
+
+     Term             Definition
+
+     Total Unicast    Number of requests to the server.
+     Requests
+
+     Failed Unicast   Number of failed requests from server.
+     Requests
+
+   show clock
+   Use the show clock command in Privileged EXEC or User EXEC mode to display the time
+   and date from the system clock. Use the show clock detail command to show the time
+   zone and summertime configuration.
+
+     Format         show clock [detail]
+
+     Mode           ·    User EXEC
+                    ·    Privileged EXEC
+
+     Term             Definition
+
+     Time             The time provided by the time source.
+
+     Time Source      The time source type.
+
+     If you specify the detail keyword, the following information is also displayed.
+
+     Time Zone        The time zone configured.
+
+     Summer Time      Indicate if the summer time is enabled.
+
+DHCP Server Commands
+
+   This section describes the commands you to configure the DHCP server settings for the
+   switch. DHCP uses UDP as its transport protocol and supports a number of features that
+   facilitate in administration address allocations.
+
+   ip dhcp pool
+   This command configures a DHCP address pool name on a DHCP server and enters DHCP
+   pool configuration mode.
+
+     Default        none
+
+     Format         ip dhcp pool <name>
+
+     Mode           Global Config
+
+                                            Utility Commands
+                                                     382
+

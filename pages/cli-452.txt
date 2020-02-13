@@ -1,0 +1,49 @@
+                                  M4100 Series ProSAFE Managed Switches
+
+     Term              Definition
+
+     Stop Bits         The number of Stop bits per character. The number of Stop bits is always 1.
+
+     Parity Type       The parity method used on the serial port. The parity method is always None.
+
+Telnet Commands
+
+   This section describes the commands you use to configure and view Telnet settings. You can
+   use Telnet to manage the device from a remote management host.
+
+   ip telnet server enable
+   Use this command to enable Telnet connections to the system and to enable the Telnet
+   Server Admin Mode. This command opens the Telnet listening port.
+
+     Default        enabled
+
+     Format         ip telnet server enable
+
+     Mode           Privileged EXEC
+
+   no ip telnet server enable
+
+   Use this command to disable Telnet access to the system and to disable the Telnet Server
+   Admin Mode. This command closes the Telnet listening port and disconnects all open Telnet
+   sessions.
+
+     Format         no ip telnet server enable
+
+     Mode           Privileged EXEC
+
+   telnet
+   Use this command to establish a new outbound Telnet connection to a remote host. The host
+   must be a valid IP address or host name. The value for <port> is a valid decimal integer in
+   the range of 0­65,535, where the default value is 23. If the optional debug parameter is
+   used, the current Telnet options enabled is displayed. The optional line parameter sets the
+   outbound Telnet operational mode as linemode (by default, the operational mode is character
+   mode). The optional noecho parameter disables local echo.
+
+     Format         telnet {<ip-address> | <hostname>} <port> [debug] [line] [noecho]
+
+     Modes          ·   Privileged EXEC
+                    ·   User EXEC
+
+                                           Management Commands
+                                               452
+

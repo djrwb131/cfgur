@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Location
+Subtype: elin
+Info: xxx xxx xxx
+
+Extended POE
+Device Type: pseDevice
+
+Extended POE PSE
+Available: 0.3 Watts
+Source: primary
+Priority: critical
+
+Extended POE PD
+
+Required: 0.2 Watts
+Source: local
+Priority: low
+
+show lldp med remote-device
+This command displays summary information about remote devices that transmit current
+LLDP MED data to the system. You can show information about LLDP remote data received
+on all ports or on a specific port.
+
+ Format       show lldp med remote-device {<slot/port> | all}
+
+ Mode         Privileged EXEC
+
+ Term           Definition
+
+ Interface      The interface in a slot/port format.
+
+ Device Class   The Remote device's MED Classification. There are four different kinds of devices, three
+                of them represent the actual end points (classified as Class I Generic [IP Communication
+                Controller etc.], Class II Media [Conference Bridge etc.], Class III Communication [IP
+                Telephone etc]). The fourth device is Network Connectivity Device, which is typically a
+                LAN Switch/Router, IEEE 802.1 Bridge, IEEE 802.11 Wireless Access Point etc.
+
+Command example:
+(NETGEAR Switch) #show lldp med remote-device all
+
+LLDP MED Remote Device Summary
+
+Local
+Interface     Remote ID  Device Class
+---------     ---------  ------------
+ 0/8           1        Class I
+
+                                      Switching Commands
+                                            198
+

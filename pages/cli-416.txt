@@ -1,0 +1,56 @@
+                             M4100 Series ProSAFE Managed Switches
+
+The parameters that are shown in the following table are displayed in the trace message.
+
+ Parameter       Definition
+
+ TX/RX           TX refers to a packet transmitted by the device. RX refers to packets received by the
+                 device.
+
+ Intf            The interface that the packet came in or went out on. Format used is slot/port (internal
+                 interface number).
+
+ SrcIp           The source IP address in the IP header of the packet.
+
+ DestIp          The destination IP address in the IP header of the packet.
+
+ AreaId          The area ID in the OSPF header of the packet.
+
+ Type            Could be one of the following:
+                 ·   HELLO. Hello packet
+                 ·   DB_DSCR. Database descriptor
+                 ·   LS_REQ. LS Request
+                 ·   LS_UPD. LS Update
+                 ·   LS_ACK. LS Acknowledge
+
+The remaining fields in the trace message are specific to the OSPF packets.
+For HELLO packet field definitions, the parameters that are shown in the following table are
+displayed in the trace message.
+
+ Parameter       Definition
+
+ Netmask         The netmask in the hello packet.
+
+ DesignRouter    Designated Router IP address.
+
+ Backup          Backup router IP address.
+
+For DB_DSCR packet field definitions, the parameters that are shown in the following table
+are displayed in the trace message.
+
+ Field           Definition
+
+ MTU             MTU
+
+ Options         Options in the OSPF packet.
+
+ Flags           Could be one or more of the following:
+                 ·   I. Init
+                 ·   M. More
+                 ·   MS. Master/Slave
+
+ Seq             Sequence Number of the DD packet.
+
+                                       Utility Commands
+                                                  416
+

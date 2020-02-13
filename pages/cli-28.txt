@@ -1,0 +1,51 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no spanning-tree auto-edge
+
+This command disables auto-edge on the interface or range of interfaces.
+
+ Format          no spanning-tree auto-edge
+
+ Mode            Interface Config
+
+spanning-tree bpdufilter
+Use this command to enable BPDU Filter on an interface or range of interfaces.
+
+ Default         disabled
+
+ Format          spanning-tree bpdufilter
+
+ Mode            Interface Config
+
+no spanning-tree bpdufilter
+
+Use this command to disable BPDU Filter on the interface or range of interfaces.
+
+ Default         disabled
+
+ Format          no spanning-tree bpdufilter
+
+ Mode            Interface Config
+
+spanning-tree bpdufilter default
+Use this command to enable BPDU Filter on all the edge port interfaces.
+
+ Default         disabled
+
+ Format          spanning-tree bpdufilter
+
+ Mode            Global Config
+
+no spanning-tree bpdufilter default
+
+Use this command to disable BPDU Filter on all the edge port interfaces.
+
+ Default         enabled
+
+ Format          no spanning-tree bpdufilter default
+
+ Mode            Global Config
+
+                                      Switching Commands
+                                           28
+

@@ -1,0 +1,61 @@
+                       M4100 Series ProSAFE Managed Switches
+
+Parameter                         Description
+
+{deny | permit}                   Specifies whether the IP ACL rule permits or denies the
+                                  matching traffic.
+
+every                             Match every packet.
+
+{icmp | igmp | ip | tcp | udp |   Specifies the protocol to match for the IP ACL rule.
+<number>}                         <number> can be a value from 0-255.
+
+<srcip> <srcmask>                 Specifies a source IP address and source netmask to match
+                                  for the IP ACL rule.
+eq {<portkey> | <0-65535>}        Note: This option is available only if the protocol is tcp or udp.
+                                  When eq is specified, an IP ACL rule matches only if the Layer
+                                  4 port number is equal to the specified port number or port key.
+                                 You can enter the port number, which ranges from 0-65535, or
+                                  the port key, which can be one of the following keywords:
+                                  For tcp protocol: bgp, domain, echo, ftp, ftp-data, http,
+                                  smtp, telnet, www, pop2, or pop3.
+                                  For udp protocol: domain, echo, ntp, rip, snmp, tftp,
+                                  time, or who.
+                                  Each of these keywords translates into its equivalent port
+                                  number.
+
+                                  Note: Port number matches-only apply to unfragmented or
+                                  first fragments.
+
+                                  Note: You can specify a port key or port number for the source
+                                  and a port key or port number for the destination.
+
+<dstip> <dstmask>                 Specifies a destination IP address and netmask for match
+                                  condition of the IP ACL rule.
+
+[precedence <precedence> | tos    Specifies the ToS for an IP ACL rule depending on a match of
+<tos> [<tosmask>] | dscp <dscp>] precedence or DSCP values using the parameters
+                                  precedence <precedence>, tos <tos>, or dscp
+                                  <dscp>.
+                                  <tosmask> is an optional parameter.
+
+log                               Specifies that this rule is to be logged.
+
+[rate-limit <1-4294967295>        Specifies the allowed rate of traffic as per the configured rate
+<1-128>]                          in kbps (from 1-4294967295) and burst-size in kbytes (from
+                                  1-128).
+
+time-range <time-range-name>     Allows imposing a time limitation on the ACL rule as defined by
+                                  the parameter <time-range-name.> If a time range with the
+                                  specified name does not exist and the ACL containing this
+                                 ACL rule is applied to an interface or bound to a VLAN, the
+                                 ACL rule is applied immediately. If a time range with specified
+                                  name exists and the ACL containing this ACL rule is applied to
+                                  an interface or bound to a VLAN, the ACL rule is applied when
+                                  the time-range with specified name becomes active. The ACL
+                                  rule is removed when the time-range with specified name
+                                  becomes inactive.
+
+                            Quality of Service Commands
+                                       302
+

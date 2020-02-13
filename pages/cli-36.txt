@@ -1,0 +1,52 @@
+                             M4100 Series ProSAFE Managed Switches
+
+If 0 (defined as the default CIST ID) is passed as the <mstid>, this command sets the
+Bridge Priority parameter for the Common and Internal Spanning Tree to the default value.
+
+ Format          no spanning-tree mst priority <mstid>
+
+ Mode            Global Config
+
+spanning-tree mst vlan
+This command adds an association between a multiple spanning tree instance and one or
+more VLANs so that the VLAN(s) are no longer associated with the Common and Internal
+Spanning Tree. The parameter <mstid> is a number that corresponds to the desired
+existing multiple spanning tree instance. The vlan range can be specified as a list or as a
+range of values. To specify a list of VLANs, enter a list of VLAN IDs, each separated by a
+comma with no spaces in between. To specify a range of VLANs, separate the beginning and
+ending VLAN ID with a dash ("-").
+
+ Format        spanning-tree mst vlan <mstid> <vlanid>
+
+ Mode          Global Config
+
+no spanning-tree mst vlan
+
+This command removes an association between a multiple spanning tree instance and one
+or more VLANs so that the VLAN(s) are again associated with the Common and Internal
+Spanning Tree.
+
+ Format        no spanning-tree mst vlan <mstid> <vlanid>
+
+ Mode          Global Config
+
+spanning-tree port mode
+This command sets the Administrative Switch Port State for this port to enabled.
+
+ Default       enabled
+
+ Format        spanning-tree port mode
+
+ Mode          Interface Config
+
+no spanning-tree port mode
+
+This command sets the Administrative Switch Port State for this port to disabled.
+
+ Format        no spanning-tree port mode
+
+ Mode          Interface Config
+
+                                   Switching Commands
+                                          36
+

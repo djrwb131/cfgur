@@ -1,0 +1,51 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no logging email message-type to-addr
+
+This command removes the configured to-addr field of email.
+
+ Format        no logging email message-type {urgent |non-urgent |both} to-addr
+               <to-email-addr>
+
+ Mode          Global Config
+
+logging email from-addr
+This command configures the email address of the sender (that is, the switch).
+
+ Default       switch@netgear.com
+
+ Format        logging email from-addr <from-email-addr>
+
+ Mode          Global Config
+
+no logging email from-addr
+
+This command removes the configured email source address.
+
+ Format        no logging email from-addr <from-email-addr>
+
+ Mode          Global Config
+
+logging email message-type subject
+This command configures the subject line of the email for the specified type.
+
+ Default       ·   For urgent messages: Urgent Log Messages
+               ·   For non-urgent messages: Non-Urgent Log Messages
+
+ Format        logging email message-type {urgent |non-urgent |both} subject
+               <subject>
+
+ Mode          Global Config
+
+no logging email message-type subject
+
+This command removes the configured email subject for the specified message type and
+restores it to the default email subject.
+
+ Format        no logging email message-type {urgent |non-urgent |both} subject
+
+ Mode          Global Config
+
+                                    Utility Commands
+                                           360
+

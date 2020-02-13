@@ -1,0 +1,52 @@
+                                   M4100 Series ProSAFE Managed Switches
+
+   show bootpdhcprelay
+   This command displays the BootP/DHCP Relay information.
+
+     Format       show bootpdhcprelay
+
+     Modes        ·     Privileged EXEC
+                  ·     User EXEC
+
+     Term               Definition
+
+     Maximum Hop        The maximum allowable relay agent hops.
+     Count
+
+     Minimum Wait       The minimum wait time.
+     Time (Seconds)
+
+     Admin Mode         Indicates whether relaying of requests is enabled or disabled.
+
+     Server IP          The IP address for the BootP/DHCP Relay server.
+     Address
+
+     Circuit Id Option  The DHCP circuit Id option which might be enabled or disabled.
+     Mode
+
+     Requests           The number or requests received.
+     Received
+
+     Requests           The number of requests relayed.
+     Relayed
+
+     Packets            The number of packets discarded.
+     Discarded
+
+IP Helper Commands
+
+   This section describes the commands to configure a DHCP relay agent with multiple DHCP
+   server addresses per routing interface, and to use different server addresses for client
+   packets arriving on different interfaces on the relay agent.
+
+   clear ip helper statistics
+   Use this command to reset the statistics displayed in the show ip helper statistics
+   command to zero.
+
+     Format       clear ip helper statistics
+
+     Mode         Privileged EXEC
+
+                                               Routing Commands
+                                                        254
+

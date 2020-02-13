@@ -1,0 +1,55 @@
+                         M4100 Series ProSAFE Managed Switches
+
+·   Event logging
+·   Persistent logging
+·   System Information (output of sysapiMbufDump)
+·   Message Queue Debug Information
+·   Memory Debug Information
+·   Memory Debug Status
+·   OS Information (output of osapiShowTasks)
+·   /proc information (meminfo, cpuinfo, interrupts, version and net/sockstat)
+
+ Format      debug crashlog {[kernel] <crashlog-number> [upload <url>] | proc |
+             verbose | deleteall}
+
+ Mode        Privileged EXEC
+
+ Default     Disabled
+
+ Parameter             Definition
+
+ kernel                View the crash log file for the kernel.
+
+ <crashlog-number>     Specifies the file number to view. The system maintains up to four copies, and the
+                       valid range is 1­4.
+
+ upload <url>          To upload the crash log to a TFTP server, use the upload keyword and specify
+                       the required TFTP server information.
+
+ proc                  View the application process crashlog.
+
+ verbose               Enable the verbose crashlog
+
+ deleteall             Delete all crash log files on the system.
+
+debug dhcp packet
+Use this command to display debug information about DHCPv4 client activities and trace
+DHCPv4 packets to and from the local DHCPv4 client.
+
+ Default     disabled
+
+ Format      debug dhcp packet [transmit | receive]
+
+ Mode        Privileged EXEC
+
+no debug dhcp
+
+Use this command to disable the display of debug trace output for DHCPv4 client activity.
+
+ Format      no debug dhcp packet [transmit | receive]
+
+ Mode        Privileged EXEC
+
+                                  Utility Commands
+                                             405
+

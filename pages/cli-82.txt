@@ -1,0 +1,53 @@
+                       M4100 Series ProSAFE Managed Switches
+
+dot1x initialize
+This command begins the initialization sequence on the specified port. This command is only
+valid if the control mode for the specified port is "auto" or "mac-based". If the control mode is
+not "auto" or "mac-based," an error is returned.
+
+ Format        dot1x initialize <slot/port>
+
+ Mode          Privileged EXEC
+
+dot1x mac-auth-bypass
+This command enables MAC-Based Authentication Bypass (MAB) for 802.1x-unaware
+clients. MAB provides 802.1x-unaware clients controlled access to the network using the
+devices' MAC address as an identifier. This requires that the known and allowable MAC
+address and corresponding access rights be pre-populated in the authentication server. MAB
+works only when the port control mode of the port is MAC-based.
+
+ Format        dot1x mac-auth-bypass
+
+ Mode          Interface Config
+
+no dot1x mac-auth-bypass
+
+This command disables MAB for 802.1x-unaware clients.
+
+ Format        no dot1x mac-auth-bypass
+
+ Mode          Interface Config
+
+dot1x max-req
+This command sets the maximum number of times the authenticator state machine on this
+port will transmit an EAPOL EAP Request/Identity frame before timing out the supplicant. The
+<count> value must be in the range 1 - 10.
+
+ Default       2
+
+ Format        dot1x max-req <count>
+
+ Mode          Interface Config
+
+no dot1x max-req
+
+This command sets the maximum number of times the authenticator state machine on this
+port will transmit an EAPOL EAP Request/Identity frame before timing out the supplicant.
+
+ Format        no dot1x max-req
+
+ Mode          Interface Config
+
+                                   Switching Commands
+                                           82
+

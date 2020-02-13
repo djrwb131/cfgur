@@ -1,0 +1,61 @@
+                              M4100 Series ProSAFE Managed Switches
+
+show ip route summary
+Use this command to display the routing table summary. Use the optional all parameter to
+show the number of all routes, including best and non-best routes. To include only the
+number of best routes, do not use the optional parameter.
+If you enter the optional all keyword, some statistics, such as the number of routes from
+each source, include counts for alternate routes. An alternate route is a route that is not the
+most preferred route to its destination and therefore is not installed in the forwarding table.
+If you do not enter the optional all keyword, the output reports only the best routes.
+
+ Format         show ip route summary [all]
+
+ Modes          ·  Privileged EXEC
+                ·  User EXEC
+
+ Term              Definition
+
+ Connected         The total number of connected routes in the routing table.
+ Routes
+
+ Static Routes     Total number of static routes in the routing table.
+
+ RIP Routes        Total number of routes installed by RIP protocol.
+
+ OSPF Routes       Total number of routes installed by OSPF protocol.
+
+ Reject Routes     Total number of reject routes installed by all protocols.
+
+ Total Routes      Total number of routes in the routing table.
+
+ Best Routes       The number of best routes currently in the routing table. This number counts only the
+                   best route to each destination.
+
+ Alternate Routes  The number of alternate routes currently in the routing table. An alternate route is one
+                   that was not selected as the best route to its destination.
+
+ Route Adds        The number of routes added to the routing table.
+
+ Route Modifies    The number of routes that changed after they were initially added to the routing table.
+
+ Route Deletes     The number of routes that deleted from the routing table.
+
+ Unresolved        The number of route adds that failed because none of the route's next hops were on a
+ Route Adds        local subnet. Note that static routes can fail to be added to the routing table at startup
+                   because the routing interfaces are not up yet. This counter gets incremented in this case.
+                   The static routes are added to the routing table when the routing interfaces come up.
+
+ Invalid Route     The number of routes that failed to be added to the routing table because the route was
+ Adds              invalid. A log message is written for each of these failures.
+
+ Failed Route      The number of routes that failed to be added to the routing table because of a resource
+ Adds              limitation in the routing table.
+
+ Reserved Locals   The number of routing table entries reserved for a local subnet on a routing interface that
+                   is down. Space for local routes is always reserved so that local routes can be installed
+                   when a routing interface bounces.
+
+                                        Routing Commands
+                                                     248
+

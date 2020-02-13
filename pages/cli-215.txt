@@ -1,0 +1,56 @@
+                              M4100 Series ProSAFE Managed Switches
+
+clear isdp counters
+This command clears ISDP counters.
+
+ Format     clear isdp counters
+
+ Mode       Privileged EXEC
+
+clear isdp table
+This command clears entries in the ISDP table.
+
+ Format     clear isdp table
+
+ Mode       Privileged EXEC
+
+show isdp
+This command displays global ISDP settings.
+
+ Format     show isdp
+
+ Mode       Privileged EXEC
+
+ Term             Definition
+
+ Timer            The frequency with which this device sends ISDP packets. This value is shown in
+                  seconds.
+
+ Hold Time        The length of time the receiving device should save information sent by this device. This
+                  value is shown in seconds.
+
+ Version 2        The setting for sending ISDPv2 packets. If disabled, version 1 packets are transmitted.
+ Advertisements
+
+ Device ID        The Device ID advertised by this device. The format of this Device ID is characterized by
+                  the value of the Device ID Format object.
+
+ Device ID        Indicates the Device ID format capability of the device.
+ Format           · serialNumber indicates that the device uses a serial number as the format for its
+ Capability         Device ID.
+                  · macAddress indicates that the device uses a Layer 2 MAC address as the format
+                    for its Device ID.
+                  · other indicates that the device uses its platform-specific format as the format for its
+                    Device ID.
+
+ Device ID        Indicates the Device ID format of the device.
+ Format           · serialNumber indicates that the value is in the form of an ASCII string containing
+                    the device serial number.
+                  · macAddress indicates that the value is in the form of a Layer 2 MAC address.
+                  · other indicates that the value is in the form of a platform specific ASCII string
+                    containing info that identifies the device. For example, ASCII string contains
+                    serialNumber appended/prepended with system name.
+
+                                       Switching Commands
+                                               215
+

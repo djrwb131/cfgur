@@ -1,0 +1,54 @@
+                              M4100 Series ProSAFE Managed Switches
+
+The information that is shown in the following table displays if you do not enter a parameter,
+the keyword all, or the MAC address and VLAN ID. If you enter vlan <vlan-id>, only the
+Mac Address, Interface, and Status fields display.
+
+ Term              Definition
+
+ Mac Address       A unicast MAC address for which the switch has forwarding and or filtering information.
+                   The format is 6 or 8 two-digit hexadecimal numbers that are separated by colons, for
+                   example 01:23:45:67:89:AB. In an IVL system the MAC address will be displayed as
+                   8 bytes.
+
+ Interface         The port through which this address was learned.
+
+ Interface Index   This object indicates the ifIndex of the interface table entry associated with this port.
+
+ Status            The status of this entry. The meanings of the values are:
+                   ·  Static. The value of the corresponding instance was added by the system or a user
+                      when a static MAC filter was defined. It cannot be relearned.
+                   ·  Learned. The value of the corresponding instance was learned by observing the
+                      source MAC addresses of incoming traffic, and is currently in use.
+                   ·  Management. The value of the corresponding instance (system MAC address) is
+                       also the value of an existing instance of dot1dStaticAddress. It is identified with
+                       interface 0/1. and is currently used when enabling VLANs for routing.
+                   ·   Self. The value of the corresponding instance is the address of one of the switch's
+                      physical interfaces (the system's own MAC address).
+                   ·  GMRP Learned. The value of the corresponding was learned via GMRP and applies
+                      to Multicast.
+                   ·  Other. The value of the corresponding instance does not fall into one of the other
+                      categories.
+
+If you enter the interface <slot/port> parameter, in addition to the MAC Address and
+Status fields, the VLAN ID field displays.
+
+ Term              Definition
+
+ VLAN ID           The VLAN on which the MAC address was learned.
+
+The information that is shown in the following table displays if you enter the count
+parameter.
+
+ Term              Definition
+
+ Dynamic           Number of MAC addresses in the forwarding database that were automatically learned.
+ Address count
+
+ Static Address    Number of MAC addresses in the forwarding database that were manually entered by a
+ (User-defined)    user.
+ count
+
+                                           Utility Commands
+                                             346
+

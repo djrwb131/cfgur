@@ -1,0 +1,45 @@
+                               M4100 Series ProSAFE Managed Switches
+
+     Term                      Definition
+
+     Configuration Script      Name of the script.
+
+     Size                      Privileged EXEC
+
+   script show
+   Use this command to display the contents of a script file, which is named <scriptname>.
+
+     Format        script show <scriptname>
+
+     Mode          Privileged EXEC
+
+     Term           Definition
+
+     Output Format  line <number>: <line contents>
+
+   script validate
+   Use this command to validate a script file by parsing each line in the script file, where
+   <scriptname> is the name of the script to validate. The validate option is intended to be
+   used as a tool for script development. Validation identifies potential problems. It might not
+   identify all problems with a script on a device.
+
+     Format        script validate <scriptname>
+
+     Mode          Privileged EXEC
+
+Pre-Login Banner and System Prompt Commands
+
+   This section describes the commands you use to configure the pre-login banner and the
+   system prompt. The pre-login banner is the text that displays before you login at the User:
+   prompt.
+
+   copy (pre-login banner)
+   Use the copy command to upload or download the CLI banner from the switch. You can
+   specify local URLs by using TFTP, Xmodem, Ymodem, or Zmodem.
+
+          Note: <ip6address> is also a valid parameter for routing packages that
+              support IPv6.
+
+                                       Management Commands
+                                                   520
+

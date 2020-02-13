@@ -1,0 +1,59 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Term             Definition
+
+ Unique Next      The number of distinct next hops used among all routes currently in the routing table.
+ Hops             These include local interfaces for local routes and neighbors for indirect routes.
+
+ Unique Next      The highest count of unique next hops since the counters were last cleared.
+ Hops High Water
+
+ Next Hop         The current number of next hop groups in use by one or more routes. Each next hop
+ Groups           group includes one or more next hops.
+
+ Next Hop         The highest count of next hop groups since the counters were last cleared.
+ Groups High
+ Water
+
+ ECMP Groups      The number of next hop groups with multiple next hops.
+
+ ECMP Routes      The number of routes with multiple next hops currently in the routing table.
+
+ Truncated ECMP   The number of ECMP routes that are currently installed in the forwarding table with just
+ Routes           one next hop. The forwarding table might limit the number of ECMP routes or the number
+                  of ECMP groups. When an ECMP route cannot be installed because the limit is reached,
+                  the route is installed with a single next hop.
+
+ ECMP Retries     The number of ECMP routes that have been installed in the forwarding table after initially
+                  being installed with a single next hop.
+
+ Routes with n    The current number of routes with each number of next hops.
+ Next Hops
+
+Command example:
+(NETGEAR Switch) #show ip route summary
+Connected Routes............................... 7
+Static Routes.................................. 1
+RIP Routes..................................... 20
+OSPF Routes.................................... 1004
+  Intra Area Routes............................ 4
+  Inter Area Routes............................ 1000
+  External Type-1 Routes....................... 0
+  External Type-2 Routes....................... 0
+Reject Routes.................................. 0
+Total routes................................... 1032
+Best Routes (High)............................. 1032 (1032)
+Alternate Routes............................... 0
+Route Adds..................................... 1010
+Route Modifies................................. 1
+Route Deletes.................................. 10
+Unresolved Route Adds.......................... 0
+Invalid Route Adds............................. 0
+Failed Route Adds.............................. 0
+Reserved Locals................................ 0
+Unique Next Hops (High)........................ 13 (13)
+Next Hop Groups (High)......................... 13 (14)
+
+                                       Routing Commands
+                                         249
+

@@ -1,0 +1,46 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+Simple Network Time Protocol (SNTP) Commands
+
+   This section describes the commands you use to automatically configure the system time
+   and date by using SNTP.
+
+   sntp broadcast client poll-interval
+   This command sets the poll interval for SNTP broadcast clients in seconds as a power of two
+   where <poll-interval> can be a value from 6 to 10.
+
+     Default       6
+
+     Format        sntp broadcast client poll-interval <poll-interval>
+
+     Mode          Global Config
+
+   no sntp broadcast client poll-interval
+
+   This command resets the poll interval for SNTP broadcast client back to the default value.
+
+     Format        no sntp broadcast client poll-interval
+
+     Mode          Global Config
+
+   sntp client mode
+   This command enables Simple Network Time Protocol (SNTP) client mode and might set the
+   mode to either broadcast or unicast.
+
+     Default       disabled
+
+     Format        sntp client mode [broadcast | unicast]
+
+     Mode          Global Config
+
+   no sntp client mode
+
+   This command disables Simple Network Time Protocol (SNTP) client mode.
+
+     Format        no sntp client mode
+
+     Mode          Global Config
+
+                                        Utility Commands
+                                          375
+

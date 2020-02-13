@@ -1,0 +1,50 @@
+                             M4100 Series ProSAFE Managed Switches
+
+port lacptimeout (Global Config)
+This command sets the timeout for all interfaces of a particular device type (actor or
+partner) to either long or short time-out.
+
+ Default       long
+
+ Format        port lacptimeout {actor | partner} {long | short}
+
+ Mode          Global Config
+
+no port lacptimeout
+
+This command sets the timeout for all physical interfaces of a particular device type (actor
+or partner) back to their default values.
+
+ Format        no port lacptimeout {actor | partner}
+
+ Mode          Global Config
+
+port-channel adminmode
+This command enables a port-channel (LAG). This command sets every configured
+port-channel with the same administrative mode setting.
+
+ Format        port-channel adminmode all
+
+ Mode          Global Config
+
+no port-channel adminmode
+
+This command disables a port-channel (LAG). This command clears every configured
+port-channel with the same administrative mode setting.
+
+ Format        no port-channel adminmode [all]
+
+ Mode          Global Config
+
+port-channel linktrap
+This command enables link trap notifications for the port-channel (LAG). The interface is a
+logical slot/port for a configured port-channel. This command enables link trap notifications
+for the port-channel (LAG).
+The interface is a logical <slot/port> for a configured port-channel. The option all
+enables link trap notifications for all the configured port-channels. Instead of <slot/port>,
+you can use lag <lag-group-id> as an alternate way to specify the LAG interface, in
+which <lag-group-id> is the LAG port number.
+
+                                 Switching Commands
+                                          120
+

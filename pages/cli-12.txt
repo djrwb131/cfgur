@@ -1,0 +1,62 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Table 5. CLI Command Modes (continued)
+
+ Command Mode      Prompt                                 Mode Description
+
+ Global Config     Switch (Config)#                       Groups general setup commands and
+                                                          permits you to make modifications to the
+                                                          running configuration.
+
+ VLAN Config       Switch (Vlan)#                         Groups all the VLAN commands.
+
+ Interface Config  Switch (Interface <slot/port>)#        Manages the operation of an interface and
+                                                          provides access to the router interface
+                   Switch (Interface Loopback <id>)# configuration commands.
+                                                          Use this mode to set up a physical port for a
+                                                          specific logical connection operation.
+                   Switch (Interface Tunnel <id>)#
+
+ Line Config       Switch (line)#                         Contains commands to configure outbound
+                                                          telnet settings and console interface settings.
+
+ Policy Map        Switch (Config-policy-map)#            Contains the QoS Policy-Map configuration
+ Config                                                   commands.
+
+ Policy Class      Switch                                 Consists of class creation, deletion, and
+ Config            (Config-policy-class-map)#             matching commands. The class match
+                                                          commands specify Layer 2, Layer 3, and
+                                                          general match criteria.
+
+ Class Map Config  Switch (Config-class-map)#             Contains the QoS class map configuration
+                                                          commands for IPv4.
+
+ Ipv6_Class-Map    Switch (Config-class-map)#             Contains the QoS class map configuration
+ Config                                                   commands for IPv6.
+
+ MAC Access-list   Switch (Config-mac-access-list)#       Allows you to create a MAC Access-List and
+ Config                                                   to enter the mode containing MAC
+                                                          Access-List configuration commands.
+
+ TACACS Config     Switch (Tacacs)#                       Contains commands to configure properties
+                                                          for the TACACS servers.
+
+ DHCP Pool         Switch (Config dhcp-pool)#             Contains the DHCP server IP address pool
+ Config                                                   configuration commands.
+
+ ARP Access-List   Switch (Config-arp-access-list)#       Contains commands to add ARP ACL rules
+ Config Mode                                              in an ARP Access List.
+
+The following table explains how to enter or exit each mode.
+Table 6. CLI Mode Access and Exit
+
+ Command Mode      Access Method                         Exit or Access Previous Mode
+
+ User EXEC         This is the first level of access.    To exit, enter logout.
+
+ Privileged EXEC   From the User EXEC mode, enter        To exit to the User EXEC mode, enter exit or press
+                   enable.                               Ctrl-Z.
+
+                               Using the Command-Line Interface
+                                                      12
+

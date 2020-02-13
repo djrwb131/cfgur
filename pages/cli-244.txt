@@ -1,0 +1,62 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Term           Definition
+
+ Interface      Valid slot and port number separated by forward slashes.
+
+ State          Routing operational state of the interface.
+
+ IP Address     The IP address of the routing interface in 32-bit dotted decimal format.
+
+ IP Mask        The IP mask of the routing interface in 32-bit dotted decimal format.
+
+ Netdir Bcast   Indicates if IP forwards net-directed broadcasts on this interface. Possible values are
+                Enable or Disable.
+
+ MultiCast Fwd  The multicast forwarding administrative mode on the interface. Possible values are
+                Enable or Disable.
+
+ Method         Shows whether the IP address was configured manually or acquired from a DHCP
+                server.
+
+show ip protocols
+This command lists a summary of the configuration and status for each unicast routing
+protocol. The command lists routing protocols that are configured and enabled. If a protocol
+is selected on the command line, the display is limited to that protocol.
+
+ Format        show ip protocols [ospf | rip]
+
+ Mode          Privileged EXEC
+
+ Parameter         Description
+
+ OSPFv2
+
+ Router ID         The router ID configured for OSPFv2
+
+ OSPF Admin Mode   Whether OSPF is enabled or disabled globally
+
+ Maximum Paths     The maximum number of next hops in an OSPF route
+
+ Routing for Networks The address ranges configured with an OSPF network command
+
+ Distance          The administrative distance (or route preference) for intra-area, inter-area, and
+                   external routes
+
+ Default Route     Whether OSPF is configured to originate a default route
+ Advertise
+
+ Always            Whether default advertisement depends on having a default route in the common
+                   routing table
+
+ Metric            The metric configured to be advertised with the default route
+
+ Metric Type       The metric type for the default route
+
+ Redist Source     A type of routes that OSPF is redistributing
+
+ Metric            The metric to advertise for redistributed routes of this type
+
+                                      Routing Commands
+                                             244
+

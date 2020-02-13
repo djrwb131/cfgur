@@ -1,0 +1,53 @@
+                          M4100 Series ProSAFE Managed Switches
+
+ip dhcp snooping limit
+Use this command to control the rate at which the DHCP Snooping messages come. The
+default rate is 15 pps with a range from 0 to 30 pps. The default burst level is 1 second with a
+range of 1­15 seconds.
+
+ Default      15 pps for rate limiting and 1 sec for burst interval
+
+ Format       ip dhcp snooping limit {rate <pps> [burst interval <seconds>]}
+
+ Mode         Interface Config
+
+no ip dhcp snooping limit
+
+Use this command to set the rate at which the DHCP Snooping messages come, and the
+burst level, to the defaults.
+
+ Format       no ip dhcp snooping limit
+
+ Mode         Interface Config
+
+ip dhcp snooping log-invalid
+Use this command to control the logging DHCP messages filtration by the DHCP Snooping
+application.
+
+ Default      disabled
+
+ Format       ip dhcp snooping log-invalid
+
+ Mode         Interface Config
+
+no ip dhcp snooping log-invalid
+
+Use this command to disable the logging DHCP messages filtration by the DHCP Snooping
+application.
+
+ Format       no ip dhcp snooping log-invalid
+
+ Mode         Interface Config
+
+ip dhcp snooping trust
+Use this command to configure the port as trusted.
+
+ Default      disabled
+
+ Format       ip dhcp snooping trust
+
+ Mode         Interface Config
+
+                                Switching Commands
+                                         141
+

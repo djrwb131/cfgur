@@ -1,0 +1,50 @@
+                               M4100 Series ProSAFE Managed Switches
+
+   show ip source binding
+   This command displays the IPSG bindings.
+
+     Format      show ip source binding [static | dynamic] [interface <slot/port>]
+                 [<vlan id>]
+
+     Mode        ·   Privileged EXEC
+                 ·   User EXEC
+
+     Term           Definition
+
+     MAC Address    The MAC address for the entry that is added.
+
+     IP Address     The IP address of the entry that is added.
+
+     Type           Entry type; statically configured from CLI or dynamically learned from DHCP Snooping.
+
+     VLAN           VLAN for the entry.
+
+     Interface      IP address of the interface in slot/port format.
+
+    Command example:
+    (NETGEAR Switch) #show ip source binding
+
+    MAC Address       IP Address         Type                        Vlan  Interface
+    ----------------- ---------------    -------------               -----  -------------
+    00:00:00:00:00:08 1.2.3.4            dhcp-snooping               2        0/1
+
+    00:00:00:00:00:09 1.2.3.4            dhcp-snooping               3        0/1
+
+    00:00:00:00:00:0A 1.2.3.4            dhcp-snooping               4        0/1
+
+Dynamic ARP Inspection Commands
+
+   Dynamic ARP Inspection (DAI) is a security feature that rejects invalid and malicious ARP
+   packets. DAI prevents a class of man-in-the-middle attacks, where an unfriendly station
+   intercepts traffic for other stations by poisoning the ARP caches of its unsuspecting
+   neighbors. The miscreant sends ARP requests or responses mapping another station's IP
+   address to its own MAC address.
+   DAI relies on DHCP snooping. DHCP snooping listens to DHCP message exchanges and
+   builds a binding database of valid (MAC address, IP address, VLAN, and interface) tuples.
+   When DAI is enabled, the switch drops ARP packets whose sender MAC address and
+   sender IP address do not match an entry in the DHCP snooping bindings database. You can
+   optionally configure additional ARP packet validation.
+
+                                         Switching Commands
+                                              147
+

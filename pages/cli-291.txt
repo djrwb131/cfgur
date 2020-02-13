@@ -1,0 +1,58 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Term             Definition
+
+ Policing Style   The style of policing, if any, used (simple).
+
+ Redirect         Forces a classified traffic stream to a specified egress port (physical or LAG). This can
+                  occur in addition to any marking or policing action. It might also be specified along with a
+                  QoS queue assignment.
+
+If the policy name is not specified, this command displays a list of all defined DiffServ
+policies. The fields that are shown in the following table are displayed.
+
+ Term             Definition
+
+ Policy Name      The name of this policy. (The order in which the policies are displayed is not necessarily
+                  the same order in which they were created.)
+
+ Policy Type      The policy type (Only inbound is supported).
+
+ Class Members    List of all class names associated with this policy.
+
+show diffserv service
+This command displays policy service information for the specified interface and direction.
+The <slot/port> parameter specifies a valid slot/port number for the system.
+
+ Format         show diffserv service <slot/port> [in | out]
+
+ Mode           Privileged EXEC
+
+ Term             Definition
+
+ DiffServ Admin   The current setting of the DiffServ administrative mode. An attached policy is only in
+ Mode             effect on an interface while DiffServ is in an enabled mode.
+
+ Interface        Valid slot and port number separated by forward slashes.
+
+ Direction        The traffic direction of this interface service.
+
+ Operational      The current operational status of this DiffServ service interface.
+ Status
+
+ Policy Name      The name of the policy attached to the interface in the indicated direction.
+
+ Policy Details   Attached policy details, whose content is identical to that described for the show
+                  policy-map <policymapname> command (content not repeated here for brevity).
+
+show diffserv service brief
+This command displays all interfaces in the system to which a DiffServ policy has been
+attached. The inbound direction parameter is optional.
+
+ Format         show diffserv service brief [in | out]
+
+ Mode           Privileged EXEC
+
+                                    Quality of Service Commands
+                                              291
+

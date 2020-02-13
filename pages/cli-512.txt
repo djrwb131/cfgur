@@ -1,0 +1,54 @@
+                          M4100 Series ProSAFE Managed Switches
+
+Responses..................................... 0
+Malformed Responses........................... 0
+Bad Authenticators............................ 0
+Pending Requests.............................. 0
+Timeouts...................................... 0
+Unknown Types................................. 0
+Packets Dropped............................... 0
+
+Command example:
+(NETGEAR Switch) #show radius accounting statistics name Default_RADIUS_Server
+
+RADIUS Accounting Server Name................. Default_RADIUS_Server
+Host Address.................................. 192.168.37.200
+Round Trip Time............................... 0.00
+Requests...................................... 0
+Retransmissions............................... 0
+Responses..................................... 0
+Malformed Responses........................... 0
+Bad Authenticators............................ 0
+Pending Requests.............................. 0
+Timeouts...................................... 0
+Unknown Types................................. 0
+Packets Dropped............................... 0
+
+show radius statistics
+Use this command to display the summary statistics of configured RADIUS Authenticating
+servers.
+
+ Format       show radius statistics {<ipaddr> | <dnsname> | name <servername>}
+
+ Mode         Privileged EXEC
+
+ Field                Definition
+
+ servername           The alias name to identify the server.
+
+ RADIUS Server Name   The name of the authenticating server.
+
+ Server Host Address  The IP address of the host.
+
+ Access Requests      The number of RADIUS Access-Request packets sent to this server. This number
+                      does not include retransmissions.
+
+ Access               The number of RADIUS Access-Request packets retransmitted to this RADIUS
+ Retransmissions      authentication server.
+
+ Access Accepts       The number of RADIUS Access-Accept packets, including both valid and invalid
+                      packets, that were received from this server.
+
+                                    Management Commands
+                                                512
+

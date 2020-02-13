@@ -1,0 +1,53 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no mvr group
+
+This command removes the MVR membership group.
+
+ Format      no mvr group <A.B.C.D> [count]
+
+ Mode        Global Config
+
+mvr mode
+This command changes the MVR mode type. If the mode is set to compatible, the switch
+does not learn multicast groups; they need to be configured by the operator as the protocol
+does not forward joins from the hosts to the router. To operate in this mode, the IGMP router
+needs to be statically configured to transmit all required multicast streams to the MVR switch.
+If the mode is set to dynamic, the switch learns existing multicast groups by snooping the
+IGMP queries from router on source ports and forwarding the IGMP joins from the hosts to
+the IGMP router on the multicast VLAN (with appropriate translation of the VLAN ID).
+
+ Default     compatible
+
+ Format      mvr mode {compatible | dynamic}
+
+ Mode        Global Config
+
+no mvr mode
+
+This command sets the mode type to the default value.
+
+ Format      no mvr mode
+
+ Mode        Global Config
+
+mvr querytime
+This command sets the MVR query response time.
+
+ Default     5
+
+ Format      mvr querytime <1-100>
+
+ Mode        Global Config
+
+no mvr querytime
+
+This command sets the MVR query response time to the default value.
+
+ Format      no mvr querytime
+
+ Mode        Global Config
+
+                           Multicast VLAN Registration Commands
+                                       221
+

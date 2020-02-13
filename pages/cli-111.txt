@@ -1,0 +1,50 @@
+                        M4100 Series ProSAFE Managed Switches
+
+no lacp collector max delay
+
+Use this command to configure the default port-channel collector max delay.
+
+ Format        no lacp collector max-delay
+
+ Mode          Interface Config
+
+lacp actor admin key
+Use this command to configure the administrative value of the LACP actor admin key. The
+valid range for <key> is 0-65535.
+
+ Default       Internal Interface Number of this Physical Port
+
+ Format        lacp actor admin key <key>
+
+ Mode          Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp actor admin key
+
+Use this command to configure the default administrative value of the key.
+
+ Format        no lacp actor admin key
+
+ Mode          Interface Config
+
+lacp actor admin state individual
+Use this command to set LACP actor admin state to individual.
+
+ Format        lacp actor admin state individual
+
+ Mode          Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp actor admin state individual
+
+Use this command to set the LACP actor admin state to aggregation.
+
+ Format        no lacp actor admin state individual
+
+ Mode          Interface Config
+
+                                  Switching Commands
+                                          111
+

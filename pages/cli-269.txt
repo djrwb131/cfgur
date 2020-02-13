@@ -1,0 +1,51 @@
+                                M4100 Series ProSAFE Managed Switches
+
+show classofservice trust
+This command displays the current trust mode setting for a specific interface. The
+<slot/port> parameter is optional and is only valid on platforms that support independent
+per-port Class of Service mappings. If you specify an interface, the command displays the
+port trust mode of the interface. If you do not specify an interface, the command displays the
+most recent global configuration settings.
+
+ Format         show classofservice trust [<slot/port>]
+
+ Mode           Privileged EXEC
+
+ Term               Definition
+
+ Non-IP Traffic     The traffic class used for non-IP traffic. This is only displayed when the COS trust mode
+ Class              is set to trust IP Precedence or IP DSCP (on platforms that support IP DSCP).
+
+ Untrusted Traffic  The traffic class used for all untrusted traffic. This is only displayed when the COS trust
+ Class              mode is set to 'untrusted'.
+
+show interfaces cos-queue
+This command displays the class-of-service queue configuration for the specified interface.
+The slot/port parameter is optional and is only valid on platforms that support independent
+per-port Class of Service mappings. If specified, the class-of-service queue configuration of
+the interface is displayed. If omitted, the most recent global configuration settings are
+displayed.
+
+ Format         show interfaces cos-queue [<slot/port>]
+
+ Mode           Privileged EXEC
+
+ Term               Definition
+
+ Queue Id           An interface supports n queues numbered 0 to (n-1). The specific n value is
+                    platform-dependent.
+
+ Minimum            The minimum transmission bandwidth guarantee for the queue, expressed as a
+ Bandwidth          percentage. A value of 0 means bandwidth is not guaranteed and the queue operates
+                    using best-effort. This is a configured value.
+
+ Scheduler Type     Indicates whether this queue is scheduled for transmission using a strict priority or a
+                    weighted scheme. This is a configured value.
+
+ Queue              The queue depth management technique used for this queue (tail drop).
+ Management
+ Type
+
+                                Quality of Service Commands
+                                                 269
+

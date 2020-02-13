@@ -1,0 +1,49 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no tacacs-server host
+
+Use this command to delete the specified TACACS+ server. The <ip-address> or
+<hostname> parameter is the IP address or host name of the TACACS+ server.
+
+ Format       no tacacs-server host {<ip-address> | <hostname>}
+
+ Mode         Global Config
+
+tacacs-server key
+Use this command to set the authentication and encryption key for all TACACS+
+communications between the switch and the TACACS+ daemon. The <key-string>
+parameter has a range of 0­128 characters and specifies the authentication and encryption
+key for all TACACS communications between the switch and the TACACS+ server. This key
+must match the key used on the TACACS+ daemon.
+Text-based configuration supports TACACS server's secrets in encrypted and non-encrypted
+format. When you save the configuration, these secret keys are stored in encrypted format
+only. If you want to enter the key in encrypted format, enter the key along with the encrypted
+keyword. In the output of the show running config command, these secret keys are
+displayed in encrypted format. You cannot show these keys in plain text format.
+
+ Format       tacacs-server key [<key-string> | encrypted <key-string>]
+
+ Mode         Global Config
+
+no tacacs-server key
+
+Use this command to disable the authentication and encryption key for all TACACS+
+communications between the switch and the TACACS+ daemon. The <key-string>
+parameter has a range of 0­128 characters. This key must match the key used on the
+TACACS+ daemon.
+
+ Format       no tacacs-server key <key-string>
+
+ Mode         Global Config
+
+tacacs-server keystring
+Use this command to set the global authentication encryption key used for all TACACS+
+communications between the TACACS+ server and the client.
+
+ Format       tacacs-server keystring
+
+ Mode         Global Config
+
+                               Management Commands
+                                         515
+

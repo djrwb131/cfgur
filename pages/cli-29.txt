@@ -1,0 +1,50 @@
+                               M4100 Series ProSAFE Managed Switches
+
+spanning-tree bpduflood
+Use this command to enable BPDU Flood on the interface.
+
+ Default         disabled
+
+ Format          spanning-tree bpduflood
+
+ Mode            Interface Config
+
+no spanning-tree bpduflood
+
+Use this command to disable BPDU Flood on the interface.
+
+ Format          no spanning-tree bpduflood
+
+ Mode            Interface Config
+
+spanning-tree bpduguard
+Use this command to enable BPDU Guard on the switch.
+
+ Default         disabled
+
+ Format          spanning-tree bpduguard
+
+ Mode            Global Config
+
+no spanning-tree bpduguard
+
+Use this command to disable BPDU Guard on the switch.
+
+ Format          no spanning-tree bpduguard
+
+ Mode            Global Config
+
+spanning-tree bpdumigrationcheck
+Use this command to force a transmission of rapid spanning tree (RSTP) and multiple
+spanning tree (MSTP) BPDUs. Use the <slot/port> parameter to transmit a BPDU from
+a specified interface, or use the all keyword to transmit BPDUs from all interfaces. This
+command forces the BPDU transmission when you execute it, so the command does not
+change the system configuration or have a "no" version.
+
+ Format          spanning-tree bpdumigrationcheck {<slot/port> | all}
+
+ Mode            Global Config
+
+                                     Switching Commands
+                                         29
+

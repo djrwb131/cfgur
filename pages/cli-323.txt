@@ -1,0 +1,50 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no poe timer schedule name
+
+Use this command to detach the schedule from the port.
+
+ Format       no poe timer schedule
+
+ Mode         Interface Config
+
+poe usagethreshold
+Use this command to set a threshold (as a percentage) for the total amount of power that can
+be delivered by the switch. For example, if the switch can deliver up to a maximum of 300
+watts, a usage threshold of 90 percent ensures that only 270 watts are used for delivering
+power to devices. This ensures that more power is not drawn than the switch can provide.
+When the usage threshold is set, all the PDs are brought down and then brought back up. If
+the consumed power is less than the threshold power (in the preceding case, 270 watts),
+then the devices continue to power up. If the consumed power is 269 watts or less, the next
+device is powered up. The moment consumed power exceeds the threshold power
+(270 watts), no other devices can power up.
+This command allows you to set the usage threshold based on each individual PoE unit or all
+PoE units.
+
+ Default      90
+
+ Format       poe usagethreshold {<unit> | all} <1-99>
+
+ Mode         Global Config
+
+no poe usagethreshold
+
+Use this command to set the usage threshold to a default value.
+
+ Format       no poe usagethreshold {<unit> | all}
+
+ Mode         Global Config
+
+poe traps
+Use this command to enable logging of specific PoE-related events, such as a PoE port
+powering a device, the threshold being exceeded, and so on.
+
+ Default      Enable
+
+ Format       poe traps
+
+ Mode         Global Config
+
+                                Power over Ethernet Commands
+                                        323
+

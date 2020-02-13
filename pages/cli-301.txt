@@ -1,0 +1,44 @@
+                           M4100 Series ProSAFE Managed Switches
+
+    Note: An implicit deny all IP rule always terminates the access list.
+
+    Note: The mirror parameter allows traffic matching this rule to be copied
+           to the specified <slot/port>, while the redirect parameter allows
+           traffic matching this rule to be forwarded to the specified
+           <slot/port>. The assign-queue and redirect parameters are
+           valid only for a permit rule.
+
+A rule might either deny or permit traffic according to the specified classification fields. At a
+minimum, either every keyword or the protocol, source address, and destination address
+values must be specified. The source and destination IP address fields might be specified
+using the keyword any to indicate a match on any value in that field. The remaining
+command parameters are all optional, but the most frequently used parameters appear in the
+same relative order as shown in the command format.
+The assign-queue parameter allows specification of a particular hardware queue for
+handling traffic that matches this rule. The allowed <queue-id> value is 0-(n-1), where n is
+the number of user configurable queues available for the hardware platform. The
+assign-queue parameter is valid only for a permit rule.
+The time-range parameter allows imposing time limitation on the IP ACL rule as defined by
+the parameter <time-range-name>. If a time range with the specified name does not exist
+and the IP ACL containing this ACL rule is applied to an interface or bound to a VLAN, then
+the ACL rule is applied immediately. If a time range with specified name exists and the IP
+ACL containing this ACL rule is applied to an interface or bound to a VLAN, then the ACL rule
+is applied when the time range with specified name becomes active. The ACL rule is
+removed when the time range with specified name becomes inactive.
+You can specify a simple rate limiter for packets matching an ACL permit rule. You must
+specify the burst size in kbytes and allowed rate of traffic in kbps. The conforming traffic is
+allowed to transmit, and non-conforming traffic is dropped. This action is ignored for any
+deny rule, since by definition matching packets are dropped.
+
+ Format       {deny | permit} {every | {{icmp | igmp | ip | tcp | udp | <number>}
+              {<srcip> <srcmask>} [eq {<portkey> | <0-65535>}] {<dstip> <dstmask>}
+              [eq {<portkey>| <0-65535>}] [precedence <precedence> | tos <tos>
+              <tosmask> | dscp <dscp>]}} [log] [rate-limit <1-4294967295> <1-128>]
+              [timerange <time-range-name>] [assign-queue <queue-id>] [{mirror |
+              redirect} [lag <lag-group-id> | <slot/port>]]
+
+ Mode         Ipv4-Access-List Config
+
+                                Quality of Service Commands
+                                           301
+

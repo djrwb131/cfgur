@@ -1,0 +1,51 @@
+                          M4100 Series ProSAFE Managed Switches
+
+Table 49. IGMP-Proxy Log Messages
+
+ Component       Message                                      Cause
+
+ IGMP-Proxy      Error getting memory for igmp host group     When we are unable to allocate memory for
+                 record                                       the IGMP group record in the Host (Proxy)
+                                                              table
+
+ IGMP-Proxy      Error getting memory for source record       When we are unable to allocate memory for
+                                                              the IGMP source record in the Host (Proxy)
+                                                              table
+
+Table 50. PIM-SM Log Messages
+
+ Component       Message                                      Cause
+
+ PIM-SM          PIM-SM not initialized                       This message arises when trying to
+                                                              activate pimsm interfaces or receiving
+                                                              pimsm packets when pimsm component is
+                                                              not initialized.
+
+ PIM-SM          Unable to take xxx semaphore                 This message is logged when failed to
+                                                              acquire semaphore to access source list or
+                                                              group list or candidate Rp list or virtual
+                                                              interface list. The xxx specifies the list for
+                                                              which the access is denied.
+
+ PIM-SM          Warning : Could not send packet type xxx     this warning is logged when failed to send a
+                 (pimsm packet type) on rtrIfNum              pimsm control packet on the specified
+                                                              router interface.
+
+ PIM-SM          add_kernel_cache : memory allocation         This message is logged when there is
+                 failed                                       insufficient memory to add a mroute entry
+                                                              into cache.
+
+ PIM_SM          Config error. Trying to add static RP.       Router learns RP-group mapping through
+                 Dynamic RP with same ip addr exists          Bootstrap messages received.This
+                                                              message pops when the static RP is
+                                                              configured which conflicts the mapping
+                                                              learnt dynamically through Bootstrap
+                                                              messages.
+
+ PIM-SM          Inner xxx(source/group) address of register  This log message appears when a register
+                 message is invalid                           message is received with invalid inner ip
+                                                              source or group address.
+
+                                         Log Messages
+                                                 552
+

@@ -1,0 +1,47 @@
+                         M4100 Series ProSAFE Managed Switches
+
+netbios-node-type
+The command configures the NetBIOS node type for Microsoft Dynamic Host Configuration
+Protocol (DHCP) clients. The <type> parameter specifies the NetBIOS node type. Valid
+types are:
+·   b-node--Broadcast
+·   p-node--Peer-to-peer
+·   m-node--Mixed
+·   h-node--Hybrid (recommended)
+
+ Default     none
+
+ Format      netbios-node-type <type>
+
+ Mode        DHCP Pool Config
+
+no netbios-node-type
+
+This command removes the NetBIOS node Type.
+
+ Format      no netbios-node-type
+
+ Mode        DHCP Pool Config
+
+next-server
+This command configures the next server in the boot process of a DHCP client. The
+<address> parameter is the IP address of the next server in the boot process, which is
+typically a TFTP server.
+
+ Default     inbound interface helper addresses
+
+ Format      next-server <address>
+
+ Mode        DHCP Pool Config
+
+no next-server
+
+This command removes the boot server list.
+
+ Format      no next-server
+
+ Mode        DHCP Pool Config
+
+                                   Utility Commands
+                                                388
+

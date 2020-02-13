@@ -1,0 +1,53 @@
+                              M4100 Series ProSAFE Managed Switches
+
+no bootpdhcprelay cidoptmode
+
+This command disables the circuit ID option mode for BootP/DHCP Relay on the system.
+
+ Format        no bootpdhcprelay cidoptmode
+
+ Mode          Global Config
+
+bootpdhcprelay maxhopcount
+This command configures the maximum allowable relay agent hops for BootP/DHCP Relay
+on the system. The <hops> parameter has a range of 1­16.
+
+ Default       4
+
+ Format        bootpdhcprelay maxhopcount <hops>
+
+ Mode          Global Config
+
+no bootpdhcprelay maxhopcount
+
+This command configures the default maximum allowable relay agent hops for BootP/DHCP
+Relay on the system.
+
+ Format        no bootpdhcprelay maxhopcount
+
+ Mode          Global Config
+
+bootpdhcprelay minwaittime
+This command configures the minimum wait time in seconds for BootP/DHCP Relay on the
+system. When the BOOTP relay agent receives a BOOTREQUEST message, it MAY use the
+seconds-since-client-began-booting field of the request as a factor in deciding whether to
+relay the request or not. The parameter has a range of 0­100 seconds.
+
+ Default       0
+
+ Format        bootpdhcprelay minwaittime <0-100>
+
+ Mode          Global Config
+
+no bootpdhcprelay minwaittime
+
+This command configures the default minimum wait time in seconds for BootP/DHCP Relay
+on the system.
+
+ Format        no bootpdhcprelay minwaittime
+
+ Mode          Global Config
+
+                              Routing Commands
+                                   253
+

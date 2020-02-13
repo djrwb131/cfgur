@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+show ip dhcp snooping statistics
+Use this command to list statistics for DHCP Snooping security violations on untrusted ports.
+
+ Format      show ip dhcp snooping statistics
+
+ Mode        ·   Privileged EXEC
+             ·   User EXEC
+
+ Term           Definition
+
+ Interface      The IP address of the interface in slot/port format.
+
+ MAC Verify     Represents the number of DHCP messages that were filtered on an untrusted interface
+ Failures       because of source MAC address and client HW address mismatch.
+
+ Client Ifc     Represents the number of DHCP release and Deny messages received on the different
+ Mismatch       ports than learned previously.
+
+ DHCP Server    Represents the number of DHCP server messages received on Untrusted ports.
+ Msgs Rec'd
+
+Command example:
+(NETGEAR Switch) #show ip dhcp snooping statistics
+
+ Interface     MAC Verify    Client Ifc         DHCP Server
+                Failures      Mismatch          Msgs Rec'd
+-----------    ----------    ----------         -----------
+  0/2                0                   0              0
+  0/3                0                   0              0
+  0/4                0                   0              0
+  0/5                0                   0              0
+  0/6                0                   0              0
+  0/7                0                   0              0
+  0/8                0                   0              0
+  0/9                0                   0              0
+  0/10               0                   0              0
+  0/11               0                   0              0
+  0/12               0                   0              0
+  0/13               0                   0              0
+  0/14               0                   0              0
+  0/15               0                   0              0
+  0/16               0                   0              0
+  0/17               0                   0              0
+  0/18               0                   0              0
+  0/19               0                   0              0
+  0/20               0                   0              0
+
+                                     Switching Commands
+                                                 145
+

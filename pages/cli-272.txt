@@ -1,0 +1,43 @@
+                             M4100 Series ProSAFE Managed Switches
+
+   no diffserv
+
+   This command sets the DiffServ operational mode to inactive. While disabled, the DiffServ
+   configuration is retained and can be changed, but it is not activated. When enabled, DiffServ
+   services are activated.
+
+     Format    no diffserv
+
+     Mode      Global Config
+
+DiffServ Class Commands
+
+   Use the DiffServ class commands to define traffic classification. To classify traffic, you specify
+   Behavior Aggregate (BA), based on DSCP and Multi-Field (MF) classes of traffic (name,
+   match criteria)
+   This set of commands consists of class creation/deletion and matching, with the class match
+   commands specifying Layer 3, Layer 2, and general match criteria. The class match criteria
+   are also known as class rules, with a class definition consisting of one or more rules to
+   identify the traffic that belongs to the class.
+
+       Note: Once you create a class match criterion for a class, you cannot
+               change or delete the criterion. To change or delete a class match
+               criterion, you must delete and re-create the entire class.
+
+   The CLI command root is class-map.
+
+   class-map
+   This command defines a DiffServ class of type match-all. When used without any match
+   condition, this command enters the class-map mode. The <class-map-name> is a
+   case-sensitive alphanumeric string from 1 to 31 characters uniquely identifying an existing
+   DiffServ class.
+
+       Note: The class-map-name "default" is reserved and you must not use it.
+
+   The class type of match-all indicates all of the individual match conditions must be true for
+   a packet to be considered a member of the class. This command might be used without
+   specifying a class type to enter the Class-Map Config mode for an existing DiffServ class.
+
+                                  Quality of Service Commands
+                                                   272
+

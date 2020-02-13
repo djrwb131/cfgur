@@ -1,0 +1,51 @@
+                            M4100 Series ProSAFE Managed Switches
+
+debug ping packet
+This command enables tracing of ICMP echo requests and responses. The command traces
+pings on the network port or service port for switching packages. For routing packages, pings
+are traced on the routing ports as well.
+
+ Default      disabled
+
+ Format       debug ping packet
+
+ Mode         Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #debug ping packet
+
+<15> JAN 01 00:21:22 192.168.17.29-1 SIM[181040176]: sim_debug.c(128) 20 % Pkt TX - Intf:
+0/1(1),
+SRC_IP:10.50.50.2, DEST_IP:10.50.50.1, Type:ECHO_REQUEST
+
+<15> JAN 01 00:21:22 192.168.17.29-1 SIM[182813968]: sim_debug.c(82) 21 % Pkt RX - Intf:
+0/1(1), S
+RC_IP:10.50.50.1, DEST_IP:10.50.50.2, Type:ECHO_REPLY
+
+The parameters that are shown in the following table are displayed in the trace message.
+
+ Parameter       Definition
+
+ TX/RX           TX refers to a packet transmitted by the device. RX refers to packets received by the
+                 device.
+
+ Intf            The interface that the packet came in or went out on. Format used is slot/port (internal
+                 interface number). Unit is always shown as 1 for interfaces on a non-stacking device.
+
+ SRC_IP          The source IP address in the IP header in the packet.
+
+ DEST_IP         The destination IP address in the IP header in the packet.
+
+ Type            Type determines whether or not the ICMP message is a REQUEST or a RESPONSE.
+
+no debug ping packet
+
+This command disables tracing of ICMP echo requests and responses.
+
+ Format       no debug ping packet
+
+ Mode         Privileged EXEC
+
+                                   Utility Commands
+                                            418
+

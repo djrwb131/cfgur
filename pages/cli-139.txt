@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no ip dhcp snooping vlan
+
+Use this command to disable DHCP Snooping on VLANs.
+
+ Format      no ip dhcp snooping vlan <vlan-list>
+
+ Mode        Global Config
+
+ip dhcp snooping verify mac-address
+Use this command to enable verification of the source MAC address with the client hardware
+address in the received DCHP message.
+
+ Default     enabled
+
+ Format      ip dhcp snooping verify mac-address
+
+ Mode        Global Config
+
+no ip dhcp snooping verify mac-address
+
+Use this command to disable verification of the source MAC address with the client hardware
+address.
+
+ Format      no ip dhcp snooping verify mac-address
+
+ Mode        Global Config
+
+ip dhcp snooping database
+Use this command to configure the persistent location of the DHCP Snooping database. This
+can be local or a remote file on a specified computer.
+
+ Default     local
+
+ Format      ip dhcp snooping database {local | <tftp://hostIP> / <filename>}
+
+ Mode        Global Config
+
+ip dhcp snooping database write-delay
+Use this command to configure the interval in seconds at which the DHCP Snooping
+database will be persisted. The interval value ranges from 15 to 86,400 seconds.
+
+ Default     300 seconds
+
+ Format      ip dhcp snooping database write-delay <seconds>
+
+ Mode        Global Config
+
+                             Switching Commands
+                                        139
+

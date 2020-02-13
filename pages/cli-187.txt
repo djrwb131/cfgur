@@ -1,0 +1,56 @@
+                                M4100 Series ProSAFE Managed Switches
+
+show lldp statistics
+Use this command to display the current LLDP traffic and remote table statistics for a specific
+interface or for all interfaces.
+
+ Format         show lldp statistics {<slot/port> | all}
+
+ Mode           Privileged Exec
+
+ Term             Definition
+
+ Last Update      The amount of time since the last update to the remote table in days, hours, minutes, and
+                  seconds.
+
+ Total Inserts    Total number of inserts to the remote data table.
+
+ Total Deletes    Total number of deletes from the remote data table.
+
+ Total Drops      Total number of times the complete remote data received was not inserted due to
+                  insufficient resources.
+
+ Total Ageouts    Total number of times a complete remote data entry was deleted because the Time to
+                  Live interval expired.
+
+The table contains the following column headings:
+
+ Term             Definition
+
+ Interface        The interface in slot/port format.
+
+ Transmit Total   Total number of LLDP packets transmitted on the port.
+
+ Receive Total    Total number of LLDP packets received on the port.
+
+ Discards         Total number of LLDP frames discarded on the port for any reason.
+
+ Errors           The number of invalid LLDP frames received on the port.
+
+ Ageouts          Total number of times a complete remote data entry was deleted for the port because the
+                  Time to Live interval expired.
+
+ TLV Discards     The number of TLVs discarded.
+
+ TLV Unknowns     Total number of LLDP TLVs received on the port where the type value is in the reserved
+                  range, and not recognized.
+
+ TLV MED          Total number of LLDP MED TLVs received on the local ports.
+
+ TVL802.1         Total number of 802.1 LLDP TLVs received on the local ports.
+
+ TVL802.3         Total number of 802.3 LLDP TLVs received on the local ports.
+
+                                          Switching Commands
+                                                     187
+

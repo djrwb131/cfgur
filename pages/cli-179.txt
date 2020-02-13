@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no port-security
+
+This command disables port locking for one (Interface Config) or all (Global Config) ports.
+
+ Format        no port-security
+
+ Mode          ·  Global Config
+               ·  Interface Config
+
+port-security max-dynamic
+This command sets the maximum number of dynamically locked MAC addresses allowed on
+a specific port.
+
+ Default       600
+
+ Format        port-security max-dynamic <maxvalue>
+
+ Mode          Interface Config
+
+no port-security max-dynamic
+
+This command resets the maximum number of dynamically locked MAC addresses allowed
+on a specific port to its default value.
+
+ Format        no port-security max-dynamic
+
+ Mode          Interface Config
+
+port-security max-static
+This command sets the maximum number of statically locked MAC addresses allowed on a
+port.
+
+ Default       20
+
+ Format        port-security max-static <maxvalue>
+
+ Mode          Interface Config
+
+no port-security max-static
+
+This command sets maximum number of statically locked MAC addresses to the default
+value.
+
+ Format        no port-security max-static
+
+ Mode          Interface Config
+
+                                   Switching Commands
+                                              179
+

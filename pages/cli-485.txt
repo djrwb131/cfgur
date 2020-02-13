@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Term            Definition
+
+ default         The default list of methods for authorization services.
+
+ <list-name>     Alphanumeric character string used to name the list of authorization methods.
+
+no ip http/https accounting exec
+
+This command deletes the authorization method list.
+
+ Format      no ip {http | https} accounting exec {default | <list-name>}
+
+ Mode        Global Config
+
+show accounting
+Use this command to display ordered methods for accounting lists.
+
+ Format      show accounting
+
+ Mode        Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #show accounting
+Number of Accounting Notifications sent at beginning of an EXEC session:
+Errors when sending Accounting Notifications beginning of an EXEC session:
+Number of Accounting Notifications at end of an EXEC session:
+Errors when sending Accounting Notifications at end of an EXEC session:
+Number of Accounting Notifications sent at beginning of a command execution:
+Errors when sending Accounting Notifications at beginning of a command execution:
+Number of Accounting Notifications sent at end of a command execution:
+Errors when sending Accounting Notifications at end of a command execution:
+
+show accounting methods
+This command displays the configured accounting method lists.
+
+ Format      show accounting methods
+
+ Mode        Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #show accounting methods
+
+Acct Type    Method Name     Record Type     Method Type
+----------   ------------    ------------    ------------
+Exec         dfltExecList    start-stop      TACACS
+Commands     dfltCmdsList    stop-only       TACACS
+
+                              Management Commands
+                                         485
+

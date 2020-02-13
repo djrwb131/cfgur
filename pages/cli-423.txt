@@ -1,0 +1,48 @@
+                           M4100 Series ProSAFE Managed Switches
+
+debug udld packet
+This command enables debugging on the received and transmitted UDLD PDUs.
+
+ Default       Disabled
+
+ Format        default udld packet receive
+
+ Mode          Privileged EXEC
+
+no debug udld packet
+
+This command disables debugging on the received and transmitted UDLD PDUs.
+
+ Format        debug udld packet receive
+
+ Mode          Privileged EXEC
+
+debug udld packet receive
+This command enables debugging on the received UDLD PDUs.
+
+ Default       Disabled
+
+ Format        default udld packet receive
+
+ Mode          Privileged EXEC
+
+no debug udld packet receive
+
+This command disables debugging on the received UDLD PDUs.
+
+ Format        debug udld packet receive
+
+ Mode          Privileged EXEC
+
+debug udld packet transmit
+This command enables debugging on the transmitted UDLD PDUs.
+
+ Default       Disabled
+
+ Format        default udld packet transmit
+
+ Mode          Privileged EXEC
+
+                                 Utility Commands
+                                          423
+

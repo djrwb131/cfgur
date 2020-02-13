@@ -1,0 +1,52 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Term             Definition
+
+ Link Speed Data  An integer representing the physical link data rate of the specified interface. This is
+ Rate             measured in Megabits per second (Mbps).
+
+ MAC Address      The burned in physical address of the specified interface. The format is 6 two-digit
+                  hexadecimal numbers that are separated by colons.
+
+ Encapsulation    The encapsulation type for the specified interface. The types are: Ethernet or SNAP.
+ Type
+
+ IP MTU           The maximum transmission unit (MTU) size of a frame, in bytes.
+
+ Bandwidth        Shows the bandwidth of the interface.
+
+ Destination      Displays whether ICMP Destination Unreachables might be sent (enabled or disabled).
+ Unreachables
+
+ ICMP Redirects   Displays whether ICMP Redirects might be sent (enabled or disabled).
+
+Command example:
+(NETGEAR Switch) >show ip interface 0/2
+Routing Interface Status....................... Down
+Method......................................... None
+Routing Mode................................... Disable
+Administrative Mode............................ Enable
+Forward Net Directed Broadcasts................ Disable
+Proxy ARP...................................... Enable
+Local Proxy ARP................................ Disable
+Active State................................... Inactive
+Link Speed Data Rate........................... Inactive
+MAC address.................................... 02:14:6C:FF:00:DE
+Encapsulation Type............................. Ethernet
+IP MTU......................................... 1500
+Bandwidth...................................... 100000 kbps
+Destination Unreachables....................... Enabled
+ICMP Redirects................................. Disabled
+
+show ip interface brief
+This command displays summary information about IP configuration settings for all ports in
+the router.
+
+ Format        show ip interface brief
+
+ Modes         ·  Privileged EXEC
+               ·  User EXEC
+
+                                       Routing Commands
+                                         243
+

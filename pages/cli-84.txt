@@ -1,0 +1,50 @@
+                             M4100 Series ProSAFE Managed Switches
+
+authenticator PAE sets the controlled port mode to reflect the outcome of the authentication
+exchanges between the supplicant, authenticator, and the authentication server. If the
+mac-based option is specified, MAC-based dot1x authentication is enabled on the port.
+
+ Default       auto
+
+ Format        dot1x port-control all {force-unauthorized | force-authorized | auto
+               | mac-based}
+
+ Mode          Global Config
+
+no dot1x port-control all
+
+This command sets the authentication mode on all ports to the default value.
+
+ Format        no dot1x port-control all
+
+ Mode          Global Config
+
+dot1x re-authenticate
+This command begins the re-authentication sequence on the specified port. This command is
+only valid if the control mode for the specified port is "auto" or "mac-based". If the control
+mode is not "auto" or "mac-based", an error will be returned.
+
+ Format        dot1x re-authenticate <slot/port>
+
+ Mode          Privileged EXEC
+
+dot1x re-authentication
+This command enables re-authentication of the supplicant for the specified port.
+
+ Default       disabled
+
+ Format        dot1x re-authentication
+
+ Mode          Interface Config
+
+no dot1x re-authentication
+
+This command disables re-authentication of the supplicant for the specified port.
+
+ Format        no dot1x re-authentication
+
+ Mode          Interface Config
+
+                                    Switching Commands
+                                          84
+

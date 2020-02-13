@@ -1,0 +1,50 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+    Table 10. TACACS+ Log Messages
+
+     Component      Message                                    Cause
+
+     TACACS+        TACACS+: authentication error, no server   TACACS+ request needed, but no servers
+                    to contact                                 are configured.
+
+     TACACS+        TACACS+: connection failed to server       TACACS+ request sent to server x.x.x.x
+                    x.x.x.x                                    but no response was received.
+
+     TACACS+        TACACS+: no key configured to encrypt      No key configured for the specified server.
+                    packet for server x.x.x.x
+
+     TACACS+        TACACS+: received invalid packet type      Received packet type that is not supported.
+                    from server.
+
+     TACACS+        TACACS+: invalid major version in          Major version mismatch.
+                    received packet.
+
+     TACACS+        TACACS+: invalid minor version in          Minor version mismatch.
+                    received packet.
+
+    Table 11. LLDP Log Message
+
+     Component      Message                                    Cause
+
+     LLDP           lldpTask(): invalid message type:xx.       Unsupported LLDP packet received.
+                    xxxxxx:xx
+
+    Table 12. SNTP Log Message
+
+     Component      Message                                    Cause
+
+     SNTP           SNTP: system clock synchronized on %s      Indicates that SNTP has successfully
+                    UTC                                        synchronized the time of the box with the
+                                                               server.
+
+Management
+
+    Table 13. SNMP Log Message
+
+     Component      Message                                    Cause
+
+     SNMP           EDB Callback: Unit Join: x.               A new unit has joined the stack.
+
+                                                Log Messages
+                                                    537
+

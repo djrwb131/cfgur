@@ -1,0 +1,52 @@
+                          M4100 Series ProSAFE Managed Switches
+
+no dhcp l2relay trust
+
+Use this command to configure an interface to the default untrusted for Option-82 reception.
+
+ Format      no dhcp l2relay trust
+
+ Mode        Interface Config
+
+show dhcp l2relay all
+Use this command to display the summary of DHCP L2 Relay configuration.
+
+ Format      show dhcp l2relay all
+
+ Mode        Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #show dhcp l2relay all
+DHCP L2 Relay is Enabled.
+Interface             L2RelayMode       TrustMode
+----------            -----------       --------------
+0/2                   Enabled            untrusted
+0/4                   Disabled           trusted
+VLAN Id          L2 Relay          CircuitId         RemoteId
+---------        ----------        -----------       ------------
+3                 Disabled         Enabled            --NULL--
+5                 Enabled          Enabled            --NULL--
+6                 Enabled          Enabled            netgear
+7                 Enabled          Disabled           --NULL--
+8                 Enabled          Disabled           --NULL--
+9                 Enabled          Disabled           --NULL--
+10                Enabled          Disabled           --NULL--
+
+show dhcp l2relay interface
+Use this command to display DHCP L2 relay configuration specific to interfaces.
+
+ Format      show dhcp l2relay interface {all | <slot/port>}
+
+ Mode        Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #show dhcp l2relay interface all
+DHCP L2 Relay is Enabled.
+Interface          L2RelayMode       TrustMode
+----------       -----------         --------------
+  0/2            Enabled              untrusted
+  0/4            Disabled             trusted
+
+                                  Switching Commands
+                                         135
+

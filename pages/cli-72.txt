@@ -1,0 +1,53 @@
+                          M4100 Series ProSAFE Managed Switches
+
+switchport mode private-vlan
+This command is used to configure a port as a promiscuous or host private VLAN port. Note
+that the properties of each mode can be configured even when the switch is not in that mode.
+However, they will only be applicable once the switch is in that particular mode.
+
+ Format       switchport mode private-vlan {host | promiscuous}
+
+ Mode         Interface Config
+
+ Default      General
+
+ Parameter     Definition
+
+ host          Configures an interface as a private VLAN host port. It can be either isolated or
+               community port depending on the secondary VLAN it is associated with.
+
+ promiscuous   Configures an interface as a private VLAN promiscuous port. The promiscuous ports
+               are members of the primary VLAN.
+
+no switchport mode
+
+This command is used to remove the private-VLAN association or mapping from the port.
+
+ Format       no switchport mode private-vlan
+
+ Mode         Interface Config
+
+private-vlan
+This command is used to configure the private VLANs and to configure the association
+between the primary private VLAN and secondary VLANs.
+
+ Format       private-vlan {association [add | remove] <secondary-vlan-list> |
+              community | isolated | primary}
+
+ Mode         VLAN Config
+
+ Parameter                Definition
+
+ association              Associates the primary and secondary VLAN.
+
+ <secondary-vlan-list>    A list of secondary VLANs to be mapped to a primary VLAN.
+
+ community                Designates a VLAN as a community VLAN.
+
+ isolated                 Designates a VLAN as the isolated VLAN.
+
+ primary                  Designates a VLAN as the primary VLAN.
+
+                                     Switching Commands
+                                           72
+

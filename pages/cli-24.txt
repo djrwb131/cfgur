@@ -1,0 +1,56 @@
+                          M4100 Series ProSAFE Managed Switches
+
+(NETGEAR Switch)#show port advertise
+
+Port         Type                            Neg              Operational Link Advertisement
+--------- ------------------------------ ----------- ------------------------------
+0/1   Gigabit - Level                       Enabled       1000f, 100f, 100h, 10f, 10h
+0/2   Gigabit - Level                       Enabled       1000f, 100f, 100h, 10f, 10h
+0/3   Gigabit - Level                       Enabled       1000f, 100f, 100h, 10f, 10h
+
+show port
+This command displays port information.
+
+ Format           show port {<slot/port> | all}
+
+ Mode             Privileged EXEC
+
+ Term               Definition
+
+ Interface          Valid slot and port number separated by forward slashes.
+
+ Type               If not blank, this field indicates that this port is a special type of port. The possible
+                    values are:
+                    ·  Mirror. This port is a monitoring port. For more information, see Port Mirroring
+                       Commands on page 125.
+                    ·  PC Mbr. This port is a member of a port-channel (LAG).
+                    ·  Probe. This port is a probe port.
+
+ Admin Mode         The Port control administration state. The port must be enabled in order for it to be
+                    allowed into the network. - May be enabled or disabled. The factory default is enabled.
+
+ Physical Mode      The desired port speed and duplex mode. If autonegotiation support is selected, the
+                    duplex mode and speed is set from the auto-negotiation process. Note that the
+                    maximum capability of the port (full-duplex -100M) is advertised. Otherwise, this object
+                    determines the port's duplex mode and transmission rate. The factory default is Auto.
+
+ Physical Status    The port speed and duplex mode.
+
+ Link Status        The Link is up or down.
+
+ Link Trap          This object determines whether to send a trap when link status changes. The factory
+                    default is enabled.
+
+ LACP Mode          LACP is enabled or disabled on this port.
+
+show port protocol
+This command displays the Protocol-Based VLAN information for either the entire system, or
+for the indicated group.
+
+ Format           show port protocol {<groupid> | all}
+
+ Mode             Privileged EXEC
+
+                                          Switching Commands
+                                              24
+

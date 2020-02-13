@@ -1,0 +1,64 @@
+                             M4100 Series ProSAFE Managed Switches
+
+The information that is shown in the following table is repeated for each class that is
+associated with this policy (only the policy attributes that are configured are displayed).
+
+ Term             Definition
+
+ Assign Queue     Directs traffic stream to the specified QoS queue. This allows a traffic classifier to specify
+                  which one of the supported hardware queues are used for handling packets belonging to
+                  the class.
+
+ Class Name       The name of this class.
+
+ Committed Burst  The committed burst size, used in simple policing.
+ Size (KB)
+
+ Committed Rate   The committed rate, used in simple policing,
+ (Kbps)
+
+ Conform Action   The current setting for the action taken on a packet considered to conform to the policing
+                  parameters. This is not displayed if policing is not in use for the class under this policy.
+
+ Conform COS      The CoS mark value if the conform action is set-cos-transmit.
+
+ Conform DSCP     The DSCP mark value if the conform action is set-dscp-transmit.
+ Value
+
+ Conform IP       The IP Precedence mark value if the conform action is set-prec-transmit.
+ Precedence
+ Value
+
+ Drop             Drop a packet upon arrival. This is useful for emulating access control list operation
+                  using DiffServ, especially when DiffServ and ACL cannot co-exist on the same interface.
+
+ Mark CoS         The Class of Service value that is set in the 802.1p header of inbound packets. This is
+                  not displayed if the mark cos was not specified.
+
+ Mark IP DSCP     The mark/re-mark value used as the DSCP for traffic matching this class. This is not
+                  displayed if mark ip description is not specified.
+
+ Mark IP          The mark/re-mark value used as the IP Precedence for traffic matching this class. This is
+ Precedence       not displayed if mark ip precedence is not specified.
+
+ Mirror           Copies a classified traffic stream to a specified egress port (physical port or LAG). This
+                  can occur in addition to any marking or policing action. It might also be specified along
+                  with a QoS queue assignment.
+
+ Non-Conform      The current setting for the action taken on a packet considered to not conform to the
+ Action           policing parameters. This is not displayed if policing not in use for the class under this
+                  policy.
+
+ Non-Conform      The CoS mark value if the non-conform action is set-cos-transmit.
+ COS
+
+ Non-Conform      The DSCP mark value if the non-conform action is set-dscp-transmit.
+ DSCP Value
+
+ Non-Conform IP   The IP Precedence mark value if the non-conform action is set-prec-transmit.
+ Precedence
+ Value
+
+                                   Quality of Service Commands
+                                                290
+

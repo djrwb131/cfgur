@@ -1,0 +1,53 @@
+                              M4100 Series ProSAFE Managed Switches
+
+set gvrp interfacemode
+This command enables GVRP on a single port (Interface Config mode) or all ports (Global
+Config mode).
+
+ Default       disabled
+
+ Format        set gvrp interfacemode
+
+ Mode          ·   Interface Config
+               ·   Global Config
+
+no set gvrp interfacemode
+
+This command disables GVRP on a single port (Interface Config mode) or all ports (Global
+Config mode). If GVRP is disabled, Join Time, Leave Time, and Leave All Time have no
+effect.
+
+ Format        no set gvrp interfacemode
+
+ Mode          ·   Interface Config
+               ·   Global Config
+
+show gvrp configuration
+This command displays Generic Attributes Registration Protocol (GARP) information for one
+or all interfaces.
+
+ Format        show gvrp configuration {<slot/port> | all}
+
+ Mode          ·   Privileged EXEC
+               ·   User EXEC
+
+ Term              Definition
+
+ Interface         Valid slot and port number separated by forward slashes.
+
+ Join Timer        The interval between the transmission of GARP PDUs registering (or re-registering)
+                   membership for an attribute. Current attributes are a VLAN or multicast group. There is
+                   an instance of this timer on a per-Port, per-GARP participant basis. Permissible values
+                   are 10­100 centiseconds (0.1 to 1.0 seconds). The factory default is 20 centiseconds
+                   (0.2 seconds). The finest granularity of specification is one centisecond (0.01 seconds).
+
+ Leave Timer       The period of time to wait after receiving an unregister request for an attribute before
+                   deleting the attribute. Current attributes are a VLAN or multicast group. This may be
+                   considered a buffer time for another station to assert registration for the same attribute in
+                   order to maintain uninterrupted service. There is an instance of this timer on a per-Port,
+                   per-GARP participant basis. Permissible values are 20­600 centiseconds (0.2 to 6.0
+                   seconds). The factory default is 60 centiseconds (0.6 seconds).
+
+                                        Switching Commands
+                                          77
+

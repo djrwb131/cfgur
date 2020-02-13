@@ -1,0 +1,11 @@
+9. Green Ethernet Commands                               9
+
+   This chapter describes the green Ethernet commands available in the managed switch CLI.
+   The chapter contains the following sections:
+      ·   Green Feature Support
+      ·   Energy-Detect Mode
+      ·   Energy Efficient Ethernet (EEE)
+      ·   Green Ethernet Commands
+
+                                                  522
+

@@ -1,0 +1,43 @@
+                              M4100 Series ProSAFE Managed Switches
+
+    Note: This command does not support a no form.
+
+ Default       snmpv2
+
+ Format        snmptrap snmpversion <name> {<ipaddr> | <hostname>} | {<ip6addr> |
+               <hostname>} {snmpv1 | snmpv2}
+
+ Mode          Global Config
+
+snmptrap ipaddr
+Use this command to assign an IP address to a specified community name. The name can
+use up to 16 case-sensitive alphanumeric characters.
+
+    Note: IP addresses in the SNMP trap receiver table must be unique. If you
+            make multiple entries using the same IP address, the first entry is
+            retained and processed. All duplicate entries are ignored.
+
+ Format        snmptrap ipaddr <name> <ipaddrold> {<ipaddrnew | hostnamenew>}
+
+ Mode          Global Config
+
+snmptrap mode
+Use this command to activate or deactivate an SNMP trap. Enabled trap receivers are active
+(able to receive traps). Disabled trap receivers are inactive (not able to receive traps).
+
+ Format        snmptrap mode <name> {<ipaddr> | <ip6addr> | <hostname>}
+
+ Mode          Global Config
+
+no snmptrap mode
+
+Use this command to deactivate an SNMP trap. Disabled trap receivers are unable to receive
+traps.
+
+ Format        no snmptrap mode <name> {<ipaddr> | <ip6addr> | <hostname>}
+
+ Mode          Global Config
+
+                                     Management Commands
+                                               497
+

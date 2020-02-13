@@ -1,0 +1,49 @@
+                                M4100 Series ProSAFE Managed Switches
+
+Term                  Definition
+
+Transmit Discards     ·   Total Transmit Packets Discards - The sum of single collision frames discarded, multiple
+                          collision frames discarded, and excessive frames discarded.
+                      ·   Single Collision Frames - A count of the number of successfully transmitted frames on a
+                          particular interface for which transmission is inhibited by exactly one collision.
+                      ·   Multiple Collision Frames - A count of the number of successfully transmitted frames on
+                          a particular interface for which transmission is inhibited by more than one collision.
+                      ·   Excessive Collisions - A count of frames for which transmission on a particular interface
+                          fails due to excessive collisions.
+                      ·   Port Membership Discards - The number of frames discarded on egress for this port due
+                          to egress filtering being enabled.
+
+Protocol Statistics   ·   802.3x Pause Frames Transmitted - A count of MAC Control frames transmitted on this
+                          interface with an opcode indicating the PAUSE operation. This counter does not increment
+                          when the interface is operating in half-duplex mode.
+                      ·   GVRP PDUs Received - The count of GVRP PDUs received in the GARP layer.
+                      ·   GVRP PDUs Transmitted - The count of GVRP PDUs transmitted from the GARP layer.
+                      ·   GVRP Failed Registrations - The number of times attempted GVRP registrations could
+                          not be completed.
+                      ·   GMRP PDUs Received - The count of GMRP PDUs received in the GARP layer.
+                      ·   GMRP PDUs Transmitted - The count of GMRP PDUs transmitted from the GARP layer.
+                      ·   GMRP Failed Registrations - The number of times attempted GMRP registrations could
+                          not be completed.
+                      ·   STP BPDUs Transmitted - Spanning Tree Protocol Bridge Protocol Data Units sent.
+                      ·   STP BPDUs Received - Spanning Tree Protocol Bridge Protocol Data Units received.
+                      ·   RST BPDUs Transmitted - Rapid Spanning Tree Protocol Bridge Protocol Data Units
+                          sent.
+                      ·   RSTP BPDUs Received - Rapid Spanning Tree Protocol Bridge Protocol Data Units
+                          received.
+                      ·   MSTP BPDUs Transmitted - Multiple Spanning Tree Protocol Bridge Protocol Data Units
+                          sent.
+                      ·   MSTP BPDUs Received - Multiple Spanning Tree Protocol Bridge Protocol Data Units
+                          received.
+
+Dot1x Statistics      ·   EAPOL Frames Transmitted - The number of EAPOL frames of any type that have been
+                          transmitted by this authenticator.
+                      ·   EAPOL Frames Received - The number of valid EAPOL frames of any type that have
+                          been received by this authenticator.
+
+Time Since            The elapsed time, in days, hours, minutes, and seconds since the statistics for this port were
+Counters Last         last cleared.
+Cleared
+
+                                            Utility Commands
+                                                  341
+

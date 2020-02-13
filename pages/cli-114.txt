@@ -1,0 +1,43 @@
+                           M4100 Series ProSAFE Managed Switches
+
+lacp partner admin key
+Use this command to configure the administrative value of the key for the protocol partner.
+The valid range for <key> is 0­65535.
+
+ Default      0x0
+
+ Format       lacp partner admin key <key>
+
+ Mode         Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp partner admin key
+
+Use this command to set the administrative value of the key for the protocol partner to the
+default.
+
+ Format       no lacp partner admin key
+
+ Mode         Interface Config
+
+lacp partner admin state individual
+Use this command to set LACP partner admin state to individual.
+
+ Format       lacp partner admin state individual
+
+ Mode         Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp partner admin state individual
+
+Use this command to set the LACP partner admin state to aggregation.
+
+ Format       no lacp partner admin state individual
+
+ Mode         Interface Config
+
+                                      Switching Commands
+                                        114
+

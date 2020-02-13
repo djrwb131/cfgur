@@ -1,0 +1,53 @@
+                            M4100 Series ProSAFE Managed Switches
+
+dot1x system-auth-control monitor
+Use this command to enable the 802.1X monitor mode on the switch. The purpose of Monitor
+mode is to help troubleshoot port-based authentication configuration issues without
+disrupting network access for hosts connected to the switch. In Monitor mode, a host is
+granted network access to an 802.1X-enabled port even if it fails the authentication process.
+The results of the process are logged for diagnostic purposes.
+
+ Format       dot1x system-auth-control monitor
+
+ Mode         Global Config
+
+ Default      Disabled
+
+no dot1x system-auth-control monitor
+
+Use this command to disable the 802.1X monitor on the switch.
+
+ Format       no dot1x system-auth-control monitor
+
+ Mode         Global Config
+
+show dot1x authentication-history
+This command displays 802.1X authentication events and information during successful and
+unsuccessful Dot1x authentication process for all interfaces or the specified interface. Use
+the optional keywords to display only failure authentication events in summary or in detail.
+
+ Format       show dot1x authentication-history {slot/port | all}
+              [failedauth-only] [detail]
+
+ Mode         Privileged EXEC
+
+ Term            Definition
+
+ Time Stamp      The exact time at which the event occurs.
+
+ Interface       Physical Port on which the event occurs.
+
+ Mac-Address     The supplicant/client MAC address.
+
+ VLAN assigned   The VLAN assigned to the client/port on authentication.
+
+ VLAN assigned   The type of VLAN ID assigned, which can be Guest VLAN, Unauth, Default, RADIUS
+ Reason          Assigned, or Monitor Mode VLAN ID.
+
+ Auth Status     The authentication status.
+
+ Reason          The actual reason behind the successful or failed authentication.
+
+                                     Switching Commands
+                                            88
+

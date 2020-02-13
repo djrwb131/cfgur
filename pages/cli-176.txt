@@ -1,0 +1,55 @@
+                           M4100 Series ProSAFE Managed Switches
+
+set mld querier query_interval
+Use this command to set the MLD Querier Query Interval time. This is the amount of time in
+seconds that the switch waits before sending another general query.
+
+ Default       disabled
+
+ Format        set mld querier query_interval <1-18000>
+
+ Mode          Global Config
+
+no set mld querier query_interval
+
+Use this command to set the MLD Querier Query Interval time to its default value.
+
+ Format        no set mld querier query_interval
+
+ Mode          Global Config
+
+set mld querier timer expiry
+Use this command to set the MLD Querier timer expiration period. This is the time period that
+the switch remains in Non-Querier mode once it discovers that there is a Multicast Querier in
+the network.
+
+ Default       60 seconds
+
+ Format        set mld querier timer expiry <60-300>
+
+ Mode          Global Config
+
+no set mld querier timer expiry
+
+Use this command to set the MLD Querier timer expiration period to its default value.
+
+ Format        no set mld querier timer expiry
+
+ Mode          Global Config
+
+set mld querier election participate
+Use this command to enable the Snooping Querier to participate in the Querier Election
+process when it discovers the presence of another Querier in the VLAN. When this mode is
+enabled, if the Snooping Querier finds that the other Querier's source address is better (less)
+than the Snooping Querier's address, it stops sending periodic queries. If the Snooping
+Querier wins the election, then it will continue sending periodic queries.
+
+ Default       disabled
+
+ Format        set mld querier election participate
+
+ Mode          VLAN Config
+
+                                  Switching Commands
+                                     176
+

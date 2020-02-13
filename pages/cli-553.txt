@@ -1,0 +1,54 @@
+                               M4100 Series ProSAFE Managed Switches
+
+    Table 51. PIM-DM Log Messages
+
+     Component      Message                                   Cause
+
+     PIM-DM         Out of memory when creating xxx           This message is logged when there is
+                                                              insufficient memory to accommodate a new
+                                                              neighbor/(S,G) Entry, Prune, Graft, Join
+                                                              etc.
+
+     PIM-DM         Error entry->ll_xxx LL creation error     This message is logged when the SLL
+                                                              creation is Failed.
+
+     PIM-DM         pim_interface_set: Could not give         This message is logged when Task
+                    taskSema                                  synchronization Semaphore release fails.
+
+     PIM-DM         Error initializing CACHE                  This message is logged when the PIM-DM
+                                                              (S,G) entry Cache table initialization fails.
+
+     PIM-DM         Error creating PIM-DM pipe                This message is logged when the PIM-DM
+                                                              Pipe (that receives control messages)
+                                                              creation fails.
+
+    Table 52. DVMRP Log Messages
+
+     Component      Message                                   Cause
+
+     DVMRP          dvmrp_send_graft: failed getting memory   Failed to allocate memory while sending a
+                    for graft                                 graft
+
+     DVMRP          dvmrp_register_neighbor: failed getting   Failed to allocate memory while registering
+                    memory for nbr                            a neighbor
+
+     DVMRP          dvmrp_recv_prune: failed getting memory   Failed to allocate memory while receiving a
+                    for prune                                 prune
+
+     DVMRP          dvmrp_new_route: failed getting memory    Failed to get memory for a new route entry
+                    for route
+
+     DVMRP          dvmrp_prepare_routes: failed getting      Failed to get memory while announcing a
+                    memory for dvmrp_ann_rt                   new route entry
+
+Stacking
+
+    Table 53. EDB Log Message
+
+     Component      Message                                   Cause
+
+     EDB            EDB Callback: Unit Join: <num>.           Unit <num> has joined the stack.
+
+                                             Log Messages
+                                                  553
+

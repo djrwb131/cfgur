@@ -1,0 +1,50 @@
+                          M4100 Series ProSAFE Managed Switches
+
+lldp med confignotification
+Use this command to configure all the ports to send the topology change notification.
+
+ Default     enabled
+
+ Format      lldp med confignotification
+
+ Mode        Interface Config
+
+no ldp med confignotification
+
+Use this command to disable notifications.
+
+ Format      no lldp med confignotification
+
+ Mode        Interface Config
+
+lldp med transmit-tlv
+Use this command to specify which optional Type Length Values (TLVs) in the LLDP MED
+set will be transmitted in the Link Layer Discovery Protocol Data Units (LLDPDUs).
+
+ Default     By default, the capabilities and network policy TLVs are included.
+
+ Format      lldp med transmit-tlv [capabilities] [ex-pd] [ex-pse] [inventory]
+             [location] [network-policy]
+
+ Mode        Interface Config
+
+ Parameter       Definition
+
+ capabilities    Transmit the LLDP capabilities TLV.
+
+ ex-pd           Transmit the LLDP extended PD TLV.
+
+ ex-pse          Transmit the LLDP extended PSE TLV.
+
+ inventory       Transmit the LLDP inventory TLV.
+
+ location        Transmit the LLDP location TLV.
+
+ network-policy  Transmit the LLDP network policy TLV.
+
+    Note: The current implementation supports one network policy: the voice
+           VLAN as defined by the voice vlan commands.
+
+                               Switching Commands
+                                           192
+

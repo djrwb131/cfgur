@@ -1,0 +1,54 @@
+                            M4100 Series ProSAFE Managed Switches
+
+set igmp groupmembership-interval
+This command sets the IGMP Group Membership Interval time on a VLAN, one interface, or
+all interfaces. The Group Membership Interval time is the amount of time in seconds that a
+switch waits for a report from a particular group on a particular interface before deleting the
+interface from the entry. This value must be greater than the IGMPv3 Maximum Response
+time value. The range is 2­3600 seconds.
+
+ Default       260 seconds
+
+ Format        set igmp groupmembership-interval <2-3600>
+
+ Mode          ·   Interface Config
+               ·   Global Config
+
+ Format        set igmp groupmembership-interval <vlan id> <2-3600>
+
+ Mode          VLAN Config
+
+no set igmp groupmembership-interval
+
+This command sets the IGMPv3 Group Membership Interval time to the default value.
+
+ Format        no set igmp groupmembership-interval
+
+ Mode          ·   Interface Config
+               ·   Global Config
+
+ Format        no set igmp groupmembership-interval <vlan id>
+
+ Mode          VLAN Config
+
+set igmp maxresponse
+This command sets the IGMP Maximum Response time for the system, or on a particular
+interface or VLAN. The Maximum Response time is the amount of time in seconds that a
+switch will wait after sending a query on an interface because it did not receive a report for a
+particular group in that interface. This value must be less than the IGMP Query Interval time
+value. The range is 1­25 seconds.
+
+ Default       10 seconds
+
+ Format        set igmp maxresponse <1-25>
+
+ Mode          ·   Global Config
+               ·   Interface Config
+
+ Format        set igmp maxresponse <vlan id> <1-25>
+
+ Mode          VLAN Config
+
+                                    Switching Commands
+                                         157
+

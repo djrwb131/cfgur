@@ -1,0 +1,32 @@
+1. Using the Command-Line Interface                                                     1
+
+   The command-line interface (CLI) is a text-based way to manage and monitor the system. You
+   can access the CLI by using a direct serial connection or by using a remote logical connection
+   with telnet or SSH.
+   This chapter describes the CLI syntax, conventions, and modes. It contains the following
+   sections:
+      ·   Command Syntax
+      ·   Command Conventions
+      ·   Common Parameter Values
+      ·   Slot/Port Naming Convention
+      ·   Using a Command's "No" Form
+      ·   Managed Switch Modules
+      ·   Command Modes
+      ·   Command Completion and Abbreviation
+      ·   CLI Error Messages
+      ·   CLI Line-Editing Conventions
+      ·   Using CLI Help
+      ·   Accessing the CLI
+
+          Note: For more information about the topics covered in this manual, visit the
+                 support website at support.netgear.com.
+
+          Note: Firmware updates with new features and bug fixes are made
+                 available from time to time at downloadcenter.netgear.com. Some
+                 products can regularly check the site and download new firmware, or
+                 you can check for and download new firmware manually. If the
+                 features or behavior of your product does not match what is
+                 described in this guide, you might need to update your firmware.
+
+                                              7
+

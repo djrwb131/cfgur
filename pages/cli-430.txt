@@ -1,0 +1,44 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Field            Description
+
+ Address Type     The sFlow receiver IP address type. For an IPv4 address, the value is 1 and for an IPv6
+                  address, the value is 2.
+
+ Datagram         The sFlow protocol version to be used while sending samples to sFlow receiver.
+ Version
+
+Command example:
+(NETGEAR Switch) #show sflow receivers 1
+Receiver Index................................. 1
+Owner String...................................
+Time out....................................... 0
+IP Address:.................................... 0.0.0.0
+Address Type................................... 1
+Port........................................... 6343
+Datagram Version............................... 5
+Maximum Datagram Size.......................... 1400
+
+show sflow samplers
+Use this command to display the sFlow sampling instances created on the switch.
+
+ Format         show sflow samplers
+
+ Mode           Privileged EXEC
+
+ Field            Description
+
+ Sampler Data     The sFlowDataSource (slot/port) for this sFlow sampler. This agent will support Physical
+ Source           ports only.
+
+ Receiver Index   The sFlowReceiver configured for this sFlow sampler.
+
+ Packet Sampling  The statistical sampling rate for packet sampling from this source.
+ Rate
+
+ Max Header Size The maximum number of bytes that should be copied from a sampled packet to form a
+                  flow sample.
+
+                                           Utility Commands
+                                           430
+

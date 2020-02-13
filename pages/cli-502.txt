@@ -1,0 +1,52 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no radius accounting mode
+
+Use this command to set the RADIUS accounting function to the default value (disabled).
+
+ Format       no radius accounting mode
+
+ Mode         Global Config
+
+radius server attribute
+Use this command to specify the RADIUS client to use the NAS-IP Address attribute in the
+RADIUS requests. If the specific IP address is configured while enabling this attribute, the
+RADIUS client uses that IP address while sending NAS-IP-Address attribute in RADIUS
+communication.
+
+ Format       radius server attribute 4 [<ipaddr>]
+
+ Mode         Global Config
+
+ Parameter     Definition
+
+ 4             NAS-IP-Address attribute to be used in RADIUS requests.
+
+ ipaddr        The IP address of the server.
+
+no radius server attribute
+
+Use this command to disable the NAS-IP-Address attribute global parameter for RADIUS
+client. When this parameter is disabled, the RADIUS client does not send the
+NAS-IP-Address attribute in RADIUS requests.
+
+ Format       no radius server attribute 4 [<ipaddr>]
+
+ Mode         Global Config
+
+Command example:
+(NETGEAR Switch) (Config) #radius server attribute 4  192.168.37.60
+
+Command example:
+(NETGEAR Switch) (Config) #radius server attribute 4
+
+radius server host
+This command configures the IP address or DNS name to use for communicating with the
+RADIUS server of a selected server type. While configuring the IP address or DNS name for
+the authenticating or accounting servers, you can also configure the port number and server
+name. If the authenticating and accounting servers are configured without a name, the
+command uses the Default_RADIUS_Auth_Server and Default_RADIUS_Acct_Server as the
+
+                                 Management Commands
+                                              502
+

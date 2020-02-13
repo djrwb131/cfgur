@@ -1,0 +1,55 @@
+                         M4100 Series ProSAFE Managed Switches
+
+Command example:
+(NETGEAR Switch) #debug igmpsnooping packet receive
+<15> JAN 01 02:45:06 192.168.17.29-1 IGMPSNOOP[185429992]: igmp_snooping_debug.c(116)
+908 % Pkt RX - Intf: 0/20(20), Vlan_Id:1 Src_Mac: 00:03:0e:00:00:10 Dest_Mac:
+01:00:5e:00:00:05 Src_IP: 11.1.1.1 Dest_IP: 225.0.0.5 Type: Membership_Query Group:
+225.0.0.5
+
+The parameters that are shown in the following table are displayed in the trace message.
+
+ Parameter    Definition
+
+ RX           A packet received by the device.
+
+ Intf         The interface that the packet went out on. Format used is slot/port (internal interface
+              number). Unit is always shown as 1 for interfaces on a non-stacking device.
+
+ Src_Mac      Source MAC address of the packet.
+
+ Dest_Mac     Destination multicast MAC address of the packet.
+
+ Src_IP       The source IP address in the ip header in the packet.
+
+ Dest_IP      The destination multicast ip address in the packet.
+
+ Type         The type of IGMP packet. Type can be one of the following:
+              ·   Membership Query. IGMP Membership Query
+              ·   V1_Membership_Report. IGMP Version 1 Membership Report
+              ·   V2_Membership_Report. IGMP Version 2 Membership Report
+              ·   V3_Membership_Report. IGMP Version 3 Membership Report
+              ·   V2_Leave_Group. IGMP Version 2 Leave Group
+
+ Group        Multicast group address in the IGMP header.
+
+no debug igmpsnooping receive
+
+This command disables tracing of received IGMP Snooping packets.
+
+ Format       no debug igmpsnooping receive
+
+ Mode         Privileged EXEC
+
+debug ip acl
+Use this command to enable debug of IP Protocol packets matching the ACL criteria.
+
+ Default      disabled
+
+ Format       debug ip acl <acl-number>
+
+ Mode         Privileged EXEC
+
+                                 Utility Commands
+                                               408
+

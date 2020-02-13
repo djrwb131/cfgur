@@ -1,0 +1,53 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ Parameter         Description
+
+ remote            In remote capture mode, the captured packets are redirected in real time to an
+                   external computer running the Wireshark tool for Microsoft® Windows®. A packet
+                   capture server runs on the switch side and sends the captured packets via a TCP
+                   connection to the Wireshark tool. The remote capture can be enabled or disabled
+                   using the CLI. There should be a Windows computer with the Wireshark tool to display
+                   the captured file. When using the remote capture mode, the switch does not store any
+                   captured data locally on its file system. You can configure the IP port number for
+                   connecting Wireshark to the switch. The default port number is 2002. If a firewall is
+                   installed between the Wireshark PC and the switch, these ports must be allowed to
+                   pass through the firewall. You must configure the firewall to allow the Wireshark
+                   computer to initiate TCP connections to the switch. If the socket connection to
+                   Wireshark has been established, the captured CPU packets are written to the data
+                   socket. Wireshark receives the packets and processes it to display. This continues
+                   until the session is terminated by either end. Starting a remote capture session
+                   automatically terminates the file capture and line capturing.
+
+ line              In capture line mode, the captured packets are saved in real-time mode into the RAM
+                   and can be displayed on the CLI. Starting a line capture automatically terminates any
+                   remote capture session and capturing into a file.
+
+no capture
+
+Use this command to reset the capture mode to remote mode.
+
+ Format       no capture
+
+ Mode         Global Config
+
+capture remote port
+Use this command to configure file capture options. The command is persistent across a
+reboot cycle.
+
+ Default      2002
+
+ Format       capture remote port <port-id>
+
+ Mode         Global Config
+
+no capture remote port
+
+Use this command to reset the remote port to the default (2002).
+
+ Format       no capture report port
+
+ Mode         Global Config
+
+                                      Utility Commands
+                                         401
+

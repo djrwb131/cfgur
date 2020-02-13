@@ -1,0 +1,57 @@
+                           M4100 Series ProSAFE Managed Switches
+
+rmon hcalarm
+This command sets the RMON hcalarm entry in the High Capacity RMON alarm MIN group.
+
+ Format      rmon hcalarm <alarm-number> <variable> <sample-interval>
+             <sampling-type> {rising-threshold high <value>} {rising-threshold
+             low <value>} {falling-threshold high <value>} {falling-threshold low
+             <value>} [startup {rising | falling | rising-falling}] [owner
+             <string>]
+
+ Mode        Global Config
+
+ Parameter                     Description
+
+ <alarm-number>                The identifier of the hcalarm instance.
+
+ <variable>                    The object identifier of the particular variable to be sampled. Only
+                               variables that resolve to an ASN.1 primitive type of integer.
+
+ <sample-interval>             The interval in seconds over which the data is sampled and
+                               compared with the rising and falling thresholds. The range is 1to
+                               2147483647.
+
+ <sampling-type>larm Sample    The method of sampling the selected variable and calculating the
+ Type                          value to be compared against thresholds. Possible types are
+                               Absolute or Delta.
+
+ rising-threshold high         High capacity alarm rising threshold absolute value high. The upper
+ <value>                       32 bits of the absolute value for threshold for the sampled statistics.
+
+ rising-threshold low          High capacity alarm rising threshold absolute value low. The lower
+ <value>                       32 bits of the absolute value for threshold for the sampled statistics.
+
+ falling-threshold high        High capacity alarm falling threshold absolute value high. The upper
+ <value>                       32 bits of the absolute value for threshold for the sampled statistic.
+
+ falling-threshold low         High capacity alarm falling threshold absolute value high. The upper
+ <value>                       32 bits of the absolute value for threshold for the sampled statistic.
+
+ [startup {rising | falling |  High capacity alarm startup alarm that may be sent. Possible values
+ rising-falling}]              are Rising Alarm, Falling Alarm or both.
+
+ [owner <string>]              High capacity alarm owner. The owner string associated with the
+                               entry.
+
+no rmon hcalarm
+
+This command deletes the RMON hcalarm entry.
+
+ Format      no rmon hcalarm <alarm number>
+
+ Mode        Global Config
+
+                                   Utility Commands
+                                           434
+

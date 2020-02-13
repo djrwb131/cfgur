@@ -1,0 +1,49 @@
+                          M4100 Series ProSAFE Managed Switches
+
+no snmp-server enable traps stpmode
+
+Use this command to disable sending new root traps and topology change notification traps.
+
+ Format     no snmp-server enable traps stpmode
+
+ Mode       Global Config
+
+snmptrap
+Use this command to add an SNMP trap receiver. The maximum length of <name> is
+16 case-sensitive alphanumeric characters. The <snmpversion> is the version of SNMP.
+The version parameter options are SNMPv1 or SNMPv2. The SNMP trap address can be set
+using both an IPv4 address format as well as an IPv6 global address format.
+The <name> parameter does not need to be unique. However, the combination of the name
+and IP address or host name must be unique. Multiple entries can exist with the same
+<name> parameter, as long as they are associated with a different IP address or host name.
+The reverse scenario is also acceptable. The <name> parameter is the community name that
+is used when the trap is sent to the receiver, but the <name> parameter is not directly
+associated with the SNMP Community Table (see snmp-server community on page 491).
+
+ Default    snmpv2
+
+ Format     snmptrap <name> {ipaddr {<ipaddr> | <hostname> | ip6addr {<ip6addr>
+            | <hostname>} [snmpversion <snmpversion>]
+
+ Mode       Global Config
+
+Command example:
+(Netgear Switch)# snmptrap mytrap ip6addr 3099::2
+
+no snmptrap
+
+Use this command to delete trap receivers for a community.
+
+ Format     no snmptrap <name> {ipaddr {<ipaddr> | <hostname> | ip6addr
+            {<ip6addr> | <hostname>}
+
+ Mode       Global Config
+
+snmptrap snmpversion
+Use this command to modify the SNMP version of a trap. The maximum length of <name> is
+16 case-sensitive alphanumeric characters. The <snmpversion> parameter options are
+snmpv1 or snmpv2.
+
+                               Management Commands
+                                       496
+

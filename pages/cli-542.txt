@@ -1,0 +1,59 @@
+                             M4100 Series ProSAFE Managed Switches
+
+Table 22. IP Subnet VLANS Log Messages
+
+ Component         Message                                     Cause
+
+ IPsubnet vlans    ERROR vlanIpSubnetSubnetValid :Invalid      Occurs when an invalid pair of subnet and
+                   subnet                                      netmask has come from the CLI
+
+ IPsubnet vlans    IP Subnet Vlans: failed to save             This message appears when save
+                   configuration                               configuration of subnet vlans failed
+
+ IPsubnet vlans    vlanIpSubnetCnfgrInitPhase1Process:         Appears when a read/write lock creations
+                   Unable to create r/w lock for vlanIpSubnet  fails
+
+ IPsubnet vlans    vlanIpSubnetCnfgrInitPhase2Process:         Appears when this component unable to
+                   Unable to register for VLAN change          register for VLAN change notifications
+                   callback
+
+ IPsubnet vlans    vlanIpSubnetCnfgrFiniPhase1Process:         Appears when a semaphore deletion of this
+                   could not delete avl semaphore              component fails.
+
+ IPsubnet vlans    vlanIpSubnetDtlVlanCreate: Failed           Appears when a dtl call fails to add an entry
+                                                               into the table
+
+ IPsubnet vlans    vlanIpSubnetSubnetDeleteApply: Failed       Appears when a dtl fails to delete an entry
+                                                               from the table
+
+ IPsubnet vlans    vlanIpSubnetVlanChangeCallback: Failed      Appears when a dtl fails to add an entry for
+                   to add an Entry                             a VLAN add notify event.
+
+ IPsubnet vlans    vlanIpSubnetVlanChangeCallback: Failed      Appears when a dtl fails to delete an entry
+                   to delete an Entry                          for a VLAN delete notify event.
+
+Table 23. Mac-based VLANs Log Messages
+
+ Component         Message                                     Cause
+
+ Mac based         MAC VLANs: Failed to save configuration     This message appears when save
+ VLANS                                                         configuration of Mac VLANs failed
+
+ Mac based         vlanMacCnfgrInitPhase1Process: Unable       Appears when a read/write lock creations
+ VLANS             to create r/w lock for vlanMac              fails
+
+ Mac based         Unable to register for VLAN change          Appears when this component unable to
+ VLANS             callback                                    register for VLAN change notifications
+
+ Mac based         vlanMacCnfgrFiniPhase1Process: could        Appears when a semaphore deletion of this
+ VLANS             not delete avl semaphore                    component fails.
+
+ Mac based         vlanMacAddApply: Failed to add an entry     Appears when a dtl call fails to add an entry
+ VLANS                                                         into the table
+
+ Mac based         vlanMacDeleteApply: Unable to delete an     Appears when a dtl fails to delete an entry
+ VLANS             Entry                                       from the table
+
+                                             Log Messages
+                                                   542
+

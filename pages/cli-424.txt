@@ -1,0 +1,45 @@
+                        M4100 Series ProSAFE Managed Switches
+
+no debug udld packet transmit
+
+This command enables debugging on the transmitted UDLD PDUs.
+
+ Format     debug udld packet transmit
+
+ Mode       Privileged EXEC
+
+debug aaa accounting
+This command is useful for debugging accounting configuration and functionality in User
+Manager.
+
+ Format     debug aaa accounting
+
+ Mode       Privileged EXEC
+
+no debug aaa accounting
+
+Use this command to turn off debugging of User Manager accounting functionality.
+
+ Format     no debug aaa accounting
+
+ Mode       Privileged EXEC
+
+debug aaa authorization
+This command is useful for debugging authorization configuration and functionality in User
+Manager.
+
+ Format     debug aaa authorization [commands | exec]
+
+ Mode       Privileged EXEC
+
+no debug aaa authorization
+
+Use this command to turn off debugging of User Manager authorization functionality.
+
+ Format     no debug aaa authorization
+
+ Mode       Privileged EXEC
+
+                                 Utility Commands
+                                       424
+

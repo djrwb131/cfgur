@@ -1,0 +1,45 @@
+                         M4100 Series ProSAFE Managed Switches
+
+lacp partner port id
+Use this command to configure the LACP partner port id. The valid range for <port-id> is
+0­65535.
+
+ Default    0x80
+
+ Format     lacp partner portid <port-id>
+
+ Mode       Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp partner port id
+
+Use this command to set the LACP partner port id to the default.
+
+ Format     no lacp partner portid
+
+ Mode       Interface Config
+
+lacp partner port priority
+Use this command to configure the LACP partner port priority. The valid range for
+<priority> is 0­255.
+
+ Default    0x0
+
+ Format     lacp partner port priority <priority>
+
+ Mode       Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp partner port priority
+
+Use this command to configure the default LACP partner port priority.
+
+ Format     no lacp partner port priority
+
+ Mode       Interface Config
+
+                                 Switching Commands
+                                       116
+

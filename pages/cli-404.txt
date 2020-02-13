@@ -1,0 +1,52 @@
+                         M4100 Series ProSAFE Managed Switches
+
+no debug auto-voip
+
+Use this command to disable Auto VoIP debug messages.
+
+ Format      no debug auto-voip
+
+ Mode        Privileged EXEC
+
+debug clear
+This command disables all previously enabled debug traces.
+
+ Default     disabled
+
+ Format      debug clear
+
+ Mode        Privileged EXEC
+
+debug console
+This command enables the display of debug trace output on the login session in which it is
+executed. Debug console display must be enabled in order to view any trace output. The
+output of debug trace commands will appear on all login sessions for which debug console
+has been enabled. The configuration of this command remains in effect for the life of the login
+session. The effect of this command is not persistent across resets.
+
+ Default     disabled
+
+ Format      debug console
+
+ Mode        Privileged EXEC
+
+no debug console
+
+This command disables the display of "debug" trace output on the login session in which it is
+executed.
+
+ Format      no debug console
+
+ Mode        Privileged EXEC
+
+debug crashlog
+Use this command to view information contained in the crash log file that the system
+maintains when it experiences an unexpected reset. The crash log file contains the following
+information:
+·   Call stack information in both primitive and verbose forms
+·   Log Status
+·   Buffered logging
+
+                                  Utility Commands
+                                         404
+

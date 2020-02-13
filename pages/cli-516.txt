@@ -1,0 +1,51 @@
+                           M4100 Series ProSAFE Managed Switches
+
+tacacs-server source interface
+Use this command in Global Configuration mode to configure the global source interface
+(source IP selection) for all TACACS+ communications between the TACACS+ client and the
+server.
+
+ Format      tacacs-server source-interface {<slot/port> | loopback <loopback-id>
+             | vlan <vlan-id>}
+
+ Mode        Global Config
+
+ Parameter        Description
+
+ <slot/port       The unit identifier assigned to the switch.
+
+ <loopback-id     The loopback interface. The range is 0­7.
+
+ <vlan-id>        The VLAN ID. The range is 1­4,093.
+
+no tacacs-server source interface
+
+Use this command in Global Configuration mode to remove the global source interface
+(source IP selection) for all TACACS+ communications between the TACACS+ client and the
+server.
+
+ Format      no tacacs-server source-interface
+
+ Mode        Privileged Exec
+
+tacacs-server timeout
+Use this command to set the timeout value for communication with the TACACS+ servers.
+The <timeout> parameter has a range of 1-30 and is the time-out value in seconds.
+
+ Default     5
+
+ Format      tacacs-server timeout <timeout>
+
+ Mode        Global Config
+
+no tacacs-server timeout
+
+Use this command to restore the default time-out value for all TACACS servers.
+
+ Format      no tacacs-server timeout
+
+ Mode        Global Config
+
+                                Management Commands
+                                        516
+

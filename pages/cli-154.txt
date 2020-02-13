@@ -1,0 +1,47 @@
+                                   M4100 Series ProSAFE Managed Switches
+
+     Term               Definition
+
+     Rate Limit         The configured rate limit value in packets per second.
+
+     Burst Interval     The configured burst interval value in seconds.
+
+    Command example:
+    (NETGEAR Switch) #show ip arp inspection interfaces
+
+     Interface         Trust State       Rate Limit    Burst Interval
+                                               (pps)     (seconds)
+     ---------------    -----------        ----------    ---------------
+     0/1                Untrusted                   15                         1
+     0/2                Untrusted                   10                         10
+
+   show arp access-list
+   Use this command to display the configured ARP ACLs with the rules. Giving an ARP ACL
+   name as the argument will display only the rules in that ARP ACL.
+
+     Format          show arp access-list [<acl-name>]
+
+     Mode            ·   Privileged EXEC
+                     ·   User EXEC
+
+    Command example:
+    (NETGEAR Switch) #show arp access-list
+
+    ARP access list H2
+         permit ip host 1.1.1.1 mac host 00:01:02:03:04:05
+         permit ip host 1.1.1.2 mac host 00:03:04:05:06:07
+    ARP access list H3
+    ARP access list H4
+         permit ip host 2.1.1.2 mac host 00:03:04:05:06:08
+
+IGMP Snooping Configuration Commands
+
+   This section describes the commands you use to configure IGMP snooping. The software
+   supports IGMP Versions 1, 2, and 3. The IGMP snooping feature can help conserve
+   bandwidth because it allows the switch to forward IP multicast traffic only to connected hosts
+   that request multicast traffic. IGMPv3 adds source filtering capabilities to IGMP versions 1
+   and 2.
+
+                                             Switching Commands
+                                                     154
+

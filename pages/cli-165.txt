@@ -1,0 +1,52 @@
+                              M4100 Series ProSAFE Managed Switches
+
+set igmp querier query-interval
+Use this command to set the IGMP Querier Query Interval time. It is the amount of time in
+seconds that the switch waits before sending another general query.
+
+ Default       disabled
+
+ Format        set igmp querier query-interval <1-18000>
+
+ Mode          Global Config
+
+no set igmp querier query-interval
+
+Use this command to set the IGMP Querier Query Interval time to its default value.
+
+ Format        no set igmp querier query-interval
+
+ Mode          Global Config
+
+set igmp querier timer expiry
+Use this command to set the IGMP Querier timer expiration period. It is the time period that
+the switch remains in Non-Querier mode once it has discovered that there is a Multicast
+Querier in the network.
+
+ Default       60 seconds
+
+ Format        set igmp querier timer expiry <60-300>
+
+ Mode          Global Config
+
+no set igmp querier timer expiry
+
+Use this command to set the IGMP Querier timer expiration period to its default value.
+
+ Format        no set igmp querier timer expiry
+
+ Mode          Global Config
+
+set igmp querier version
+Use this command to set the IGMP version of the query that the snooping switch is going to
+send periodically.
+
+ Default       1
+
+ Format        set igmp querier version <1-2>
+
+ Mode          Global Config
+
+                                  Switching Commands
+                                       165
+

@@ -1,0 +1,49 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Default       2
+
+ Format        passwords strength minimum uppercase-letters <number>
+
+ Mode          Global Config
+
+no passwords strength minimum uppercase-letters
+
+Use this command to reset the minimum number of uppercase letters to the default value.
+
+ Format        no passwords strength minimum uppercase-characters
+
+ Mode          Global Config
+
+passwords strength minimum lowercase-letters
+Use this command to enforce a minimum number of lowercase letters that a password should
+contain. The valid range is 0-16. The default is 2. Minimum of 0 means no restriction on that
+set of characters.
+
+ Default       2
+
+ Format        passwords strength minimum lowercase-letters <number>
+
+ Mode          Global Config
+
+no passwords strength minimum lowercase-letters
+
+Use this command to reset the minimum number of lowercase letters to the default value.
+
+ Format        no passwords strength minimum lowercase-characters
+
+ Mode          Global Config
+
+passwords strength minimum numeric-characters
+Use this command to enforce a minimum number of numeric characters that a password
+should contain. The valid range is 0-16. The default is 2. Minimum of 0 means no restriction
+on that set of characters.
+
+ Default       2
+
+ Format        passwords strength minimum numeric-letters <number>
+
+ Mode          Global Config
+
+                                     Management Commands
+                                              476
+

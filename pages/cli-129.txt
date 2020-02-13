@@ -1,0 +1,48 @@
+                               M4100 Series ProSAFE Managed Switches
+
+Static MAC Filtering Commands
+
+   The commands in this section describe how to configure static MAC filtering. Static MAC
+   filtering allows you to configure destination ports for a static multicast MAC filter irrespective
+   of the platform.
+
+   macfilter
+   This command adds a static MAC filter entry for the MAC address <macaddr> on the VLAN
+   <vlanid>. A packet with a specific destination MAC address in a specific VLAN is admitted
+   only if the ingress port is defined in the set of source ports, otherwise the packet is dropped.
+   On the egress side, a packet that was admitted is sent through all ports that are defined in
+   the set of destination ports.
+   The value of the <macaddr> parameter is a 6-byte hexadecimal number in the format of
+   b1:b2:b3:b4:b5:b6. The following MAC addresses are restricted: 00:00:00:00:00:00,
+   01:80:C2:00:00:00 to 01:80:C2:00:00:0F, 01:80:C2:00:00:20 to 01:80:C2:00:00:21, and
+   FF:FF:FF:FF:FF:FF. The <vlanid> parameter must identify a valid VLAN.
+   The number of static mac filters supported on the system is different for MAC filters where
+   source ports are configured and MAC filters where destination ports are configured.
+   ·   For unicast MAC address filters and multicast MAC address filters with source port lists,
+       the maximum number of static MAC filters supported is 20.
+   ·   For multicast MAC address filters with destination ports configured, the maximum number
+       of static filters supported is 256.
+   For example, for current platforms you can configure the following combinations:
+   ·   Unicast MAC and source port (max = 20)
+   ·   Multicast MAC and source port (max=20)
+   ·   Multicast MAC and destination port (only) (max=256)
+   ·   Multicast MAC and source ports and destination ports (max=20)
+
+     Format     macfilter <macaddr> <vlanid>
+
+     Mode       Global Config
+
+   no macfilter
+
+   This command removes all filtering restrictions and the static MAC filter entry for the MAC
+   address <macaddr> on the VLAN <vlanid>. The <macaddr> parameter must be specified
+   as a 6-byte hexadecimal number in the format of b1:b2:b3:b4:b5:b6.
+   The <vlanid> parameter must identify a valid VLAN.
+
+     Format     no macfilter <macaddr> <vlanid>
+
+     Mode       Global Config
+
+                                        Switching Commands
+                                                 129
+

@@ -1,0 +1,55 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Parameter                              Description
+
+ assign-queue <queue-id>                Specifies the assign-queue, which is the queue identifier to
+                                        which packets matching this rule are assigned.
+
+ [{mirror | redirect} [lag              Specifies the mirror or redirect interface which is the
+ <lag-group-id> | <slot/port>]          <lag-group-id> or <slot/port> to which packets
+                                        matching this rule are copied or forwarded, respectively.
+
+ip access-group
+This command either attaches a specific IP ACL identified by <accesslistnumber> to an
+interface or associates with a VLAN ID in a specific direction. The parameter <name> is the
+name of the access control list.
+An optional sequence number might be specified to indicate the order of this IP access list
+relative to other IP access lists already assigned to this interface and direction. A lower
+number indicates higher precedence order. If a sequence number is already in use for this
+interface and direction, the specified access list replaces the currently attached IP access list
+using that sequence number. If the sequence number is not specified for this command, a
+sequence number that is one greater than the highest sequence number currently in use for
+this interface and direction is used.
+
+ Default      none
+
+ Format       ip access-group {<accesslistnumber> | <name>} {in | {vlan <vlan-id>
+              in}} [sequence <1-4294967295>]
+
+ Modes        · Interface Config
+              · Global Config
+
+no ip access-group
+
+This command removes a specified IP ACL from an interface.
+
+ Default      none
+
+ Format       no ip access-group {<accesslistnumber> | <name>} {in | {vlan
+              <vlan-id> in}}
+
+ Mode         · Interface Config
+              · Global Config
+
+acl-trapflags
+This command enables the ACL trap mode.
+
+ Default      disabled
+
+ Format       acl-trapflags
+
+ Mode         Global Config
+
+                                 Quality of Service Commands
+                                             303
+

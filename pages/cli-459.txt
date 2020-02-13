@@ -1,0 +1,48 @@
+                                  M4100 Series ProSAFE Managed Switches
+
+   show ip ssh
+   Use this command to display the ssh settings.
+
+     Format         show ip ssh
+
+     Mode           Privileged EXEC
+
+     Term              Definition
+
+     Administrative    This field indicates whether the administrative mode of SSH is enabled or disabled.
+     Mode
+
+     Protocol Level    The protocol level might have the values of version 1, version 2 or both versions 1 and
+                       version 2.
+
+     SSH Sessions      The number of SSH sessions currently active.
+     Currently Active
+
+     Max SSH           The maximum number of SSH sessions allowed.
+     Sessions
+     Allowed
+
+     SSH Timeout       The SSH time-out value in minutes.
+
+     Keys Present      Indicates whether the SSH RSA and DSA key files are present on the device.
+
+     Key Generation    Indicates whether RSA or DSA key files generation is currently in progress.
+     in Progress
+
+Management Security Commands
+
+   This section describes commands you use to generate keys and certificates, which you can
+   do in addition to loading them as before.
+
+   crypto certificate generate
+   Use this command to generate self-signed certificate for HTTPS. The generate RSA key for
+   SSL has a length of 1024 bits. The resulting certificate is generated with a common name
+   equal to the lowest IP address of the device and a duration of 365 days.
+
+     Format         crypto certificate generate
+
+     Mode           Global Config
+
+                                    Management Commands
+                                               459
+

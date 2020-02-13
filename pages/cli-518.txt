@@ -1,0 +1,48 @@
+                            M4100 Series ProSAFE Managed Switches
+
+   show tacacs
+   Use this command to display the configuration and statistics of a TACACS+ server.
+
+     Format        show tacacs [<ip-address> | <hostname>]
+
+     Mode          Privileged EXEC
+
+     Field                 Definition
+
+     Host Address          The IP address or hostname of the configured TACACS+ server.
+
+     Port                  The configured TACACS+ server port number.
+
+     TimeOut               The timeout in seconds for establishing a TCP connection.
+
+     Priority              The preference order in which TACACS+ servers are contacted. If a server
+                           connection fails, the next highest priority server is contacted.
+
+Configuration Scripting Commands
+
+   Configuration Scripting allows you to generate text-formatted script files representing the
+   current configuration of a system. You can upload these configuration script files to a
+   computer or UNIX system and edit them. Then, you can download the edited files to the
+   system and apply the new configuration. You can apply configuration scripts to one or more
+   switches with no or minor modifications.
+   Use the show running-config command (see show running-config on page 349) to
+   capture the running configuration into a script. Use the copy command (see copy on
+   page 371) to transfer the configuration script to or from the switch.
+   You should use scripts on systems with default configuration; however, you are not prevented
+   from applying scripts on systems with non-default configurations.
+   Scripts must conform to the following rules:
+   ·   Script files are not distributed across the stack, and only live in the unit that is the master
+       unit at the time of the file download.
+   ·   The file extension must be ".scr".
+   ·  A maximum of ten scripts are allowed on the switch.
+   ·   The combined size of all script files on the switch shall not exceed 2048 KB.
+   ·   The maximum number of configuration file command lines is 2000.
+   You can type single-line annotations at the command prompt to use when you write test or
+   configuration scripts to improve script readability. The exclamation point (!) character flags
+   the beginning of a comment. The comment flag character can begin a word anywhere on the
+   command line, and all input following this character is ignored. Any command line that begins
+   with the "!" character is recognized as a comment line and ignored by the parser.
+
+                                      Management Commands
+                                                518
+

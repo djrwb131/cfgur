@@ -1,0 +1,55 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Term             Definition
+
+ SNMPv3           The authentication protocol to be used for the specified login user.
+ Authentication
+
+ SNMPv3           The encryption protocol to be used for the specified login user.
+ Encryption
+
+show users accounts
+Use this command to display the local user status about user account lockout and password
+aging.
+
+ Format         show users accounts
+
+ Mode           Privileged EXEC
+
+ Term             Definition
+
+ User Name        The local user account's user name.
+
+ Privilege        The user's privilege level (1-15).
+
+ Password aging   The password aging time for the local users.
+
+ Lockout Status   Indicates whether the user account is locked out (true or false).
+
+ Password         The current password expiration date in date format.
+ Expiration Date
+
+show users accounts detail
+This command displays the local user status about user account lockout and password
+aging. It also includes information about Password strength and complexity.
+
+ Format         show users accounts detail
+
+ Mode           Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #show users accounts detail
+UserName....................................... admin
+Privilege...................................... 15
+Password Aging................................. ---
+Password Expiry................................ ---
+Lockout........................................ False
+Override Complexity Check...................... Disable
+Password Strength.............................. ---
+UserName....................................... guest
+Privilege...................................... 1
+Password Aging................................. ---
+
+                                Management Commands
+                                                     472
+

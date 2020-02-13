@@ -1,0 +1,52 @@
+                         M4100 Series ProSAFE Managed Switches
+
+Interface     Energy-Detect        Short-Reach-Config   Short-Reach       EEE
+             Config      Opr        Auto      Forced           Opr      Config
+---------  ---------  ---------  ---------   ---------  -----------  --------
+  0/1      Disabled   Inactive                                        Disabled
+  0/2      Disabled   Inactive                                        Disabled
+  0/3      Disabled   Inactive                                        Disabled
+  0/4      Disabled   Inactive                                        Disabled
+  0/5      Disabled   Inactive                                        Disabled
+  0/6      Disabled   Inactive                                        Disabled
+  0/7      Disabled   Inactive                                        Disabled
+  0/8      Disabled   Inactive                                        Disabled
+  0/9      Disabled   Inactive                                        Disabled
+  0/10     Disabled   Inactive                                        Disabled
+  0/11     Disabled   Inactive                                        Disabled
+  0/12     Disabled   Inactive                                        Disabled
+  0/13     Disabled   Inactive                                        Disabled
+  0/14     Disabled   Inactive                                        Disabled
+  0/15     Disabled   Inactive                                        Disabled
+  0/16     Disabled   Inactive                                        Disabled
+  0/17     Disabled   Inactive                                        Disabled
+  0/18     Disabled   Inactive                                        Disabled
+  0/19     Disabled   Inactive                                        Disabled
+  0/20     Disabled   Inactive                                        Disabled
+  0/21     Disabled   Inactive                                        Disabled
+  0/22     Disabled   Inactive                                        Disabled
+  0/23     Disabled   Inactive                                        Disabled
+  0/24     Disabled   Inactive                                        Disabled
+  0/25     Disabled   Inactive                                        Disabled
+
+Command example:
+(NETGEAR Switch) #show green-mode 0/25
+
+EEE Admin Mode................................. Enabled
+     Transmit Idle Time......................... 0
+     Transmit Wake Time......................... 0
+     Rx Low Power Idle Event Count.............. 0
+     Rx Low Power Idle Duration (uSec).......... 0
+     Tx Low Power Idle Event Count.............. 0
+     Tx Low Power Idle Duration (uSec).......... 0
+     Tw_sys_tx (usec)........................... XX
+     Tw_sys_tx Echo (usec)...................... XX
+     Tw_sys_rx (usec)........................... XX
+     Tw_sys_rx Echo (usec)...................... XX
+     Fallback Tw_sys (usec)..................... XX
+     Tx DLL enabled............................. Yes
+     Tx DLL ready............................... Yes
+
+                               Green Ethernet Commands
+                                         529
+

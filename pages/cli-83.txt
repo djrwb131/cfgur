@@ -1,0 +1,54 @@
+                           M4100 Series ProSAFE Managed Switches
+
+dot1x max-users
+Use this command to set the maximum number of clients supported on the port when
+MAC-based dot1x authentication is enabled on the port. The maximum users supported per
+port is dependent on the product. The <count> value is in the range 1 - 48.
+
+ Default       48
+
+ Format        dot1x max-users <count>
+
+ Mode          Interface Config
+
+no dot1x max-users
+
+This command resets the maximum number of clients allowed per port to its default value.
+
+ Format       no dot1x max-req
+
+ Mode          Interface Config
+
+dot1x port-control
+This command sets the authentication mode to use on the specified port. Select
+force-unauthorized to specify that the authenticator PAE unconditionally sets the
+controlled port to unauthorized. Select force-authorized to specify that the authenticator
+PAE unconditionally sets the controlled port to authorized. Select auto to specify that the
+authenticator PAE sets the controlled port mode to reflect the outcome of the authentication
+exchanges between the supplicant, authenticator, and the authentication server. If the
+mac-based option is specified, MAC-based dot1x authentication is enabled on the port.
+
+ Default       auto
+
+ Format        dot1x port-control {force-unauthorized | force-authorized | auto |
+               mac-based}
+
+ Mode          Interface Config
+
+no dot1x port-control
+
+This command sets the 802.1x port control mode on the specified port to the default value.
+
+ Format        no dot1x port-control
+
+ Mode          Interface Config
+
+dot1x port-control all
+This command sets the authentication mode to use on all ports. Select
+force-unauthorized to specify that the authenticator PAE unconditionally sets the
+controlled port to unauthorized. Select force-authorized to specify that the authenticator
+PAE unconditionally sets the controlled port to authorized. Select auto to specify that the
+
+                                  Switching Commands
+                                           83
+

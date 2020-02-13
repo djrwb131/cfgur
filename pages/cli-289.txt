@@ -1,0 +1,52 @@
+                                M4100 Series ProSAFE Managed Switches
+
+show diffserv
+This command displays the DiffServ General Status Group information, which includes the
+current administrative mode setting as well as the current and maximum number of rows in
+each of the main DiffServ private MIB tables. This command provides no options.
+
+ Format        show diffserv
+
+ Mode          Privileged EXEC
+
+ Term                   Definition
+
+ DiffServ Admin mode    The current value of the DiffServ administrative mode.
+
+ Class Table Size       The current number of entries (rows) and the maximum allowed entries (rows) in
+ Current /Max           the Class Table.
+
+ Class Rule Table Size  The current number of entries (rows) and the maximum allowed entries (rows) in
+ Current /Max           the Class Rule Table.
+
+ Policy Table Size      The current number of entries (rows) and the maximum allowed entries (rows) in
+ Current /Max           the Policy Table.
+
+ Policy Instance Table  Current number of entries (rows) and the maximum allowed entries (rows) in the
+ Size Current /Max      Policy Instance Table.
+
+ Policy Attribute Table Current number of entries (rows) and the maximum allowed entries (rows) in the
+ Size Current /Max      Policy Attribute Table.
+
+ Service Table Size     The current number of entries (rows) i and the maximum allowed entries (rows) in
+ Current /Max           the Service Table.
+
+show policy-map
+This command displays all configuration information for the specified policy. The
+<policyname> is the name of an existing DiffServ policy.
+
+ Format        show policy-map [<policyname>]
+
+ Mode          Privileged EXEC
+
+If the policy name is specified, the fields that are shown in the following table are displayed.
+
+ Term               Definition
+
+ Policy Name        The name of this policy.
+
+ Policy Type        The policy type (Only inbound policy definitions are supported for this platform.)
+
+                                   Quality of Service Commands
+                                                  289
+

@@ -1,0 +1,49 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+ Term              Definition
+
+ Total MAC         Number of MAC addresses currently in the forwarding database.
+ Addresses in use
+
+ Total MAC         Number of MAC addresses the forwarding database can handle.
+ Addresses
+ available
+
+process cpu threshold
+Use this command to configure the CPU utilization thresholds. The Rising and Falling
+thresholds are specified as a percentage of CPU resources. The utilization monitoring time
+period can be configured from 5 seconds to 86,400 seconds in multiples of 5 seconds. The
+CPU utilization threshold configuration is saved across a switch reboot. Configuring the
+falling utilization threshold is optional. If the falling CPU utilization parameters are not
+configured, they take the same value as the rising CPU utilization parameters.
+
+ Format           process cpu threshold type total rising <1-100> interval <5-86400>
+                  {falling <1-100> interval <5-86400>}
+
+ Mode             Global Config
+
+ Parameter             Description
+
+ rising threshold      The percentage of CPU resources that, when exceeded for the configured rising
+                       interval, triggers a notification. The range is 1­100. The default is 0 (disabled).
+
+ rising interval       The duration of the CPU rising threshold violation, in seconds, that must be met to
+                       trigger a notification. The range is 5­86,400. The default is 0 (disabled).
+
+ falling threshold     The percentage of CPU resources that, when usage falls below this level for the
+                       configured interval, triggers a notification. The range is 1­100. The default is 0
+                       (disabled). A notification is triggered when the total CPU utilization falls below this
+                       level for a configured period of time. The falling utilization threshold notification is
+                       made only if a rising threshold notification was previously done. The falling utilization
+                       threshold must always be equal or less than the rising threshold value. The CLI does
+                       not allow setting the falling threshold to be greater than the rising threshold.
+
+ falling interval      The duration of the CPU falling threshold, in seconds, that must be met to trigger a
+                       notification. The range is 5­86,400. The default is 0 (disabled).
+
+show process cpu
+This command provides the percentage utilization of the CPU by different tasks.
+
+                                         Utility Commands
+                                               347
+

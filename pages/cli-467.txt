@@ -1,0 +1,57 @@
+                                     M4100 Series ProSAFE Managed Switches
+
+     Term                           Definition
+
+     Secure Port                    The secure HTTP server port number.
+
+     Secure Protocol Level(s)       The protocol level might have the values of SSL3, TSL1, or both SSL3 and
+                                    TSL1.
+
+     Maximum Allowable HTTPS        The number of allowable secure http sessions.
+     Sessions
+
+     HTTPS Session Hard             The hard time-out for secure http sessions in hours.
+     Timeout
+
+     HTTPS Session Soft             The soft time-out for secure http sessions in minutes.
+     Timeout
+
+     Certificate Present            Indicates whether the secure-server certificate files are present on the device.
+
+     Certificate Generation in      Indicates whether certificate generation is currently in progress.
+     Progress
+
+Access Commands
+
+   Use the commands in this section to close remote connections or to view information about
+   connections to the system.
+
+   disconnect
+   Use the disconnect command to close HTTP, HTTPS, Telnet, or SSH sessions. Use all
+   to close all active sessions, or use <session-id> to specify the session ID to close. To
+   view the possible values for <session-id>, use the show loginsession command.
+
+     Format        disconnect {<session_id> | all}
+
+     Mode          Privileged EXEC
+
+   show loginsession
+   Use this command to display current Telnet and serial port connections to the switch.
+
+     Format        show loginsession
+
+     Mode          Privileged EXEC
+
+     Field               Definition
+
+     ID                  Login Session ID.
+
+     User Name           The name the user entered to log on to the system.
+
+     Connection From IP address of the remote client machine or EIA-232 for the serial port connection.
+
+     Idle Time           Time this session has been idle.
+
+                                           Management Commands
+                                                          467
+

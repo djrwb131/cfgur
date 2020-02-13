@@ -1,0 +1,54 @@
+                                     M4100 Series ProSAFE Managed Switches
+
+    Table 35. Protocol-based VLANs Log Messages
+
+     Component        Message                                       Cause
+
+     Protocol Based   pbVlanCnfgrInitPhase2Process: Unable to       Appears when nimRegisterIntfChange fails
+     VLANs            register NIM callback                         to register pbVlan for link state changes.
+
+     Protocol Based   pbVlanCnfgrInitPhase2Process: Unable to       Appears when vlanRegisterForChange
+     VLANs            register pbVlan callback with vlans           fails to register pbVlan for vlan changes.
+
+     Protocol Based   pbVlanCnfgrInitPhase2Process: Unable to       Appears when nvStoreRegister fails to
+     VLANs            register pbVlan callback with nvStore         register save and restore functions for
+                                                                    configuration save.
+
+QoS
+
+    Table 36. ACL Log Messages
+
+     Component        Message                                       Cause
+
+     ACL              Total number of ACL rules (x) exceeds max     The combination of all ACLs applied to an
+                      (y) on intf i.                                interface has resulted in requiring more
+                                                                    rules than the platform supports.
+
+     ACL              ACL name, rule x: This rule is not being      The ACL configuration has resulted in a
+                      logged                                        requirement for more logging rules than the
+                                                                    platform supports.  The specified rule is
+                                                                    functioning normally except for the logging
+                                                                    action.
+
+     ACL              aclLogTask: error logging ACL rule trap for   The system was unable to send an SNMP
+                      correlator number                             trap for this ACL rule which contains a
+                                                                    logging attribute.
+
+     ACL              IP ACL number: Forced truncation of one       While processing the saved configuration,
+                      or more rules during config migration         the system encountered an ACL with more
+                                                                    rules than is supported by the current
+                                                                    version. This might happen when code is
+                                                                    updated to a version supporting fewer rules
+                                                                    per ACL than the previous version.
+
+    Table 37. CoS Log Message
+
+     Component        Message                                       Cause
+
+     COS              cosCnfgrInitPhase3Process: Unable to          The COS component was unable to apply
+                      apply saved config -- using factory defaults  the saved configuration and has initialized
+                                                                    to the factory default settings.
+
+                                                Log Messages
+                                                     547
+

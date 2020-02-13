@@ -1,0 +1,54 @@
+                              M4100 Series ProSAFE Managed Switches
+
+no dos-control l4port
+
+This command disables L4 Port Denial of Service protections.
+
+ Format        no dos-control l4port
+
+ Mode          Global Config
+
+dos-control icmp
+This command enables Maximum ICMP Packet Size Denial of Service protections. If the
+mode is enabled, Denial of Service prevention is active for this type of attack. If ICMP Echo
+Request (PING) packets ingress having a size greater than the configured value, the packets
+will be dropped if the mode is enabled.
+
+ Default       disabled <512>
+
+ Format        dos-control icmp [<0-1023>]
+
+ Mode          Global Config
+
+no dos-control icmp
+
+This command disables Maximum ICMP Packet Size Denial of Service protections.
+
+ Format        no dos-control icmp
+
+ Mode          Global Config
+
+dos-control smacdmac
+This command enables Source MAC address = Destination MAC address (SMAC=DMAC)
+Denial of Service protection. If the mode is enabled, Denial of Service prevention is active for
+this type of attack. If packets ingress with SMAC=DMAC, the packets will be dropped if the
+mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control smacdmac
+
+ Mode          Global Config
+
+no dos-control smacdmac
+
+This command disables Source MAC address = Destination MAC address (SMAC=DMAC)
+Denial of Service protection.
+
+ Format        no dos-control smacdmac
+
+ Mode          Global Config
+
+                                   Switching Commands
+                                           205
+

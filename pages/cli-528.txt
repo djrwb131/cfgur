@@ -1,0 +1,53 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ Field                   Definition
+
+ Remote Tw_sys_rx        Integer that indicates the value of Tw_sys that the remote system requests from the
+ (microsec)              local system. This value maps from the aLldpXdot3RemRxTwSys attribute.
+
+ Remote Tw_sys_rx Echo   Integer that indicates the value of Receive Tw_sys echoed back by the remote
+ (microsec)              system. This value maps from the aLldpXdot3RemRxTwSysEcho attribute.
+
+ Remote Fallback Tw_sys  Integer that indicates the value of fallback Tw_sys that the remote system is
+ (microsec)              advertising. This attribute maps to the variable RemFbSystemValue as defined in
+                         78.4.2.3.
+
+ Tx_dll_enabled          Initialization status of the EEE transmit Data Link Layer management function on the
+                         local system.
+
+ Tx_dll_ready            Data Link Layer ready: This variable indicates that the tx system initialization is
+                         complete and is ready to update/receive LLDPDU containing EEE TLV. This variable
+                         is updated by the local system software.
+
+ Rx_dll_enabled          Status of the EEE capability negotiation on the local system.
+
+ Rx_dll_ready            Data Link Layer ready: This variable indicates that the rx system initialization is
+                         complete and is ready to update/receive LLDPDU containing EEE TLV. This variable
+                         is updated by the local system software.
+
+ Cumulative Energy       Estimated Cumulative energy saved on this port in (Watts * hours) due to all green
+ Saving                  modes enabled
+
+ Time Since Counters     Time Since Counters Last Cleared (since the time of power up, or after 'clear eee
+ Last Cleared            counters' is executed)
+
+     Note: Executing the clear green-mode statistics command clears
+             only the EEE Transmit, Receive LPI event count, LPI duration, and
+             Cumulative Energy Savings Estimates of the port. Other status
+             parameters listed in the previous table remain unaffected after you
+             executed the clear green-mode statistics command.
+
+Command example:
+(NETGEAR Switch) #show green-mode
+
+Current Power Consumption (mW).............. XX
+Power Saving (%)............................ XX
+Cumulative Energy Saving /Stack (W * H)... XX
+
+Unit    Green Ethernet Features Supported
+----    --------------------------------
+1       Energy-Detect EEE LPI-History LLDP-Cap-Exchg Pwr-Usg-Est
+
+                                    Green Ethernet Commands
+                                                 528
+

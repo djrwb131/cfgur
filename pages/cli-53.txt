@@ -1,0 +1,48 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no vlan protocol group add protocol
+
+This command removes the <protocol> from this protocol-based VLAN group that is
+identified by this <groupid>. The possible values for protocol are ip, arp, and ipx.
+
+ Format     no vlan protocol group add protocol <groupid> <ethertype>
+            {<protocol-list> | arp | ip | ipx}
+
+ Mode       Global Config
+
+protocol group
+This command attaches a <vlanid> to the protocol-based VLAN identified by <groupid>.
+A group may only be associated with one VLAN at a time, however the VLAN association can
+be changed.
+
+ Default    none
+
+ Format     protocol group <groupid> <vlanid>
+
+ Mode       VLAN Config
+
+no protocol group
+
+This command removes the <vlanid> from this protocol-based VLAN group that is
+identified by this <groupid>.
+
+ Format     no protocol group <groupid> <vlanid>
+
+ Mode       VLAN Config
+
+protocol vlan group
+This command adds the physical interface to the protocol-based VLAN identified by
+<groupid>. You can associate multiple interfaces with a group, but you can only associate
+each interface and protocol combination with one group. If adding an interface to a group
+causes any conflicts with protocols currently associated with the group, this command fails
+and the interface(s) are not added to the group.
+
+ Default    none
+
+ Format     protocol vlan group <groupid>
+
+ Mode       Interface Config
+
+                                  Switching Commands
+                                          53
+

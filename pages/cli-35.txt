@@ -1,0 +1,50 @@
+                              M4100 Series ProSAFE Managed Switches
+
+spanning-tree mst instance
+This command adds a multiple spanning tree instance to the switch. The parameter
+<mstid> is a number within a range of 1­4094, that corresponds to the new instance ID to
+be added. The maximum number of multiple instances supported by the switch is 4.
+
+ Default       none
+
+ Format        spanning-tree mst instance <mstid>
+
+ Mode          Global Config
+
+no spanning-tree mst instance
+
+This command removes a multiple spanning tree instance from the switch and reallocates all
+VLANs allocated to the deleted instance to the Common and Internal Spanning Tree. The
+parameter <mstid> is a number that corresponds to the desired existing multiple spanning
+tree instance to be removed.
+
+ Format        no spanning-tree mst instance <mstid>
+
+ Mode          Global Config
+
+spanning-tree mst priority
+This command sets the bridge priority for a specific multiple spanning tree instance. The
+parameter <mstid> is a number that corresponds to the desired existing multiple spanning
+tree instance. The priority value is a number within a range of 0­61440 in increments of
+4096.
+If you specify 0 (defined as the default CIST ID) as the <mstid>, this command sets the
+Bridge Priority parameter to a new value for the Common and Internal Spanning Tree. The
+bridge priority value is a number within a range of 0­61440. The twelve least significant bits
+are masked according to the 802.1s specification. This causes the priority to be rounded
+down to the next lower valid priority.
+
+ Default       32768
+
+ Format        spanning-tree mst priority <mstid> <0-61440>
+
+ Mode          Global Config
+
+no spanning-tree mst priority
+
+This command sets the bridge priority for a specific multiple spanning tree instance to the
+default value. The parameter <mstid> is a number that corresponds to the desired existing
+multiple spanning tree instance.
+
+                                  Switching Commands
+                                              35
+

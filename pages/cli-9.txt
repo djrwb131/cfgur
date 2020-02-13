@@ -1,0 +1,58 @@
+                                M4100 Series ProSAFE Managed Switches
+
+    Table 1. Parameter Conventions (continued)
+
+     Symbol               Example                         Description
+
+     { } curly braces     {choice1 | choice2}             Indicates that you must select a parameter from the
+                                                          list of choices.
+
+     | Vertical bars      choice1 | choice2               Separates the mutually exclusive choices.
+
+     [{ }] Braces within  [{choice1 | choice2}]           Indicates a choice within an optional element. This
+     square brackets                                      format is used mainly for complicated commands
+
+Common Parameter Values
+
+   Parameter values might be names (strings) or numbers. To use spaces as part of a name
+   parameter, enclose the name value in double quotes. For example, the expression "System
+   Name with Spaces" forces the system to accept the spaces. Empty strings ("") are not valid
+   user-defined strings. The following table describes common parameter values and value
+   formatting.
+    Table 2. Parameter Descriptions
+
+     Parameter         Description
+
+     ipaddr            This parameter is a valid IPv4 address. You can enter the IP address in the following
+                       formats:
+                       ·  a (32 bits)
+                       ·  a.b (8.24 bits)
+                       ·  a.b.c (8.8.16 bits)
+                       ·  a.b.c.d (8.8.8.8)
+                       In addition to these formats, the CLI accepts decimal, hexadecimal and octal formats
+                       through the following input formats (where n is any valid hexadecimal, octal or decimal
+                       number):
+                       ·  0xn (CLI assumes hexadecimal format.)
+                       ·  0n (CLI assumes octal format with leading zeros.)
+                       ·  n (CLI assumes decimal format.)
+
+     ipv6-address      This parameter is a valid IPv6 address. You can enter the IP address in the following
+                       formats:
+                       ·  FE80:0000:0000:0000:020F:24FF:FEBF:DBCB
+                       ·  FE80:0:0:0:20F:24FF:FEBF:DBCB
+                       ·  FE80::20F24FF:FEBF:DBCB
+                       ·  FE80:0:0:0:20F:24FF:128:141:49:32
+                       For additional information, refer to RFC 3513.
+
+     Interface or      Valid slot and port number separated by forward slashes. For example, 0/1 represents slot
+     slot/port         number 0 and port number 1.
+
+     Logical Interface Represents a logical slot and port number. This is applicable in the case of a port-channel
+                       (LAG). You can use the logical slot/port to configure the port-channel.
+
+     Character strings Use double quotation marks to identify character strings, for example, "System Name with
+                       Spaces". An empty string ("") is not valid.
+
+                                   Using the Command-Line Interface
+                                                   9
+

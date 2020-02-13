@@ -1,0 +1,52 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ip proxy-arp
+This command enables proxy ARP on a router interface. Without proxy ARP, a device only
+responds to an ARP request if the target IP address is an address configured on the interface
+where the ARP request arrived. With proxy ARP, the device might also respond if the target
+IP address is reachable. The device responds only if all next hops in its route to the
+destination are through interfaces other than the interface that received the ARP request.
+
+ Default       enabled
+
+ Format        ip proxy-arp
+
+ Mode          Interface Config
+
+no ip proxy-arp
+
+This command disables proxy ARP on a router interface.
+
+ Format        no ip proxy-arp
+
+ Mode          Interface Config
+
+arp cachesize
+This command configures the ARP cache size. The ARP cache size value is a
+platform-specific integer value. The default size also varies depending on the platform.
+
+ Format        arp cachesize <platform specific integer value>
+
+ Mode          Global Config
+
+no arp cachesize
+
+This command configures the default ARP cache size.
+
+ Format        no arp cachesize
+
+ Mode          Global Config
+
+arp dynamicrenew
+This command enables the ARP component to automatically renew dynamic ARP entries
+when they age out.
+
+ Default       enabled
+
+ Format        arp dynamicrenew
+
+ Mode          Privileged EXEC
+
+                                    Routing Commands
+                                           229
+

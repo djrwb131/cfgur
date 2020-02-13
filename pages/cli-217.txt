@@ -1,0 +1,57 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Term             Definition
+
+ Device ID        The device ID associated with the neighbor which advertised the information.
+
+ IP Addresses     The IP addresses associated with the neighbor.
+
+ Capability       ISDP functional capabilities advertised by the neighbor.
+
+ Platform         The hardware platform advertised by the neighbor.
+
+ Interface        The interface (slot/port) on which the neighbor's advertisement was received.
+
+ Port ID          The port ID of the interface from which the neighbor sent the advertisement.
+
+ Hold Time        The hold time advertised by the neighbor.
+
+ Advertisement    The version of the advertisement packet received from the neighbor.
+ Version
+
+ Entry Last       Displays when the entry was last modified.
+ Changed Time
+
+ Version          The software version that the neighbor is running.
+
+Command example:
+(NETGEAR Switch) #show isdp neighbors detail
+
+Device ID                        0001f45f1bc0
+Address(es):
+IP Address:                      10.27.7.57
+Capability                       Router Trans Bridge Switch IGMP
+Platform                         SecureStack C2
+Interface                        0/48
+Port ID                          ge.3.14
+Holdtime                         131
+Advertisement Version            2
+Entry last changed time          0 days 00:01:59
+Version:                         05.00.56
+
+show isdp traffic
+This command displays ISDP statistics.
+
+ Format        show isdp traffic
+
+ Mode          Privileged EXEC
+
+ Term                         Definition
+
+ ISDP Packets Received        Total number of ISDP packets received
+
+ ISDP Packets Transmitted     Total number of ISDP packets transmitted
+
+                                         Switching Commands
+                                              217
+

@@ -1,0 +1,46 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ Format       mac access-list extended <name>
+
+ Mode         Global Config
+
+no mac access-list extended
+
+This command deletes a MAC ACL identified by <name> from the system.
+
+ Format       no mac access-list extended <name>
+
+ Mode         Global Config
+
+mac access-list extended rename
+This command changes the name of a MAC access control list (ACL). The <name>
+parameter is the name of an existing MAC ACL. The <newname> parameter is a
+case-sensitive alphanumeric string from 1 to 31 characters uniquely identifying the MAC
+access list.
+This command fails if a MAC ACL by the name <newname> exists.
+
+ Format       mac access-list extended rename <name> <newname>
+
+ Mode         Global Config
+
+{deny | permit} (MAC ACL)
+This command creates a new rule for the current MAC access list. Each rule is appended to
+the list of configured rules for the list.
+
+    Note: The no form of this command is not supported, since the rules within a
+             MAC ACL cannot be deleted individually. Rather, the entire MAC ACL
+             must be deleted and respecified.
+
+    Note: An implicit deny all MAC rule always terminates the access list.
+
+A rule might either deny or permit traffic according to the specified classification fields. At a
+minimum, the source and destination MAC value must be specified, each of which might be
+substituted using the keyword any to indicate a match on any value in that field. The
+remaining command parameters are all optional, but the most frequently used parameters
+appear in the same relative order as shown in the command format.
+The Ethertype might be specified as either a keyword or a four-digit hexadecimal value from
+0x0600-0xFFFF. The currently supported <ethertypekey> values are: appletalk, arp,
+
+                              Quality of Service Commands
+                                             294
+

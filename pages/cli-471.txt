@@ -1,0 +1,55 @@
+                             M4100 Series ProSAFE Managed Switches
+
+username snmpv3 encryption
+Use this command to specify the encryption protocol used for the specified user. The valid
+encryption protocols are des and none.
+If you select des, you can specify the required key on the command line. The encryption key
+must be 8­64 characters long. If you select the des protocol but do not provide a key, the
+user is prompted for the key. When you use the des protocol, the login password is also used
+as the SNMPv3 encryption password, so it must be a minimum of eight characters. If you
+select none, you do not need to provide a key.
+The <username> value is the login user name associated with the specified encryption. You
+must enter the <username> in the same case you used when you added the user. To see
+the case of the <username>, enter the show users command.
+
+ Default      no encryption
+
+ Format       username snmpv3 encryption <username> {none | des [<key>]}
+
+ Mode         Global Config
+
+no username snmpv3 encryption
+
+Use this command to set the encryption protocol to none. The <username> is the login user
+name for which the specified encryption protocol will be used.
+
+ Format       no username snmpv3 encryption <username>
+
+ Mode         Global Config
+
+show users
+Use this command to display the configured user names and their settings. This command is
+available only for users with read/write privileges. The SNMPv3 fields is displayed only if
+SNMP is available on the system.
+
+ Format       show users
+
+ Mode         Privileged EXEC
+
+ Term           Definition
+
+ User Name      The name the user enters to login using the serial port, Telnet, or web.
+
+ Access Mode    Shows whether the user is able to change parameters on the switch (Read/Write) or is
+                only able to view them (Read Only). As a factory default, the "admin" user has
+                Read/Write access and the "guest" has Read Only access. There can only be one
+                Read/Write user and up to five Read Only users.
+
+ SNMPv3 Access  The SNMPv3 Access Mode. If the value is set to ReadWrite, the SNMPv3 user is able to
+ Mode           set and retrieve parameters on the system. If the value is set to ReadOnly, the SNMPv3
+                user is only able to retrieve parameter information. The SNMPv3 access mode might be
+                different than the CLI and Web access mode.
+
+                                    Management Commands
+                                        471
+

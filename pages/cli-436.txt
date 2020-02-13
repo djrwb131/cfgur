@@ -1,0 +1,49 @@
+                         M4100 Series ProSAFE Managed Switches
+
+show rmon
+This command displays the entries in the RMON alarm table.
+
+ Format      show rmon {alarms | alarm <alarm-index>}
+
+ Mode         Privileged Exec
+
+show rmon collection history
+This command displays the entries in the RMON history control table.
+
+ Format       show rmon collection history
+
+ Mode         Privileged Exec
+
+show rmon events
+This command displays the entries in the RMON event table.
+
+ Format       show rmon events
+
+ Mode         Privileged Exec
+
+Command example:
+(NETGEAR Switch) # show rmon events
+
+Index   Description           Type  Community       Owner  Last time sent
+-------------------------------------------------------------------------------
+1       test                  log   public          MIB    0 days 0 h:0 m:0 s
+
+show rmon history
+This command displays the specified entry in the RMON history table.
+
+ Format       show rmon history <index> {errors | other | throughput}
+
+ Mode         Privileged Exec
+
+Command example:
+(NETGEAR Switch) # show rmon history 1 throughput
+
+Sample set: 1
+Maximum table size: 270
+
+Time                Octets           Packets Broadcast Multicast  Util
+-------------------- ---------- --------- --------- ---------- --------
+
+                                   Utility Commands
+                                              436
+

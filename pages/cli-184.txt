@@ -1,0 +1,52 @@
+                        M4100 Series ProSAFE Managed Switches
+
+Use port-desc to transmit the port description TLV. To configure the port description, see
+description on page 20
+
+ Default       all optional TLVs are included
+
+ Format        lldp transmit-tlv [sys-desc] [sys-name] [sys-cap] [port-desc]
+
+ Mode          Interface Config
+
+no lldp transmit-tlv
+
+Use this command to remove an optional TLV from the LLDPDUs. Use the command without
+parameters to remove all optional TLVs from the LLDPDU.
+
+ Format        no lldp transmit-tlv [sys-desc] [sys-name] [sys-cap] [port-desc]
+
+ Mode          Interface Config
+
+lldp transmit-mgmt
+Use this command to include transmission of the local system management address
+information in the LLDPDUs.
+
+ Default       enabled
+
+ Format        lldp transmit-mgmt
+
+ Mode          Interface Config
+
+no lldp transmit-mgmt
+
+Use this command to include transmission of the local system management address
+information in the LLDPDUs. Use this command to cancel inclusion of the management
+information in LLDPDUs.
+
+ Format        no lldp transmit-mgmt
+
+ Mode          Interface Config
+
+lldp notification
+Use this command to enable remote data change notifications.
+
+ Default       disabled
+
+ Format        lldp notification
+
+ Mode          Interface Config
+
+                                   Switching Commands
+                                                   184
+

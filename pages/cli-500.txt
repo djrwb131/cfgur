@@ -1,0 +1,57 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Field          Definition
+
+ SNMP Trap      The community string of the SNMP trap packet sent to the trap manager. The string is
+ Name           case-sensitive and can be up to 16 alphanumeric characters.
+
+ IP Address     The IPv4 address to receive SNMP traps from this device.
+
+ IPv6 Address   The IPv6 address to receive SNMP traps from this device.
+
+ SNMP Version   SNMPv2
+
+ Status         The receiver's status (enabled or disabled).
+
+Command example:
+(Netgear Switch)#show snmptrap
+
+ Community Name IpAddress             IPv6 Address           Snmp Version     Mode
+   Mytrap       0.0.0.0                2001::1               SNMPv2          Enable show trapflags
+
+show trapflags
+Use this command to display trap conditions. The command's display shows all the enabled
+OSPFv2 and OSPFv3 trap flags. Configure which traps the switch should generate by
+enabling or disabling the trap condition. If a trap condition is enabled and the condition is
+detected, the SNMP agent on the switch sends the trap to all enabled trap receivers. You do
+not have to reset the switch to implement the changes. Cold and warm start traps are always
+generated and cannot be disabled.
+
+ Format         show trapflags
+
+ Mode           Privileged EXEC
+
+ Field          Definition
+
+ Authentication Can be enabled or disabled. The factory default is enabled. Indicates whether
+ Flag           authentication failure traps will be sent.
+
+ Link Up/Down   Can be enabled or disabled. The factory default is enabled. Indicates whether link status
+ Flag           traps will be sent.
+
+ Multiple Users Can be enabled or disabled. The factory default is enabled. Indicates whether a trap will
+ Flag           be sent when the same user ID is logged into the switch more than once at the same
+                time (either through Telnet or the serial port).
+
+ Spanning Tree  Can be enabled or disabled. The factory default is enabled. Indicates whether spanning
+ Flag           tree traps are sent.
+
+ ACL Traps      Might be enabled or disabled. The factory default is disabled. Indicates whether ACL
+                traps are sent.
+
+ DVMRP Traps    Can be enabled or disabled. The factory default is disabled. Indicates whether DVMRP
+                traps are sent.
+
+                                      Management Commands
+                                               500
+

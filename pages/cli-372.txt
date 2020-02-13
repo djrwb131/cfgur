@@ -1,0 +1,44 @@
+                        M4100 Series ProSAFE Managed Switches
+
+You can use the copy command with the following options:
+copy {<url> | image1 | image2 | nvram:backup-config | nvram:clibanner |
+nvram:cpu-pkt-capture.pcap | nvram:errorlog | nvram:factory-defaults | nvram:log |
+nvram:script | nvram:startup-config | nvram:tech-support | nvram:traplog |
+system:running-config} {<url> | isa-users | image1 | image2 | nvram:startup-config |
+nvram:backup-config | nvram:startup-config | nvram:clibanner | nvram:script
+<destfilename> | nvram:script <destfilename> noval | nvram:sshkey-dsa |
+nvram:sshkey-rsa1 | nvram:sshkey-rsa2 | nvram:sslpem-dhweak | nvram:sslpem-dhstrong |
+nvram:sslpem-root | nvram:sslpem-server:nvram:startup-config}
+
+Use the ias-users keyword to download the IAS user database file. When the IAS user's
+file is downloaded, the switch IAS user's database is replaced with the users and their
+attributes in the downloaded file.
+In the copy <url> ias-users command, for <url>, use one of the following values for the
+IAS user's file:
+{{tftp://<ipaddr> | <ipv6address> | <hostname>/<filepath>/<filename>} |
+{sftp | scp://<username>@<ipaddress>/<filepath>/<filename>}}
+
+    Note: The maximum length for the file path is 160 characters, and the
+          maximum length for the file name is 31 characters.
+
+For TFTP, SFTP, and SCP, the <ipaddr> or <hostname> parameter is the IP address or
+host name of the server, <filepath> is the path to the file, and <filename> is the name
+of the file that you want to upload or download. For SFTP and SCP, the <username>
+parameter is the user name for logging into the remote server via SSH.
+
+    Note: <ip6address> is also a valid parameter for routing packages that
+          support IPv6.
+
+For switches that support a USB device, the copy command can be used to transfer files from
+and to the USB device. The syntax for the USB file is: usb://<filename>. The USB device
+can be either a source or destination in the copy command. It cannot be used as both source
+and destination in a copy command.
+
+          CAUTION:
+
+          Before you load a new release image to make a backup, upload the
+          existing startup-config.cfg file to the server.
+
+                                      Utility Commands
+                                        372
+

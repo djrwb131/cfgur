@@ -1,0 +1,52 @@
+                             M4100 Series ProSAFE Managed Switches
+
+capture file size
+Use this command to configure file capture options. The command is persistent across a
+reboot cycle. The range is from 2 to 512 Kbytes.
+
+ Default       512 Kbytes
+
+ Format        capture file size <file-size>
+
+ Mode          Global Config
+
+no capture file size
+
+Use this command to reset the file size to the default (512 Kbytes).
+
+ Format        no capture file size
+
+ Mode          Global Config
+
+capture line wrap
+This command enables wrapping of captured packets in line mode when the captured
+packets reaches full capacity.
+
+ Default       Disabled
+
+ Format        capture line wrap
+
+ Mode          Global Config
+
+no capture line wrap
+
+This command disables wrapping of captured packets and configures capture packet to stop
+when the captured packet capacity is full.
+
+ Format        no capture line wrap
+
+ Mode          Global Config
+
+show capture packets
+Use this command to display packets captured and saved to RAM. It is possible to capture
+and save into RAM, packets that are received or transmitted through the CPU. A maximum
+128 packets can be saved into RAM per capturing session. A maximum 128 bytes per packet
+can be saved into the RAM. If a packet holds more than 128 bytes, only the first 128 bytes
+are saved; data more than 128 bytes is skipped and cannot be displayed in the CLI.
+Capturing packets is stopped automatically when 128 packets are captured and have not yet
+been displayed during a capture session. Captured packets are not retained after a reload
+cycle.
+
+                                    Utility Commands
+                                            402
+

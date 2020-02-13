@@ -1,0 +1,55 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+Loopback Interface Commands
+
+   The commands in this section describe how to create, delete, and manage loopback
+   interfaces. A loopback interface is always expected to be up. This interface can provide the
+   source address for sent packets and can receive both local and remote packets. The
+   loopback interface is typically used by routing protocols.
+   To assign an IP address to the loopback interface, see ip address on page 234.
+
+   interface loopback
+   Use this command to enter the Interface Config mode for a loopback interface. The range of
+   the loopback ID is 0­7.
+
+     Format        interface loopback <loopback-id>
+
+     Mode          Global Config
+
+   no interface loopback
+
+   This command removes the loopback interface and associated configuration parameters for
+   the specified loopback interface.
+
+     Format        no interface loopback <loopback-id>
+
+     Mode          Global Config
+
+   show interface loopback
+   This command displays information about configured loopback interfaces.
+
+     Format        show interface loopback [<loopback-id>]
+
+     Mode          Privileged EXEC
+
+   If you do not specify a loopback ID, the following information appears for each loopback
+   interface on the system:
+
+     Term             Definition
+
+     Loopback ID      The loopback ID associated with the rest of the information in the row.
+
+     Interface        The interface name.
+
+     IP Address       The IPv4 address of the interface.
+
+     Received         The number of packets received on this interface.
+     Packets
+
+     Sent Packets     The number of packets transmitted from this interface.
+
+     IPv6 Address     The IPv6 address of this interface.
+
+                                            Switching Commands
+                                                    26
+

@@ -1,0 +1,47 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Format              police-simple {<1-4294967295> <1-128> conform-action {drop |
+                     set-prec-transmit <0-7> | set-dscp-transmit <0-63> |
+                     set-cos-transmit <0-7> | transmit} [violate-action {drop |
+                     set-prec-transmit <0-7> | set-dscp-transmit <0-63> |
+                     set-cos-transmit <0-7> | transmit}]}
+
+ Mode                Policy-Class-Map Config
+
+ Incompatibilities   Drop, Mark (all forms)
+
+police-two-rate
+This command is the two-rate form of the police command and is used to establish the
+traffic policing style for the specified class. For each outcome, the only possible actions are
+drop, set-cos-as-sec-cos, set-cos-transmit, set-sec-cos-transmit, set-dscp-transmit,
+set-prec-transmit, or transmit. In this two-rate form of the police command, the conform
+action defaults to send, the exceed action defaults to drop, and the violate action defaults to
+drop. These actions can be set with this command after the style is configured.
+
+ Format            police-two-rate {<1-4294967295> <1-128> <1-4294967295> <1-128>
+                   conform-action {drop | set-cos-as-sec-cos | set-cos-transmit <0-7>
+                   | set-sec-cos-transmit <0-7> | set-prec-transmit <0-7> |
+                   set-dscp-transmit <0-63> | transmit} exceed-action {drop |
+                   set-cos-as-sec-cos | set-cos-transmit <0-7> | set-sec-cos-transmit
+                   <0-7> | set-prec-transmit <0-7> | set-dscp-transmit <0-63> |
+                   transmit} violate-action {drop | set-cos-as-sec-cos |
+                   set-cos-transmit <0-7> | set-sec-cos-transmit <0-7> |
+                   set-prec-transmit <0-7> | set-dscp-transmit <0-63> | transmit}}
+
+ Mode              Policy-Class-Map Config
+
+policy-map
+This command establishes a new DiffServ policy. The <policyname> parameter is a
+case-sensitive alphanumeric string from 1 to 31 characters uniquely identifying the policy.
+The type of policy is specific to the inbound traffic direction as indicated by the parameter
+
+    Note: The CLI mode is changed to Policy-Map Config when this command
+           is successfully executed.
+
+ Format       policy-map <policyname> [in | out]
+
+ Mode         Global Config
+
+                                  Quality of Service Commands
+                                                  285
+

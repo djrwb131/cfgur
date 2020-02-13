@@ -1,0 +1,46 @@
+                         M4100 Series ProSAFE Managed Switches
+
+quit
+This command closes the current telnet connection or resets the current serial connection.
+The system asks you whether to save configuration changes before quitting.
+
+ Format     quit
+
+ Modes      ·  Privileged EXEC
+            ·  User EXEC
+
+reload
+This command resets the switch without powering it off. Reset means that all network
+connections are terminated and the boot code executes. The switch uses the stored
+configuration to initialize the switch. You are prompted to confirm that the reset should
+proceed. The LEDs on the switch indicate a successful reset.
+
+ Format     reload
+
+ Mode       Privileged EXEC
+
+save
+This command makes the current configuration changes permanent by writing the
+configuration changes to system NVRAM.
+
+ Format     save
+
+ Mode       Privileged EXEC
+
+copy
+The copy command uploads and downloads files to and from the switch. You can also use
+the copy command to manage the dual images (image1 and image2) on the file system.
+Upload and download files from a server by using TFTP or Xmodem. SFTP and SCP are
+available as additional transfer methods if the software package supports secure
+management.
+
+ Format     copy <source> <destination>
+
+ Mode       Privileged EXEC
+
+Replace the <source> and <destination> parameters with the options in Table 1 on
+page 373.
+
+                                     Utility Commands
+                                       371
+

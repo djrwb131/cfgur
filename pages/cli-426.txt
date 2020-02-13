@@ -1,0 +1,53 @@
+                              M4100 Series ProSAFE Managed Switches
+
+sflow receiver
+Use this command to configure the sFlow collector parameters (owner string, receiver
+time-out, maximum datagram size, IP address, and port) for a poller.
+
+ Format         sflow receiver <rcvr_idx> {owner <owner-string> {timeout
+                <rcvr_timeout> | notimeout} | maxdatagram <size> | ip <ip> | port
+                <port>}
+
+ Mode           Global Config
+
+ Field           Description
+
+ Receiver Index  The sFlow Receiver for this sFlow sampler to which flow samples are to be sent. A value
+                 of zero (0) means that no receiver is configured, no packets will be sampled. Only active
+                 receivers can be set. If a receiver expires, then all samplers associated with the receiver
+                 will also expire. Possible values are 1-8. The default is 0.
+
+ Receiver Owner  The identity string for the receiver, the entity making use of this sFlowRcvrTable entry.
+                 The range is 127 characters. The default is a null string. The empty string indicates that
+                 the entry is currently unclaimed and the receiver configuration is reset to the default
+                 values. An entity wishing to claim an sFlowRcvrTable entry must ensure that the entry is
+                 unclaimed before trying to claim it. The entry is claimed by setting the owner string to a
+                 non-null value. The entry must be claimed before assigning a receiver to a sampler or
+                 poller.
+
+ Receiver        The time, in seconds, remaining before the sampler or poller is released and stops
+ Timeout         sending samples to receiver. A management entity wanting to maintain control of the
+                 sampler is responsible for setting a new value before the old one expires. The allowed
+                 range is 0-4294967295 seconds. The default is zero (0).
+
+ Receiver Max    The maximum number of data bytes that can be sent in a single sample datagram. The
+ Datagram Size   management entity should set this value to avoid fragmentation of the sFlow datagrams.
+                 The allowed range is 200 ­9,116). The default is 1400.
+
+ Receiver IP     The sFlow receiver IP address. If set to 0.0.0.0, no sFlow datagrams will be sent. The
+                 default is 0.0.0.0.
+
+ Receiver Port   The destination Layer4 UDP port for sFlow datagrams. The range is 1-65535. The
+                 default is 6343.
+
+no sflow receiver
+
+Use this command to set the sFlow collector parameters back to the defaults.
+
+ Format         no sflow receiver <rcvr_idx> [owner | maxdatagram | ip | port]
+
+ Mode           Global Config
+
+                                           Utility Commands
+                                                 426
+

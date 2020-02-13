@@ -1,0 +1,51 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Parameter          Description
+
+ <dest-udp-port>    A destination UDP port number from 0 to 65535.
+
+ port name options  The destination UDP port may be optionally specified by its name. Whether a port is
+                    specified by its number or its name has no effect on behavior. The names recognized
+                    are as follows:
+                    ·   dhcp (port 67)
+                    ·   domain (port 53)
+                    ·   isakmp (port 500)
+                    ·   mobile-ip (port 434)
+                    ·   nameserver (port 42)
+                    ·   netbios-dgm (port 138)
+                    ·   netbios-ns (port 137)
+                    ·   ntp (port 123)
+                    ·   pim-auto-rp (port 496)
+                    ·   rip (port 520)
+                    ·   tacacs (port 49)
+                    ·   tftp (port 69)
+                    ·   time (port 37)
+                    Other ports must be specified by number.
+
+no ip helper-address discard
+
+Use this command to permit the matching packets.
+
+ Format       no ip helper-address discard [<dest-udp-port> | dhcp | domain |
+              isakmp | mobile-ip | nameserver | netbios-dgm | netbios-ns | ntp |
+              pim-auto-rip | rip | tacacs | tftp | time]
+
+ Mode         Interface Config
+
+show ip helper-address
+Use this command to display the configured helper addresses on the interface.
+
+ Format       show ip helper-address <interface>
+
+ Mode         ·    Privileged EXEC
+              ·    User EXEC
+
+Command example:
+(NETGEAR Switch) #show ip helper-address 0/1
+
+Helper IP Address.............................. 1.2.3.4
+............................................... 1.2.3.5
+
+                                         Routing Commands
+                                               258
+

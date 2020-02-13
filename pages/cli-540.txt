@@ -1,0 +1,59 @@
+                          M4100 Series ProSAFE Managed Switches
+
+Table 18. SSHD Log Messages
+
+ Component      Message                                    Cause
+
+ SSHD           SSHD: Unknown UI event in message,         Failed to dispatch the UI event to the
+                event=XXXX                                 appropriate SSHD function as it's an invalid
+                                                           event. XXXX indicates the event to be
+                                                           dispatched.
+
+ SSHD           sshdApiCnfgrCommand: Failed calling        Failed to send the message to the SSHD
+                sshdIssueCmd.                              message queue
+
+Table 19. SSLT Log Messages
+
+ Component      Message                                    Cause
+
+ SSLT           SSLT: Exceeded maximum,                    Exceeded maximum allowed SSLT
+                ssltConnectionTask                         connections.
+
+ SSLT           SSLT: Error creating Secure server socket6 Failed to create secure server socket for
+                                                           IPV6.
+
+ SSLT           SSLT: Can't connect to unsecure server at  Failed to open connection to unsecure
+                XXXX, result = YYYY, errno = ZZZZ          server. XXXX is the unsecure server socket
+                                                           address. YYYY is the result returned from
+                                                           connect function and ZZZZ is the error
+                                                           code.
+
+ SSLT           SSLT: Msg Queue is full, event=XXXX        Failed to send the received message to the
+                                                           SSLT message queue as message queue
+                                                           is full. XXXX indicates the event to be sent.
+
+ SSLT           SSLT: Unknown UI event in message,         Failed to dispatch the received UI event to
+                event=XXXX                                 the appropriate SSLT function as it's an
+                                                           invalid event. XXXX indicates the event to
+                                                           be dispatched.
+
+ SSLT           ssltApiCnfgrCommand: Failed calling        Failed to send the message to the SSLT
+                ssltIssueCmd.                              message queue.
+
+ SSLT           SSLT: Error loading certificate from file  Failed while loading the SSLcertificate from
+                XXXX                                       specified file. XXXX indicates the file from
+                                                           where the certificate is being read.
+
+ SSLT           SSLT: Error loading private key from file  Failed while loading private key for SSL
+                                                           connection.
+
+ SSLT           SSLT: Error setting cipher list (no valid  Failed while setting cipher list.
+                ciphers)
+
+ SSLT           SSLT: Could not delete the SSL             Failed to delete SSL semaphores during
+                semaphores                                 cleanup.of all resources associated with
+                                                           the OpenSSL Locking semaphores.
+
+                                        Log Messages
+                                               540
+

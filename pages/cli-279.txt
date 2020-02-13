@@ -1,0 +1,52 @@
+                          M4100 Series ProSAFE Managed Switches
+
+match source-address mac
+This command adds to the specified class definition a match condition based on the source
+MAC address of a packet. The <address> parameter is any layer 2 MAC address formatted
+as six, two-digit hexadecimal numbers separated by colons (for example, 00:11:22:dd:ee:ff).
+The <macmask> parameter is a layer 2 MAC address bit mask, which might not be
+contiguous, and is formatted as six, two-digit hexadecimal numbers separated by colons (for
+example, ff:07:23:ff:fe:dc).
+
+ Default       none
+
+ Format        match source-address mac <address> <macmask>
+
+ Mode          · Class-Map Config
+               · Ipv6-Class-Map Config
+
+match srcip
+This command adds to the specified class definition a match condition based on the source
+IP address of a packet. The <ipaddr> parameter specifies an IP address. The <ipmask>
+parameter specifies an IP address bit mask and must consist of a contiguous set of leading 1
+bits.
+
+ Default       none
+
+ Format        match srcip <ipaddr> <ipmask>
+
+ Mode          Class-Map Config
+
+match srcip6
+This command adds to the specified class definition a match condition based on the source
+IP address of a packet.
+
+ Default       none
+
+ Format        match srcip6 <source-ipv6-prefix/prefix-length>
+
+ Mode          Ipv6-Class-Map Config
+
+match srcl4port
+This command adds to the specified class definition a match condition based on the source
+layer 4 port of a packet using a single keyword or numeric notation. To specify the match
+condition as a single keyword notation, the value for <portkey> is one of the supported port
+name keywords (listed below). The currently supported <portkey> values are: domain,
+echo, ftp, ftpdata, http, smtp, snmp, telnet, tftp, www. Each of these translates into
+its equivalent port number, which is used as both the start and end of a port range.
+To specify the match condition as a numeric value, one layer 4-port number is required. The
+port number is an integer from 0 to 65535.
+
+                                  Quality of Service Commands
+                                           279
+

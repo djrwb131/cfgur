@@ -1,0 +1,54 @@
+                                    M4100 Series ProSAFE Managed Switches
+
+     Term               Definition
+
+     Log                Displays when you enable logging for the rule.
+
+     Assign Queue       The queue identifier to which packets matching this rule are assigned.
+
+     Mirror Interface   The slot/port to which packets matching this rule are copied.
+
+     Redirect           The slot/port to which packets matching this rule are forwarded.
+     Interface
+
+     Time Range         Displays the name of the time-range if the ACL rule has referenced a time range.
+     Name
+
+     Rule Status        Status (Active/Inactive) of the ACL rule.
+
+   show access-lists
+   This command displays IP ACLs, IPv6 ACLs, and MAC access control lists information for a
+   designated interface and direction.
+
+     Format       show access-lists interface <slot/port> [in | out]
+
+     Mode         Privileged EXEC
+
+     Term               Definition
+
+     ACL Type           Type of access list (IP, IPv6, or MAC).
+
+     ACL ID             Access List name for a MAC or IPv6 access list or the numeric identifier for an IP access
+                        list.
+
+     Sequence           An optional sequence number might be specified to indicate the order of this access list
+     Number             relative to other access lists already assigned to this interface and direction. A lower
+                        number indicates higher precedence order. If a sequence number is already in use for
+                        this interface and direction, the specified access list replaces the currently attached
+                        access list using that sequence number. If the sequence number is not specified by the
+                        user, a sequence number that is one greater than the highest sequence number currently
+                        in use for this interface and direction is used. Valid range is (1­4,294,967,295).
+
+IPv6 Access Control List (ACL) Commands
+
+   This section describes the commands you use to configure IPv6 ACL settings. IPv6 ACLs
+   ensure that only authorized users have access to specific resources and block any
+   unwarranted attempts to reach network resources.
+   The following rules apply to IPv6 ACLs:
+   ·   The maximum number of ACLs you create is 100, regardless of type.
+   ·   The system supports only Ethernet II frame types.
+   ·   The maximum number of rules per IPv6 ACL is hardware-dependent.
+
+                                       Quality of Service Commands
+                                              305
+

@@ -1,0 +1,50 @@
+                            M4100 Series ProSAFE Managed Switches
+
+sflow sampler
+A data source configured to collect flow samples is called a poller. Use this command to
+configure a new sFlow sampler instance for this data source if <rcvr-idx> is valid.
+
+ Format         sflow sampler {<rcvr-indx> | rate <sampling-rate> | maxheadersize
+                <size>}
+
+ Mode           Interface Config
+
+ Field            Description
+
+ Receiver Index   The sFlow Receiver for this sFlow sampler to which flow samples are to be sent. A value
+                  of zero (0) means that no receiver is configured, no packets will be sampled. Only active
+                  receivers can be set. If a receiver expires, then all samplers associated with the receiver
+                  will also expire. Possible values are 1-8. The default is 0.
+
+ Sampling Rate    The statistical sampling rate for packet sampling from this source. A value of zero (0)
+                  disables sampling. A value of N means that out of N incoming packets, 1 packet will be
+                  sampled. The range is 1024-65536 and 0. The default is 0.
+                  When you issue a show command for the sampling rate, the configured sampling rate on
+                  an interface changes. Each time that you configure a sampling rate, a threshold value is
+                  calculated. This threshold value is configured in the hardware register. When you issue a
+                  show command for the sampling rate, the threshold value is queried from the hardware
+                  and the sampling rate is calculated in the following way:
+                  threshold value = 2^24/ (sampling rate)
+                  Because only an integer operation is supported, the sampling rate is not the same as the
+                  configured value.
+                  The following is an example:
+                  configured sampling rate is 60000
+                  threshold value = 2^24/ (60000) = 279 (from integer division)
+                  recalculated sampling rate = 2^24/ (279) = 60133
+
+ Maxheadersize    The maximum number of bytes that should be copied from the sampler packet. The
+                  range is 20-256. The default is 128. When set to zero (0), all the sampler parameters are
+                  set to their corresponding default value.
+
+no sflow sampler
+
+Use this command to reset the sFlow sampler instance to the default settings.
+
+ Format         no sflow sampler {<rcvr-indx> | rate <sampling-rate> | maxheadersize
+                <size>}
+
+ Mode           Interface Config
+
+                                         Utility Commands
+                                                 427
+

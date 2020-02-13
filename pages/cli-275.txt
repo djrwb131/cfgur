@@ -1,0 +1,53 @@
+                    M4100 Series ProSAFE Managed Switches
+
+no match class-map
+
+This command removes from the specified class definition the set of match conditions
+defined for another class. The <refclassname> is the name of an existing DiffServ class
+whose match conditions are being referenced by the specified class definition.
+
+ Format   no match class-map <refclassname>
+
+ Mode     ·   Class-Map Config
+          ·   Ipv6-Class-Map Config
+
+match cos
+This command adds to the specified class definition a match condition for the Class of
+Service value (the only tag in a single tagged packet or the first or outer 802.1Q tag of a
+double VLAN tagged packet). The value might be from 0 to 7.
+
+ Default  none
+
+ Format   match cos <0-7>
+
+ Mode     ·   Class-Map Config
+          ·   Ipv6-Class-Map Config
+
+match secondary cos
+This command adds to the specified class definition a match condition for the secondary
+Class of Service value (the only tag in a single tagged packet or the first or outer 802.1Q tag
+of a double VLAN tagged packet). The value might be from 0 to 7.
+
+ Default  none
+
+ Format   match secondary-cos <0-7>
+
+ Mode     Class-Map Config
+
+match ip6flowlbl
+This command adds to the specified class definition a match condition based on the
+IP6flowlbl of a packet. The <label> is the value to match in the Flow Label field of the IPv6
+header (range 0-1048575).
+
+ Format   match ip6flowlbl <label>
+
+ Mode     Ipv6-Class-Map Configuration mode
+
+match destination-address mac
+This command adds to the specified class definition a match condition based on the
+destination MAC address of a packet. The <macaddr> parameter is any layer 2 MAC
+address formatted as six, two-digit hexadecimal numbers separated by colons (for example,
+
+                               Quality of Service Commands
+                                     275
+

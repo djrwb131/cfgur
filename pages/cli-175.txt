@@ -1,0 +1,43 @@
+                                  M4100 Series ProSAFE Managed Switches
+
+MLD Snooping Querier Commands
+
+   In an IPv6 environment, MLD Snooping requires that one central switch or router periodically
+   query all end-devices on the network to announce their multicast memberships. This central
+   device is the MLD Querier. The MLD query responses, known as MLD reports, keep the
+   switch updated with the current multicast group membership on a port-by-port basis. If the
+   switch does not receive updated membership information in a timely fashion, it will stop
+   forwarding multicast frames to the port where the end device is located.
+   This section describes the commands you use to configure and display information on MLD
+   Snooping queries on the network and, separately, on VLANs.
+
+   set mld querier
+   Use this command to enable MLD Snooping Querier on the system (Global Config Mode) or
+   on a VLAN. Using this command, you can specify the IP address that the snooping querier
+   switch should use as a source address while generating periodic queries.
+   If a VLAN has MLD Snooping Querier enabled and MLD Snooping is operationally disabled
+   on it, MLD Snooping Querier functionality is disabled on that VLAN. MLD Snooping
+   functionality is re-enabled if MLD Snooping is operational on the VLAN.
+   The MLD Snooping Querier sends periodic general queries on the VLAN to solicit
+   membership reports.
+
+     Default         disabled
+
+     Format          set mld querier [vlan-id] [address ipv6_address]
+
+     Mode            ·   Global Config
+                     ·   VLAN Mode
+
+   no set mld querier
+
+   Use this command to disable MLD Snooping Querier on the system. Use the optional
+   parameter address to reset the querier address.
+
+     Format          no set mld querier [vlan-id] [address]
+
+     Mode            ·   Global Config
+                     ·   VLAN Mode
+
+                                            Switching Commands
+                                                    175
+

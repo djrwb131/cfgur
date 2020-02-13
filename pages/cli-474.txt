@@ -1,0 +1,52 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no passwords min-length
+
+Use this command to set the minimum password length to the default value.
+
+ Format        no passwords min-length
+
+ Mode          Global Config
+
+passwords history
+Use this command to set the number of previous passwords that shall be stored for each
+user account. When a local user changes his or her password, the user will not be able to
+reuse any password stored in password history. This ensures that users do not reuse their
+passwords often. The valid range is 0-10.
+
+ Default       0
+
+ Format        passwords history <0-10>
+
+ Mode          Global Config
+
+no passwords history
+
+Use this command to set the password history to the default value.
+
+ Format        no passwords history
+
+ Mode          Global Config
+
+passwords aging
+Use this command to implement aging on passwords for local users. When a user's
+password expires, the user will be prompted to change it before logging in again. The valid
+range is 1-365. The default is 0, or no aging.
+
+ Default       0
+
+ Format        passwords aging <1-365>
+
+ Mode          Global Config
+
+no passwords aging
+
+Use this command to set the password aging to the default value.
+
+ Format        no passwords aging
+
+ Mode          Global Config
+
+                                  Management Commands
+                                           474
+

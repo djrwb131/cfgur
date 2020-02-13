@@ -1,0 +1,47 @@
+                                    M4100 Series ProSAFE Managed Switches
+
+IP Address Conflict Commands
+
+   ip address-conflict-detect run
+   This command triggers the switch to run active address conflict detection by sending
+   gratuitous ARP packets for IPv4 addresses on the switch.
+
+       Note: This command takes effect only once after it is executed and cannot
+                be saved across power cycles.
+
+     Format      ip address-conflict-detect run
+
+     Mode        Global Config
+
+   show ip address-conflict
+   This command displays the status information corresponding to the last detected address
+   conflict.
+
+     Format            show ip address-conflict
+
+     Modes             Privileged EXEC
+
+     Term               Definition
+
+     Address Conflict   Identifies whether the switch has detected an address conflict on any IP address.
+     Detection Status
+
+     Last Conflicting   The IP Address that was last detected as conflicting on any interface.
+     IP Address
+
+     Last Conflicting   The MAC Address of the conflicting host that was last detected on any interface.
+     MAC Address
+
+     Time Since         The time in days, hours, minutes and seconds since the last address conflict was
+     Conflict Detected  detected.
+
+   clear ip address-conflict-detect
+   This command clears the detected address conflict status information.
+
+     Format      clear ip address-conflict-detect
+
+     Mode        Privileged EXEC
+
+                                             Utility Commands
+                                                431
+

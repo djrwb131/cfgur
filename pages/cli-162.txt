@@ -1,0 +1,59 @@
+                               M4100 Series ProSAFE Managed Switches
+
+If you specify the <slot/port> values, the command displays the information that is
+described in the following table.
+
+ Term              Definition
+
+ IGMP Snooping     Indicates whether IGMP Snooping is active on the interface.
+ Admin Mode
+
+ Fast Leave        Indicates whether IGMP Snooping Fast-leave is active on the interface.
+ Mode
+
+ Group             The amount of time in seconds that a switch will wait for a report from a particular group
+ Membership        on a particular interface before deleting the interface from the entry. This value may be
+ Interval          configured.
+
+ Maximum           The amount of time the switch waits after it sends a query on an interface because it did
+ Response Time     not receive a report for a particular group on that interface. This value may be configured.
+
+ Multicast Router  The amount of time to wait before removing an interface from the list of interfaces with
+ Expiry Time       multicast routers attached. The interface is removed if a query is not received. This value
+                   may be configured.
+
+If you specify the <vlan id> value, the command displays the information that is described
+in the following table.
+
+ Term              Definition
+
+ VLAN ID           The VLAN ID.
+
+ IGMP Snooping     Indicates whether IGMP Snooping is active on the VLAN.
+ Admin Mode
+
+ Fast Leave        Indicates whether IGMP Snooping Fast-leave is active on the VLAN.
+ Mode
+
+ Group             The amount of time in seconds that a switch will wait for a report from a particular group
+ Membership        on a particular interface, which is participating in the VLAN, before deleting the interface
+ Interval          from the entry. This value may be configured.
+
+ Maximum           The amount of time the switch waits after it sends a query on an interface, participating in
+ Response Time     the VLAN, because it did not receive a report for a particular group on that interface. This
+                   value may be configured.
+
+ Multicast Router  The amount of time to wait before removing an interface that is participating in the VLAN
+ Expiry Time       from the list of interfaces with multicast routers attached. The interface is removed if a
+                   query is not received. This value may be configured.
+
+show igmpsnooping mrouter interface
+This command displays information about statically configured ports.
+
+ Format       show igmpsnooping mrouter interface <slot/port>
+
+ Mode         Privileged EXEC
+
+                                        Switching Commands
+                                                 162
+

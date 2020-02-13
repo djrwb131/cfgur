@@ -1,0 +1,51 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no client-name
+
+This command removes the client name.
+
+ Format       no client-name
+
+ Mode          DHCP Pool Config
+
+default-router
+This command specifies the default router list for a DHCP client.
+<address1> and <address2>...<address8> must be valid IP addresses, each made up of
+four decimal bytes ranging from 0 to 255. IP address 0.0.0.0 is invalid.
+
+ Default       none
+
+ Format        default-router <address1> [<address2>...<address8>]
+
+ Mode          DHCP Pool Config
+
+no default-router
+
+This command removes the default router list.
+
+ Format        no default-router
+
+ Mode          DHCP Pool Config
+
+dns-server
+This command specifies the IP servers available to a DHCP client. Address parameters are
+valid IP addresses; each made up of four decimal bytes ranging from 0 to 255. IP address
+0.0.0.0 is invalid.
+
+ Default       none
+
+ Format        dns-server <address1> [<address2>...<address8>]
+
+ Mode          DHCP Pool Config
+
+no dns-server
+
+This command removes the DNS Server list.
+
+ Format        no dns-server
+
+ Mode          DHCP Pool Config
+
+                                     Utility Commands
+                                       384
+

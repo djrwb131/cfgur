@@ -1,0 +1,50 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no poe high-power
+
+Use this command to disable the high-power mode. The port will support only IEEE 902.3af
+devices.
+This command works on a global basis or per interface.
+
+ Format        no poe high-power
+
+ Mode          Interface Config
+
+poe power limit
+Use this command to configure the type of power limit for a port. If the power limit type is
+user-defined, the command also allows you to configure a maximum power limit.
+There are three options:
+·   class-based. Allows the port to draw up to the maximum power based on the
+    classification of the device connected.
+·   none. Allows the port to draw up to Class 0 maximum power if it is in low-power mode
+    and up to Class 4 maximum power if it is in high-power mode.
+·   user-defined. Allows you to define the maximum power to the port. This can be a
+    value from 3 through 32 watts.
+
+ Default       User-defined, with a maximum of 30 watts
+
+ Format        poe power limit {class-based | none | user-defined [<3000-32000>]}
+
+ Mode          ·   Global Config
+               ·   Interface Config
+
+no poe power limit
+
+Use this command to set the power limit type to the default. It also sets the maximum power
+limit to the default if the power limit type is user-defined.
+
+ Format        no poe power limit [user-defined]
+
+ Mode          ·   Global Config
+               ·   Interface Config
+
+poe power management
+Use this command to configure the power management mode based on each individual PoE
+unit or on all PoE units.
+Both the power management modes mentioned here will power up a device based on first
+come, first served. When the available power is less than the power limit defined on a port, no
+more power will be delivered.
+
+                                 Power over Ethernet Commands
+                                            320
+

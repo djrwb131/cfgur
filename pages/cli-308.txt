@@ -1,0 +1,59 @@
+                              M4100 Series ProSAFE Managed Switches
+
+Global Config mode. The Interface Config mode command is only available on platforms that
+support independent per-port Class of Service queue configuration.
+
+ Format         ipv6 traffic-filter <name> {in | {vlan <vlan-id> in}} [sequence
+                <1-4294967295>]
+
+ Modes          ·   Global Config
+                ·   Interface Config
+
+no ipv6 traffic-filter
+
+This command removes an IPv6 ACL identified by <name> from the interface or interfaces in
+a specific direction.
+
+ Format         no ipv6 traffic-filter <name> {in | {vlan <vlan-id> in}}
+
+ Modes          ·   Global Config
+                ·   Interface Config
+
+show ipv6 access-lists
+This command displays an IPv6 access list and all of the rules that are defined for the IPv6
+ACL. Use the [<name>] parameter to identify a specific IPv6 ACL to display.
+
+ Format         show ipv6 access-lists [<name>]
+
+ Mode           Privileged EXEC
+
+ Term              Definition
+
+ Rule Number       The ordered rule number identifier defined within the IPv6 ACL.
+
+ Action            The action associated with each rule. The possible values are Permit or Deny.
+
+ Match All         Indicates whether this access list applies to every packet. Possible values are True or
+                   False.
+
+ Protocol          The protocol to filter for this rule.
+
+ Source IP         The source IP address for this rule.
+ Address
+
+ Source L4 Port    The source port for this rule.
+ Keyword
+
+ Destination IP    The destination IP address for this rule.
+ Address
+
+ Destination L4    The destination port for this rule.
+ Port Keyword
+
+ IP DSCP           The value specified for IP DSCP.
+
+ Flow Label        The value specified for IPv6 Flow Label.
+
+                                      Quality of Service Commands
+                                                         308
+

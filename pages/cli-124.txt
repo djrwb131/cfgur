@@ -1,0 +1,58 @@
+                               M4100 Series ProSAFE Managed Switches
+
+The following output parameters are displayed.
+
+ Term               Description
+
+ System Priority    The administrative value of priority associated with the Partner's System ID.
+
+ System ID          The value representing the administrative value of the Aggregation Port's protocol
+                    Partner's System ID.
+
+ Admin Key          The administrative value of the Key for the protocol Partner.
+
+ Port Priority      The administrative value of the port priority for the protocol Partner.
+
+ Port-ID            The administrative value of the port number for the protocol Partner.
+
+ Admin State        The administrative values of the actor state for the protocol Partner.
+
+show port-channel brief
+This command displays the static capability of all port-channel (LAG) interfaces on the device
+as well as a summary of individual port-channel interfaces.
+
+ Format          show port-channel brief
+
+ Mode            ·  Privileged EXEC
+                 ·  User EXEC
+
+For each port-channel the following information is displayed:
+
+ Term               Definition
+
+ Logical Interface  The slot/port of the logical interface.
+
+ Port-channel       The name of port-channel (LAG) interface.
+ Name
+
+ Link-State         Shows whether the link is up or down.
+
+ Trap Flag          Shows whether trap flags are enabled or disabled.
+
+ Type               Shows whether the port-channel is statically or dynamically maintained.
+
+ Mbr Ports          The members of this port-channel.
+
+ Active Ports       The ports that are actively participating in the port-channel.
+
+show port-channel
+This command displays an overview of all port-channels (LAGs) on the switch.
+
+ Format          show port-channel
+
+ Mode            ·  Privileged EXEC
+                 ·  User EXEC
+
+                                          Switching Commands
+                                            124
+

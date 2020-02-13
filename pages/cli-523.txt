@@ -1,0 +1,53 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Green Feature Support
+
+   The NETGEAR Managed switch supports the following green Ethernet power saving modes:
+   ·   Energy Detect Mode
+   ·   EEE Mode
+   The green Ethernet commands supported depends on the switch model.
+    Table 2. Green feature support
+
+     Model            Energy-Detect  EEE
+
+     M4100-D10-POE    Yes            No
+
+     M4100-D12G       Yes            Yes
+
+     M4100-50G-POE+   Yes            Yes
+
+     M4100-26G-POE    Yes            Yes
+
+     M4100-50G        Yes            Yes
+
+     M4100-26G        Yes            Yes
+
+     M4100-50-POE     Yes            No
+
+     M4100-26-POE     Yes            No
+
+     M7100-24x        No             Yes
+
+     M4100-12GF       Yes            No
+
+     M4100-D12G-POE+  Yes            No
+
+     M4100-24G-POE+   Yes            No
+
+     M4100-12G-POE+   Yes            No
+
+Energy-Detect Mode
+
+   When Energy-Detect mode is enabled, if communication on a port stops, the port circuitry
+   automatically shuts down for a short period. The port wakes up periodically to check for link
+   activity. If activity is detected, the port circuitry remains active. This allows performing
+   autonegotiation and saving power when there is no active link.
+
+       Note: Combination ports support both copper and fiber media. Energy
+               Detect mode only applies to copper media. If Energy Detect mode is
+               configured on a combination port, it will only function when a copper
+               media is active.
+
+                                    Green Ethernet Commands
+                                             523
+

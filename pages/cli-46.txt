@@ -1,0 +1,50 @@
+                                   M4100 Series ProSAFE Managed Switches
+
+   show spanning-tree vlan
+   This command displays the association between a VLAN and a multiple spanning tree
+   instance. The <vlanid> corresponds to an existing VLAN ID.
+
+     Format          show spanning-tree vlan <vlanid>
+
+     Mode            ·  Privileged EXEC
+                     ·  User EXEC
+
+     Term               Definition
+
+     VLAN Identifier    The VLANs associated with the selected MST instance.
+
+     Associated         Identifier for the associated multiple spanning tree instance or "CST" if associated with
+     Instance           the Common and Internal Spanning Tree.
+
+VLAN Commands
+
+   This section describes the commands you use to configure VLAN settings.
+
+   vlan database
+   This command gives you access to the VLAN Config mode, which allows you to configure
+   VLAN characteristics.
+
+     Format          vlan database
+
+     Mode            Privileged EXEC
+
+   network mgmt_vlan
+   This command configures the Management VLAN ID.
+
+     Default         1
+
+     Format          network mgmt_vlan <1-4093>
+
+     Mode            Privileged EXEC
+
+   no network mgmt_vlan
+
+   This command sets the Management VLAN ID to the default.
+
+     Format          no network mgmt_vlan
+
+     Mode            Privileged EXEC
+
+                                            Switching Commands
+                                                46
+

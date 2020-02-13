@@ -1,0 +1,54 @@
+                             M4100 Series ProSAFE Managed Switches
+
+spanning-tree max-age
+This command sets the Bridge Max Age parameter to a new value for the Common and
+Internal Spanning Tree. The max-age value is in seconds within a range of 6­40, with the
+value being less than or equal to 2 x (Bridge Forward Delay - 1).
+
+ Default       20
+
+ Format        spanning-tree max-age <6-40>
+
+ Mode          Global Config
+
+no spanning-tree max-age
+
+This command sets the Bridge Max Age parameter for the Common and Internal Spanning
+Tree to the default value.
+
+ Format        no spanning-tree max-age
+
+ Mode          Global Config
+
+spanning-tree max-hops
+This command sets the MSTP Max Hops parameter to a new value for the Common and
+Internal Spanning Tree. The max-hops value is a range from 6 to 40.
+
+ Default       20
+
+ Format        spanning-tree max-hops <1-127>
+
+ Mode          Global Config
+
+no spanning-tree max-hops
+
+This command sets the Bridge Max Hops parameter for the Common and Internal Spanning
+Tree to the default value.
+
+ Format        no spanning-tree max-hops
+
+ Mode          Global Config
+
+spanning-tree mst
+This command sets the Path Cost or Port Priority for this port within the multiple spanning
+tree instance or in the Common and Internal Spanning Tree. If you specify an <mstid>
+parameter that corresponds to an existing multiple spanning tree instance, the configurations
+are done for that multiple spanning tree instance. If you specify 0 (defined as the default
+CIST ID) as the <mstid>, the configurations are done for the Common and Internal
+Spanning Tree instance.
+If you specify the cost option, the command sets the path cost for this port within a multiple
+spanning tree instance or the Common and Internal Spanning Tree instance, depending on
+
+                                 Switching Commands
+                                          33
+

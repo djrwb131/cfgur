@@ -1,0 +1,43 @@
+                       M4100 Series ProSAFE Managed Switches
+
+A VLAN can be configured as the source to a session (all member ports of that VLAN are
+monitored). Remote port mirroring is configured by adding the RSPAN VLAN ID. At the
+source switch, the destination is configured as the RSPAN VLAN and at the destination
+switch, the source is configured as the RSPAN VLAN.
+
+    Note: The source and destination cannot be configured as remote on the
+          same device.
+
+The reflector-port is configured at the source switch. The reflector-port forwards the mirrored
+traffic towards the destination switch.
+
+    Note: This port must be configured with RSPAN VLAN membership.
+
+IP/MAC ACL can be attached to a session by giving the access list number/name.
+Use the destination interface <slot/port> to specify the interface to receive the
+monitored traffic.
+Use the mode parameter to enable the administrative mode of the session. If enabled, the
+probe port monitors all the traffic received and transmitted on the physical monitored port.
+Use the filter parameter to filter a specified access group either by IP address or MAC
+address.
+
+ Format        monitor session <session-id> {source {interface <slot/port> | cpu
+               | vlan <vlan-id> | remote vlan <vlan-id>} [{rx | tx}] |
+               destination {interface <slot/port> | remote vlan <vlan-id>
+               reflector-port <slot/port>} | mode}
+
+ Mode          Global Config
+
+Command example:
+To configure the RSPAN VLAN source:
+monitor session <session-id> source {interface <slot/port> | vlan <vlan-id> | remote vlan
+<vlan-id>} [rx | tx]
+
+Command example:
+To the configure RSPAN VLAN destination:
+monitor session <session-id> destination {interface <slot/port> | remote vlan <vlan-id>
+reflector-port <slot/port>}
+
+                                   Switching Commands
+                                           126
+

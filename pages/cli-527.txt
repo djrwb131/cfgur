@@ -1,0 +1,62 @@
+                               M4100 Series ProSAFE Managed Switches
+
+Field                       Definition
+
+Reason for Energy-detect    The energy detect mode might be administratively enabled, but the operational
+current operational status  status might be inactive. The reasons for the same are:
+                               -  Port is currently operating in the fiber mode
+                               -  Link is up.
+                               -  Admin Mode Disabled
+                               -  Interface Not Attached
+                            If the energy-detect operational status is active, the reason field displays
+                            No energy Detected
+
+EEE Admin Mode              EEE Admin Mode is enabled or disabled.
+
+Transmit Idle Time          It is the time for which condition to move to LPI state is satisfied, at the end of which
+                            MAC TX transitions to LPI state. The Range is (0 to 0xffffffff).The default value is 0.
+
+Transmit Wake Time          It is the time for which MAC / switch has to wait to go back to ACTIVE state from LPI
+                            state when it receives packet for transmission. The Range is (0 to 0xffff).The default
+                            value is 0.
+
+Rx Low Power Idle Event     This field is incremented each time MAC RX enters LP IDLE state. Shows the total
+Count                       number of Rx LPI Events since EEE counters are last cleared
+
+Rx Low Power Idle           This field indicates duration of Rx LPI state in 10-microsecond increments. Shows
+Duration (microsec)         the total duration of Rx LPI since the EEE counters are last cleared.
+
+Tx Low Power Idle Event     This field is incremented each time MAC TX enters LP IDLE state. Shows the total
+Count                       number of Tx LPI Events since EEE counters are last cleared.
+
+Tx Low Power Idle           This field indicates duration of Tx LPI state in 10us increments. Shows the total
+Duration (microsec)         duration of Tx LPI since the EEE counters are last cleared.
+
+Tw_sys_tx (microsec)        Integer that indicates the value of Tw_sys that the local system can support. This
+                            value is updated by the EEE DLL Transmitter state diagram. This variable maps into
+                            the aLldpXdot3LocTxTwSys attribute.
+
+Tw_sys Echo (microsec)      Integer that indicates the remote system's Transmit Tw_sys that was used by the
+                            local system to compute the Tw_sys that it wants to request from the remote system.
+                            This value maps into the aLldpXdot3LocTxTwSysEcho attribute.
+
+Tw_sys_rx (microsec)        Integer that indicates the value of Tw_sys that the local system requests from the
+                            remote system. This value is updated by the EEE Receiver L2 state diagram. This
+                            variable maps into the aLldpXdot3LocRxTwSys attribute.
+
+Tw_sys_rx Echo              Integer that indicates the remote systems Receive Tw_sys that was used by the local
+(microsec)                  system to compute the Tw_sys that it can support. This value maps into the
+                            aLldpXdot3LocRxTwSysEcho attribute.
+
+Fallback Tw_sys             Integer that indicates the value of fallback Tw_sys that the local system requests
+(microsec)                  from the remote system. This value is updated by the local system software.
+
+Remote Tw_sys_tx            Integer that indicates the value of Tw_sys that the remote system can support. This
+(microsec)                  value maps from the aLldpXdot3RemTxTwSys attribute.
+
+Remote Tw_sys Echo          Integer that indicates the value Transmit Tw_sys echoed back by the remote system.
+(microsec)                  This value maps from the aLldpXdot3RemTxTwSysEcho attribute.
+
+                                        Green Ethernet Commands
+                                               527
+

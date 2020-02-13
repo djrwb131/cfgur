@@ -1,0 +1,53 @@
+                              M4100 Series ProSAFE Managed Switches
+
+Command Completion and Abbreviation
+
+   Command completion finishes spelling the command when you type enough letters of a
+   command to uniquely identify the command keyword. Once you have entered enough letters,
+   press the SPACEBAR or TAB key to complete the word.
+   Command abbreviation allows you to execute a command when you have entered there are
+   enough letters to uniquely identify the command. You must enter all of the required keywords
+   and parameters before you enter the command.
+
+CLI Error Messages
+
+   If you enter a command and the system is unable to execute it, an error message appears.
+   The following table describes the most common CLI error messages.
+    Table 7. CLI Error Messages
+
+     Message Text                            Description
+
+     % Invalid input detected at '^' marker. Indicates that you entered an incorrect or unavailable command.
+                                             The carat (^) shows where the invalid text is detected. This
+                                             message also appears if any of the parameters or values are not
+                                             recognized.
+
+     Command not found / Incomplete          Indicates that you did not enter the required keywords or values.
+     command. Use a question mark (?) to
+     list commands.
+
+     Ambiguous command                       Indicates that you did not enter enough letters to uniquely identify
+                                             the command.
+
+CLI Line-Editing Conventions
+
+   The following table describes the key combinations you can use to edit commands or
+   increase the speed of command entry. You can access this list from the CLI by entering help
+   from the User or Privileged EXEC modes.
+    Table 8. CLI Editing Conventions
+
+     Key Sequence       Description
+
+     DEL or Backspace   Delete previous character
+
+     Ctrl-A             Go to beginning of line
+
+     Ctrl-E             Go to end of line
+
+     Ctrl-F             Go forward one character
+
+     Ctrl-B             Go backward one character
+
+                                    Using the Command-Line Interface
+                                                  14
+

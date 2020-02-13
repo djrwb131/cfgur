@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Parameter         Description
+
+ <ipaddress> |     The IP address or name of the logging host.
+ <hostname>
+
+ <addresstype>     Indicates the type of address (IPv4, IPv6, or DNS). You can configure either an IPv4
+                   or IPv6 address or a host name for a syslog collector among the list of servers.
+
+ <port-number>     A port number from 1 to 65535.
+
+ <severitylevel>   Specify this value as either an integer from 0 to 7, or symbolically through one of the
+                   following keywords: emergency (0), alert (1), critical (2), error (3),
+                   warning (4), notice (5), info (6), or debug (7).
+
+logging host remove
+This command disables logging to host. See show logging hosts on page 357 for a list of host
+indexes.
+
+ Format      logging host remove <hostindex>
+
+ Mode        Global Config
+
+logging syslog
+This command enables syslog logging. The <portid> parameter is an integer with a range
+of 1-65535.
+
+ Default     disabled
+
+ Format      logging syslog [port <portid>]
+
+ Mode        Global Config
+
+no logging syslog
+
+This command disables syslog logging.
+
+ Format      no logging syslog
+
+ Mode        Global Config
+
+logging syslog source-interface
+This command configures the syslog source interface (source IP address) for the syslog
+server configuration. The IP address of the selected source interface is used for filling the
+IP header of management protocol packets. This allows security devices (firewalls) to identify
+the source packets coming from the specific switch. If a source interface is not specified, the
+primary IP address of the originating (outbound) interface is used as the source address.
+
+                                  Utility Commands
+                                        355
+

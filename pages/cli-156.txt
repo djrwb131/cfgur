@@ -1,0 +1,52 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Default       disabled
+
+ Format        set igmp interfacemode
+
+ Mode          Global Config
+
+no set igmp interfacemode
+
+This command disables IGMP Snooping on all interfaces.
+
+ Format        no set igmp interfacemode
+
+ Mode          Global Config
+
+set igmp fast-leave
+This command enables or disables IGMP Snooping fast-leave admin mode on a selected
+interface or VLAN. Enabling fast-leave allows the switch to immediately remove the layer 2
+LAN interface from its forwarding table entry upon receiving an IGMP leave message for that
+multicast group without first sending out MAC-based general queries to the interface.
+You should enable fast-leave admin mode only on VLANs where only one host is connected
+to each layer 2 LAN port. This prevents the inadvertent dropping of the other hosts that were
+connected to the same layer 2 LAN port but were still interested in receiving multicast traffic
+directed to that group. Also, fast-leave processing is supported only with IGMP version 2
+hosts.
+
+ Default       disabled
+
+ Format        set igmp fast-leave
+
+ Mode          Interface Config
+
+ Format        set igmp fast-leave <vlan id>
+
+ Mode          VLAN Config
+
+no set igmp fast-leave
+
+This command disables IGMP Snooping fast-leave admin mode on a selected interface.
+
+ Format        no set igmp fast-leave
+
+ Mode          Interface Config
+
+ Format        no set igmp fast-leave <vlan id>
+
+ Mode          VLAN Config
+
+                                   Switching Commands
+                                          156
+

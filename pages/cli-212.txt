@@ -1,0 +1,55 @@
+                             M4100 Series ProSAFE Managed Switches
+
+show forwardingdb agetime
+This command displays the timeout for address aging.
+
+ Default       300s
+
+ Format        show forwardingdb agetime
+
+ Mode          Privileged EXEC
+
+ Term             Definition
+
+ Address Aging    This parameter displays the address aging timeout for the associated forwarding
+ Timeout          database.
+
+show mac-address-table multicast
+This command displays the Multicast Forwarding Database (MFDB) information. If you enter
+the command with no parameter, the entire table is displayed. You can display the table entry
+for one MAC Address by specifying the MAC address as an optional parameter.
+
+ Format        show mac-address-table multicast <macaddr>
+
+ Mode          Privileged EXEC
+
+ Term             Definition
+
+ MAC Address      A multicast MAC address for which the switch has forwarding and or filtering information.
+                  The format is two-digit hexadecimal numbers separated by colons, for example
+                  01:23:45:67:89:AB. In an IVL system the MAC address will be displayed as a MAC
+                  address and VLAN ID combination of 8 bytes.
+
+ Type             The type of the entry. Static entries are those that are configured by the end user.
+                  Dynamic entries are added to the table as a result of a learning process or protocol.
+
+ Component        The component that is responsible for this entry in the Multicast Forwarding Database.
+                  Possible values are IGMP Snooping, GMRP, and Static Filtering.
+
+ Description      The text description of this multicast table entry.
+
+ Interfaces       The list of interfaces that are designated for forwarding (Fwd:) and filtering (Flt:).
+
+ Forwarding       The resultant forwarding list is derived from combining all the component's forwarding
+ Interfaces       interfaces and removing the interfaces that are listed as the static filtering interfaces.
+
+show mac-address-table stats
+This command displays the Multicast Forwarding Database (MFDB) statistics.
+
+ Format        show mac-address-table stats
+
+ Mode          Privileged EXEC
+
+                               Switching Commands
+                                         212
+

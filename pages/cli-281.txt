@@ -1,0 +1,43 @@
+                            M4100 Series ProSAFE Managed Switches
+
+    Note: The only way to remove an individual policy attribute from a class
+           instance within a policy is to remove the class instance and re-add it
+           to the policy. The values associated with an existing policy attribute
+           can be changed without removing the class instance.
+
+The CLI command root is policy-map.
+
+assign-queue
+This command modifies the queue id to which the associated traffic stream is assigned. The
+<queueid> is an integer from 0 to n-1, where n is the number of egress queues supported
+by the device.
+
+ Format             assign-queue <queueid>
+
+ Mode               Policy-Class-Map Config
+
+ Incompatibilities  Drop
+
+drop
+This command specifies that all packets for the associated traffic stream are to be dropped at
+ingress.
+
+ Format             drop
+
+ Mode               Policy-Class-Map Config
+
+ Incompatibilities  Assign Queue, Mark (all forms), Mirror, Police, Redirect
+
+mirror
+This command specifies that all incoming packets for the associated traffic stream are copied
+to a specific egress interface (physical port or LAG).
+
+ Format             mirror <slot/port>
+
+ Mode               Policy-Class-Map Config
+
+ Incompatibilities  Drop, Redirect
+
+                                   Quality of Service Commands
+                                            281
+

@@ -1,0 +1,46 @@
+                                M4100 Series ProSAFE Managed Switches
+
+     Term             Description
+
+     Querier Election Indicates whether the MLD Snooping Querier participates in querier election if it
+     Participate      discovers the presence of a querier in the VLAN.
+
+     Querier VLAN     The IP address will be used in the IPv6 header while sending out MLD queries on this
+     Address          VLAN. It can be configured using the appropriate command.
+
+     Operational      This version of IPv6 will be used while sending out MLD queriers on this VLAN.
+     Version
+
+     Last Querier     Indicates the IP address of the most recent Querier from which a Query was received.
+     Address
+
+     Last Querier     Indicates the MLD version of the most recent Querier from which a Query was received
+     Version          on this VLAN.
+
+   When the optional argument detail is used, the command shows the global information
+   and the information for all Querier-enabled VLANs.
+
+Port Security Commands
+
+   This section describes the commands you use to configure Port Security on the switch. Port
+   security, which is also known as port MAC locking, allows you to secure the network by
+   locking allowable MAC addresses on a port. Packets with a matching source MAC address
+   are forwarded normally, and all other packets are discarded.
+
+       Note: To enable the SNMP trap specific to port security, see snmp-server
+                  enable traps violation on page 494.
+
+   port-security
+   This command enables port locking at the system level (Global Config) or port level (Interface
+   Config).
+
+     Default      disabled
+
+     Format       port-security
+
+     Mode         ·    Global Config
+                  ·    Interface Config
+
+                                             Switching Commands
+                                            178
+

@@ -1,0 +1,49 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+Utilities
+
+    Table 6. Trap Mgr Log Message
+
+     Component        Message                                        Cause
+
+     Trap Mgr         Link Up/Down: slot/port                        An interface changed link state.
+
+    Table 7. DHCP Filtering Log Messages
+
+     Component        Message                                        Cause
+
+     DHCP Filtering   Unable to create r/w lock for DHCP             Unable to create semaphore used for dhcp
+                      Filtering                                      filtering configuration structure .
+
+     DHCP Filtering   Failed to register with nv Store.              Unable to register save and restore
+                                                                     functions for configuration save
+
+     DHCP Filtering   Failed to register with NIM                    Unable to register with NIM for interface
+                                                                     callback functions
+
+     DHCP Filtering   Error on call to sysapiCfgFileWrite file       Error on trying to save configuration .
+
+    Table 8. NVStore Log Messages
+
+     Component        Message                                        Cause
+
+     NVStore          Building defaults for file XXX                 A component's configuration file does not
+                                                                     exist or the file's checksum is incorrect so
+                                                                     the component's default configuration file is
+                                                                     built.
+
+     NVStore          Error on call to osapiFsWrite routine on file  Either the file cannot be opened or the OS's
+                      XXX                                            file I/O returned an error trying to write to
+                                                                     the file.
+
+     NVStore          File XXX corrupted from file system.           The calculated checksum of a component's
+                      Checksum mismatch.                             configuration file in the file system did not
+                                                                     match the checksum of the file in memory.
+
+     NVStore          Migrating config file XXX from version Y to    A configuration file version mismatch was
+                      Z                                              detected so a configuration file migration
+                                                                     has started.
+
+                                                  Log Messages
+                                                        535
+

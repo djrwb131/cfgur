@@ -1,0 +1,48 @@
+                           M4100 Series ProSAFE Managed Switches
+
+transport input telnet
+Use this command to regulate new Telnet sessions. If enabled, new Telnet sessions can be
+established until there are no more sessions available. An established session remains
+active until the session is ended or an abnormal network error ends the session.
+
+    Note: If the Telnet Server Admin Mode is disabled, Telnet sessions cannot
+            be established. Use the ip telnet server enable command to
+            enable Telnet Server Admin Mode.
+
+ Default       enabled
+
+ Format        transport input telnet
+
+ Mode          Line Config
+
+no transport input telnet
+
+Use this command to prevent new Telnet sessions from being established.
+
+ Format        no transport input telnet
+
+ Mode          Line Config
+
+transport output telnet
+Use this command to regulate new outbound Telnet connections. If enabled, new outbound
+Telnet sessions can be established until the system reaches the maximum number of
+simultaneous outbound Telnet sessions allowed. An established session remains active until
+the session is ended or an abnormal network error ends it.
+
+ Default       enabled
+
+ Format        transport output telnet
+
+ Mode          Line Config
+
+no transport output telnet
+
+Use this command to prevent new outbound Telnet connection from being established.
+
+ Format        no transport output telnet
+
+ Mode          Line Config
+
+                               Management Commands
+                                          453
+

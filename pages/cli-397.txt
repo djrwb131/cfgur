@@ -1,0 +1,55 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ip host
+Use this command to define static host name-to-address mapping in the host cache. The
+<name> parameter is the host name. The <ip address> parameter is the IP address of the
+host.
+
+ Default     none
+
+ Format      ip host <name> <ipaddress>
+
+ Mode        Global Config
+
+no ip host
+
+Use this command to remove the name-to-address mapping.
+
+ Format      no ip host <name>
+
+ Mode        Global Config
+
+ipv6 host
+Use this command to define static host name-to-IPv6 address mapping in the host cache.
+The <name> parameter is the host name. The <ipv6-address> parameter is the IPv6
+address of the host.
+
+ Default     none
+
+ Format      ipv6 host <name> <ipv6-address>
+
+ Mode        Global Config
+
+no ipv6 host
+
+Use this command to remove the static host name-to-IPv6 address mapping in the host
+cache.
+
+ Format      no ipv6 host <name>
+
+ Mode        Global Config
+
+ip domain retry
+Use this command to specify the number of times to retry sending Domain Name System
+(DNS) queries. The parameter <number> indicates the number of times to retry sending a
+DNS query to the DNS server. This number ranges from 0 to 100.
+
+ Default     2
+
+ Format      ip domain retry <number>
+
+ Mode        Global Config
+
+                                  Utility Commands
+                                        397
+

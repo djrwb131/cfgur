@@ -1,0 +1,50 @@
+                                M4100 Series ProSAFE Managed Switches
+
+   show dvlan-tunnel
+   Use this command without the optional parameters to display all interfaces enabled for
+   Double VLAN Tunneling. Use the optional parameters to display detailed information about
+   Double VLAN Tunneling for the specified interface or all interfaces.
+
+     Format       show dvlan-tunnel [interface {<slot/port> | all}]
+
+     Mode         ·   Privileged EXEC
+                  ·   User EXEC
+
+     Term            Definition
+
+     Interface       Valid slot and port number separated by forward slashes.
+
+     Mode            The administrative mode through which Double VLAN Tunneling can be enabled or
+                     disabled. The default value for this field is disabled.
+
+     EtherType       A 2-byte hex EtherType to be used as the first 16 bits of the DVLAN tunnel. There are
+                     three different EtherType tags. The first is 802.1Q, which represents the commonly used
+                     value of 0x8100. The second is vMAN, which represents the commonly used value of
+                     0x88A8. If EtherType is not one of these two values, it is a custom tunnel value,
+                     representing any value in the range of 0­65535.
+
+Voice VLAN Commands
+
+   This section describes the commands you use for Voice VLAN. Voice VLAN enables switch
+   ports to carry voice traffic with defined priority to enable separation of voice and data traffic
+   coming onto the port. The benefits of using Voice VLAN is to ensure that the sound quality of
+   an IP phone could be safeguarded from deteriorating when the data traffic on the port is high.
+   Also the inherent isolation provided by VLANs ensures that inter-VLAN traffic is under
+   management control and that network- attached clients cannot initiate a direct attack on
+   voice components. QoS-based on IEEE 802.1P Class of Service (CoS) uses classification
+   and scheduling to sent network traffic from the switch in a predictable manner. The system
+   uses the source MAC of the traffic traveling through the port to identify the IP phone data
+   flow.
+
+   voice vlan (Global Config)
+   Use this command to enable the Voice VLAN capability on the switch.
+
+     Default      disabled
+
+     Format       voice vlan
+
+     Mode         Global Config
+
+                                      Switching Commands
+                                              65
+

@@ -1,0 +1,51 @@
+                              M4100 Series ProSAFE Managed Switches
+
+For LS_REQ packet field definitions, the parameter that is shown in the following table is
+displayed in the trace message.
+
+ Field            Definition
+
+ Length           Length of packet
+
+For LS_UPD packet field definitions, the parameter that is shown in the following table is
+displayed in the trace message.
+
+ Field            Definition
+
+ Length           Length of packet
+
+For LS_ACK packet field definitions, the parameter that is shown in the following table is
+displayed in the trace message.
+
+ Field            Definition
+
+ Length           Length of packet
+
+no debug ospf packet
+
+This command disables tracing of OSPF packets.
+
+ Format        no debug ospf packet
+
+ Mode          Privileged EXEC
+
+debug ipv6 ospfv3 packet
+Use this command to enable OSPFv3 packet debug trace.
+
+ Default       disabled
+
+ Format        debug ipv6 ospfv3 packet
+
+ Mode          Privileged EXEC
+
+no debug ipv6 ospfv3 packet
+
+Use this command to disable tracing of OSPFv3 packets.
+
+ Format        no debug ipv6 ospfv3 packet
+
+ Mode          Privileged EXEC
+
+                                    Utility Commands
+                                          417
+

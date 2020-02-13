@@ -1,0 +1,47 @@
+                              M4100 Series ProSAFE Managed Switches
+
+no sntp unicast client poll-timeout
+
+This command will reset the poll timeout for SNTP unicast clients to its default value.
+
+ Format        no sntp unicast client poll-timeout
+
+ Mode          Global Config
+
+sntp unicast client poll-retry
+This command will set the poll retry for SNTP unicast clients to a value from 0 to 10.
+
+ Default       1
+
+ Format        sntp unicast client poll-retry <poll-retry>
+
+ Mode          Global Config
+
+no sntp unicast client poll-retry
+
+This command will reset the poll retry for SNTP unicast clients to its default value.
+
+ Format        no sntp unicast client poll-retry
+
+ Mode          Global Config
+
+sntp server
+This command configures an SNTP server (a maximum of three). The optional priority can be
+a value of 1-3, the version a value of 1-4, and the port id a value of 1-65535.
+
+ Format        sntp server {<ipaddress> | <ipv6address> | <hostname>} [<priority>
+               [<version> [<portid>]]]
+
+ Mode          Global Config
+
+no sntp server
+
+This command deletes a server from the configured SNTP servers.
+
+ Format        no sntp server remove {<ipaddress> | <ipv6address> | <hostname>}
+
+ Mode          Global Config
+
+                                    Utility Commands
+                                          377
+

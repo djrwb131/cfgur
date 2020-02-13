@@ -1,0 +1,56 @@
+                          M4100 Series ProSAFE Managed Switches
+
+ Format          show monitor session <session-id>
+
+ Mode            Privileged EXEC
+
+ Term            Definition
+
+ Session ID      An integer value used to identify the session. Its value can be anything between 1 and
+                 the maximum number of mirroring sessions allowed on the platform.
+
+ Monitor Session Indicates whether the Port Mirroring feature is enabled or disabled for the session
+ Mode            identified with <session-id>. The possible values are Enabled and Disabled.
+
+ Probe Port      Probe port (destination port) for the session identified with <session-id>. If probe
+                 port is not set then this field is blank.
+
+ Source Port     The port, which is configured as mirrored port (source port) for the session identified
+                 with <session-id>. If no source port is configured for the session then this field is
+                 blank.
+
+ Type            Direction in which source port configured for port mirroring.Types are tx for transmitted
+                 packets and rx for receiving packets.
+
+ Src VLAN        All member ports of this VLAN are mirrored. If the source VLAN is not configured, this
+                 field is blank.
+
+ Ref. Port       This port carries all the mirrored traffic at the source switch.
+
+ Src Remote VLAN The source VLAN is configured at the destination switch. If the remote VLAN is not
+                 configured, this field is blank.
+
+ Dst Remote VLAN The destination VLAN is configured at the source switch. If the remote VLAN is not
+                 configured, this field is blank.
+
+ IP ACL          The IP access-list id or name attached to the port mirroring session.
+
+ MAC ACL         The MAC access-list name attached to the port mirroring session.
+
+show vlan remote-span
+This command displays the configured RSPAN VLAN.
+
+ Format          show vlan remote-span
+
+ Mode            Privileged Exec Mode
+
+Command example:
+(NETGEAR Switch)# show vlan remote-span
+
+Remote SPAN VLAN
+------------------------------------------------------------------------
+100
+
+                                       Switching Commands
+                                                  128
+

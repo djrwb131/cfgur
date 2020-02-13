@@ -1,0 +1,56 @@
+                                   M4100 Series ProSAFE Managed Switches
+
+   show mac access-lists
+   This command displays a MAC access list and all of the rules that are defined for the MAC
+   ACL. Use the [<name>] parameter to identify a specific MAC ACL to display.
+
+     Format       show mac access-lists [<name>]
+
+     Mode         Privileged EXEC
+
+     Term              Definition
+
+     Rule Number       The ordered rule number identifier defined within the MAC ACL.
+
+     Action            The action associated with each rule. The possible values are Permit or Deny.
+
+     Source MAC        The source MAC address for this rule.
+     Address
+
+     Destination MAC   The destination MAC address for this rule.
+     Address
+
+     Ethertype         The Ethertype keyword or custom value for this rule.
+
+     VLAN ID           The VLAN identifier value or range for this rule.
+
+     COS               The COS (802.1p) value for this rule.
+
+     Log               Displays when you enable logging for the rule.
+
+     Assign Queue      The queue identifier to which packets matching this rule are assigned.
+
+     Mirror Interface  The slot/port to which packets matching this rule are copied.
+
+     Redirect          The slot/port to which packets matching this rule are forwarded.
+     Interface
+
+     Time Range        Displays the name of the time-range if the MAC ACL rule has referenced a time range.
+     name
+
+     Rule Status       Status (Active/Inactive) of the MAC ACL rule
+
+IP Access Control List (ACL) Commands
+
+   This section describes the commands you use to configure IP ACL settings. IP ACLs ensure
+   that only authorized users have access to specific resources and block any unwarranted
+   attempts to reach network resources.
+   The following rules apply to IP ACLs:
+   ·   Managed switch software does not support IP ACL configuration for IP packet fragments.
+   ·   The maximum number of ACLs you can create is hardware-dependent. The limit applies
+       to all ACLs, regardless of type.
+   ·   The maximum number of rules per IP ACL is hardware-dependent.
+
+                                      Quality of Service Commands
+                                              297
+

@@ -1,0 +1,57 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Term                Definition
+
+ Group Name          The group name of an entry in the Protocol-based VLAN table.
+
+ Group ID            The group identifier of the protocol group.
+
+ Protocol(s)         The type of protocol(s) for this group.
+
+ VLAN                The VLAN associated with this Protocol Group.
+
+ Interface(s)        Lists the slot/port interface(s) that are associated with this Protocol Group.
+
+show port description
+This command displays the port description for every port.
+
+ Format           show port description <slot/port>
+
+ Mode             Privileged EXEC
+
+ Term                Definition
+
+ Interface           Valid slot and port number separated by forward slashes
+
+ Description         Shows the port description configured via the "description" command
+
+show port status
+This command displays the Protocol-Based VLAN information for either the entire system, or
+for the indicated group.
+
+ Format           show port status {<slot/port> | all}
+
+ Mode             Privileged EXEC
+
+ Term                Definition
+
+ Interface           Valid slot and port number separated by forward slashes.
+
+ Media Type          "Copper" or "Fiber" for combo port.
+
+ STP Mode            Indicate the spanning tree mode of the port.
+
+ Physical Mode       Either "Auto" or fixed speed and duplex mode.
+
+ Physical Status     The actual speed and duplex mode.
+
+ Link Status         Whether the link is Up or Down.
+
+ Loop Status         Whether the port is in loop state or not.
+
+ Partner Flow        Whether the remote side is using flow control or not.
+ Control
+
+                                        Switching Commands
+                                                25
+

@@ -1,0 +1,60 @@
+                            M4100 Series ProSAFE Managed Switches
+
+Table 9. RADIUS Log Messages
+
+ Component      Message                                      Cause
+
+ RADIUS         RADIUS: Invalid data length - xxx            The RADIUS Client received an invalid
+                                                             message from the server.
+
+ RADIUS         RADIUS: Failed to send the request           A problem communicating with the
+                                                             RADIUS server.
+
+ RADIUS         RADIUS: Failed to send all of the request    A problem communicating with the
+                                                             RADIUS server during transmit.
+
+ RADIUS         RADIUS: Could not get the Task Sync          Resource issue with RADIUS Client
+                semaphore!                                   service.
+
+ RADIUS         RADIUS: Buffer is too small for response     RADIUS Client attempted to build a
+                processing                                   response larger than resources allow.
+
+ RADIUS         RADIUS: Could not allocate accounting        Resource issue with RADIUS Client
+                requestInfo                                  service.
+
+ RADIUS         RADIUS: Could not allocate requestInfo       Resource issue with RADIUS Client
+                                                             service.
+
+ RADIUS         RADIUS: osapiSocketRecvFrom returned         Error while attempting to read data from the
+                error                                        RADIUS server.
+
+ RADIUS         RADIUS: Accounting-Response failed to        The RADIUS Client received an invalid
+                validate, id=xxx                             message from the server.
+
+ RADIUS         RADIUS: User (xxx) needs to respond for      An unexpected challenge was received for
+                challenge                                    a configured user.
+
+ RADIUS         RADIUS: Could not allocate a buffer for the  Resource issue with RADIUS Client
+                packet                                       service.
+
+ RADIUS         RADIUS: Access-Challenge failed to           The RADIUS Client received an invalid
+                validate, id=xxx                             message from the server.
+
+ RADIUS         RADIUS: Failed to validate                   The RADIUS Client received an invalid
+                Message-Authenticator, id=xxx                message from the server.
+
+ RADIUS         RADIUS: Access-Accpet failed to validate,    The RADIUS Client received an invalid
+                id=xxx                                       message from the server.
+
+ RADIUS         RADIUS: Invalid packet length ­ xxx          The RADIUS Client received an invalid
+                                                             message from the server.
+
+ RADIUS         RADIUS: Response is missing                  The RADIUS Client received an invalid
+                Message-Authenticator, id=xxx                message from the server.
+
+ RADIUS         RADIUS: Server address does not match        RADIUS Client received a server response
+                configured server                            from an unconfigured server.
+
+                                           Log Messages
+                                               536
+

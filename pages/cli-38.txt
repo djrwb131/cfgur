@@ -1,0 +1,57 @@
+                               M4100 Series ProSAFE Managed Switches
+
+no spanning-tree bpduforwarding
+
+This command will cause the STP BPDU packets received from the network to be dropped if
+STP is disabled.
+
+ Format          no spanning-tree bpduforwarding
+
+ Mode            Global Config
+
+show spanning-tree
+This command displays spanning tree settings for the Common and Internal Spanning Tree.
+The following details are displayed.
+
+ Format          show spanning-tree
+
+ Mode            ·  Privileged EXEC
+                 ·  User EXEC
+
+ Term               Definition
+
+ Bridge Priority    Specifies the bridge priority for the Common and Internal Spanning Tree (CST). The
+                    value lies between 0 and 61440. It is displayed in multiples of 4096.
+
+ Bridge Identifier  The bridge identifier for the CST. It is made up using the bridge priority and the base
+                    MAC address of the bridge.
+
+ Time Since         Time in seconds.
+ Topology
+ Change
+
+ Topology           Number of times changed.
+ Change Count
+
+ Topology           Boolean value of the Topology Change parameter for the switch indicating if a topology
+ Change             change is in progress on any port assigned to the Common and Internal Spanning Tree.
+
+ Designated Root    The bridge identifier of the root bridge. It is made up from the bridge priority and the base
+                    MAC address of the bridge.
+
+ Root Path Cost     Value of the Root Path Cost parameter for the Common and Internal Spanning Tree.
+
+ Root Port          Identifier of the port to access the Designated Root for the CST
+ Identifier
+
+ Root Port Max      Derived value.
+ Age
+
+ Root Port Bridge   Derived value.
+ Forward Delay
+
+ Hello Time         Configured value of the parameter for the CST.
+
+                                     Switching Commands
+                                                   38
+

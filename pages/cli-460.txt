@@ -1,0 +1,52 @@
+                                M4100 Series ProSAFE Managed Switches
+
+   no crypto certificate generate
+
+   Use this command to delete the HTTPS certificate files from the device, regardless of
+   whether they are self-signed or downloaded from an outside source.
+
+     Format       no crypto certificate generate
+
+     Mode         Global Config
+
+   crypto key generate rsa
+   Use this command to generate an RSA key pair for SSH. The new key files will overwrite any
+   existing generated or downloaded RSA key files.
+
+     Format       crypto key generate rsa
+
+     Mode         Global Config
+
+   no crypto key generate rsa
+
+   Use this command to delete the RSA key files from the device.
+
+     Format       no crypto key generate rsa
+
+     Mode         Global Config
+
+   crypto key generate dsa
+   Use this command to generate a DSA key pair for SSH. The new key files will overwrite any
+   existing generated or downloaded DSA key files.
+
+     Format       crypto key generate dsa
+
+     Mode         Global Config
+
+   no crypto key generate dsa
+
+   Use this command to delete the DSA key files from the device.
+
+     Format       no crypto key generate dsa
+
+     Mode         Global Config
+
+Hypertext Transfer Protocol (HTTP) Commands
+
+   This section describes the commands you use to configure HTTP and secure HTTP access
+   to the switch. Access to the switch by using a Web browser is enabled by default. Everything
+   you can view and configure by using the CLI is also available by using the Web.
+
+                                    Management Commands
+                                             460
+

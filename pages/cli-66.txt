@@ -1,0 +1,53 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no voice vlan (Global Config)
+
+Use this command to disable the Voice VLAN capability on the switch.
+
+ Format       no voice vlan
+
+ Mode         Global Config
+
+voice vlan (Interface Config)
+Use this command to enable the Voice VLAN capability on the interface.
+
+ Default      disabled
+
+ Format       voice vlan {<id> | dot1p <priority> | none | untagged}
+
+ Mode         Interface Config
+
+You can configure Voice VLAN in any of the following ways:
+
+ Parameter       Description
+
+ vlan-id         Configure the IP phone to forward all voice traffic through the specified VLAN. Valid
+                 VLAN IDs are from 1 to 4093 (the maximum supported by the platform).
+
+ dot1p           Configure the IP phone to use 802.1p priority tagging for voice traffic and to use the
+                 default native VLAN (VLAN 0) to carry all traffic. Valid <priority> range is 0­7.
+
+ none            Allow the IP phone to use its own configuration to send untagged voice traffic.
+
+ untagged        Configure the phone to send untagged voice traffic.
+
+no voice vlan (Interface Config)
+
+Use this command to disable the Voice VLAN capability on the interface.
+
+ Format       no voice vlan
+
+ Mode         Interface Config
+
+voice vlan data priority
+Use this command to either trust or untrust the data traffic arriving on the Voice VLAN port.
+
+ Default      trust
+
+ Format       voice vlan data priority {untrust | trust}
+
+ Mode         Interface Config
+
+                                 Switching Commands
+                                         66
+

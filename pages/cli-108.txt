@@ -1,0 +1,44 @@
+                         M4100 Series ProSAFE Managed Switches
+
+no flowcontrol
+
+ Format       no flowcontrol
+
+ Mode         · Global Config
+              · Interface Config
+
+show flowcontrol
+Use this command to display the IEEE 802.3 Annex 31B flow control settings and status for a
+specific interface or all interfaces. It also displays 802.3 Tx and Rx pause counts. Priority
+Flow Control frames counts are not displayed. If the port is enabled for priority flow control,
+operational flow control status is displayed as "Inactive". Operational flow control status for
+stacking ports is always displayed as "N/A".
+
+ Format       show flowcontrol [slot/port]
+
+ Mode         Privileged Exec
+
+Command example:
+(NETGEAR Switch)#show flowcontrol
+
+Admin Flow Control: Symmetric
+
+Port     Flow Control   RxPause         TxPause
+         Oper
+------   ------------   --------        ---------
+0/1      Active         310             611
+0/2      Inactive       0               0
+
+Command example:
+(NETGEAR Switch)#show flowcontrol interface 0/1
+
+Admin Flow Control: Symmetric
+
+Port       Flow Control       RxPause      TxPause
+           Oper
+---------  -------            --------     -------
+0/1        Active             310          611
+
+                                       Switching Commands
+                                              108
+

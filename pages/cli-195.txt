@@ -1,0 +1,56 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Term              Definition
+
+ Fast Start        The number of LLDP PDUs that will be transmitted when the protocol is enabled.
+ Repeat Count
+
+ Device Class      The local device's MED Classification. There are four different kinds of devices, three of
+                   them represent the actual end points (classified as Class I Generic[IP Communication
+                   Controller etc.], Class II Media Conference Bridge etc.], Class III Communication [IP
+                   Telephone etc.]. Class IV Network Connectivity Device, which is typically a LAN Switch,
+                   Router, IEEE 802.11 Wireless Access Point, etc.
+
+Command example:
+(NETGEAR Switch) #show lldp med
+LLDP MED Global Configuration
+
+Fast Start Repeat Count:       3
+Device Class:     Network Connectivity
+
+show lldp med interface
+Use this command to display a summary of the current LLDP MED configuration for a
+specific interface. <slot/port> indicates a specific physical interface. all indicates all
+valid LLDP interfaces.
+
+ Format       show lldp med interface {<slot/port> | all}
+
+ Mode         Privileged Exec
+
+ Term                 Definition
+
+ Interface            The interface in a slot/port format.
+
+ Link                 Shows whether the link is up or down.
+
+ ConfigMED            Shows if the LLPD-MED mode is enabled or disabled on this interface
+
+ OperMED              Shows if the LLPD-MED TLVs are transmitted or not on this interface.
+
+ ConfigNotify         Shows if the LLPD-MED topology notification mode of this interface.
+
+ TLVsTx               Shows whether the interface sends optional TLVs in the LLDPDUs. The TLV codes
+                      can be 0 (Capabilities), 1 (Network Policy), 2 (Location), 3 (Extended PSE), 4
+                      (Extended Pd), or 5 (Inventory).
+
+Command example:
+(NETGEAR Switch) #show lldp med interface all
+
+Interface     Link   configMED operMED      ConfigNotify TLVsTx
+---------     ------ --------- --------     ------------ -----------
+  0/1         Down   Disabled     Disabled  Disabled        0,1
+  0/2         Up     Disabled     Disabled  Disabled        0,1
+
+                                  Switching Commands
+                                              195
+

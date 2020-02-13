@@ -1,0 +1,59 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ Term            Definition
+
+ Port            SNTP Client Port.
+
+ Client Mode     Configured SNTP Client Mode.
+
+show sntp server
+This command is used to display SNTP server settings and configured servers.
+
+ Format         show sntp server
+
+ Mode           Privileged EXEC
+
+ Term            Definition
+
+ Server Host     IP address or hostname of configured SNTP Server.
+ Address
+
+ Server Type     Address Type of Server.
+
+ Server Stratum  Claimed stratum of the server for the last received valid packet.
+
+ Server          Reference clock identifier of the server for the last received valid packet.
+ Reference ID
+
+ Server Mode     SNTP Server mode.
+
+ Server Maximum  Total number of SNTP Servers allowed.
+ Entries
+
+ Server Current  Total number of SNTP configured.
+ Entries
+
+For each configured server, the information that is shown in the following table is displayed.
+
+ Term            Definition
+
+ Host Address    IP address or hostname of configured SNTP Server.
+
+ Address Type    Address Type of configured SNTP server.
+
+ Priority        IP priority type of the configured server.
+
+ Version         SNTP Version number of the server. The protocol version used to query the server in
+                 unicast mode.
+
+ Port            Server Port Number.
+
+ Last Attempt    Last server attempt time for the specified server.
+ Time
+
+ Last Update     Last server attempt status for the server.
+ Status
+
+                                         Utility Commands
+                                              381
+

@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no set mld mrouter
+
+Use this command to disable multicast router attached mode for a VLAN with a particular
+VLAN ID.
+
+ Format      no set mld mrouter <vlan-id>
+
+ Mode        Interface Config
+
+set mld mrouter interface
+Use this command to configure the interface as a multicast router-attached interface. When
+configured as a multicast router interface, the interface is treated as a multicast
+router-attached interface in all VLANs.
+
+ Default     disabled
+
+ Format      set mld mrouter interface
+
+ Mode        Interface Config
+
+no set mld mrouter interface
+
+Use this command to disable the status of the interface as a statically configured multicast
+router-attached interface.
+
+ Format      no set mld mrouter interface
+
+ Mode        Interface Config
+
+show mldsnooping
+Use this command to display MLD Snooping information. Configured information is displayed
+whether or not MLD Snooping is enabled.
+
+ Format      show mldsnooping [<slot/port> | <vlan-id>]
+
+ Mode        Privileged EXEC
+
+When the optional arguments <slot/port> or <vlan-id> are not used, the command
+output displays the information that is shown in the following table.
+
+ Term             Definition
+
+ Admin Mode       Indicates whether or not MLD Snooping is active on the switch.
+
+ Interfaces       Interfaces on which MLD Snooping is enabled.
+ Enabled for MLD
+ Snooping
+
+                                 Switching Commands
+                                        172
+

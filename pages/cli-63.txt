@@ -1,0 +1,51 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+    Command example:
+    (NETGEAR Switch) #show interfaces switchport general
+
+    Intf        PVID  Ingress        Acceptable  Untagged  Tagged    Forbidden Dynamic
+                      Filtering      Frame Type  Vlans     Vlans     Vlans   Vlans
+    --------- ----- ---------- ----------- --------- --------- --------- ---------
+    1/0/1       1     Enabled        Admit All   1,4-7     30-40,55  3,100-200 88,96
+    1/0/2       1     Disabled       Admit All   1         30-40,55  none    none
+
+Double VLAN Commands
+
+   This section describes the commands you use to configure double VLAN (DVLAN). Double
+   VLAN tagging is a way to pass VLAN traffic from one customer domain to another through a
+   Metro Core in a simple and cost effective manner. The additional tag on the traffic helps
+   differentiate between customers in the MAN while preserving the VLAN identification of the
+   individual customers when they enter their own 802.1Q domain.
+
+   dvlan-tunnel ethertype
+   This command configures the ether-type for all interfaces. The ether-type may have the
+   values of 802.1Q, vman, or custom. If the ether-type has a value of custom, the optional
+   value of the custom ether type must be set to a value from 0 to 65535.
+
+     Default       vman
+
+     Format        dvlan-tunnel ethertype {802.1Q | vman | custom} [<0-65535>]
+
+     Mode          Global Config
+
+   mode dot1q-tunnel
+   This command is used to enable Double VLAN Tunneling on the specified interface.
+
+     Default       disabled
+
+     Format        mode dot1q-tunnel
+
+     Mode          Interface Config
+
+   no mode dot1q-tunnel
+
+   This command is used to disable Double VLAN Tunneling on the specified interface. By
+   default, Double VLAN Tunneling is disabled.
+
+     Format        no mode dot1q-tunnel
+
+     Mode          Interface Config
+
+                                       Switching Commands
+                                                   63
+

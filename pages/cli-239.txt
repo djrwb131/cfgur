@@ -1,0 +1,50 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Default       1
+
+ Format        ip route distance <1-255>
+
+ Mode          Global Config
+
+no ip route distance
+
+This command sets the default static route preference value in the router. Lower route
+preference values are preferred when determining the best route.
+
+ Format        no ip route distance
+
+ Mode          Global Config
+
+ip netdirbcast
+This command enables the forwarding of network-directed broadcasts. When enabled,
+network directed broadcasts are forwarded. When disabled they are dropped.
+
+ Default       disabled
+
+ Format        ip netdirbcast
+
+ Mode          Interface Config
+
+no ip netdirbcast
+
+This command disables the forwarding of network-directed broadcasts. When disabled,
+network directed broadcasts are dropped.
+
+ Format        no ip netdirbcast
+
+ Mode          Interface Config
+
+ip mtu
+This command sets the IP maximum transmission unit (MTU) on a routing interface. The IP
+MTU is the size of the largest IP packet that can be transmitted on the interface without
+fragmentation. The software currently does not fragment IP packets.
+·   Packets forwarded in hardware ignore the IP MTU.
+·   Packets forwarded in software are dropped if they exceed the IP MTU of the outgoing
+    interface.
+Packets originated on the router, such as OSPF packets, might be fragmented by the IP
+stack. The IP stack uses its default IP MTU and ignores the value set using the ip mtu
+command.
+
+                                    Routing Commands
+                                         239
+

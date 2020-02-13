@@ -1,0 +1,49 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no ip arp inspection limit
+
+Use this command to set the rate limit and burst interval values for an interface to the default
+values of 15 pps and 1 second, respectively.
+
+ Format        no ip arp inspection limit
+
+ Mode          Interface Config
+
+ip arp inspection filter
+Use this command to configure the ARP ACL used to filter invalid ARP packets on a list of
+comma-separated VLAN ranges. If you enter the static keyword, packets that do not
+match a permit statement are dropped without consulting the DHCP snooping bindings.
+
+ Default       No ARP ACL is configured on a VLAN
+
+ Format        ip arp inspection filter <acl-name> vlan <vlan-list> [static]
+
+ Mode          Global Config
+
+no ip arp inspection filter
+
+Use this command to unconfigure the ARP ACL used to filter invalid ARP packets on a list of
+comma-separated VLAN ranges.
+
+ Format        no ip arp inspection filter <acl-name> vlan <vlan-list> [static]
+
+ Mode          Global Config
+
+arp access-list
+Use this command to create an ARP ACL.
+
+ Format        arp access-list <acl-name>
+
+ Mode          Global Config
+
+no arp access-list
+
+Use this command to delete a configured ARP ACL.
+
+ Format        no arp access-list <acl-name>
+
+ Mode          Global Config
+
+                                 Switching Commands
+                                          150
+

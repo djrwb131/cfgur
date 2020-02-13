@@ -1,0 +1,51 @@
+                           M4100 Series ProSAFE Managed Switches
+
+Table 25. IGMP Snooping Log Messages
+
+ Component       Message                                     Cause
+
+ IGMP Snooping   Failed to set igmp mrouter mode %d for      Failed to set VLAN multicast router mode
+                 interface xxx on VLAN yyy                   due to IGMP Snooping message queue
+                                                             being full
+
+ IGMP Snooping   snoopCnfgrInitPhase1Process: Error          Could not allocate buffers for small IGMP
+                 allocating small buffers                    packets
+
+ IGMP Snooping   snoopCnfgrInitPhase1Process: Error          Could not allocate buffers for large IGMP
+                 allocating large buffers                    packets
+
+Table 26. GARP/GVRP/GMRP Log Messages
+
+ Component       Message                                     Cause
+
+ GARP/GVRP/      garpSpanState, garpIfStateChange,           The garpQueue is full, logs specifics of the
+ GMRP            GarpIssueCmd,                               message content like internal interface
+                 garpDot1sChangeCallBack,                    number, type of message, and so on.
+                 garpApiCnfgrCommand,
+                 garpLeaveAllTimerCallback,
+                 garpTimerCallback: QUEUE SEND
+                 FAILURE:
+
+ GARP/GVRP/      GarpSendPDU: QUEUE SEND FAILURE             The garpPduQueue is full, logs specific of
+ GMRP                                                        the GPDU, internal interface number, VLAN
+                                                             id, buffer handle, and so on.
+
+ GARP/GVRP/      garpMapIntfIsConfigurable,                  A default configuration does not exist for
+ GMRP            gmrpMapIntfIsConfigurable: Error            this interface. Typically a case when a new
+                 accessing GARP/GMRP config data for         interface is created and has no
+                 interface %d in garpMapIntfIsConfigurable.  pre-configuration.
+
+ GARP/GVRP/      garpTraceMsgQueueUsage: garpQueue           Traces the buildup of message queue.
+ GMRP            usage has exceeded fifty/eighty/ninety      Helpful in determining the load on GARP.
+                 percent
+
+ GARP/GVRP/      gid_destroy_port: Error Removing port %d    Mismatch between the gmd (gmrp
+ GMRP            registration for vlan-mac %d -              database) and MFDB.
+                 %02X:%02X:%02X:%02X:%02X:%02X
+
+ GARP/GVRP/      gmd_create_entry: GMRP failure adding       MFDB table is full.
+ GMRP            MFDB entry: vlan %d and address %s
+
+                                           Log Messages
+                                                  544
+

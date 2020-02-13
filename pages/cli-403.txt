@@ -1,0 +1,46 @@
+                           M4100 Series ProSAFE Managed Switches
+
+     Format  show capture packets
+
+     Mode    Privileged EXEC
+
+Serviceability Packet Tracing Commands
+
+   These commands improve the capability of network engineers to diagnose conditions
+   affecting their managed switch product.
+
+                CAUTION:
+
+                The output of the debug commands can be long and might adversely
+                affect system performance.
+
+   debug arp
+   Use this command to enable ARP debug protocol messages.
+
+     Default disabled
+
+     Format  debug arp
+
+     Mode    Privileged EXEC
+
+   no debug arp
+
+   Use this command to disable ARP debug protocol messages.
+
+     Format  no debug arp
+
+     Mode    Privileged EXEC
+
+   debug auto-voip
+   Use this command to enable Auto VoIP debug messages. Use the optional parameters to
+   trace H323, SCCP, or SIP packets respectively.
+
+     Default disabled
+
+     Format  debug auto-voip [H323 | SCCP | SIP]
+
+     Mode    Privileged EXEC
+
+                                  Utility Commands
+                                             403
+

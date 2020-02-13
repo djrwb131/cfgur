@@ -1,0 +1,51 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+     Term             Definition
+
+     LeaveAll Timer   This Leave All Time controls how frequently LeaveAll PDUs are generated. A LeaveAll
+                      PDU indicates that all registrations will shortly be deregistered. Participants will need to
+                      rejoin in order to maintain registration. There is an instance of this timer on a per-Port,
+                      per-GARP participant basis. The Leave All Period Timer is set to a random value in the
+                      range of LeaveAllTime to 1.5*LeaveAllTime. Permissible values are 200­6000
+                      centiseconds (2­60 seconds). The factory default is 1000 centiseconds (10 seconds).
+
+     Port GVMRP       The GVRP administrative mode for the port, which is enabled or disabled (default). If this
+     Mode             parameter is disabled, Join Time, Leave Time, and Leave All Time have no effect.
+
+GMRP Commands
+
+   This section describes the commands you use to configure and view GARP Multicast
+   Registration Protocol (GMRP) information. Like IGMP snooping, GMRP helps control the
+   flooding of multicast packets. GMRP-enabled switches dynamically register and deregister
+   group membership information with the MAC networking devices attached to the same
+   segment. GMRP also allows group membership information to propagate across all
+   networking devices in the bridged LAN that support Extended Filtering Services.
+
+       Note: If GMRP is disabled, the system does not forward GMRP messages.
+
+   set gmrp adminmode
+   This command enables GARP Multicast Registration Protocol (GMRP) on the system.
+
+     Default        disabled
+
+     Format         set gmrp adminmode
+
+     Mode           Privileged EXEC
+
+   no set gmrp adminmode
+
+   This command disables GARP Multicast Registration Protocol (GMRP) on the system.
+
+     Format         no set gmrp adminmode
+
+     Mode           Privileged EXEC
+
+   set gmrp interfacemode
+   This command enables GARP Multicast Registration Protocol on a single interface (Interface
+   Config mode) or all interfaces (Global Config mode). If an interface which has GARP enabled
+   is enabled for routing or is enlisted as a member of a port-channel (LAG), GARP functionality
+   is disabled on that interface. GARP functionality is subsequently re-enabled if routing is
+
+                                        Switching Commands
+                                                78
+

@@ -1,0 +1,41 @@
+                           M4100 Series ProSAFE Managed Switches
+
+lacp partner admin state longtimeout
+Use this command to set LACP partner admin state to longtimeout.
+
+ Format       lacp partner admin state longtimeout
+
+ Mode         Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp partner admin state longtimeout
+
+Use this command to set the LACP partner admin state to short timeout.
+
+ Format       no lacp partner admin state longtimeout
+
+ Mode         Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+lacp partner admin state passive
+Use this command to set the LACP partner admin state to passive.
+
+ Format       lacp partner admin state passive
+
+ Mode         Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp partner admin state passive
+
+Use this command to set the LACP partner admin state to active.
+
+ Format       no lacp partner admin state passive
+
+ Mode         Interface Config
+
+                                       Switching Commands
+                                        115
+

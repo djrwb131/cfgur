@@ -1,0 +1,47 @@
+                       M4100 Series ProSAFE Managed Switches
+
+mvr type
+This command sets the MVR port type. When a port is set as source, it is the port to which
+the multicast traffic flows using the multicast VLAN. When a port is set to receiver, it is the
+port where a listening host is connected to the switch.
+
+ Default     none
+
+ Format      mvr type {receiver | source}
+
+ Mode        Interface Config
+
+no mvr type
+
+Use this command to set the MVR port type to none.
+
+ Format      no mvr type
+
+ Mode        Interface Config
+
+mvr vlan group
+Use this command to include the port in the specific MVR group. <mVLAN> is the multicast
+VLAN, and <A.B.C.D> is the IP multicast group
+
+ Format      mvr vlan <mVLAN> group <A.B.C.D>
+
+ Mode        Interface Config
+
+no mvr vlan
+
+Use this command to exclude the port from the specific MVR group.
+
+ Format      no mvr vlan <mVLAN> group <A.B.C.D>
+
+ Mode        Interface Config
+
+show mvr
+This command displays global MVR settings.
+
+ Format      show mvr
+
+ Mode        Privileged EXEC
+
+                        Multicast VLAN Registration Commands
+                                            223
+

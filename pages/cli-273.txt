@@ -1,0 +1,47 @@
+                              M4100 Series ProSAFE Managed Switches
+
+    Note: The optional keywords [ipv4 | ipv6] specify the Layer 3 protocol
+            for this class. If not specified, this parameter defaults to ipv4. This
+            maintains backward compatibility for configurations defined on
+            systems before IPv6 match items were supported.
+
+    Note: The CLI mode is changed to Class-Map Config or Ipv6-Class-Map
+            Config when this command is successfully executed depending on
+            the [ipv4 | ipv6] keyword specified.
+
+ Format        class-map match-all <class-map-name> [ipv4 | ipv6]
+
+ Mode          Global Config
+
+no class-map
+
+This command eliminates an existing DiffServ class. The <class-map-name> is the name
+of an existing DiffServ class. (The class name "default" is reserved and is not allowed here.)
+This command might be issued at any time; if the class is currently referenced by one or
+more policies or by any other class, the delete action fails.
+
+ Format        no class-map <class-map-name>
+
+ Mode          Global Config
+
+class-map rename
+This command changes the name of a DiffServ class. The <class-map-name> is the
+name of an existing DiffServ class. The <new-class-map-name> parameter is a
+case-sensitive alphanumeric string from 1 to 31 characters uniquely identifying the class.
+
+ Default       none
+
+ Format        class-map rename <class-map-name> <new-class-map-name>
+
+ Mode          Global Config
+
+match ethertype
+This command adds to the specified class definition a match condition based on the value of
+the ethertype. The ethertype value is specified as a <keyword> argument that can be one
+of the following types: appletalk, arp, ibmsna, ipv4, ipv6, ipx, mplsmcast,
+mplsucast, netbios, novell, pppoe, or rarp or as a <range> argument that
+represents an EtherType value in the range of 0x0600-0xFFFF.
+
+                                   Quality of Service Commands
+                                               273
+

@@ -1,0 +1,55 @@
+                             M4100 Series ProSAFE Managed Switches
+
+ip helper-address (Global Config)
+Use the Global Configuration ip helper-address command to have the switch forward
+User Datagram Protocol (UDP) broadcasts received on an interface. To disable the
+forwarding of broadcast packets to specific addresses, use the no form of this command.
+The ip helper-address command forwards specific UDP broadcast from one interface to
+another. You can define many helper addresses but the total number of address-port pairs is
+limited to 128 for the whole device. The setting of a helper address for a specific interface has
+precedence over a setting of a helper address for all interfaces.
+·   <ip-address> is the destination broadcast or host address to be used when forwarding
+    UDP broadcasts. You can specify 0.0.0.0 to indicate not to forward the UDP packet to
+    any host and enter 255.255.255.255 to broadcast the UDP packets to all hosts on the
+    target subnet.
+·   <dest-udp-port> is the broadcast packet destination UDP port number to forward. If
+    not specified, packets for the default services are forwarded to the helper address. The
+    valid range is 0-65535.
+
+ Default      No helper addresses are configured.
+
+ Format       ip helper-address <ip-address> [<dest-udp-port> | dhcp | domain |
+              isakmp | mobile-ip | nameserver | netbios-dgm | netbios-ns | ntp |
+              pim-auto-rip | rip | tacacs | tftp | time]
+
+ Mode         Global Config
+
+ Parameter          Description
+
+ <ip-address>       The IPv4 unicast or directed broadcast address to which relayed UDP broadcast
+                    packets are sent. The IP address cannot be an IP address configured on any
+                    interface of the local router.
+
+ <dest-udp-port>    A destination UDP port number from 0 to 65535.
+
+ port name options  The destination UDP port may be optionally specified by its name. Whether a port is
+                    specified by its number or its name has no effect on behavior. The names
+                    recognized are as follows:
+                    ·   dhcp (port 67)
+                    ·   domain (port 53)
+                    ·   isakmp (port 500)
+                    ·   mobile-ip (port 434)
+                    ·   nameserver (port 42)
+                    ·   netbios-dgm (port 138)
+                    ·   netbios-ns (port 137)
+                    ·   ntp (port 123)
+                    ·   pim-auto-rp (port 496)
+                    ·   rip (port 520)
+                    ·   tacacs (port 49)
+                    ·   tftp (port 69)
+                    ·   time (port 37)
+                    Other ports must be specified by number.
+
+                                       Routing Commands
+                                                   255
+

@@ -1,0 +1,44 @@
+                       M4100 Series ProSAFE Managed Switches
+
+ Format       {deny | permit} {<srcmac> | any} {<dstmac> | any} [<ethertypekey> |
+              <0x0600-0xFFFF>] [vlan {eq <0-4095>}] [cos <0-7>] [[log] [time-range
+              <time-range-name>] [assign-queue <queue-id>]] [{mirror | redirect}
+              <slot/port>]
+
+ Mode         Mac-Access-List Config
+
+mac access-group
+This command either attaches a specific MAC access control list (ACL) identified by <name>
+to an interface, or associates it with a VLAN ID in a specific direction. The <name> parameter
+must be the name of an existing MAC ACL.
+An optional sequence number might be specified to indicate the order of this mac access list
+relative to other mac access lists already assigned to this interface and direction. A lower
+number indicates higher precedence order. If a sequence number is already in use for this
+interface and direction, the specified mac access list replaces the currently attached mac
+access list using that sequence number. If the sequence number is not specified for this
+command, a sequence number that is one greater than the highest sequence number
+currently in use for this interface and direction is used.
+This command specified in Interface Config mode only affects a single interface, whereas the
+Global Config mode setting is applied to all interfaces. The VLAN keyword is only valid in the
+Global Config mode. The Interface Config mode command is available only on platforms that
+support independent per-port Class of Service queue configuration.
+
+ Format       mac access-group <name> {in | {vlan <vlan-id> in}} [sequence
+              <1-4294967295>]
+
+ Modes        ·   Global Config
+              ·   Interface Config
+
+no mac access-group
+
+This command removes a MAC ACL identified by <name> from the interface in a specific
+direction.
+
+ Format       no mac access-group <name> {in | {vlan <vlan-id> in}}
+
+ Modes        ·   Global Config
+              ·   Interface Config
+
+                                    Quality of Service Commands
+                                              296
+

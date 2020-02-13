@@ -1,0 +1,50 @@
+                         M4100 Series ProSAFE Managed Switches
+
+ Format      random-detect queue-parms <queue-id-1> [<queue-id-2> ... <queue-id-n>]
+             minthresh <thresh-prec-1> ... <thresh-prec-n> max-thresh
+             <thresh-prec-1> ... <threshprec-n> drop-probability <prob-prec-1> ...
+             <prob-prec-n>
+
+ Modes       ·   Global Config
+             ·   Interface Config
+
+no random-detect queue-parms
+
+Use this command to set the WRED configuration back to the default.
+
+ Format      no random-detect queue-parms <queue-id-1> [<queue-id-2> ...
+             <queue-id-n>]
+
+ Modes       ·  Global Config
+             ·  Interface Config
+
+traffic-shape
+This command specifies the maximum transmission bandwidth limit for the interface as a
+whole. Also known as rate shaping, traffic shaping has the effect of smoothing temporary
+traffic bursts over time so that the transmitted traffic rate is bounded.
+
+ Format      traffic-shape <bw>
+
+ Modes       ·  Global Config
+             ·  Interface Config
+
+no traffic-shape
+
+This command restores the interface shaping rate to the default value.
+
+ Format      no traffic-shape
+
+ Modes       ·  Global Config
+             ·  Interface Config
+
+show classofservice dot1p-mapping
+This command displays the current Dot1p (802.1p) priority mapping to internal traffic classes
+for a specific interface. The <slot/port> parameter is optional and is only valid on
+platforms that support independent per-port Class of Service mappings. If specified, the
+802.1p mapping table of the interface is displayed. If omitted, the most recent global
+configuration settings are displayed. For more information, see Voice VLAN Commands on
+page 65.
+
+                                  Quality of Service Commands
+                                           267
+

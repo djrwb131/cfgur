@@ -1,0 +1,62 @@
+                             M4100 Series ProSAFE Managed Switches
+
+Table 40. OSPFv2 Log Messages (continued)
+
+ Component      Message                                       Cause
+
+ OSPFv2         Warning: OSPF LSDB is 90% full (22648         OSPFv2 limits the number of Link State
+                LSAs).                                       Advertisements (LSAs) that can be stored
+                                                              in the link state database (LSDB). When
+                                                              the database becomes 90 or 95 percent
+                                                              full, OSPFv2 logs this warning. The
+                                                              warning includes the current size of the
+                                                              database.
+
+ OSPFv2         The number of LSAs, 25165, in the OSPF        When the OSPFv2 LSDB becomes full,
+                LSDB has exceeded the LSDB memory             OSPFv2 logs this message. OSPFv2
+                allocation.                                   reoriginates its router LSAs with the metric
+                                                              of all nonstub links set to the maximum
+                                                              value to encourage other routers to not
+                                                              compute routes through the overloaded
+                                                              router.
+
+ OSPFv2         Dropping the DD packet because of MTU         OSPFv2 ignored a Database Description
+                mismatch                                      packet whose MTU is greater than the IP
+                                                              MTU on the interface where the DD was
+                                                              received.
+
+ OSPFv2         LSA Checksum error in LsUpdate,               OSPFv2 ignored a received link state
+                dropping LSID 1.2.3.4 checksum 0x1234.        advertisement (LSA) whose checksum was
+                                                              incorrect.
+
+Table 41. OSPFv3 Log Messages
+
+ Component      Message                                       Cause
+
+ OSPFv3         Best route client deregistration failed for   OSPFv3 registers with the IPv6 routing
+                OSPFv3 Redist                                 table manager ("RTO6") to be notified of
+                                                              best route changes. There are cases where
+                                                              OSPFv3 deregisters more than once,
+                                                              causing the second deregistration to fail.
+                                                              The failure is harmless.
+
+ OSPFv3         Warning: OSPF LSDB is 90% full (15292         OSPFv3 limits the number of Link State
+                LSAs).                                       Advertisements (LSAs) that can be stored
+                                                              in the link state database (LSDB). When
+                                                              the database becomes 90 or 95 percent
+                                                              full, OSPFv3 logs this warning. The
+                                                              warning includes the current size of the
+                                                              database.
+
+ OSPFv3         The number of LSAs, 16992, in the OSPF        When the OSPFv3 LSDB becomes full,
+                LSDB has exceeded the LSDB memory             OSPFv3 logs this message. OSPFv3
+                allocation.                                   reoriginates its router LSAs with the R-bit
+                                                              clear indicating that OSPFv3 is overloaded.
+
+ OSPFv3         LSA Checksum error detected for LSID          OSPFv3 periodically verifies the checksum
+                1.2.3.4 checksum 0x34f5. OSPFv3               of each LSA in memory. OSPFv3 logs this.
+                Database might be corrupted.
+
+                                   Log Messages
+                                              549
+

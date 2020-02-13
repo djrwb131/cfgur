@@ -1,0 +1,51 @@
+                         M4100 Series ProSAFE Managed Switches
+
+ Parameter                        Description
+
+ [maxFail <maxFail>               As an option, specify when the traceroute is terminated after
+                                  failing to receive a response for the number of consecutive
+                                  probes. Range is 0­255.
+
+ [interval <interval>]            As an option, specify the time between probes, in seconds.
+                                  Range is 1­60 seconds.
+
+ [count <count>]                  As an option, specify the number of probes to send for each TTL
+                                  value. Range is 1­10 probes.
+
+ [port <port>]                    As an option, specify destination UDP port of the probe. This
+                                  should be an unused port on the remote destination system.
+                                  Range is 1­65,535.
+
+ [size <size>]                    As an option, specify the size, in bytes, of the payload of the Echo
+                                  Requests sent. Range is 0­65507 bytes.
+
+ [source {<ip-address> |          As an option, specify the source IP address or interface for the
+ <slot/port> | loopback <0-7>}] traceroute.
+
+Command example:
+The traceroute succeeds:
+(NETGEAR Switch) # traceroute 10.240.10.115 initTtl 1 maxTtl 4 maxFail 0 interval 1 count
+3 port 33434 size 43
+ Traceroute to 10.240.10.115 ,4 hops max 43 byte packets:
+1 10.240.4.1   708 msec     41 msec      11 msec
+2 10.240.10.115   0 msec      0 msec     0 msec
+
+Hop Count = 1 Last TTL = 2 Test attempt = 6 Test Success = 6
+
+Command example:
+The traceroute fails:
+(NETGEAR Switch) # traceroute 10.40.1.1 initTtl 1 maxFail 0 interval 1 count 3
+port 33434 size 43
+Traceroute to 10.40.1.1 ,30 hops max 43 byte packets:
+1 10.240.4.1   19 msec     18 msec      9 msec
+2 10.240.1.252   0 msec     0 msec      1 msec
+3 172.31.0.9   277 msec     276 msec      277 msec
+4 10.254.1.1   289 msec     327 msec      282 msec
+5 10.254.21.2   287 msec      293 msec      296 msec
+6 192.168.76.2   290 msec      291 msec       289 msec
+7 0.0.0.0    0 msec *
+Hop Count = 6 Last TTL = 7 Test attempt = 19 Test Success = 18
+
+                                   Utility Commands
+                                          366
+

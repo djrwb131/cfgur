@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+show authentication methods
+This command displays information about the authentication methods.
+
+ Format         show authentication methods
+
+ Mode           Privileged EXEC
+
+Command example:
+Login Authentication Method Lists
+________________________________
+Console_Default: None
+Network_Default:Local
+Enable Authentication Lists
+_____________________
+Console_Default: Enable None
+Network_Default:Enable
+Line Login Method List Enable Method Lists
+_____________________
+Console Console_Default Console_Default
+Telnet Network_Default Network_Default
+SSH Network_Default Network_Default
+http : Local
+https : Local
+dot1x :
+
+show dot1x
+This command is used to show a summary of the global dot1x configuration, summary
+information of the dot1x configuration for a specified port or all ports, the detailed dot1x
+configuration for a specified port and the dot1x statistics for a specified port - depending on
+the tokens used.
+
+ Format         show dot1x [{summary {<slot/port> | all} | detail <slot/port> |
+                statistics <slot/port>]
+
+ Mode           Privileged EXEC
+
+If you do not use the optional <slot/port> parameters, the command displays the global
+dot1x mode, the VLAN Assignment mode, and the Dynamic VLAN Creation mode.
+
+ Term            Definition
+
+ Administrative  Indicates whether authentication control on the switch is enabled or disabled.
+ Mode
+
+ VLAN            Indicates whether assignment of an authorized port to a RADIUS assigned VLAN is
+ Assignment      allowed (enabled) or not (disabled).
+ Mode
+
+                                  Switching Commands
+                                            89
+

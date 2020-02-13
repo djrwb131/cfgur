@@ -1,0 +1,54 @@
+                             M4100 Series ProSAFE Managed Switches
+
+logging cli-command
+This command enables the CLI command logging feature, which enables logging of all CLI
+commands issued on the system.
+
+ Default       enabled
+
+ Format        logging cli-command
+
+ Mode          Global Config
+
+no logging cli-command
+
+This command disables the CLI command Logging feature.
+
+ Format        no logging cli-command
+
+ Mode          Global Config
+
+logging console
+This command enables logging to the console. You can specify the <severitylevel>
+value as either an integer from 0 to 7 or symbolically through one of the following keywords:
+emergency (0), alert (1), critical (2), error (3), warning (4), notice (5), info (6),
+or debug (7).
+
+ Default       disabled; critical when enabled
+
+ Format        logging console [<severitylevel>]
+
+ Mode          Global Config
+
+no logging console
+
+This command disables logging to the console.
+
+ Format        no logging console
+
+ Mode          Global Config
+
+logging host
+This command enables logging to a host. You can configure up to eight hosts.
+
+ Default       · port--514
+               · level--critical (2)
+
+ Format        logging host {<ipaddress> | <hostname>} <addresstype> {<port-number>
+               <severitylevel>}
+
+ Mode          Global Config
+
+                                      Utility Commands
+                                                   354
+

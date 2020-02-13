@@ -1,0 +1,52 @@
+                               M4100 Series ProSAFE Managed Switches
+
+Packet Capture Commands
+
+   Packet capture commands assist in troubleshooting protocol-related problems with the
+   management CPU. The packets to and from the management CPU can be captured in an
+   internally allocated buffer area for export to a PC host for protocol analysis. Public domain
+   packet analysis tools like Ethereal can be used to decode and review the packets in detail.
+   Capturing can be performed in a variety of modes, either transmit-side only, receive-side only,
+   or both. The number of packets captured will depend on the size of the captured packets.
+
+   capture {start | stop}
+   Use the capture start command to manually start capturing CPU packets for packet
+   trace. Capturing packets is stopped automatically when 128 packets are captured and have
+   not yet been displayed during a capture session. It is guaranteed that packets not displayed
+   and not saved will not be lost when capturing is in progress. Use the capture stop
+   command to manually stop capturing CPU packets for packet trace before the moment when
+   128 packets are captured and capturing packets is stopped automatically.The packet capture
+   operates in three modes:
+   ·   Capture file
+   ·   Remote capture
+   ·   Capture line
+   The command is not persistent across a reboot cycle.
+
+     Format      capture {start | stop} {transmit | receive | all}
+
+     Mode        Privileged EXEC
+
+   capture {file | remote | line}
+   Use this command to configure file capture options. The command is persistent across a
+   reboot cycle.
+
+     Default     Remote
+
+     Format      capture {file | remote | line}
+
+     Mode        Global Config
+
+     Parameter       Description
+
+     file            In capture file mode, the captured packets are stored in a file on NVRAM. The
+                     maximum file size defaults to 524,288 bytes. The switch can transfer the file to a TFTP
+                     server via TFTP, SFTP, SCP via CLI, web and SNMP. The file is formatted in pcap
+                     format, is named cpuPktCapture.pcap, and can be examined using network
+                     analyzer tools such as Wireshark® by Ethereal®. Starting a file capture automatically
+                     terminates any remote capture sessions and line capturing. After the packet capture is
+                     activated, the capture proceeds until the capture file reaches its maximum size, or
+                     until the capture is stopped manually using the CLI command capture stop.
+
+                                    Utility Commands
+                                   400
+

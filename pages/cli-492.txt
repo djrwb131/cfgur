@@ -1,0 +1,51 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no snmp-server community
+
+Use this command to remove this community name from the table. The <name> is the
+community name to be deleted.
+
+ Format        no snmp-server community <name>
+
+ Mode          Global Config
+
+snmp-server community ipaddr
+Use this command to set a client IP address for an SNMP community. The address is the
+associated community SNMP packet sending address and is used along with the client IP
+mask value to denote a range of IP addresses from which SNMP clients might use that
+community to access the device. A value of 0.0.0.0 allows access from any IP address.
+Otherwise, this value is ANDed with the mask to determine the range of allowed client IP
+addresses. The name is the applicable community name.
+
+ Default       0.0.0.0
+
+ Format        snmp-server community ipaddr <ipaddr> <name>
+
+ Mode          Global Config
+
+no snmp-server community ipaddr
+
+Use this command to set a client IP address for an SNMP community to 0.0.0.0. The name is
+the applicable community name.
+
+ Format        no snmp-server community ipaddr <name>
+
+ Mode          Global Config
+
+snmp-server community ipmask
+Use this command to set a client IP mask for an SNMP community. The address is the
+associated community SNMP packet sending address and is used along with the client IP
+address value to denote a range of IP addresses from which SNMP clients might use that
+community to access the device. A value of 255.255.255.255 allows access from only one
+station and uses that machine's IP address for the client IP address. A value of 0.0.0.0 allows
+access from any IP address. The name is the applicable community name.
+
+ Default       0.0.0.0
+
+ Format        snmp-server community ipmask <ipmask> <name>
+
+ Mode          Global Config
+
+                               Management Commands
+                                   492
+

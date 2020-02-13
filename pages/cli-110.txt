@@ -1,0 +1,47 @@
+                             M4100 Series ProSAFE Managed Switches
+
+deleteport (Global Config)
+This command deletes all configured ports from the port-channel (LAG). The interface is a
+logical slot/port number of a configured port-channel. To clear the port channels, see clear
+port-channel on page 368.
+
+ Format        deleteport <logical slot/port>
+
+ Mode          Global Config
+
+lacp admin key
+Use this command to configure the administrative value of the key for the port-channel. The
+value range of <key> is 0­65535.
+
+ Default       0x8000
+
+ Format        lacp admin key <key>
+
+ Mode          Interface Config
+
+    Note: This command is only applicable to port-channel interfaces.
+
+no lacp admin key
+
+Use this command to configure the default administrative value of the key for the
+port-channel.
+
+ Format        no lacp admin key
+
+ Mode          Interface Config
+
+lacp collector max-delay
+Use this command to configure the port-channel collector max delay. The valid range of
+<delay> is 0-65535.
+
+ Default       0x8000
+
+ Format        lacp collector max-delay <delay>
+
+ Mode          Interface Config
+
+    Note: This command is only applicable to port-channel interfaces.
+
+                                 Switching Commands
+                                           110
+

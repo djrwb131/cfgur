@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no passwords strength minimum numeric-characters
+
+Use this command to reset the minimum number of numeric characters to the default value.
+
+ Format        no passwords strength minimum numeric-characters
+
+ Mode          Global Config
+
+passwords strength minimum special-characters
+Use this command to enforce a minimum number of special characters that a password
+should contain. The valid range is 0-16. The default is 2. Minimum of 0 means no restriction
+on that set of characters.
+
+ Default       2
+
+ Format        passwords strength minimum special-letters <number>
+
+ Mode          Global Config
+
+no passwords strength minimum special-letters
+
+Use this command to reset the minimum number of special letters to the default value.
+
+ Format        no passwords strength minimum special-letters
+
+ Mode          Global Config
+
+passwords strength maximum consecutive-characters
+Use this command to enforce a maximum number of consecutive characters that a password
+should contain. An example of consecutive characters is abcd. The valid range is 0-16. If a
+password has consecutive characters more than the configured limit, it fails to configure. The
+default is 0. A maximum of 0 means no restriction on that set of characters.
+
+ Default       0
+
+ Format        passwords strength maximum consecutive-characters <number>
+
+ Mode          Global Config
+
+no passwords strength maximum consecutive-characters
+
+Use this command to reset the maximum number of consecutive characters to the default
+value.
+
+ Format        no passwords strength maximum consecutive-characters
+
+ Mode          Global Config
+
+                                     Management Commands
+                                              477
+

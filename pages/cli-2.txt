@@ -1,0 +1,27 @@
+                                    M4100 Series ProSAFE Managed Switches
+
+Support
+Thank you for selecting NETGEAR products.
+After installing your device, locate the serial number on the label of your product and use it to register your product at
+https://my.netgear.com. You must register your product before you can use NETGEAR telephone support. NETGEAR
+recommends registering your product through the NETGEAR website.
+For product updates and web support, visit http://support.netgear.com.
+Phone (US & Canada only): 1-888-NETGEAR.
+Phone (Other Countries): Check the list of phone numbers at http://support.netgear.com/general/contact/default.aspx.
+
+Compliance
+For regulatory compliance information, visit http://www.netgear.com/about/regulatory.
+See the regulatory compliance document before connecting the power supply.
+
+Trademarks
+© NETGEAR, Inc. NETGEAR and the NETGEAR Logo are trademarks of NETGEAR, Inc. Any non-NETGEAR trademarks are
+used for reference purposes only.
+
+Revision History
+
+ Publication Part Number  Publish Date        Comments
+
+ 202-11166-03             March 2015          First publication.
+
+                                                     2
+

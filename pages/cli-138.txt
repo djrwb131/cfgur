@@ -1,0 +1,48 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+   show dhcp client vendor-id-option
+   Use this command to display the configured administration mode of the vendor-id-option and
+   the vendor-id string to be included in Option-43 in DHCP requests.
+
+     Format        show dhcp client vendor-id-option
+
+     Mode          Privileged EXEC
+
+    Command example:
+    (NETGEAR Switch) #show dhcp client vendor-id-option
+    DHCP Client Vendor Identifier Option ........... Enabled
+    DHCP Client Vendor Identifier Option string .... Client
+
+DHCP Snooping Configuration Commands
+
+   This section describes commands you use to configure DHCP Snooping.
+
+   ip dhcp snooping
+   Use this command to enable DHCP Snooping globally.
+
+     Default       disabled
+
+     Format        ip dhcp snooping
+
+     Mode          Global Config
+
+   no ip dhcp snooping
+
+   Use this command to disable DHCP Snooping globally.
+
+     Format        no ip dhcp snooping
+
+     Mode          Global Config
+
+   ip dhcp snooping vlan
+   Use this command to enable DHCP Snooping on a list of comma-separated VLAN ranges.
+
+     Default       disabled
+
+     Format        ip dhcp snooping vlan <vlan-list>
+
+     Mode          Global Config
+
+                                       Switching Commands
+                                       138
+

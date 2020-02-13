@@ -1,0 +1,52 @@
+                           M4100 Series ProSAFE Managed Switches
+
+clock timezone
+When using SNTP/NTP time servers to update the switch's clock, the time data received
+from the server is based on Coordinated Universal Time (UTC) which is the same as
+Greenwich Mean Time (GMT). This might not be the time zone in which the switch is located.
+Use the clock timezone command to configure a time zone specifying the number of
+hours and optionally the number of minutes difference from UTC. To set the switch clock to
+UTC, use the no form of the command.
+
+ Default     no clock timezone
+
+ Format      clock timezone <zone-name> <+/-hours-offset> [<+/-minutes-offset>]
+
+ Mode        Global Config
+
+ Term             Definition
+
+ <zone-name>      A name to associate with the time zone
+
+ <hours-offset>   Number of hours difference with UTC
+
+ <minutes-offset> Number of minutes difference with UTC
+
+no clock timezone
+
+This command sets the switch to UTC time.
+
+ Format      no clock timezone
+
+ Mode        Global Config
+
+clock set
+This command sets the system time and date.
+
+ Format      clock set <hh:mm:ss>
+             clock set <mm/dd/yyyy>
+
+ Mode        Global Config
+
+clock summer-time recurring
+Use this command to set the summertime offset to UTC recursively every year. If the optional
+parameters are not specified, they are read as either 0 or \0, as appropriate.
+Use the following parameters to configure the summer-time.
+·   USA--the US Daylight saving time setting is used (Start --- March, 2nd sunday 02:00 AM,
+    End --- Nov, 1st sunday, 2:00 AM)
+·   EU--the European Union Daylight savings time is used (Start --- March, 5th Sunday
+    02:00 AM, End --- October, 5th Sunday, 3:00 AM)
+
+                                  Utility Commands
+                                         378
+

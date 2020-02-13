@@ -1,0 +1,51 @@
+                             M4100 Series ProSAFE Managed Switches
+
+snmp-server community rw
+Use this command to restrict access to switch information. The access mode is read/write
+(also called private).
+
+ Format        snmp-server community rw <name>
+
+ Mode          Global Config
+
+snmp-server enable traps violation
+Use this command to enable sending new violation traps designating when a packet with a
+disallowed MAC address is received on a locked port.
+
+    Note: For other port security commands, see Protected Ports Commands
+            on page 68.
+
+ Default       disabled
+
+ Format        snmp-server enable traps violation
+
+ Mode          Interface Config
+
+no snmp-server enable traps violation
+
+Use this command to disable sending new violation traps.
+
+ Format        no snmp-server enable traps violation
+
+ Mode          Interface Config
+
+snmp-server enable traps
+Use this command to enable the Authentication Flag.
+
+ Default       enabled
+
+ Format        snmp-server enable traps
+
+ Mode          Global Config
+
+no snmp-server enable traps
+
+Use this command to disable the Authentication Flag.
+
+ Format        no snmp-server enable traps
+
+ Mode          Global Config
+
+                                  Management Commands
+                                        494
+

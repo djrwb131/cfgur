@@ -1,0 +1,52 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ Term              Description
+
+ Querier Address   The IP Address which will be used in the IPv4 header while sending out IGMP queries. It
+                   can be configured using the appropriate command.
+
+ Query Interval    The amount of time in seconds that a Snooping Querier waits before sending out the
+                   periodic general query.
+
+ Querier Timeout   The amount of time to wait in the Non-Querier operational state before moving to a
+                   Querier state.
+
+If you specify a value for the <vlan-id> argument, the command displays the information
+that is shown in the following table.
+
+ Term              Description
+
+ VLAN Admin        Indicates whether iGMP Snooping Querier is active on the VLAN.
+ Mode
+
+ VLAN              Indicates whether IGMP Snooping Querier is in "Querier" or "Non-Querier" state. When
+ Operational       the switch is in Querier state, it will send out periodic general queries. When in
+ State             Non-Querier state, it will wait for moving to Querier state and does not send out any
+                   queries.
+
+ VLAN              Indicates the time to wait before removing a Leave from a host upon receiving a Leave
+ Operational Max   request. This value is calculated dynamically from the Queries received from the
+ Response Time     network. If the Snooping Switch is in Querier state, then it is equal to the configured
+                   value.
+
+ Querier Election  Indicates whether the IGMP Snooping Querier participates in querier election if it
+ Participation     discovers the presence of a querier in the VLAN.
+
+ Querier VLAN      The IP address will be used in the IPv4 header while sending out IGMP queries on this
+ Address           VLAN. It can be configured using the appropriate command.
+
+ Operational       The version of IPv4 will be used while sending out IGMP queries on this VLAN.
+ Version
+
+ Last Querier      Indicates the IP address of the most recent Querier from which a Query was received.
+ Address
+
+ Last Querier      Indicates the IGMP version of the most recent Querier from which a Query was received
+ Version           on this VLAN.
+
+If you use the optional detail argument, the command shows the global information and
+the information for all querier-enabled VLANs.
+
+                                           Switching Commands
+                                                  167
+

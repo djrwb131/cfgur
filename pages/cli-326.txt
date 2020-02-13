@@ -1,0 +1,54 @@
+                            M4100 Series ProSAFE Managed Switches
+
+show poe port info
+Use this command to get information about the status of the PoE ports. You can display
+information based on each individual port or all the ports collectively. The command displays
+only PSE-capable ports.
+
+ Format         show poe port info [<port> | all]
+
+ Mode           ·   Privileged EXEC
+                ·   User EXEC
+
+ Term           Definition
+
+ Intf           Interface on which PoE is configured.
+
+ Class          Class of the powered device according to the IEEE802.3af and IEEE802.3at definition.
+                ·   Class Usage Max Power (watts)
+                ·   0 Default 0.44-12.95
+                ·   1 Optional 0.44-3.84
+                ·   2 Optional 3.84-6.49
+                ·   3 Optional 6.49-12.95
+                ·   4 Optional 12.95-25.5
+
+ Power          The power supplied to the powered device (in watts).
+
+ Output Current The current supplied to the powered device (in mA).
+ (mA)
+
+ Output Voltage The voltage supplied to the powered device (in volts).
+ (volts)
+
+ Status         The Status field reports the state of power supplied to the port. The possible values are:
+                ·   Disabled--The PoE function is disabled on this port.
+                ·   Searching--The port is detecting the PoE device.
+                ·   Delivering Power--The port is providing power to the PoE device.
+                ·   Fault--The POE device is not IEEE compliant; no power is provided.
+                ·  Test--The port is in testing state.
+                ·   Other Fault--The port has experienced problems other than compliance issues.
+                When a port begins to deliver power, there is a trap indicating so. When a port stops
+                delivering power, there is a trap indicating so.
+
+Command example:
+(NETGEAR Switch) #show poe port info all
+
+          High        Max                    Output               Output
+Intf     Power     Power    Class    Power   Current              Voltage    Status                    Fault
+                      (W)              (W)   (mA)                  (volt)                              Status
+------ -------    -----    -------  ------   -------             -------  ------------------ ----------
+  0/1      Yes     32.0    Unknown    00.000  0                   00.00    Searching                  No Error
+
+                                Power over Ethernet Commands
+                                             326
+

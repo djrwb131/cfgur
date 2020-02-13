@@ -1,0 +1,48 @@
+                              M4100 Series ProSAFE Managed Switches
+
+MLD Snooping Commands
+
+   This section describes commands used for MLD Snooping. In IPv4, Layer 2 switches can use
+   IGMP Snooping to limit the flooding of multicast traffic by dynamically configuring Layer 2
+   interfaces so that multicast traffic is forwarded only to those interfaces associated with IP
+   multicast addresses. In IPv6, MLD Snooping performs a similar function. With MLD
+   Snooping, IPv6 multicast data is selectively forwarded to a list of ports that want to receive
+   the data, instead of being flooded to all ports in a VLAN. This list is constructed by snooping
+   IPv6 multicast control packets.
+
+   set mld
+   Use this command to enable MLD Snooping on the system (Global Config Mode) or an
+   interface (Interface Config Mode). This command also enables MLD Snooping on a particular
+   VLAN and enables MLD Snooping on all interfaces participating in a VLAN.
+   If an interface has MLD Snooping enabled and you enable this interface for routing or enlist it
+   as a member of a port-channel (LAG), MLD Snooping functionality is disabled on that
+   interface. MLD Snooping functionality is re-enabled if you disable routing or remove port
+   channel (LAG) membership from an interface that has MLD Snooping enabled.
+   MLD Snooping supports the following activities:
+   ·   Validation of address version, payload length consistencies and discarding of the frame
+       upon error.
+   ·   Maintenance of the forwarding table entries based on the MAC address versus the IPv6
+       address.
+   ·   Flooding of unregistered multicast data packets to all ports in the VLAN.
+
+     Default    disabled
+
+     Format     set mld <vlan-id>
+
+     Mode       ·   Global Config
+                ·   Interface Config
+                ·   VLAN Mode
+
+   no set mld
+
+   Use this command to disable MLD Snooping on the system.
+
+     Format     no set mld <vlan-id>
+
+     Mode       ·   Global Config
+                ·   Interface Config
+                ·   VLAN Mode
+
+                                       Switching Commands
+                                       168
+

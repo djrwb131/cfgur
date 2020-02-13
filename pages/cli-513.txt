@@ -1,0 +1,57 @@
+                          M4100 Series ProSAFE Managed Switches
+
+ Field               Definition
+
+ Access Rejects      The number of RADIUS Access-Reject packets, including both valid and invalid
+                     packets, that were received from this server.
+
+ Access Challenges   The number of RADIUS Access-Challenge packets, including both valid and
+                     invalid packets, that were received from this server.
+
+ Malformed Access    The number of malformed RADIUS Access-Response packets received from this
+ Responses           server. Malformed packets include packets with an invalid length. Bad
+                     authenticators or signature attributes or unknown types are not included as
+                     malformed access responses.
+
+ Bad Authenticators  The number of RADIUS Access-Response packets containing invalid
+                     authenticators or signature attributes received from this server.
+
+ Pending Requests    The number of RADIUS Access-Request packets destined for this server that have
+                     not yet timed out or received a response.
+
+ Timeouts            The number of authentication time-outs to this server.
+
+ Unknown Types       The number of packets of unknown type that were received from this server on the
+                     authentication port.
+
+ Packets Dropped     The number of RADIUS packets received from this server on the authentication
+                     port and dropped for some other reason.
+
+Command example:
+(NETGEAR Switch) #show radius statistics 192.168.37.200
+
+RADIUS Server Name............................ Default_RADIUS_Server
+Server Host Address........................... 192.168.37.200
+Access Requests............................... 0.00
+Access Retransmissions........................ 0
+Access Accepts................................ 0
+Access Rejects................................ 0
+Access Challenges............................. 0
+Malformed Access Responses.................... 0
+Bad Authenticators............................ 0
+Pending Requests.............................. 0
+Timeouts...................................... 0
+Unknown Types................................. 0
+Packets Dropped............................... 0
+
+Command example:
+(NETGEAR Switch) #show radius statistics name Default_RADIUS_Server
+
+RADIUS Server Name............................ Default_RADIUS_Server
+Server Host Address........................... 192.168.37.200
+Access Requests............................... 0.00
+Access Retransmissions........................ 0
+
+                                   Management Commands
+                                               513
+

@@ -1,0 +1,58 @@
+                        M4100 Series ProSAFE Managed Switches
+
+The following is an example of an ezconfig session.
+
+ NETGEAR EZ Configuration Utility
+ --------------------------------
+ Hello and Welcome!
+
+ This utility will walk you thru assigning the IP address for the switch
+ management CPU. It will allow you to save the changes at the end. After
+ the session, simply use the newly assigned IP address to access the Web
+ GUI using any public domain Web browser.
+
+ Admin password not defined. Do you want to change the password?
+ (Y/N/Q)  y
+ Enter new password:********
+ Confirm new password:********
+ Password Changed!
+
+ The 'enable' password required for switch configuration via the command
+ line interface is currently not configured. Do you wish to change it
+ (Y/N/Q)?  y
+
+ Enter new password:********
+ Confirm new password:********
+ Password Changed!
+
+ Assigning an IP address to your switch management
+
+ Current IP Address Configuration
+ --------------------------------
+ IP address: 0.0.0.0
+ Subnet mask: 0.0.0.0
+ Gateway address: 0.0.0.0
+
+ Would you like to assign an IP address now (Y/N/Q)?  y
+
+ IP Address: 10.10.10.1
+ Subnet mask: 255.255.255.0
+ Gateway address: 10.10.10.10
+
+ Do you want to assign switch name and location information (Y/N/Q)?       y
+
+ System Name: testunit1
+ System Location: testlab
+ System Contact: Bud Lightyear
+
+ There are changes detected, do you wish to save the changes permanently
+ (Y/N)?  y
+
+ The configuration changes have been saved successfully.      Please enter
+ 'show running-config' to see the final configuration.
+
+ Thanks for using EzConfig!
+
+                               Management Commands
+                                        445
+

@@ -1,0 +1,54 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no lldp med transmit-tlv
+
+Use this command to remove a TLV.
+
+ Format        no lldp med transmit-tlv [capabilities] [network-policy] [ex-pse]
+               [ex-pd] [location] [inventory]
+
+ Mode          Interface Config
+
+lldp med all
+Use this command to configure LLDP-MED on all the ports.
+
+ Format        lldp med all
+
+ Mode          Global Config
+
+no lldp med all
+
+Use this command to remove LLDP-MD on all ports.
+
+ Format        no lldp med all
+
+ Mode          Global Config
+
+lldp med confignotification all
+Use this command to configure all the ports to send the topology change notification.
+
+ Format        lldp med confignotification all
+
+ Mode          Global Config
+
+no lldp med confignotification all
+
+Use this command to disable all the ports to send the topology change notification.
+
+ Format        no lldp med confignotification all
+
+ Mode          Global Config
+
+lldp med faststartrepeatcount
+Use this command to set the value of the fast start repeat count. <count> is the number of
+LLDP PDUs that will be transmitted when the product is enabled. The range is 1 to 10.
+
+ Default       3
+
+ Format        lldp med faststartrepeatcount [<count>]
+
+ Mode          Global Config
+
+                                   Switching Commands
+                                        193
+

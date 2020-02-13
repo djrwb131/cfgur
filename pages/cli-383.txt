@@ -1,0 +1,48 @@
+                           M4100 Series ProSAFE Managed Switches
+
+no ip dhcp pool
+
+This command removes the DHCP address pool. The name should be previously configured
+pool name.
+
+ Format     no ip dhcp pool <name>
+
+ Mode       Global Config
+
+client-identifier
+This command specifies the unique identifier for a DHCP client. Unique-identifier is a valid
+notation in hexadecimal format. In some systems, such as Microsoft DHCP clients, the client
+identifier is required instead of hardware addresses. The unique-identifier is a concatenation
+of the media type and the MAC address.
+For example, the Microsoft client identifier for Ethernet address c819.2488.f177 is
+01c8.1924.88f1.77 where 01 represents the Ethernet media type. For more information, refer
+to the "Address Resolution Protocol Parameters" section of RFC 1700, Assigned Numbers
+for a list of media type codes.
+
+ Default    none
+
+ Format     client-identifier <uniqueidentifier>
+
+ Mode       DHCP Pool Config
+
+no client-identifier
+
+This command deletes the client identifier.
+
+ Format     no client-identifier
+
+ Mode       DHCP Pool Config
+
+client-name
+This command specifies the name for a DHCP client. Name is a string consisting of standard
+ASCII characters.
+
+ Default    none
+
+ Format     client-name <name>
+
+ Mode       DHCP Pool Config
+
+                                 Utility Commands
+                                            383
+

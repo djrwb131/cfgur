@@ -1,0 +1,56 @@
+                              M4100 Series ProSAFE Managed Switches
+
+show network
+Use this command to display configuration settings associated with the switch's network
+interface. The network interface is the logical interface used for in-band connectivity with the
+switch via any of the switch's front panel ports. The configuration parameters associated with
+the switch's network interface do not affect the configuration of the front panel ports through
+which traffic is switched or routed. The network interface is always considered to be up,
+whether any member ports are up; therefore, the show network command will always show
+"Interface Status" as "up".
+
+ Format         show network
+
+ Modes          ·  Privileged EXEC
+                ·  User EXEC
+
+ Term              Definition
+
+ Interface Status  The network interface status; it is always considered to be "up".
+
+ IP Address        The IP address of the interface. The factory default value is 0.0.0.0.
+
+ Subnet Mask       The IP subnet mask for this interface. The factory default value is 0.0.0.0.
+
+ Default Gateway   The default gateway for this IP interface. The factory default value is 0.0.0.0.
+
+ IPv6              Whether enabled or disabled.
+ Administrative
+ Mode
+
+ IPv6              The IPv6 address and length.
+ Address/Length
+
+ IPv6 Default      The IPv6 default router address.
+ Router
+
+ Burned In MAC     The burned in MAC address used for in-band connectivity.
+ Address
+
+ Locally           If desired, a locally administered MAC address can be configured for in-band
+ Administered      connectivity. To take effect, 'MAC Address Type' must be set to 'Locally Administered'.
+ MAC Address       Enter the address as twelve hexadecimal digits (6 bytes) with a colon between each
+                   byte. Bit 1 of byte 0 must be set to a 1 and bit 0 to a 0, that is, byte 0 should have the
+                   following mask "xxxx xx10". The MAC address used by this bridge when it must be
+                   referred to in a unique fashion. It is recommended that this be the numerically smallest
+                   MAC address of all ports that belong to this bridge. However it is only required to be
+                   unique. When concatenated with dot1dStpPriority a unique BridgeIdentifier is formed
+                   which is used in the Spanning Tree Protocol.
+
+ MAC Address       The MAC address which should be used for in-band connectivity. The choices are the
+ Type              burned in or the Locally Administered address. The factory default is to use the burned in
+                   MAC address.
+
+                                      Management Commands
+                                                    448
+

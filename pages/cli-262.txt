@@ -1,0 +1,23 @@
+5. Quality of Service Commands                                                      5
+
+   This chapter describes the Quality of Service (QoS) commands available in the managed switch
+   CLI.
+   The chapter contains the following sections:
+      ·   Class of Service (CoS) Commands
+      ·   Differentiated Services (DiffServ) Commands
+      ·   DiffServ Class Commands
+      ·   DiffServ Policy Commands
+      ·   DiffServ Service Commands
+      ·   DiffServ Show Commands
+      ·   MAC Access Control List (ACL) Commands
+      ·   IP Access Control List (ACL) Commands
+      ·   IPv6 Access Control List (ACL) Commands
+      ·   Time Range Commands for Time-Based ACLs
+      ·   AutoVoIP Commands
+   The commands in this chapter are in two functional groups:
+      ·   Show commands display switch settings, statistics, and other information.
+      ·   Configuration commands configure features and options of the switch. Every switch
+          command has a show command that displays the configuration setting.
+
+                                                  262
+

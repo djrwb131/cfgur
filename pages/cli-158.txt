@@ -1,0 +1,50 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no set igmp maxresponse
+
+This command sets the max response time (on the interface or VLAN) to the default value.
+
+ Format        no set igmp maxresponse
+
+ Mode          ·  Global Config
+               ·  Interface Config
+
+ Format        no set igmp maxresponse <vlan id>
+
+ Mode          VLAN Config
+
+set igmp mcrtrexpiretime
+This command sets the Multicast Router Present Expiration time. The time is set for the
+system, on a particular interface or VLAN. This is the amount of time in seconds that a switch
+waits for a query to be received on an interface before the interface is removed from the list of
+interfaces with multicast routers attached. The range is 0­3600 seconds. A value of 0
+indicates an infinite time-out, that is, no expiration.
+
+ Default       0
+
+ Format        set igmp mcrtrexpiretime <0-3600>
+
+ Mode          ·  Global Config
+               ·  Interface Config
+
+ Format        set igmp mcrtrexpiretime <vlan id> <0-3600>
+
+ Mode          VLAN Config
+
+no set igmp mcrtrexpiretime
+
+This command sets the Multicast Router Present Expiration time to 0. The time is set for the
+system, on a particular interface or a VLAN.
+
+ Format        no set igmp mcrtrexpiretime
+
+ Mode          ·  Global Config
+               ·  Interface Config
+
+ Format        no set igmp mcrtrexpiretime <vlan id>
+
+ Mode          VLAN Config
+
+                                      Switching Commands
+                                          158
+

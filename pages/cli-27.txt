@@ -1,0 +1,54 @@
+                                    M4100 Series ProSAFE Managed Switches
+
+   If you specify a loopback ID, the following information appears:
+
+     Term              Definition
+
+     Interface Link    Shows whether the link is up or down.
+     Status
+
+     IP Address        The IPv4 address of the interface.
+
+     IPv6 is enabled   Shows whether IPv6 is enabled on the interface.
+     (disabled)
+
+     IPv6 Prefix is    The IPv6 address of the interface.
+
+     MTU size          The maximum transmission size for packets on this interface, in bytes.
+
+Spanning Tree Protocol (STP) Commands
+
+   This section describes the commands you use to configure Spanning Tree Protocol (STP).
+   STP helps prevent network loops, duplicate messages, and network instability.
+
+   spanning-tree
+   This command sets the spanning-tree operational mode to enabled.
+
+     Default          enabled
+
+     Format           spanning-tree
+
+     Mode             Global Config
+
+   no spanning-tree
+
+   This command sets the spanning-tree operational mode to disabled. While disabled, the
+   spanning-tree configuration is retained and can be changed, but is not activated.
+
+     Format           no spanning-tree
+
+     Mode             Global Config
+
+   spanning-tree auto-edge
+   This command enables auto-edge on the interface or range of interfaces. When enabled, the
+   interface becomes an edge port if it does not see BPDUs for edge delay time.
+
+     Default          enabled
+
+     Format           spanning-tree auto-edge
+
+     Mode             Interface Config
+
+                                        Switching Commands
+                                                27
+

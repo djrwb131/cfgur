@@ -1,0 +1,53 @@
+                          M4100 Series ProSAFE Managed Switches
+
+  0/3       Down   Disabled     Disabled Disabled         0,1
+  0/4       Down   Disabled     Disabled Disabled         0,1
+  0/5       Down   Disabled     Disabled Disabled         0,1
+  0/6       Down   Disabled     Disabled Disabled         0,1
+  0/7       Down   Disabled     Disabled Disabled         0,1
+  0/8       Down   Disabled     Disabled Disabled         0,1
+  0/9       Down   Disabled     Disabled Disabled         0,1
+  0/10      Down   Disabled     Disabled Disabled         0,1
+  0/11      Down   Disabled     Disabled Disabled         0,1
+  0/12      Down   Disabled     Disabled Disabled         0,1
+  0/13      Down   Disabled     Disabled Disabled         0,1
+  0/14      Down   Disabled     Disabled Disabled         0,1
+
+TLV Codes: 0- Capabilities,             1- Network Policy
+            2- Location,                3- Extended PSE
+            4- Extended Pd,             5- Inventory
+
+Command example:
+(NETGEAR Switch) #show lldp med interface 0/2
+
+Interface   Link   configMED operMED     ConfigNotify TLVsTx
+---------   ------ --------- --------    ------------ -----------
+  0/2       Up     Disabled     Disabled Disabled         0,1
+
+TLV Codes: 0- Capabilities,             1- Network Policy
+            2- Location,                3- Extended PSE
+            4- Extended Pd,             5- Inventory
+
+show lldp med local-device detail
+This command displays detailed information about the LLDP data a specific interface
+transmits.
+
+ Format       show lldp med local-device detail <slot/port>
+
+ Mode         Privileged EXEC
+
+ Term               Definition
+
+ Media Application  Shows the application type. Types are unknown, voice, voicesignaling, guestvoice,
+ Type               guestvoicesignaling, sfotphonevoice, videoconferencing, streamingvideo,
+                    videosignaling.
+
+ Vlan ID            Shows the VLAN id associated with a particular policy type
+
+ Priority           Shows the priority associated with a particular policy type.
+
+ DSCP               Shows the DSCP associated with a particular policy type.
+
+                                      Switching Commands
+                                           196
+

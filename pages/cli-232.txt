@@ -1,0 +1,58 @@
+                               M4100 Series ProSAFE Managed Switches
+
+show arp
+This command displays the Address Resolution Protocol (ARP) cache. The displayed results
+are not the total ARP entries. To view the total ARP entries, the operator should view the
+show arp results with the show arp switch results.
+
+ Format         show arp
+
+ Mode           Privileged EXEC
+
+ Term                Definition
+
+ Age Time (seconds) The time it takes for an ARP entry to age out. This is configurable. Age time is
+                     measured in seconds.
+
+ Response Time       The time it takes for an ARP request timeout. This value is configurable. Response
+ (seconds)           time is measured in seconds.
+
+ Retries             The maximum number of times an ARP request is retried. This value is configurable.
+
+ Cache Size          The maximum number of entries in the ARP table. This value is configurable.
+
+ Dynamic Renew       Displays whether the ARP component automatically attempts to renew dynamic ARP
+ Mode                entries when they age out.
+
+ Total Entry Count   The total entries in the ARP table and the peak entry count in the ARP table.
+ Current / Peak
+
+ Static Entry Count  The static entry count in the ARP table, the active entry count in the ARP table, the
+ Configured/Active / active entry count in the ARP table, and maximum static entry count in the ARP table.
+ Max
+
+The following are displayed for each ARP entry:
+
+ Term               Definition
+
+ IP Address         The IP address of a device on a subnet attached to an existing routing interface.
+
+ MAC Address        The hardware MAC address of that device.
+
+ Interface          The routing slot/port associated with the device ARP entry.
+
+ Type               The type that is configurable. The possible values are Local, Gateway, Dynamic and
+                    Static.
+
+ Age                The current age of the ARP entry since last refresh (in hh:mm:ss format)
+
+show arp brief
+This command displays the brief Address Resolution Protocol (ARP) table information.
+
+ Format         show arp brief
+
+ Mode           Privileged EXEC
+
+                                      Routing Commands
+                                                  232
+

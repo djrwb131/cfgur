@@ -1,0 +1,35 @@
+                            M4100 Series ProSAFE Managed Switches
+
+ Format      copy <url> nvram:clibanner
+             or
+             copy nvram:clibanner <url>
+
+ Mode        Privileged EXEC
+
+set prompt
+Use this command to change the name of the prompt. The length of name might be up to
+64 alphanumeric characters.
+
+ Format      set prompt <prompt_string>
+
+ Mode        Privileged EXEC
+
+set clibanner
+Use this command to add the CLI Banner. The banner message supports up to 2000
+characters.
+
+ Format      set clibanner <line>
+
+ Mode        Global Config
+
+no set clibanner
+
+Use this command to remove the CLI Banner downloaded through TFTP.
+
+ Format      no set clibanner
+
+ Mode        Global Config
+
+                                Management Commands
+                                        521
+

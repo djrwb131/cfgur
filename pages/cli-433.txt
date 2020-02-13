@@ -1,0 +1,52 @@
+                            M4100 Series ProSAFE Managed Switches
+
+   -    Group 2 - High Capacity Alarm Capabilities Group
+        Describes the high capacity alarm capabilities provided by the agent.
+   -    Group 3 - High Capacity Alarm Notifications Group
+        Provides new rising and falling threshold notifications for high capacity objects.
+
+rmon alarm
+This command sets the RMON alarm entry in the RMON alarm MIB group.
+
+ Format      rmon alarm <alarm-number> <variable> <sample-interval>
+             <sampling-type> {rising-threshold <value>} {falling-threshold
+             <value>} [startup {rising | falling | rising-falling}] [owner
+             <string>]
+
+ Mode        Global Config
+
+ Parameter                   Description
+
+ <alarm-number>              The alarm number that identifies the alarm.
+
+ <variable>                  The object identifier of the particular variable to be sampled. Only
+                             variables that resolve to an ASN.1 primitive type of integer.
+
+ <sample-interval>           The interval in seconds over which the data is sampled and compared
+                             with the rising and falling thresholds. The range is 0 to 2147483647.
+                             The default is 0.
+
+ <sampling-type>             The alarm sample type. The method of sampling the selected variable
+                             and calculating the value to be compared against thresholds. Possible
+                             types are Absolute or Delta.
+
+ rising-threshold <value>    The alarm rising threshold for the sample statistics.
+
+ falling-threshold <value>   The alarm falling threshold for the sample statistics.
+
+ [startup {rising | falling  The alarm that may be sent. Possible values are Rising Alarm, Falling
+ | rising-falling}]          Alarm, or both.
+
+ owner <string>              The alarm owner. The owner string associated with the alarm entry.
+
+no rmon alarm
+
+This command deletes the RMON alarm entry.
+
+ Format      no rmon alarm <alarm number>
+
+ Mode        Global Config
+
+                                  Utility Commands
+                                         433
+

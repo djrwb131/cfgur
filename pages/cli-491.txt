@@ -1,0 +1,46 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+   show aaa ias-users
+   Use this command to display configured IAS users and their attributes. Passwords
+   configured are not shown in the show command output.
+
+     Format        show aaa ias-users
+
+     Mode          Privileged EXEC
+
+SNMP Commands
+
+   This section describes the commands you use to configure Simple Network Management
+   Protocol (SNMP) on the switch. You can configure the switch to act as an SNMP agent so
+   that it can communicate with SNMP managers on your network.
+
+   snmp-server
+   Use this command to set the name and the physical location of the switch and the
+   organization responsible for the network. The range for <name>, <loc> and <con> is from 1
+   to 31 alphanumeric characters.
+
+     Default       none
+
+     Format        snmp-server {sysname <name> | location <loc> | contact <con>}
+
+     Mode          Global Config
+
+   snmp-server community
+   Use this command to add (and name) a new SNMP community. A community <name> is a
+   name associated with the switch and with a set of SNMP managers that manage it with a
+   specified privileged level. The length of <name> can be up to 16 case-sensitive characters.
+
+       Note: Community names in the SNMP community table must be unique.
+                When making multiple entries using the same community name, the
+                first entry is kept and processed and all duplicate entries are ignored.
+
+     Default       · Public and private, which you can rename.
+                   · Default values for the remaining four community names are blank.
+
+     Format        snmp-server community <name>
+
+     Mode          Global Config
+
+                                      Management Commands
+                                               491
+

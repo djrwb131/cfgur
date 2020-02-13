@@ -1,0 +1,24 @@
+10. Log Messages                                         10
+
+   This chapter lists common log messages, along with information regarding the cause of each
+   message. There is no specific action that can be taken per message. If a problem is being
+   diagnosed, a set of these messages in the event log, along with an understanding of the system
+   configuration and details of the problem, can assist NETGEAR technical support in determining
+   the root cause of such a problem.
+
+          Note: This chapter does not contain a complete list of all syslog messages.
+
+   The chapter contains the following sections:
+      ·   Core
+      ·   Utilities
+      ·   Management
+      ·   Switching
+      ·   QoS
+      ·   Routing/IPv6 Routing
+      ·   Multicast
+      ·   Stacking
+      ·   Technologies
+      ·   O/S Support
+
+                                                  532
+

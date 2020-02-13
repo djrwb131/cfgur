@@ -1,0 +1,60 @@
+                              M4100 Series ProSAFE Managed Switches
+
+Term                Definition
+
+Packets             ·   Total Packets Transmitted (Octets) - The total number of octets of data (including those
+Transmitted Octets      in bad packets) received on the network (excluding framing bits but including FCS octets).
+                       This object can be used as a reasonable estimate of Ethernet utilization. If greater
+                        precision is desired, the etherStatsPkts and etherStatsOctets objects should be sampled
+                        before and after a common interval. -----
+                    ·   Packets Transmitted 64 Octets - The total number of packets (including bad packets)
+                        received that were 64 octets in length (excluding framing bits but including FCS octets).
+                    ·   Packets Transmitted 65-127 Octets - The total number of packets (including bad packets)
+                        received that were from 65 through 127 octets in length inclusive (excluding framing bits
+                        but including FCS octets).
+                    ·   Packets Transmitted 128-255 Octets - The total number of packets (including bad
+                        packets) received that were from 128 through 255 octets in length inclusive (excluding
+                        framing bits but including FCS octets).
+                    ·   Packets Transmitted 256-511 Octets - The total number of packets (including bad
+                        packets) received that were from 256 through 511 octets in length inclusive (excluding
+                        framing bits but including FCS octets).
+                    ·   Packets Transmitted 512-1023 Octets - The total number of packets (including bad
+                        packets) received that were from 512 through 1023 octets in length inclusive (excluding
+                        framing bits but including FCS octets).
+                    ·   Packets Transmitted 1024-1518 Octets - The total number of packets (including bad
+                        packets) received that were from 1024 through 1518 octets in length inclusive (excluding
+                        framing bits but including FCS octets).
+                    ·   Packets Transmitted > 1518 Octets - The total number of packets transmitted that were
+                        longer than 1518 octets (excluding framing bits, but including FCS octets) and were
+                        otherwise well formed.
+                    ·   Max Frame Size - The maximum size of the Info (non-MAC) field that this port will receive
+                        or transmit.
+
+Packets             ·   Total Packets Transmitted Successfully- The number of frames that have been
+Transmitted             transmitted by this port to its segment.
+Successfully        ·   Unicast Packets Transmitted - The total number of packets that higher-level protocols
+                        requested be transmitted to a subnetwork-unicast address, including those that were
+                        discarded or not sent.
+                    ·   Multicast Packets Transmitted - The total number of packets that higher-level protocols
+                        requested be transmitted to a Multicast address, including those that were discarded or not
+                        sent.
+                    ·   Broadcast Packets Transmitted - The total number of packets that higher-level protocols
+                        requested be transmitted to the Broadcast address, including those that were discarded or
+                        not sent.
+
+Transmit Packets    The number of outbound packets which were chosen to be discarded even though no errors
+Discarded           had been detected to prevent their being deliverable to a higher-layer protocol. A possible
+                    reason for discarding a packet could be to free up buffer space.
+
+Transmit Errors     ·   Total Transmit Errors - The sum of Single, Multiple, and Excessive Collisions.
+                    ·   Tx FCS Errors - The total number of packets transmitted that had a length (excluding
+                        framing bits, but including FCS octets) of from 64 through 1518 octets, inclusive, but had a
+                        bad Frame Check Sequence (FCS) with an integral number of octets.
+                    ·   Oversized - The total number of frames that exceeded the max permitted frame size. This
+                        counter has a max increment rate of 815 counts per sec. at 10 Mb/s.
+                    ·   Underrun Errors - The total number of frames discarded because the transmit FIFO buffer
+                        became empty during frame transmission.
+
+                                          Utility Commands
+                                                 340
+

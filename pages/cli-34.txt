@@ -1,0 +1,46 @@
+                             M4100 Series ProSAFE Managed Switches
+
+the <mstid> parameter. You can set the path cost as a number in the range of 1­200000000
+or auto. If you select auto the path cost value is set based on Link Speed.
+If you specify the external-cost option, this command sets the external-path cost for MST
+instance 0 that is, CIST instance. You can set the external cost as a number in the range of
+1­200000000 or auto. If you specify auto, the external path cost value is set based on Link
+Speed.
+If you specify the port-priority option, this command sets the priority for this port within a
+specific multiple spanning tree instance or the Common and Internal Spanning Tree instance,
+depending on the <mstid> parameter. The port-priority value is a number in the range of
+0­240 in increments of 16.
+
+ Default      ·   cost--auto
+              ·   external-cost--auto
+              ·   port-priority--128
+
+ Format       spanning-tree mst <mstid> {{cost <1-200000000> | auto} |
+              {external-cost <1-200000000> | auto} | port-priority <0-240>}
+
+ Mode         Interface Config
+
+no spanning-tree mst
+
+This command sets the Path Cost or Port Priority for this port within the multiple spanning
+tree instance, or in the Common and Internal Spanning Tree to the respective default values.
+If you specify an <mstid> parameter that corresponds to an existing multiple spanning tree
+instance, you are configuring that multiple spanning tree instance. If you specify 0 (defined as
+the default CIST ID) as the <mstid>, you are configuring the Common and Internal
+Spanning Tree instance.
+If you specify cost, this command sets the path cost for this port within a multiple spanning
+tree instance or the Common and Internal Spanning Tree instance, depending on the
+<mstid> parameter, to the default value, that is, a path cost value based on the Link Speed.
+If you specify external-cost, this command sets the external path cost for this port for mst
+`0' instance, to the default value, that is, a path cost value based on the Link Speed.
+If you specify port-priority, this command sets the priority for this port within a specific
+multiple spanning tree instance or the Common and Internal Spanning Tree instance,
+depending on the <mstid> parameter, to the default value.
+
+ Format       no spanning-tree mst <mstid> [cost | external-cost | port-priority]
+
+ Mode         Interface Config
+
+                                        Switching Commands
+                                                 34
+

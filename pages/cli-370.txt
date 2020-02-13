@@ -1,0 +1,46 @@
+                        M4100 Series ProSAFE Managed Switches
+
+ Parameter              Description
+
+ [interval <interval>]  As an option, specify the time between Echo Requests, in seconds. The
+                        range is 1­60 seconds.
+
+ [size <size>]          As an option, specify the size, in bytes, of the payload of the Echo Requests
+                        sent. The range is 0­65507 bytes.
+
+Command example:
+The ping succeeds:
+(NETGEAR Switch) #ping 10.254.2.160 count 3 interval 1 size 255
+Pinging 10.254.2.160 with 255 bytes of data:
+
+Received response for icmp_seq = 0. time= 275268 usec
+Received response for icmp_seq = 1. time= 274009 usec
+Received response for icmp_seq = 2. time= 279459 usec
+
+----10.254.2.160 PING statistics----
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip (msec) min/avg/max = 274/279/276
+
+Command example:
+The ping fails because the destination is unreachable:
+(NETGEAR Switch) # ping 192.168.254.222 count 3 interval 1 size 255
+Pinging 192.168.254.222 with 255 bytes of data:
+Received Response: Unreachable Destination
+Received Response :Unreachable Destination
+Received Response :Unreachable Destination
+----192.168.254.222  PING statistics----
+3 packets transmitted,3 packets received, 0% packet loss
+round-trip (msec) min/avg/max = 0/0/0
+
+Command example:
+The ping fails because the request times out:
+(NETGEAR Switch) # ping 1.1.1.1 count 1 interval 3
+Pinging 1.1.1.1 with 0 bytes of data:
+
+----1.1.1.1 PING statistics----
+1 packets transmitted,0 packets received, 100% packet loss
+round-trip (msec) min/avg/max = 0/0/0
+
+                                    Utility Commands
+                                         370
+

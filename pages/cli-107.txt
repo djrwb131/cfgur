@@ -1,0 +1,53 @@
+                                  M4100 Series ProSAFE Managed Switches
+
+   Use the all keyword to display the per-port configuration parameters for all interfaces, or
+   specify the slot/port to display information about a specific interface.
+
+     Format        show storm-control [all | <slot/port>]
+
+     Mode          Privileged EXEC
+
+     Term             Definition
+
+     Bcast Mode       Shows whether the broadcast storm control mode is enabled or disabled. The factory
+                      default is disabled.
+
+     Bcast Level      The broadcast storm control level.
+
+     Mcast Mode       Shows whether the multicast storm control mode is enabled or disabled.
+
+     Mcast Level      The multicast storm control level.
+
+     Ucast Mode       Shows whether the Unknown Unicast or DLF (Destination Lookup Failure) storm control
+                      mode is enabled or disabled.
+
+     Ucast Level      The Unknown Unicast or DLF (Destination Lookup Failure) storm control level.
+
+Flow Control Commands
+
+   In 802.3x flow control, the MAC control PAUSE operation is specified in IEEE 802.3 Annex
+   31 B. It allows traffic from one device to be throttled for a specified period of time and is
+   defined for devices that are directly connected. A device that needs to inhibit transmission of
+   data frames from another device on the LAN transmits a PAUSE frame as defined in the
+   IEEE specification.
+   This feature allows the user to configure the switch to use symmetric, asymmetric, or no flow
+   control. Asymmetric flow control allows the switch to respond to received PAUSE frames, but
+   the port cannot generate PAUSE frames. Symmetric flow control allows the switch to both
+   respond to and generate MAC control PAUSE frames.
+
+   flowcontrol
+   Use this command to enable or disable the symmetric or asymmetric flow control on the
+   switch. Use the no form of command to disable the symmetric or asymmetric flow control.
+   Asymmetric here means that Tx Pause can never be enabled. Only Rx Pause can be
+   enabled.
+
+     Default       Disabled
+
+     Format        flowcontrol {symmetric | asymmetric}
+
+     Mode          ·  Global Config
+                   ·  Interface Config
+
+                                              Switching Commands
+                                                     107
+

@@ -1,0 +1,51 @@
+                               M4100 Series ProSAFE Managed Switches
+
+debug spanning-tree bpdu receive
+This command enables tracing of spanning tree BPDUs received by the switch. Spanning
+tree should be enabled on the device and on the interface in order to monitor packets for a
+particular interface.
+
+ Default        disabled
+
+ Format         debug spanning-tree bpdu receive
+
+ Mode           Privileged EXEC
+
+Command example:
+(NETGEAR Switch) #debug spanning-tree bpdu receive
+
+<15> JAN 01 01:02:04 192.168.17.29-1 DOT1S[191096896]: dot1s_debug.c(1249) 101 % Pkt RX
+- Intf: 0/9(9), Source_Mac: 00:11:88:4e:c2:10 Version: 3, Root Mac: 00:11:88:4e:c2:00,
+Root Priority: 0x8000 Path Cost: 0
+
+The parameters that are shown in the following table are displayed in the trace message.
+
+ Parameter         Definition
+
+ RX                A packet received by the device.
+
+ Intf              The interface that the packet came in on. Format used is slot/port (internal interface
+                   number). Unit is always shown as 1 for interfaces on a non-stacking device.
+
+ Source_Mac        Source MAC address of the packet.
+
+ Version           Spanning tree protocol version (0-3). 0 refers to STP, 2 RSTP and 3 MSTP.
+
+ Root_Mac          MAC address of the CIST root bridge.
+
+ Root_Priority     Priority of the CIST root bridge. The value is between 0 and 61440. It is displayed in hex
+                   in multiples of 4096.
+
+ Path_Cost         External root path cost component of the BPDU.
+
+no debug spanning-tree bpdu receive
+
+This command disables tracing of received spanning tree BPDUs.
+
+ Format         no debug spanning-tree bpdu receive
+
+ Mode           Privileged EXEC
+
+                                         Utility Commands
+                                                    421
+

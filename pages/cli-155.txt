@@ -1,0 +1,52 @@
+                         M4100 Series ProSAFE Managed Switches
+
+set igmp
+This command enables IGMP Snooping on the system (Global Config Mode) or an interface
+(Interface Config Mode). This command also enables IGMP snooping on a particular VLAN
+(VLAN Config Mode) and can enable IGMP snooping on all interfaces participating in a
+VLAN.
+If an interface has IGMP Snooping enabled and you enable this interface for routing or enlist
+it as a member of a port-channel (LAG), IGMP Snooping functionality is disabled on that
+interface. IGMP Snooping functionality is re-enabled if you disable routing or remove
+port-channel (LAG) membership from an interface that has IGMP Snooping enabled.
+The IGMP application supports the following activities:
+·   Validation of the IP header checksum (as well as the IGMP header checksum) and
+    discarding of the frame upon checksum error.
+·   Maintenance of the forwarding table entries based on the MAC address versus the IP
+    address.
+·   Flooding of unregistered multicast data packets to all ports in the VLAN.
+
+ Default     disabled
+
+ Format      set igmp
+
+ Mode        ·   Global Config
+             ·   Interface Config
+
+ Format      set igmp <vlanid>
+
+ Mode        VLAN Config
+
+no set igmp
+
+This command disables IGMP Snooping on the system, an interface, or a VLAN.
+
+ Format      no set igmp
+
+ Mode        ·   Global Config
+             ·   Interface Config
+
+ Format      no set igmp <vlanid>
+
+ Mode        VLAN Config
+
+set igmp interfacemode
+This command enables IGMP Snooping on all interfaces. If an interface has IGMP Snooping
+enabled and you enable this interface for routing or enlist it as a member of a port-channel
+(LAG), IGMP Snooping functionality is disabled on that interface. IGMP Snooping
+functionality is re-enabled if you disable routing or remove port-channel (LAG) membership
+from an interface that has IGMP Snooping enabled.
+
+                                    Switching Commands
+                                         155
+

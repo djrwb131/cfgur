@@ -1,0 +1,53 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Default     preference--1
+
+ Format      ip route <ipaddr> <subnetmask> [<nexthopip> | Null0] [<preference>]
+
+ Mode        Global Config
+
+no ip route
+
+This command deletes a single next hop to a destination static route. If you use the
+<nexthopip> parameter, the next hop is deleted. If you use the <preference> value, the
+preference value of the static route is reset to its default.
+
+ Format      no ip route <ipaddr> <subnetmask> [<nexthopip> | Null0]
+             [<preference>]
+
+ Mode        Global Config
+
+ip route default
+This command configures the default route. The value for <nexthopip> is a valid IP
+address of the next hop router. The <preference> is an integer value from 1 to 255. A route
+with a preference of 255 cannot be used to forward traffic.
+
+ Default     preference--1
+
+ Format      ip route default <nexthopip> [<preference>]
+
+ Mode        Global Config
+
+no ip route default
+
+This command deletes all configured default routes. If the optional <nexthopip> parameter
+is designated, the specific next hop is deleted from the configured default route and if the
+optional preference value is designated, the preference of the configured default route is
+reset to its default.
+
+ Format      no ip route default [<nexthopip> | <preference>]
+
+ Mode        Global Config
+
+ip route distance
+This command sets the default distance (preference) for static routes. Lower route distance
+values are preferred when determining the best route. The ip route and ip route
+default commands allow you to optionally set the distance (preference) of an individual
+static route. The default distance is used when no distance is specified in these commands.
+Changing the default distance does not update the distance of existing static routes, even if
+they were assigned the original default distance. The new default distance will only be
+applied to static routes created after invoking the ip route distance command.
+
+                                  Routing Commands
+                                         238
+

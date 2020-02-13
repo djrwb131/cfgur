@@ -1,0 +1,51 @@
+                            M4100 Series ProSAFE Managed Switches
+
+option
+The option command configures DHCP server options. The <code> parameter specifies
+the DHCP option code and ranges from 1-254. The <ascii string> parameter specifies
+an NVT ASCII character string. ASCII character strings that contain white space must be
+delimited by quotation marks. The hex <string> parameter specifies hexadecimal data. In
+hexadecimal, character strings are two hexadecimal digits. You can separate each byte by a
+period (for example, a3.4f.22.0c), colon (for example, a3:4f:22:0c), or white space (for
+example, a3 4f 22 0c).
+
+ Default     none
+
+ Format      option <code> {<ascii string> | hex <string1>
+             [<string2>...<string8>] | ip <address1> [<address2>...<address8>]}
+
+ Mode        DHCP Pool Config
+
+no option
+
+This command removes the DHCP Server options. The <code> parameter specifies the
+DHCP option code.
+
+ Format      no option <code>
+
+ Mode        DHCP Pool Config
+
+ip dhcp excluded-address
+This command specifies the IP addresses that a DHCP server should not assign to DHCP
+clients. Low-address and high-address are valid IP addresses; each made up of four decimal
+bytes ranging from 0 to 255. IP address 0.0.0.0 is invalid.
+
+ Default     none
+
+ Format      ip dhcp excluded-address <lowaddress> [<highaddress>]
+
+ Mode        Global Config
+
+no ip dhcp excluded-address
+
+This command removes the excluded IP addresses for a DHCP client. Low-address and
+high-address are valid IP addresses; each made up of four decimal bytes ranging from 0 to
+255. IP address 0.0.0.0 is invalid.
+
+ Format      no ip dhcp excluded-address <lowaddress> [<highaddress>]
+
+ Mode        Global Config
+
+                                      Utility Commands
+                                             389
+

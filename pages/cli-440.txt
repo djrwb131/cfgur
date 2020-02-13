@@ -1,0 +1,51 @@
+                                  M4100 Series ProSAFE Managed Switches
+
+   If you do not enter a value for the <slot/port> parameter, the command output displays
+   the fields that are shown in the following table.
+
+     Term              Definition
+
+     Admin Mode        The global administrative mode of UDLD.
+
+     Message Interval The time period (in seconds) between the transmission of UDLD probe packets.
+
+     Timeout Interval  The time period (in seconds) before making decision that link is unidirectional.
+
+   If you enter a value for the <slot/port> parameter or you use the all keyword, the
+   command output displays the fields that are shown in the following table.
+
+     Term              Definition
+
+     Slot/Port         The identifying slot and port of the interface.
+
+     Admin Mode        The administrative mode of UDLD configured on this interface. This is either Enabled or
+                       Disabled.
+
+     UDLD Mode         The UDLD mode configured on this interface. This is either Normal or Aggressive.
+
+     UDLD Status       The status of the link as determined by UDLD. The options are:
+                       ·   Undetermined. UDLD has not collected enough information to determine the state of
+                           the port.
+                       ·   Not applicable. UDLD is disabled, either globally or on the port
+                       ·   Shutdown. UDLD has detected a unidirectional link and shutdown the port, That is,
+                          the port is in an errDisabled state.
+                       ·  Bidirectional. UDLD has detected a bidirectional link.
+                       ·  Undetermined(Link Down). The port would transition into this state when the port link
+                           physically goes down due to any reasons other than the port been put into D-Disable
+                           mode by UDLD protocol on the switch.
+
+USB Commands
+
+   If there is an USB flash device in the USB slot, the commands display the device status and
+   content.
+
+   show usb device
+   This command displays USB flash device details.
+
+     Format       show USB device
+
+     Mode         Privileged EXEC
+
+                                           Utility Commands
+                                                 440
+

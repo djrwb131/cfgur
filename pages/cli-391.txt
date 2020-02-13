@@ -1,0 +1,48 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no ip dhcp bootp automatic
+
+This command disables the allocation of the addresses to the bootp client. The address are
+from the automatic address pool.
+
+ Format        no ip dhcp bootp automatic
+
+ Mode          Global Config
+
+ip dhcp conflict logging
+This command enables conflict logging on DHCP server.
+
+ Default       enabled
+
+ Format        ip dhcp conflict logging
+
+ Mode          Global Config
+
+no ip dhcp conflict logging
+
+This command disables conflict logging on DHCP server.
+
+ Format        no ip dhcp conflict logging
+
+ Mode          Global Config
+
+clear ip dhcp binding
+This command deletes an automatic address binding from the DHCP server database. If you
+specify *, the bindings corresponding to all the addresses are deleted. <address> is a valid
+IP address made up of four decimal bytes ranging from 0 to 255. IP address 0.0.0.0 is
+invalid.
+
+ Format        clear ip dhcp binding {<address> | *}
+
+ Mode          Privileged EXEC
+
+clear ip dhcp server statistics
+This command clears DHCP server statistics counters.
+
+ Format        clear ip dhcp server statistics
+
+ Mode          Privileged EXEC
+
+                                 Utility Commands
+                                          391
+

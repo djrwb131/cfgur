@@ -1,0 +1,43 @@
+                                M4100 Series ProSAFE Managed Switches
+
+   no policy-map
+
+   This command eliminates an existing DiffServ policy. The <policyname> parameter is the
+   name of an existing DiffServ policy. This command might be issued at any time. If the policy is
+   referenced by one or more interface service attachments, this delete attempt fails.
+
+     Format       no policy-map <policyname>
+
+     Mode         Global Config
+
+   policy-map rename
+   This command changes the name of a DiffServ policy. The <policyname> is the name of an
+   existing DiffServ class. The <newpolicyname> parameter is a case-sensitive alphanumeric
+   string from 1 to 31 characters uniquely identifying the policy.
+
+     Format       policy-map rename <policyname> <newpolicyname>
+
+     Mode         Global Config
+
+DiffServ Service Commands
+
+   Use the DiffServ service commands to assign a DiffServ traffic conditioning policy, which you
+   specified by using the policy commands, to an interface in the incoming direction
+   The service commands attach a defined policy to a directional interface. You can assign only
+   one policy at any one time to an interface in the inbound direction. DiffServ is not used in the
+   outbound direction.
+   This set of commands consists of service addition/removal.
+   The CLI command root is service-policy.
+
+   service-policy
+   This command attaches a policy to an interface in the inbound direction. The <policyname>
+   parameter is the name of an existing DiffServ policy. This command causes a service to
+   create a reference to the policy.
+
+       Note: This command effectively enables DiffServ on an interface in the
+               inbound direction. There is no separate interface administrative
+               'mode' command for DiffServ.
+
+                                      Quality of Service Commands
+                                             286
+

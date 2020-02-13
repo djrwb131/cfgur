@@ -1,0 +1,52 @@
+                         M4100 Series ProSAFE Managed Switches
+
+Table 5. System Log Messages
+
+ Component      Message                                         Cause
+
+ SYSTEM         Configuration file Switch CLI.cfg size is 0     The configuration file could not be read.
+                (zero) bytes                                    This message might occur on a system for
+                                                                which no configuration has ever been
+                                                                saved or for which configuration has been
+                                                                erased.
+
+ SYSTEM         could not separate                              The configuration file could not be read.
+                SYSAPI_CONFIG_FILENAME                          This message might occur on a system for
+                                                                which no configuration has ever been
+                                                                saved or for which configuration has been
+                                                                erased.
+
+ SYSTEM         Building defaults for file <file name> version  Configuration did not exist or could not be
+                <version num>                                   read for the specified feature or file.
+                                                                Default configuration values will be used.
+                                                                The file name and version are indicated.
+
+ SYSTEM         File <filename>: same version (version          The configuration file which was loaded
+                num) but the sizes (<version                    was of a different size than expected for the
+                size>-><expected version size) differ           version number. This message indicates
+                                                                the configuration file needed to be migrated
+                                                                to the version number appropriate for the
+                                                                code image. This message might appear
+                                                                after upgrading the code image to a more
+                                                                current release.
+
+ SYSTEM         Migrating config file <filename> from           The configuration file identified was
+                version <version num> to <version num>          migrated from a previous version number.
+                                                                Both the old and new version number are
+                                                                specified. This message might appear after
+                                                                upgrading the code image to a more
+                                                                current release.
+
+ SYSTEM         Building Defaults                               Configuration did not exist or could not be
+                                                                read for the specified feature. Default
+                                                                configuration values will be used.
+
+ SYSTEM         sysapiCfgFileGet failed size = <expected        Configuration did not exist or could not be
+                size of file> version = <expected version>      read for the specified feature. This
+                                                                message is usually followed by a message
+                                                                indicating that default configuration values
+                                                                will be used.
+
+                                         Log Messages
+                                              534
+

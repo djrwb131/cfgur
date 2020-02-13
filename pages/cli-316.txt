@@ -1,0 +1,29 @@
+                             M4100 Series ProSAFE Managed Switches
+
+show auto-voip oui-table
+This command lists all of the configured OUIs.
+
+ Format          show auto-voip oui-table
+
+ Mode            ·   Privileged EXEC
+                 ·   User EXEC
+
+ Term                Definition
+
+ OUI                 OUI of the source MAC address
+
+ Status              Default or Configured entry.
+
+ OUI Description     Description of the OUI
+
+Command example:
+(Netgear Switch)# show auto-voip oui-table
+OUI              Status          Description
+---------        ----------      ---------
+00:01:E3         Default         SIEMENS
+00:03:6B         Default         CISCO1
+00:01:01         Configured      VoIP phone
+
+                                Quality of Service Commands
+                                                  316
+

@@ -1,0 +1,54 @@
+                            M4100 Series ProSAFE Managed Switches
+
+no aaa authentication dot1x
+
+Use this command to remove the authentication at login.
+
+ Format      no aaa authentication dot1x default
+
+ Mode        Global Config
+
+aaa accounting
+The command creates an accounting method list. This list is identified by the default
+keyword or by a user-specified <list-name>. Accounting records, when enabled for a
+line-mode, can be sent at both the beginning and at the end (start-stop) or only at the end
+(stop-only). If none is specified, accounting is disabled for the specified list. If tacacs is
+specified as the accounting method, accounting records are notified to a TACACS+ server. If
+radius is the specified accounting method, accounting records are notified to a RADIUS
+server.
+For the same set of accounting type and list name, the administrator can change the record
+type or the methods list without having to first delete the previous configuration.
+Note the following:
+·  A maximum of five accounting method lists can be created for each exec and commands
+    type.
+·   The same list-name can be used for both exec and commands accounting type.
+·  AAA accounting for commands with RADIUS as the accounting method is not supported.
+
+ Format      aaa accounting {exec | commands} {default | <list-name>} {start-stop
+             | stop-only | none} <method1> [<method2>...]
+
+ Mode        Global Config
+
+ Term                 Definition
+
+ exec                 Provides accounting for user EXEC terminal sessions.
+
+ commands             Provides accounting for all user-executed commands.
+
+ default              The default list of methods for accounting services.
+
+ <list-name>          Character string used to name the list of accounting methods.
+
+ start-stop           Sends a start accounting notice at the beginning of a process and a stop
+                      accounting notice at the end of a process.
+
+ stop-only            Sends a stop accounting notice at the end of the requested user process.
+
+ none                 Disables accounting services on this line.
+
+ <method1>            Use either tacacs or radius for accounting purpose.
+ [<method2>...]
+
+                                    Management Commands
+                                             483
+

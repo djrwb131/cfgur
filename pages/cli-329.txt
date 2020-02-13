@@ -1,0 +1,48 @@
+                                    M4100 Series ProSAFE Managed Switches
+
+Auto Install Commands
+
+   This section describes the Auto Install Commands. Auto Install is a software feature which
+   provides for the configuration of a switch automatically when the device is initialized and no
+   configuration file is found on the switch. The Auto Install process requires DHCP to be
+   enabled by default in order for it to be completed. The downloaded config file is not
+   automatically saved to the startup-config. An administrator must explicitly issue a save
+   request in order to save the configuration. The Auto Install process depends upon the
+   configuration of other devices in the network, including a DHCP or BOOTP server, a TFTP
+   server and, if necessary, a DNS server.
+   There are three steps to Auto Install:
+   1.  Configuration or assignment of an IP address for the device.
+   2. Assignment of a TFTP server.
+   3.  Obtain a configuration file for the device from the TFTP server.
+
+   show autoinstall
+   This command displays the status of the Auto Config process.
+
+     Format       show autoinstall
+
+     Mode         Privileged EXEC
+
+     Term               Definition
+
+     AutoInstall Mode   The administrator mode is enabled or disabled.
+
+     AutoSave Modet     If this option is enabled, the downloaded config file will be saved. Otherwise, you must
+                        explicitly issue a copy running-config startup-config command in order to
+                        save the configuration.
+
+     AutoInstall Retry  the number of attempts to download a configuration.
+     Count
+
+     AutoInstall State  The status of the AutoInstall.
+
+    Command example: Example
+    (NETGEAR Switch) #show autoinstall
+    AutoInstall Mode............................... Stopped
+    AutoSave Mode.................................. Disabled
+    AutoInstall Persistant Mode.................... Enabled
+    AutoInstall Retry Count........................ 3
+    AutoInstall State.............................. Waiting for boot options
+
+                                                Utility Commands
+                                                         329
+

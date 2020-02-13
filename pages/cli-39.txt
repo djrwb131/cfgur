@@ -1,0 +1,50 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Term              Definition
+
+ Bridge Hold Time Minimum time between transmission of Configuration Bridge Protocol Data Units
+                   (BPDUs).
+
+ Bridge Max Hops Bridge max-hops count for the device.
+
+ CST Regional      Bridge Identifier of the CST Regional Root. It is made up using the bridge priority and the
+ Root              base MAC address of the bridge.
+
+ Regional Root     Path Cost to the CST Regional Root.
+ Path Cost
+
+ Associated FIDs   List of forwarding database identifiers currently associated with this instance.
+
+ Associated        List of VLAN IDs currently associated with this instance.
+ VLANs
+
+show spanning-tree brief
+This command displays spanning tree settings for the bridge. The following information
+appears.
+
+ Format          show spanning-tree brief
+
+ Mode            · Privileged EXEC
+                 · User EXEC
+
+ Term                     Definition
+
+ Bridge Priority          Configured value.
+
+ Bridge Identifier        The bridge identifier for the selected MST instance. It is made up using the
+                          bridge priority and the base MAC address of the bridge.
+
+ Bridge Max Age           Configured value.
+
+ Bridge Max Hops          Bridge max-hops count for the device.
+
+ Bridge Hello Time        Configured value.
+
+ Bridge Forward Delay     Configured value.
+
+ Bridge Hold Time         Minimum time between transmission of Configuration Bridge Protocol Data
+                          Units (BPDUs).
+
+                                       Switching Commands
+                                                   39
+

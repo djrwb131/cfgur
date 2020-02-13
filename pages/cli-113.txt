@@ -1,0 +1,45 @@
+                            M4100 Series ProSAFE Managed Switches
+
+lacp actor port priority
+Use this command to configure the priority value assigned to the Aggregation Port. The valid
+range for <priority> is 0­255.
+
+ Default       0x80
+
+ Format        lacp actor port priority <priority>
+
+ Mode          Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp actor port priority
+
+Use this command to configure the default priority value assigned to the Aggregation Port.
+
+ Format        no lacp actor port priority
+
+ Mode          Interface Config
+
+lacp actor system priority
+Use this command to configure the priority value associated with the LACP Actor's
+SystemID. The range for <priority> is 0­65535.
+
+ Default       32768
+
+ Format        lacp actor system priority <priority>
+
+ Mode          Interface Config
+
+    Note: This command is only applicable to physical interfaces.
+
+no lacp actor system priority
+
+Use this command to configure the priority value associated with the Actor's SystemID.
+
+ Format        no lacp actor system priority
+
+ Mode          Interface Config
+
+                                 Switching Commands
+                                         113
+

@@ -1,0 +1,53 @@
+                        M4100 Series ProSAFE Managed Switches
+
+Table 1. Parameters for the copy command (continued)
+
+ Source                        Destination              Description
+
+ <url>                         nvram:sslpem-dhweak      Downloads an HTTP secure-server
+                                                        certificate.
+
+ <url>                         nvram:sslpem-dhstrong    Downloads an HTTP secure-server
+                                                        certificate.
+
+ <url>                         nvram:sslpem-root        Downloads an HTTP secure-server
+                                                        certificate. For more information, see
+                                                        Hypertext Transfer Protocol (HTTP)
+                                                        Commands on page 460.
+
+ <url>                         nvram:sslpem-server      Downloads an HTTP secure-server
+                                                        certificate.
+
+ <url>                         nvram:startup-config     Downloads the startup configuration file
+                                                        to the system.
+
+ <url>                         nvram:license-key        Download the license date to the
+                                                        system.
+
+ <url>                         ias-users                Downloads IAS users file by SFTP, SCP,
+                                                        or TFTP.
+
+ <url>                         {image1 | image2}        Download an image from the remote
+                                                        server to either image. In a stacking
+                                                        environment, the downloaded image is
+                                                        distributed to the stack nodes.
+
+ {image1 | image2}             <url>                    Upload either image to the remote
+                                                        server.
+
+ image1                        image2                   Copy image1 to image2.
+
+ image2                        image1                   Copy image2 to image1.
+
+write memory
+Use this command to save running configuration changes to NVRAM so that the changes
+you make will persist across a reboot. This command is the same as the copy
+system:running config nvram:startup-config command.
+
+ Format      write memory
+
+ Mode        Privileged EXEC
+
+                                      Utility Commands
+                                             374
+

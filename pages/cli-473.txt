@@ -1,0 +1,48 @@
+                             M4100 Series ProSAFE Managed Switches
+
+Password Expiry................................ ---
+Lockout........................................ False
+Override Complexity Check...................... Disable
+Password Strength.............................. ---
+
+show users long
+Use this command to display the user's full name.
+
+ Format       show users long
+
+ Mode         Privileged EXEC
+
+ Term            Definition
+
+ User Name       The full name of the user.
+
+show users login-history
+Use this command to display the users who have logged in previously.
+
+ Format       show users login-history [<username>]
+
+ Mode         Privileged EXEC
+
+ Term            Definition
+
+ Login Time      The time at which the user logged in.
+
+ Username        The user name used to login.
+
+ Protocol        The protocol that the user used to login.
+
+ Location        The location of the user.
+
+passwords min-length
+Use this command to enforce a minimum password length for local users. The value also
+applies to the enable password. The valid range is 0­64.
+
+ Default      8
+
+ Format       passwords min-length <0-64>
+
+ Mode         Global Config
+
+                                 Management Commands
+                                                473
+

@@ -1,0 +1,51 @@
+                         M4100 Series ProSAFE Managed Switches
+
+Command example:
+(NETGEAR Switch) #show radius servers
+
+Cur  Host Address               Server Name                      Port  Type
+rent
+---- ------------------------ --------------------------------- ----- ----------
+ *   192.168.37.200            Network1_RADIUS_Server            1813  Primary
+     192.168.37.201            Network2_RADIUS_Server            1813  Secondary
+     192.168.37.202            Network3_RADIUS_Server            1813  Primary
+     192.168.37.203            Network4_RADIUS_Server            1813  Secondary
+
+Command example:
+(NETGEAR Switch) #show radius servers name
+
+Current Host Address     Server Name                        Type
+------------------------ --------------------------------- ----------192.168.37.200
+Network1_RADIUS_Server              Secondary
+192.168.37.201           Network2_RADIUS_Server             Primary
+192.168.37.202           Network3_RADIUS_Server             Secondary
+192.168.37.203           Network4_RADIUS_Server             Primary
+
+Command example:
+(NETGEAR Switch) #show radius servers name Default_RADIUS_Server
+
+Server Name............................ Default_RADIUS_Server
+Host Address........................... 192.168.37.58
+Secret Configured...................... No
+Message Authenticator ................. Enable
+Number of Retransmits.................. 4
+Time Duration.......................... 10
+RADIUS Accounting Mode................. Disable
+RADIUS Attribute 4 Mode................ Enable
+RADIUS Attribute 4 Value .............. 192.168.37.60
+
+Command example:
+(NETGEAR Switch) #show radius servers 192.168.37.58
+
+Server Name............................ Default_RADIUS_Server
+Host Address........................... 192.168.37.58
+Secret Configured...................... No
+Message Authenticator ................. Enable
+Number of Retransmits.................. 4
+Time Duration.......................... 10
+RADIUS Accounting Mode................. Disable
+RADIUS Attribute 4 Mode................ Enable
+
+                                Management Commands
+                                         509
+

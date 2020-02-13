@@ -1,0 +1,59 @@
+                             M4100 Series ProSAFE Managed Switches
+
+no poe traps
+
+Use this command to disable logging the PoE traps.
+
+ Format           no poe traps
+
+ Mode             Global Config
+
+show poe
+Use this command to get global information regarding the PoE status.
+
+ Format           show poe
+
+ Mode             · Privileged EXEC
+                  · User EXEC
+
+ Term                Definition
+
+ Firmware Version    The firmware version of the PoE controller on the switch.
+
+ PSE Main            Indicates the status of the PoE controller:
+ Operational Status  ·  ON--Indicates that the PoE controller is actively delivering power.
+                     ·  OFF--Indicates that the PoE controller is not delivering power.
+                     ·  FAULTY--Indicates that the PoE controller is not functioning.
+
+ Total Power (Main   Indicates the maximum amount of power that can be delivered by this PoE unit when
+ AC)                 on system power.
+
+ Total Power (RPS)   Indicates the maximum amount of power that can be delivered by this PoE unit when
+                     on RPS.
+
+ Total Power (PD)    Indicates the maximum amount of power that can be delivered by this PoE unit when
+                     on the PD source. This field is applicable only for the GSM5212P.
+
+ Power Source        Indicates the power source being used: main AC, RPS, or PD. If PD is used as a
+                     source, "PD <portNo>" is displayed.
+
+ Threshold Power     System can power up one port, if consumed power is less than this power. That is,
+                     the consumed power can be between the total power and threshold power values.
+                     The threshold power value is effected by changing the system usage threshold.
+
+ Total Power         Indicates the total amount of power being delivered to all the devices plugged into the
+ Consumed            switch.
+
+ Usage Threshold     Indicates the usage threshold level.
+
+ Power               Indicates the management mode used by the PoE controller.
+ Management Mode
+
+ Auto Reset Mode     Indicates whether the PoE ports will be automatically reset in case of an error on a
+                     port.
+
+ Traps               Configures the traps.
+
+                                 Power over Ethernet Commands
+                                                  324
+

@@ -1,0 +1,49 @@
+                                   M4100 Series ProSAFE Managed Switches
+
+   show voice vlan
+
+     Format         show voice vlan [interface {<slot/port> | all}]
+
+     Mode           Privileged EXEC
+
+   When the interface parameter is not specified, only the global mode of the Voice VLAN is
+   displayed.
+
+     Term            Definition
+
+     Administrative  The Global Voice VLAN mode.
+     Mode
+
+   When the interface is specified:
+
+     Term                         Definition
+
+     Voice VLAN Interface Mode    The admin mode of the Voice VLAN on the interface.
+
+     Voice VLAN ID                The Voice VLAN ID
+
+     Voice VLAN Priority          The do1p priority for the Voice VLAN on the port.
+
+     Voice VLAN Untagged          The tagging option for the Voice VLAN traffic.
+
+     Voice VLAN CoS Override      The Override option for the voice traffic arriving on the port.
+
+     Voice VLAN Status            The operational status of Voice VLAN on the port.
+
+Provisioning (IEEE 802.1p) Commands
+
+   This section describes the commands you use to configure provisioning, which allows you to
+   prioritize ports.
+
+   vlan port priority all
+   This command configures the port priority assigned for untagged packets for all ports
+   presently plugged into the device. The range for the priority is 0-7. Any subsequent per port
+   configuration will override this configuration setting.
+
+     Format         vlan port priority all <priority>
+
+     Mode           Global Config
+
+                                             Switching Commands
+                                                     67
+

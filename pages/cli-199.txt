@@ -1,0 +1,60 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ 0/9               2         Not Defined
+ 0/10              3         Class II
+ 0/11              4         Class III
+ 0/12              5         Network Con
+
+show lldp med remote-device detail
+Use this command to display detailed information about remote devices that transmit current
+LLDP MED data to an interface on the system.
+
+ Format         show lldp med remote-device detail <slot/port>
+
+ Mode           Privileged EXEC
+
+ Term              Definition
+
+ Supported         Shows the supported capabilities that were received in MED TLV on this port.
+ Capabilities
+
+ Enabled           Shows the enabled capabilities that were enabled in MED TLV on this port.
+ capabilities
+
+ Device Class      Shows the device class as advertized by the device remotely connected to the port.
+
+ Network Policy    Shows if network policy TLV is received in the LLDP frames on this port.
+ Information
+
+ Media             Shows the application type. Types of applications are unknown, voice, voicesignaling,
+ Application Type  guestvoice, guestvoicesignaling, sfotphonevoice, videoconferencing, streamingvideo,
+                   videosignaling.
+
+ VLAN Id           Shows the VLAN id associated with a particular policy type.
+
+ Priority          Shows the priority associated with a particular policy type.
+
+ DSCP              Shows the DSCP associated with a particular policy type.
+
+ Unknown           Indicates if the policy type is unknown. In this case, the VLAN id, Priority and DSCP are
+                   ignored.
+
+ Tagged            Indicates if the policy type is using tagged or untagged VLAN.
+
+ Hardware          Shows the hardware version of the remote device.
+ Revision
+
+ Firmware          Shows the firmware version of the remote device.
+ Revision
+
+ Software          Shows the software version of the remote device.
+ Revision
+
+ Serial Number     Shows the serial number of the remote device.
+
+ Manufacturer      Shows the manufacture name of the remote device.
+ Name
+
+                                       Switching Commands
+                                               199
+

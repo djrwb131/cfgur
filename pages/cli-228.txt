@@ -1,0 +1,51 @@
+                                 M4100 Series ProSAFE Managed Switches
+
+Address Resolution Protocol (ARP) Commands
+
+   This section describes the commands you use to configure ARP and to view ARP information
+   about the switch. ARP associates IP addresses with MAC addresses and stores the
+   information as ARP entries in the ARP cache.
+
+   arp
+   This command creates an ARP entry. The value for <ipaddress> is the IP address of a
+   device on a subnet attached to an existing routing interface. <macaddr> is a unicast MAC
+   address for that device.
+   The format of the MAC address is 6 two-digit hexadecimal numbers that are separated by
+   colons, for example 00:06:29:32:81:40.
+
+     Format        arp <ipaddress> <macaddr>
+
+     Mode          Global Config
+
+   no arp
+
+   This command deletes an ARP entry. The value for <arpentry> is the IP address of the
+   interface. The value for <ipaddress> is the IP address of a device on a subnet attached to
+   an existing routing interface. <macaddr> is a unicast MAC address for that device.
+
+     Format        no arp <ipaddress> <macaddr>
+
+     Mode          Global Config
+
+   ip local-proxy-arp
+   This command enables local-proxy-arp on interface or range of interfaces. The switch only
+   responds if all next hops in its route to the destination are through interfaces other than the
+   interface that received the ARP request. Enabling local proxy ARP removes this restriction.
+
+     Default       disabled
+
+     Format        ip local-proxy-arp
+
+     Mode          Interface Config
+
+   no ip local-proxy-arp
+
+   This command disables local-proxy-arp on the interface or a range of interfaces.
+
+     Format        no ip local-proxy-arp
+
+     Mode          Interface Config
+
+                                        Routing Commands
+                                              228
+

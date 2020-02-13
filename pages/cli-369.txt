@@ -1,0 +1,48 @@
+                           M4100 Series ProSAFE Managed Switches
+
+enable password
+This command prompts you to change the Privileged EXEC password. Passwords are a
+maximum of 64 alphanumeric characters. The password is case-sensitive. The encrypted
+option allows you to transfer the enable password between devices without needing to know
+the password. In this case, the <password> parameter must be exactly 128 hexadecimal
+characters.
+
+ Format      enable password <password> [encrypted]
+
+ Mode        Privileged EXEC
+
+logout
+This command closes the current telnet connection or resets the current serial connection.
+
+    Note: Save configuration changes before logging out.
+
+ Format      logout
+
+ Modes       ·   Privileged EXEC
+             ·   User EXEC
+
+ping
+Use this command to determine whether another computer is on the network. Ping provides
+a synchronous response when initiated from the CLI and web interfaces.
+
+ Default     ·  The default count is 1.
+             ·  The default interval is 3 seconds.
+             ·  The default size is 0 bytes.
+
+ Format      ping {<ipaddress> | <hostname>} [count <count>] [interval
+             <interval>] [size <size>]
+
+ Modes       ·   Privileged EXEC
+             ·   User EXEC
+
+Using the options described below, you can specify the number and size of Echo Requests
+and the interval between Echo Requests.
+
+ Parameter               Description
+
+ [count <count>]         As an option, specify the number of ping packets (ICMP Echo requests) that
+                         are sent to the destination address. The range is 1­15 requests.
+
+                                        Utility Commands
+                                             369
+

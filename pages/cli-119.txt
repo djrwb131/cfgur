@@ -1,0 +1,47 @@
+                              M4100 Series ProSAFE Managed Switches
+
+no port lacpmode
+
+This command disables Link Aggregation Control Protocol (LACP) on a port.
+
+ Format        no port lacpmode
+
+ Mode          Interface Config
+
+port lacpmode enable all
+This command enables Link Aggregation Control Protocol (LACP) on all ports.
+
+ Format        port lacpmode enable all
+
+ Mode          Global Config
+
+no port lacpmode enable all
+
+This command disables Link Aggregation Control Protocol (LACP) on all ports.
+
+ Format        no port lacpmode enable all
+
+ Mode          Global Config
+
+port lacptimeout (Interface Config)
+This command sets the timeout on a physical interface of a particular device type (actor or
+partner) to either long or short time-out.
+
+ Default       long
+
+ Format        port lacptimeout {actor | partner} {long | short}
+
+ Mode          Interface Config
+
+no port lacptimeout
+
+This command sets the timeout back to its default value on a physical interface of a particular
+device type (actor or partner).
+
+ Format        no port lacptimeout {actor | partner}
+
+ Mode          Interface Config
+
+                                Switching Commands
+                                          119
+

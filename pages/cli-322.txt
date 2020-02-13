@@ -1,0 +1,48 @@
+                       M4100 Series ProSAFE Managed Switches
+
+ Default     low
+
+ Format      poe priority {crit | high | low}
+
+ Mode        ·   Global Config
+             ·   Interface Config
+
+no poe priority
+
+Use this command to set the priority to the default.
+
+ Format      no poe priority
+
+ Mode        ·   Global Config
+             ·   Interface Config
+
+poe reset
+Use this command to reset the PoE state of every port (in global mode) or a specific port (in
+interface mode). When the PoE port status is shown to be in an error state, this command
+can be used to reset the PoE port. The command can also reset the power-delivering ports.
+Note that this command takes effect only once after it is executed and cannot be saved
+across power cycles.
+
+ Format      poe reset
+
+ Mode        ·   Global Config
+             ·   Interface Config
+
+poe timer schedule name
+Use this command to allow you to attach a timer schedule to a PoE port.
+You can define a time schedule using the existing time range commands. This schedule has
+start and stop times. When this timer schedule is applied to a PoE-enabled port, the
+capability of the port to deliver power is affected. At the scheduled start time, the PoE port is
+disabled such that it cannot deliver any power. At the scheduled stop time, the PoE port is
+reenabled so that it can deliver power.
+
+    Note: For information about creating a timer schedule, see Time Range
+            Commands for Time-Based ACLs on page 309.
+
+ Format      poe timer schedule <name>
+
+ Mode        Interface Config
+
+                               Power over Ethernet Commands
+                                        322
+

@@ -1,0 +1,53 @@
+                             M4100 Series ProSAFE Managed Switches
+
+dos-control tcpport
+This command enables TCP L4 source = destination port number (Source TCP Port =
+Destination TCP Port) Denial of Service protection. If the mode is enabled, Denial of Service
+prevention is active for this type of attack. If packets ingress with Source TCP Port =
+Destination TCP Port, the packets will be dropped if the mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control tcpport
+
+ Mode          Global Config
+
+no dos-control tcpport
+
+This command disables TCP L4 source = destination port number (Source TCP Port =
+Destination TCP Port) Denial of Service protection.
+
+ Format        no dos-control smacdmac
+
+ Mode          Global Config
+
+dos-control udpport
+This command enables UDP L4 source = destination port number (Source UDP Port =
+Destination UDP Port) Denial of Service protection. If the mode is enabled, Denial of Service
+prevention is active for this type of attack. If packets ingress with Source UDP Port =
+Destination UDP Port, the packets will be dropped if the mode is enabled.
+
+ Default       disabled
+
+ Format        dos-control udppport
+
+ Mode          Global Config
+
+no dos-control udpport
+
+This command disables UDP L4 source = destination port number (Source UDP Port =
+Destination UDP Port) Denial of Service protection.
+
+ Format        no dos-control udppport
+
+ Mode          Global Config
+
+dos-control tcpflagseq
+This command enables TCP Flag and Sequence Denial of Service protections. If the mode is
+enabled, Denial of Service prevention is active for this type of attack. If packets ingress
+having TCP Flag SYN set and a source port less than 1024 or having TCP Control Flags set
+to 0 and TCP Sequence Number set to 0 or having TCP Flags FIN, URG, and PSH set and
+
+                                   Switching Commands
+                                          206
+

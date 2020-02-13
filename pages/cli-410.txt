@@ -1,0 +1,49 @@
+                          M4100 Series ProSAFE Managed Switches
+
+no debug ip igmp packet
+
+Use this command to disable debug tracing of IGMP packet reception and transmission.
+
+ Format        no debug ip igmp packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+debug ip mcache packet
+Use this command for tracing MDATA packet reception and transmission. If you use the
+receive option, only received MDATA packets are traced. If you use the transmit option,
+only transmitted MDATA packets are traced. When neither keyword is used in the command,
+then all data packet traces are dumped. Vital information such as source address, destination
+address, packet length, and the interface on which the packet is received or transmitted is
+displayed on the console.
+
+ Default       disabled
+
+ Format        debug ip mcache packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+no debug ip mcache packet
+
+Use this command to disable debug tracing of MDATA packet reception and transmission.
+
+ Format        no debug ip mcache packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+debug ip pimdm packet
+Use this command to trace PIMDM packet reception and transmission. If you use the
+receive option, only received PIMDM packets are traced. If you use the transmit option,
+only transmitted PIMDM packets are traced. When neither keyword is used in the command,
+then all PIMDM packet traces are dumped. Vital information such as source address,
+destination address, control packet type, packet length, and the interface on which the packet
+is received or transmitted is displayed on the console.
+
+ Default       disabled
+
+ Format        debug ip pimdm packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+                                      Utility Commands
+                                            410
+

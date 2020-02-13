@@ -1,0 +1,46 @@
+                           M4100 Series ProSAFE Managed Switches
+
+ Term                 Definition
+
+ encrypted            Encrypted password you enter, copied from another device configuration.
+
+ override-complexity  Disables the validation of the password strength.
+ -check
+
+no username
+
+Use this command to remove a user account.
+
+ Format     no username <username>
+
+ Mode       Global Config
+
+       Note: You cannot delete the "admin" user account.
+
+username name nopassword
+Use this command to remove an existing user's password (NULL password).
+
+ Format     username name nopassword [level level]
+
+ Mode       Global Config
+
+ Parameter           Description
+
+ name                The name of the user. Range: 1-32 characters.
+
+ password            The authentication password for the user. Range 8-64 characters.
+
+ level               The user level. Level 0 can be assigned by a level 15 user to another user to suspend
+                     that user's access. Range 0-15.
+
+username unlock
+Use this command to unlock a user's account. Only a user with read/write access can
+reactivate a locked user account.
+
+ Format     username <username> unlock
+
+ Mode       Global Config
+
+                                  Management Commands
+                                       469
+

@@ -1,0 +1,50 @@
+                              M4100 Series ProSAFE Managed Switches
+
+   If you specify the interface, the command also displays the following information.
+
+     Term          Definition
+
+     Interface     The slot/port of the interface. If displaying the global configuration, this output line is
+                   replaced with a Global Config indication.
+
+     Interface     The maximum transmission bandwidth limit for the interface as a whole. It is independent
+     Shaping Rate  of any per-queue maximum bandwidth value(s) in effect for the interface. This is a
+                   configured value.
+
+   show interfaces random-detect
+   This command displays the global WRED settings for each CoS queue. If you specify the
+   slot/port, the command displays the WRED settings for each CoS queue on the specified
+   interface.
+
+     Format       show interfaces random-detect [<slot/port>]
+
+     Mode         Privileged EXEC
+
+     Term          Definition
+
+    Queue ID      An interface supports n queues numbered 0 to (n-1). The specific n value is
+                   platform-dependent.
+
+     WRED Minimum  The configured minimum threshold the queue depth (as a percentage) where WRED
+     Threshold     starts marking and dropping traffic.
+
+     WRED Maximum  The configured maximum threshold is the queue depth (as a percentage) above which
+     Threshold     WRED marks / drops all traffic.
+
+     WRED Drop     The configured percentage probability that WRED will mark/drop a packet, when the
+     Probability   queue depth is at the maximum threshold. (The drop probability increases linearly from 0
+                   just before the minimum threshold, to this value at the maximum threshold, then goes to
+                   100% for larger queue depths).
+
+Differentiated Services (DiffServ) Commands
+
+   This section describes the commands you use to configure QOS Differentiated Services
+   (DiffServ).
+   You configure DiffServ in several stages by specifying three DiffServ components:
+   1.  Class
+       a.   Creating and deleting classes.
+       b.   Defining match criteria for a class.
+
+                                     Quality of Service Commands
+                                                   270
+

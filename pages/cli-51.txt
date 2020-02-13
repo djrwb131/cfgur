@@ -1,0 +1,51 @@
+                              M4100 Series ProSAFE Managed Switches
+
+no vlan port ingressfilter all
+
+This command disables ingress filtering for all ports. If ingress filtering is disabled, frames
+received with VLAN IDs that do not match the VLAN membership of the receiving interface
+are admitted and forwarded to ports that are members of that VLAN.
+
+ Format        no vlan port ingressfilter all
+
+ Mode          Global Config
+
+vlan port pvid all
+This command changes the VLAN ID for all interface.
+
+ Default       1
+
+ Format        vlan port pvid all <1-4093>
+
+ Mode          Global Config
+
+no vlan port pvid all
+
+This command sets the VLAN ID for all interfaces to 1.
+
+ Format        no vlan port pvid all
+
+ Mode          Global Config
+
+vlan port tagging all
+This command configures the tagging behavior for all interfaces in a VLAN to enabled. If
+tagging is enabled, traffic is transmitted as tagged frames. If tagging is disabled, traffic is
+transmitted as untagged frames. The ID is a valid VLAN identification number.
+
+ Format        vlan port tagging all <1-4093>
+
+ Mode          Global Config
+
+no vlan port tagging all
+
+This command configures the tagging behavior for all interfaces in a VLAN to disabled. If
+tagging is disabled, traffic is transmitted as untagged frames. The ID is a valid VLAN
+identification number.
+
+ Format       no vlan port tagging all
+
+ Mode          Global Config
+
+                                     Switching Commands
+                                           51
+

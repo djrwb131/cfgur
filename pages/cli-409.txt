@@ -1,0 +1,49 @@
+                        M4100 Series ProSAFE Managed Switches
+
+no debug ip acl
+
+Use this command to disable debug of IP Protocol packets matching the ACL criteria.
+
+ Format        no debug ip acl <acl-number>
+
+ Mode          Privileged EXEC
+
+debug ip dvmrp packet
+Use this command to trace DVMRP packet reception and transmission. If you use the
+receive option, only received DVMRP packets are traced. If you use the transmit option,
+only transmitted DVMRP packets are traced. When neither keyword is used in the command,
+then all DVMRP packet traces are dumped. Vital information such as source address,
+destination address, control packet type, packet length, and the interface on which the packet
+is received or transmitted is displayed on the console.
+
+ Default       disabled
+
+ Format        debug ip dvmrp packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+no debug ip dvmrp packet
+
+Use this command to disable debug tracing of DVMRP packet reception and transmission.
+
+ Format        no debug ip dvmrp packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+debug ip igmp packet
+Use this command to trace IGMP packet reception and transmission. If you use the receive
+option, only received IGMP packets are traced. If you use the transmit option, only
+transmitted IGMP packets are traced. When neither keyword is used in the command, then
+all IGMP packet traces are dumped. Vital information such as source address, destination
+address, control packet type, packet length, and the interface on which the packet is received
+or transmitted is displayed on the console.
+
+ Default       disabled
+
+ Format        debug ip igmp packet [receive | transmit]
+
+ Mode          Privileged EXEC
+
+                                       Utility Commands
+                                            409
+

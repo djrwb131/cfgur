@@ -1,0 +1,61 @@
+                             M4100 Series ProSAFE Managed Switches
+
+Technologies
+
+    Table 54. System General Error Messages
+
+     Component      Message                                        Cause
+
+     OS             Invalid USP unit = x, slot = x, port =x        A port was not able to be translated
+                                                                   correctly during the receive.
+
+     OS             In hapiBroadSystemMacAddress call to           Failed to add an L2 address to the MAC
+                    'bcm_l2_addr_add' - FAILED : x                 table. This should only happen when a
+                                                                   hash collision occurs or the table is full.
+
+     OS             Failed installing mirror action - rest of the  A previously configured probe port is not
+                    policy applied successfully                    being used in the policy. The release notes
+                                                                   state that only a single probe port can be
+                                                                   configured
+
+     OS             Policy x does not contain rule x               The rule was not added to the policy due to
+                                                                   a discrepancy in the rule count for this
+                                                                   specific policy . Additionally, the message
+                                                                   can be displayed when an old rule is being
+                                                                   modified, but the old rule is not in the policy
+
+     OS             ERROR: policy x, tmpPolicy x, size x, data     An issue installing the policy due to a
+                    x x x x x x x x                                possible duplicate hash
+
+     OS            ACL x not found in internal table               Attempting to delete a non-existent ACL
+
+     OS            ACL internal table overflow                     Attempting to add an ACL to a full table
+
+     OS             In hapiBroadQosCosQueueConfig, Failed          Attempting to configure the bandwidth
+                    to configure minimum bandwidth. Available      beyond its capabilities
+                    bandwidth x
+
+     OS             USL: failed to put sync response on queue      A response to a sync request was not
+                                                                   enqueued. This could indicate that a
+                                                                   previous sync request was received after it
+                                                                   was timed out
+
+     OS             USL: failed to sync ipmc table on unit=x       Either the transport failed or the message
+                                                                   was dropped
+
+     OS             usl_task_ipmc_msg_send(): failed to send       Either the transport failed or the message
+                    with x                                         was dropped
+
+     OS             USL: No available entries in the STG table     The Spanning Tree Group table is full in
+                                                                   USL
+
+     OS             USL: failed to sync stg table on unit=x        Could not synchronize unit x due to a
+                                                                   transport failure or API issue on remote
+                                                                   unit. A synchronization retry will be issued
+
+     OS             USL: A Trunk doesn't exist in USL              Attempting to modify a Trunk that doesn't
+                                                                   exist
+
+                                                Log Messages
+                                                     554
+

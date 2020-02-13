@@ -1,0 +1,64 @@
+                              M4100 Series ProSAFE Managed Switches
+
+ Term              Definition
+
+ Transitions Into  The number of times this interface has transitioned into loop inconsistent state.
+ Loop
+ Inconsistent
+ State
+
+ Transitions Out   The number of times this interface has transitioned out of loop inconsistent state.
+ of Loop
+ Inconsistent
+ State
+
+If you specify 0 (defined as the default CIST ID) as the <mstid>, this command displays the
+settings and parameters for a specific switch port within the Common and Internal Spanning
+Tree. The <slot/port> is the desired switch port. In this case, the following are displayed.
+
+ Term              Definition
+
+ Port Identifier   The port identifier for this port within the CST.
+
+ Port Priority     The priority of the port within the CST.
+
+ Port Forwarding   The forwarding state of the port within the CST.
+ State
+
+ Port Role         The role of the specified interface within the CST.
+
+ Auto-Calculate    Indicates whether auto calculation for port path cost is enabled or not (disabled).
+ Port Path Cost
+
+ Port Path Cost    The configured path cost for the specified interface.
+
+ Auto-Calculate    Indicates whether auto calculation for external port path cost is enabled.
+ External Port
+ Path Cost
+
+ External Port     The cost to get to the root bridge of the CIST across the boundary of the region. This
+ Path Cost         means that if the port is a boundary port for an MSTP region, the external path cost is
+                   used.
+
+ Designated Root   Identifier of the designated root for this port within the CST.
+
+ Root Path Cost    The root path cost to the LAN by the port.
+
+ Designated        The bridge containing the designated port.
+ Bridge
+
+ Designated Port   Port on the Designated Bridge that offers the lowest cost to the LAN.
+ Identifier
+
+ Topology          Value of flag in next Configuration Bridge Protocol Data Unit (BPDU) transmission
+ Change            indicating if a topology change is in progress for this port.
+ Acknowledgeme
+ nt
+
+ Hello Time        The hello time in use for this port.
+
+ Edge Port         The configured value indicating if this port is an edge port.
+
+                                        Switching Commands
+                                                        42
+

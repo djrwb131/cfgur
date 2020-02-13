@@ -1,0 +1,53 @@
+                       M4100 Series ProSAFE Managed Switches
+
+Time Duration........................................... 10
+RADIUS Accounting Mode.................................. Disable
+RADIUS Attribute 4 Mode................................. Enable
+RADIUS Attribute 4 Value ............................... 192.168.37.60
+
+show radius servers
+Use this command to display the summary and details of RADIUS authenticating servers
+configured for the RADIUS client.
+
+ Format        show radius servers [<ipaddr> | <dnsname> | name [<servername>]]
+
+ Mode          Privileged EXEC
+
+ Field                  Description
+
+ Current                The `*' symbol preceding the server host address specifies that the server is
+                        currently active.
+
+ Host Address           The IP address of the host.
+
+ Server Name            The name of the authenticating server.
+
+ Port                   The port used for communication with the authenticating server.
+
+ Type                   Specifies whether this server is a primary or secondary type.
+
+ Current Host Address   The IP address of the currently active authenticating server.
+
+ Secret Configured      Yes or No Boolean value that indicates whether this server is configured with a
+                        secret.
+
+ Number of Retransmits The configured value of the maximum number of times a request packet is
+                        retransmitted.
+
+ Message Authenticator A global parameter to indicate whether the Message Authenticator attribute is
+                        enabled or disabled.
+
+ Time Duration          The configured timeout value, in seconds, for request retransmissions.
+
+ RADIUS Accounting      A global parameter to indicate whether the accounting mode for all the servers is
+ Mode                   enabled or not.
+
+ RADIUS Attribute 4     A global parameter to indicate whether the NAS-IP-Address attribute has been
+ Mode                   enabled to use in RADIUS requests.
+
+ RADIUS Attribute 4     A global parameter that specifies the IP address to be used in NAS-IP-Address
+ Value                  attribute used in RADIUS requests.
+
+                                        Management Commands
+                                                 508
+

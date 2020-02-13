@@ -1,0 +1,45 @@
+                        M4100 Series ProSAFE Managed Switches
+
+Total Rx High Alloc Attempts   384555
+Total Tx Alloc Attempts        2478536
+Total Rx Norm Alloc Failures   0
+Total Rx Mid2 Alloc Failures   0
+Total Rx Mid1 Alloc Failures   0
+Total Rx High Alloc Failures   0
+Total Tx Alloc Failures        0
+
+show running-config
+Use this command to display or capture the current setting of different protocol packages
+supported on the switch. This command displays or captures commands with settings and
+configurations that differ from the default value. To display or capture the commands with
+settings and configurations that are equal to the default value, include the [all] option.
+
+    Note: The output of the show running-config command does not display
+          the user password, even if you set one different from the default.
+
+The output is displayed in the script format, which can be used to configure another switch
+with same configuration. If the optional <scriptname> is provided with a file name
+extension of .scr, the output is redirected to a script file.
+
+    Note: If you issue the show running-config command from a serial
+          connection, access to the switch through remote connections (such as
+          Telnet) is suspended while the output is being generated and displayed.
+
+    Note: If you use a text-based configuration file, the show running-config
+          command displays only configured physical interfaces, that is, if any
+          interface only contains the default configuration, that interface will be
+          skipped from the show running-config command output. This is true
+          for any configuration mode that contains nothing but default
+          configuration. That is, the command to enter a particular config mode,
+          followed immediately by its exit command, are both omitted from the
+          output of the show running-config command (and hence from the
+          startup-config file when the system configuration is saved.)
+
+This command captures the current settings of the trapflag status:
+·   If all the flags are enabled, then the comma\nd displays trapflags all.
+·   If all the flags in a particular group are enabled, then the command displays trapflags
+    group name all.
+
+                                   Utility Commands
+                                         349
+

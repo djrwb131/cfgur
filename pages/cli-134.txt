@@ -1,0 +1,54 @@
+                           M4100 Series ProSAFE Managed Switches
+
+dhcp l2relay remote-id vlan
+Use this parameter to set the DHCP Option-82 Remote ID for a VLAN and subscribed service
+(based on subscription-name). The vlan­list range is 1­4093. Separate non-consecutive IDs
+with a comma (,), and do not insert spaces or zeros between the range. Use a dash (­) for
+the range.
+
+ Format      dhcp l2relay remote-id <remote-id-string> vlan <vlan-list>
+
+ Mode        Global Config
+
+no dhcp l2relay remote-id vlan
+
+Use this parameter to clear the DHCP Option-82 Remote ID for a VLAN and subscribed
+service (based on subscription-name).
+
+ Format      no dhcp l2relay remote-id vlan <vlan-list>
+
+ Mode        Global Config
+
+dhcp l2relay vlan
+Use this command to enable the DHCP L2 Relay agent for a set of VLANs. All DHCP packets
+which arrive on interfaces in the configured VLAN are subject to L2 Relay processing.
+vlan­list range is 1­4093. Separate non-consecutive IDs with a comma (,), and do not insert
+spaces or zeros between the range. Use a dash (­) for the range.
+
+ Default     disabled
+
+ Format      dhcp l2relay vlan <vlan-list>
+
+ Mode        Global Config
+
+no dhcp l2relay vlan
+
+Use this command to disable the DHCP L2 Relay agent for a set of VLANs.
+
+ Format      no dhcp l2relay vlan <vlan-list>
+
+ Mode        Global Config
+
+dhcp l2relay trust
+Use this command to configure an interface or range of interfaces as trusted for Option-82
+reception.
+
+ Default     untrusted
+
+ Format      dhcp l2relay trust
+
+ Mode        Interface Config
+
+                                 Switching Commands
+                                          134
+

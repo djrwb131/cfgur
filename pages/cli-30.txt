@@ -1,0 +1,53 @@
+                            M4100 Series ProSAFE Managed Switches
+
+spanning-tree configuration name
+This command sets the Configuration Identifier Name for use in identifying the configuration
+that this switch is currently using. The <name> is a string of up to 32 characters.
+
+ Default         base MAC address in hexadecimal notation
+
+ Format          spanning-tree configuration name <name>
+
+ Mode            Global Config
+
+no spanning-tree configuration name
+
+This command resets the Configuration Identifier Name to its default.
+
+ Format          no spanning-tree configuration name
+
+ Mode            Global Config
+
+spanning-tree configuration revision
+This command sets the Configuration Identifier Revision Level for use in identifying the
+configuration that this switch is currently using. The Configuration Identifier Revision Level is
+a number in the range of 0­65535.
+
+ Default         0
+
+ Format          spanning-tree configuration revision <0-65535>
+
+ Mode            Global Config
+
+no spanning-tree configuration revision
+
+This command sets the Configuration Identifier Revision Level for use in identifying the
+configuration that this switch is currently using to the default value.
+
+ Format          no spanning-tree configuration revision
+
+ Mode            Global Config
+
+spanning-tree edgeport
+This command specifies that this port is an Edge Port within the Common and Internal
+Spanning Tree. This allows this port to transition to Forwarding State without delay.
+
+ Default         Enabled
+
+ Format          spanning-tree edgeport
+
+ Mode            Interface Config
+
+                                  Switching Commands
+                                         30
+

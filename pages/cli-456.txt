@@ -1,0 +1,53 @@
+                              M4100 Series ProSAFE Managed Switches
+
+show telnet
+Use this command to display the current outbound Telnet settings. In other words, these
+settings apply to Telnet connections initiated from the switch to a remote system.
+
+ Format        show telnet
+
+ Modes         ·   Privileged EXEC
+               ·   User EXEC
+
+ Term              Definition
+
+ Outbound Telnet   The number of minutes an outbound Telnet session is allowed to remain inactive before
+ Login Timeout     being logged off.
+
+ Maximum           The number of simultaneous outbound Telnet connections allowed.
+ Number of
+ Outbound Telnet
+ Sessions
+
+ Allow New         Indicates whether outbound Telnet sessions will be allowed.
+ Outbound Telnet
+ Sessions
+
+show telnetcon
+Use this command to display the current inbound Telnet settings. In other words, these
+settings apply to Telnet connections initiated from a remote system to the switch.
+
+ Format        show telnetcon
+
+ Modes         ·   Privileged EXEC
+               ·   User EXEC
+
+ Term              Definition
+
+ Remote            This object indicates the number of minutes a remote connection session is allowed to
+ Connection        remain inactive before being logged off. Might be specified as a number from 1 to 160.
+ Login Timeout     The factory default is 5.
+ (minutes)
+
+ Maximum           This object indicates the number of simultaneous remote connection sessions allowed.
+ Number of         The factory default is 5.
+ Remote
+ Connection
+ Sessions
+
+ Allow New Telnet  New Telnet sessions will not be allowed when this field is set to no. The factory default
+ Sessions          value is yes.
+
+                                        Management Commands
+                                                    456
+

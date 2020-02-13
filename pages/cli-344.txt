@@ -1,0 +1,49 @@
+                           M4100 Series ProSAFE Managed Switches
+
+show fiber-ports optics-info
+This command displays the SFP vendor related information such as vendor name, serial
+number of the SFP, part number of the SFP. The values are derived from the SFP's A0 table
+using the I2C interface.
+
+ Format        show fiber-ports optics-info {all | <slot/port>}
+
+ Mode          Privileged EXEC
+
+ Field                          Description
+
+ Vendor Name                    The vendor name is a 16 character field that contains ASCII charac-
+                                ters, left-aligned and padded on the right with ASCII spaces (20h). The
+                                vendor name shall be the full name of the corporation, a commonly
+                                accepted abbreviation of the name of the corporation, the SCSI com-
+                                pany code for the corporation, or the stock exchange code for the cor-
+                                poration.
+
+ Length (50um, OM2)             This value specifies link length that is supported by the transceiver
+                                while operating in compliance with applicable standards using 50
+                                micron multimode OM2 [500MHz*km at 850nm] fiber. A value of zero
+                                means that the transceiver does not support 50 micron multimode fiber
+                                or that the length information must be determined from the transceiver
+                                technology.
+
+ Length (62.5um, OM1)           This value specifies link length that is supported by the transceiver
+                                while operating in compliance with applicable standards using 62.5
+                                micron multimode OM1 [200 MHz*km at 850nm, 500 MHz*km at
+                                1310nm] fiber. A value of zero means that the transceiver does not
+                                support 62.5 micron multimode fiber or that the length information must
+                                determined from the transceiver technology
+
+ Vendor SN                      The vendor serial number (vendor SN) is a 16 character field that con-
+                                tains ASCII characters, left-aligned and padded on the right with ASCII
+                                spaces (20h), defining the vendor's serial number for the transceiver. A
+                                value of all zero in the 16-byte field indicates that the vendor SN is
+                                unspecified.
+
+ Vendor PN                      The vendor part number (vendor PN) is a 16-byte field that contains
+                                ASCII characters, left aligned and added on the right with ASCII
+                                spaces (20h), defining the vendor part number or product name. A
+                                value of all zero in the 16-byte field indicates that the vendor PN is
+                                unspecified.
+
+                               Utility Commands
+                                              344
+

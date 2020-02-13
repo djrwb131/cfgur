@@ -1,0 +1,47 @@
+                       M4100 Series ProSAFE Managed Switches
+
+ Default   1 (day)
+
+ Format    lease [{<days> [<hours>] [<minutes>] | infinite}]
+
+ Mode      DHCP Pool Config
+
+no lease
+
+This command restores the default value of the lease time for DHCP Server.
+
+ Format    no lease
+
+ Mode      DHCP Pool Config
+
+network (DHCP Pool Config)
+Use this command to configure the subnet number and mask for a DHCP address pool on
+the server. Network-number is a valid IP address, made up of four decimal bytes ranging
+from 0 to 255. IP address 0.0.0.0 is invalid. Mask is the IP subnet mask for the specified
+address pool. The prefix-length is an integer from 0 to 32.
+
+ Default   none
+
+ Format    network <networknumber> [<mask> | <prefixlength>]
+
+ Mode      DHCP Pool Config
+
+no network
+
+This command removes the subnet number and mask.
+
+ Format    no network
+
+ Mode      DHCP Pool Config
+
+bootfile
+The command specifies the name of the default boot image for a DHCP client. The
+<filename> specifies the boot image file.
+
+ Format    bootfile <filename>
+
+ Mode      DHCP Pool Config
+
+                                Utility Commands
+                                          386
+

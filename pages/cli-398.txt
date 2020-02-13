@@ -1,0 +1,47 @@
+                         M4100 Series ProSAFE Managed Switches
+
+no ip domain retry
+
+Use this command to return to the default.
+
+ Format    no ip domain retry <number>
+
+ Mode      Global Config
+
+ip domain timeout
+Use this command to specify the amount of time to wait for a response to a DNS query. The
+<seconds> parameter specifies the time in seconds to wait for a response to a DNS query
+and ranges from 0 to 3600.
+
+ Default   3
+
+ Format    ip domain timeout <seconds>
+
+ Mode      Global Config
+
+no ip domain timeout
+
+Use this command to return to the default setting.
+
+ Format    no ip domain timeout
+
+ Mode      Global Config
+
+clear host
+Use this command to delete entries from the host name-to-address cache. This command
+clears the entries from the DNS cache maintained by the software. This command clears
+both IPv4 and IPv6 entries.
+
+ Format    clear host {<name> | all}
+
+ Mode      Privileged EXEC
+
+ Field        Description
+
+ name         A particular host entry to remove. <name> ranges from 1-255 characters.
+
+ all          Removes all entries.
+
+                                   Utility Commands
+                                           398
+

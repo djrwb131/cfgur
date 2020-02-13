@@ -1,0 +1,49 @@
+                               M4100 Series ProSAFE Managed Switches
+
+ Default       enabled
+
+ Format        port-channel linktrap {<slot/port> | lag <lag-group-id> | all}
+
+ Mode          Global Config
+
+no port-channel linktrap
+
+This command disables link trap notifications for the port-channel (LAG). The interface is a
+logical slot and port for a configured port-channel. The option all disables link trap
+notifications for all the configured port-channels.
+
+ Format        no port-channel linktrap {<slot/port> | lag <lag-group-id> | all}
+
+ Mode          Global Config
+
+port-channel load-balance
+This command selects the load-balancing option used on a port-channel (LAG). Traffic is
+balanced on a port-channel (LAG) by selecting one of the links in the channel over which to
+transmit specific packets. The link is selected by creating a binary pattern from selected fields
+in a packet, and associating that pattern with a particular link.
+Load-balancing is not supported on every device. The range of options for load-balancing
+can vary per device. The switch also supports enhanced hashing mode, which has the
+following advantages:
+·   MODULO-N (where N is the number of active link members in a LAG) operation based on
+    the number of ports in the LAG.
+·   Packet attributes selection based on the packet type: For L2 packets, source and
+    destination MAC address are used for hash computation. For L3 packets, source IP,
+    destination IP address, TCP/UDP ports are used.
+·   Non-Unicast traffic and unicast traffic is hashed using a common hash algorithm
+·   Excellent load balancing performance.
+The interface is a logical <slot/port> for a configured port-channel. The option all
+enables the configuration for all the configured port-channels. Instead of <slot/port>, you
+can use lag <lag-group-id> as an alternate way to specify the LAG interface, in which
+<lag-group-id> is the LAG port number.
+
+ Default         3
+
+ Format          port-channel load-balance {1 | 2 | 3 | 4 | 5 | 6 | 7} {<slot/port>
+                 | lag <lag-group-id> | all}
+
+ Mode            Interface Config
+                 Global Config
+
+                                    Switching Commands
+                                          121
+

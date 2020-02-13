@@ -1,0 +1,43 @@
+                               M4100 Series ProSAFE Managed Switches
+
+   vlan priority
+   This command configures the default 802.1p port priority assigned for untagged packets for a
+   specific interface. The range for the priority is 0­7.
+
+     Default     0
+
+     Format      vlan priority <priority>
+
+     Mode        Interface Config
+
+Protected Ports Commands
+
+   This section describes commands you use to configure and view protected ports on a switch.
+   Protected ports do not forward traffic to each other, even if they are on the same VLAN.
+   However, protected ports can forward traffic to all unprotected ports in their group.
+   Unprotected ports can forward traffic to both protected and unprotected ports. Ports are
+   unprotected by default.
+   If an interface is configured as a protected port, and you add that interface to a Port Channel
+   or link aggregation group (LAG), the protected port status becomes operationally disabled on
+   the interface, and the interface follows the configuration of the LAG port. However, the
+   protected port configuration for the interface remains unchanged. Once the interface is no
+   longer a member of a LAG, the current configuration for that interface automatically becomes
+   effective.
+
+   switchport protected (Global Config)
+   Use this command to create a protected port group. The <groupid> parameter identifies the
+   set of protected ports. Use the name <name> pair to assign a name to the protected port
+   group. The name can be up to 32 alphanumeric characters long, including blanks. The
+   default is blank.
+
+       Note: Port protection occurs within a single switch. Protected port configuration
+               does not affect traffic between ports on two different switches. No traffic
+               forwarding is possible between two protected ports.
+
+     Format      switchport protected <groupid> name <name>
+
+     Mode        Global Config
+
+                                          Switching Commands
+                                          68
+

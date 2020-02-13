@@ -1,0 +1,39 @@
+                            M4100 Series ProSAFE Managed Switches
+
+       Note: This command fails if any attributes within the policy definition exceed
+               the capabilities of the interface. Once a policy is successfully attached
+               to an interface, any attempt to change the policy definition, that would
+               result in a violation of the interface capabilities, causes the policy
+               change attempt to fail.
+
+     Format       service-policy {in | out} <policymapname>
+
+     Modes        ·   Global Config
+                  ·   Interface Config
+
+       Note: Each interface can have one policy attached.
+
+   no service-policy
+
+   This command detaches a policy from an interface in the inbound direction. The
+   <policyname> parameter is the name of an existing DiffServ policy.
+
+       Note: This command causes a service to remove its reference to the policy.
+               This command effectively disables DiffServ on an interface in the
+               inbound direction. There is no separate interface administrative
+               'mode' command for DiffServ.
+
+     Format       no service-policy in <policymapname>
+
+     Modes        ·   Global Config
+                  ·   Interface Config
+
+DiffServ Show Commands
+
+   Use the DiffServ show commands to display configuration and status information for classes,
+   policies, and services. You can display DiffServ information in summary or detailed formats.
+   The status information is only shown when the DiffServ administrative mode is enabled.
+
+                                        Quality of Service Commands
+                                             287
+

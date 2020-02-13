@@ -1,0 +1,49 @@
+                               M4100 Series ProSAFE Managed Switches
+
+no lldp notification
+
+Use this command to disable notifications.
+
+ Default       disabled
+
+ Format        no lldp notification
+
+ Mode          Interface Config
+
+lldp notification-interval
+Use this command to configure how frequently the system sends remote data change
+notifications. The <interval> parameter is the number of seconds to wait between sending
+notifications. The valid interval range is 5-3600 seconds.
+
+ Default       5
+
+ Format        lldp notification-interval <interval>
+
+ Mode          Global Config
+
+no lldp notification-interval
+
+Use this command to return the notification interval to the default value.
+
+ Format        no lldp notification-interval
+
+ Mode          Global Config
+
+clear lldp statistics
+Use this command to reset all LLDP statistics, including MED-related information.
+
+ Format        clear lldp statistics
+
+ Mode          Privileged Exec
+
+clear lldp remote-data
+Use this command to delete all information from the LLDP remote data table, including
+MED-related information.
+
+ Format        clear lldp remote-data
+
+ Mode          Global Config
+
+                                    Switching Commands
+                                           185
+

@@ -1,0 +1,49 @@
+                                    M4100 Series ProSAFE Managed Switches
+
+     Term                Definition
+
+     Group ID            The number that identifies the protected port group.
+
+     Name                An optional name of the protected port group. The name can be up to 32 alphanumeric
+                         characters long, including blanks. The default is blank.
+
+     List of Physical    List of ports, which are configured as protected for the group identified with <groupid>. If
+     Ports               no port is configured as protected for this group, this field is blank.
+
+   show interfaces switchport (for a group ID)
+   This command displays the status of the interface (protected/unprotected) under the groupid.
+
+     Format           show interfaces switchport <slot/port> <groupid>
+
+     Mode             ·   Privileged EXEC
+                      ·   User EXEC
+
+     Term                Definition
+
+     Name                A string associated with this group as a convenience. It can be up to 32 alphanumeric
+                         characters long, including blanks. The default is blank. This field is optional.
+
+     Protected port      Indicates whether the interface is protected or not. It shows TRUE or FALSE. If the group
+                         is a multiple groups then, it shows TRUE in Group <groupid>.
+
+Private VLAN Commands
+
+   The Private VLANs feature separates a regular VLAN domain into two or more subdomains.
+   Each subdomain is defined (represented) by a primary VLAN and a secondary VLAN. The
+   primary VLAN ID is the same for all subdomains that belong to a private VLAN. The
+   secondary VLAN ID differentiates subdomains from each other and provides Layer 2 isolation
+   between ports of the same private VLAN. The types of VLANs within a private VLAN are as
+   follows:
+   ·   Primary VLAN--Forwards the traffic from the promiscuous ports to isolated ports,
+       community ports, and other promiscuous ports in the same private VLAN. Only one
+       primary VLAN can be configured per private VLAN. All ports within a private VLAN share
+       primary VLAN.
+   ·   Isolated VLAN--A secondary VLAN that carries traffic from isolated ports to promiscuous
+       ports. Only one isolated VLAN can be configured per private VLAN.
+   ·   Community VLAN--A secondary VLAN that forwards traffic between ports that belong to
+       the same community and the promiscuous ports. There can be multiple community
+       VLANs per private VLAN.
+
+                                              Switching Commands
+                                               70
+
