@@ -3,23 +3,20 @@ import gi
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
+import json_db
 
 try:
-    cfg = open("cmd_tree.json","r")
-    from json_db import Decoder
-    import json
-    ctree = json.load(cfg,cls=Decoder)
-    cfg.close()
+    ctree = json_db.get_command_tree()
 except Exception as e:
     print("ERROR LOADING JSON FILE: %s" % (str(e)))
-    
-try:
-    import config_parser
-    config_parser.init()
-    ctree = config_parser.cmd_tree
-except Exception as e:
-    print("ERROR PARSING: %s" % (str(e)))
-
+    exit(1)
+##    try:
+##        import config_parser
+##        config_parser.init()
+##        ctree = config_parser.cmd_tree
+##    except Exception as e:
+##        print("ERROR PARSING: %s" % (str(e)))
+##
 def hello(button):
     print("Hello world!")
     

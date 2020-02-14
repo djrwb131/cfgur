@@ -1,24 +1,22 @@
-# json_tc.py
+# json_db.py
 #
 # Custom encoder/decoder for command classes
 #
 
-from json import JSONEncoder,JSONDecoder
+from json import JSONEncoder,JSONDecoder,load
 from command import Command
 from command_tree import CommandTree
 from command_mode import CommandMode
 from param import Param
 from param_tree import ParamTree
-from settings import CLASS_KEY, JSON_DEBUG
-# This encoder just tries to call serialise, which allows a class to
-# return a serialisable version of itself. If the object has no serialise()
-# member, the JSONEncoder superclass will automatically try to serialise
-# it using its own encode() function. Therefore, the encoder returns it as-is.
-#
-# This will allow the JSONEncoder to throw an exception if the object
-# is not JSON-approved, and does not have a serialise() member.
+from settings import CLASS_KEY, JSON_DEBUG, JSON_FILENAME
+
 SERIALISABLE_CLASSES = ( Command, CommandTree, CommandMode, Param, ParamTree )
 
+# This encoder scans the object for embedded, serialisable objects. If
+# found, it will serialise each one recursively. This encoder is very
+# generic and will likely work with any class - but requires each
+# class to be put into the SERIALISABLE_CLASSES constant, for posterity.
 class Encoder(JSONEncoder):
     def default(self, o):
         if type(o) in SERIALISABLE_CLASSES:
@@ -34,19 +32,19 @@ class Encoder(JSONEncoder):
 
 
             
-# This decoder checks the _serialised_class field of a decoded object.
+# This decoder checks the CLASS_KEY field of a decoded object.
 # If the object was encoded using serialise(), this field will
 # contain the name of the class object it was serialised from.
 #
-# If the _serialised_class field is accessible, this decoder will check
+# If the CLASS_KEY field is accessible, this decoder will check
 # the try to instantiate this class using relevant info from the dict,
 # then return an instance of the class.
 #
-# If the decoded object is not a dict, or has no _serialised_class field,
+# If the decoded object is not a dict, or has no CLASS_KEY field,
 # the decoder will return the object as-is.
 #
-# If the object has a _serialised_class field, but no instantiation rule,
-# the decoder will emit a warning and return the object as-is.
+# If the object has a CLASS_KEY field, but no instantiation rule,
+# the decoder will raise an exception.
 
 class Decoder(JSONDecoder):
     def decode(self, s):
@@ -57,9 +55,11 @@ class Decoder(JSONDecoder):
 
 # recursive deserialisation
     def deserialise_map(self,inp):
+        if JSON_DEBUG:
+            print("Deserialising map:\n----\n%s\n----\n" % (str(inp.keys())))
         ret = dict()
         for k in inp.keys():
-            if CLASS_KEY in inp[k]:
+            if inp[k] and CLASS_KEY in inp[k]:
                 ret[k] = self.deserialise(inp[k])
             else:
                 ret[k] = inp[k]
@@ -68,30 +68,37 @@ class Decoder(JSONDecoder):
 # takes a dict containing a CLASS_KEY and
 # returns its deserialised class
     def deserialise(self,t):
+        if not type(t) == dict or not CLASS_KEY in t:
+            return t
         if JSON_DEBUG:
-            print("deserialise( %s )"% ((t[CLASS_KEY])))
+            print(type(t))
+            print("deserialise to ( %s )"% ((t[CLASS_KEY])))
+            print("keys: %s" % t.keys())
         c = t[CLASS_KEY]
-        
+        for i in t.keys():
+            if t[i] == dict:
+                t[i]=self.deserialise_map(t[i])
         # instantiation rules        
         if c == str(Param):
-            return Param(t["param"],t["regex"])
+            return Param(t)
         
         if c == str(Command):
-            params = self.deserialise_map(t["params"])
-            return Command(t["cmd"],t["desc"],params)
+            return Command(t)
         
         if c == str(CommandMode):
-            commands = self.deserialise_map(t["commands"])
-            params = self.deserialise_map(t["params"])
-            return CommandMode(t["cmd"],t["desc"],commands,params)
+            return CommandMode(t)
         
         if c == str(ParamTree):
-            m = self.deserialise_map(t["pmap"])
-            return ParamTree(t["cmd"],m)
+            return ParamTree(t)
         
         if c == str(CommandTree):
-            m = self.deserialise_map(t["map"])
-            r = self.deserialise(t["root_mode"])
-            return CommandTree(r,m)
+            return CommandTree(t)
         
         raise TypeError("No instantiation rule for %s %s" % (CLASS_KEY,c))
+
+# Convenience function to load the command tree
+def get_command_tree():
+    cfg = open(JSON_FILENAME,"rb")
+    ctd = load(cfg,cls=Decoder)
+    cfg.close()
+    return ctd

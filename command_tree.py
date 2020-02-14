@@ -8,28 +8,21 @@ from command_mode import CommandMode
 from settings import DEBUG
 
 class CommandTree(CLIObject):
-    """
-    Contains the entire tree of possible commands and command modes.
-    Commands and command modes are put into dictionary entry, to keep track
-    of the chain for each configuration option.
-    """
     def __init__(self,root_mode,m=dict(),p=dict()):
-        """
-        Args:
-            root_mode: the root CommandMode for this CommandTree. (required)
-            m:         if restoring from save, this will be the already-deserialised dict of CommandModes.
-
-        """
-        super().__init__("Command Tree","Python class to manage the general command structure.")
-        if len(m) and not len(p):
-            raise Exception("CommandTree.__init__() had a modes dict but the parent dict was empty :(")
-        if len(p) and not len(m):
-            raise Exception("CommandTree.__init__() had a parents dict but an empty modes dict - cannot instantiate")
-        self.modes = m
-        self.parents = p
-        self.root_mode = root_mode
-        self.modes[str(root_mode)]=root_mode
-        self.parents[str(root_mode)]=None
+        if type(root_mode) == dict() and not m and not p:
+            self.__dict__ = root_mode
+            super().__init__("Command Tree","Python class to manage the general command structure.")
+        else:
+            super().__init__("Command Tree","Python class to manage the general command structure.")
+            if len(m) and not len(p):
+                raise Exception("CommandTree.__init__() had a modes dict but the parent dict was empty :(")
+            if len(p) and not len(m):
+                raise Exception("CommandTree.__init__() had a parents dict but an empty modes dict - cannot instantiate")
+            self.modes = m
+            self.parents = p
+            self.root_mode = root_mode
+            self.modes[str(root_mode)]=root_mode
+            self.parents[str(root_mode)]=None
             
     def add_command_mode(self,mode,parent_mode=None):
         """

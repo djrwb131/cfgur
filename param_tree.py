@@ -1,7 +1,12 @@
-class ParamTree():
+from cli_obj import CLIObject
+class ParamTree(CLIObject):
     def __init__(self,cmd,pmap=dict()):
-        self.pmap = pmap
-        self.cmd = cmd
+        if type(cmd) == dict and not pmap:
+            self.__dict__ = cmd
+            super().__init__(self.name,"Parameter tree for %s" % (self.name,))
+        else:
+            super().__init__(cmd,"Parameter tree for %s" % (cmd,))
+            self.pmap = pmap
         
     def add_param(self,param,chain):
         r = self.pmap
@@ -11,15 +16,4 @@ class ParamTree():
                 r=r[str(j)]
         if not r[str(param)]:
             r[str(param)]=param
-
-    def __str__(self):
-        return self.cmd
-
-    def serialise(self):
-        b = {
-            "_serialised_class":"ParamTree",
-            "pmap":self.pmap,
-            "cmd":self.cmd
-            }
-        return b
 

@@ -2,26 +2,20 @@
 #
 # Command parameters and input validation
 #
-class Param():
+from cli_obj import CLIObject
+class Param(CLIObject):
     def __init__(self,param,desc,regex=""):
-        self.param=param
-        self.desc=desc
-        if regex:
-            self.regex=re.compile(regex)
+        if type(param) == dict and not desc and not regex:
+            self.__dict__ = param
         else:
-            self.regex=""
-            
+            self.param = param
+            self.desc = desc
+            self.regex = regex
+        super().__init__(self.param,self.desc)
+        
     def validate(self,arg):
         if not self.regex:
             return False
         return True if self.regex.search(arg) else False
 
-    def serialise(self):
-        b = {
-            "_serialised_class":"Param",
-            "param":self.param,
-            "desc":self.desc,
-            "regex":self.regex
-            }
-        return b
     
