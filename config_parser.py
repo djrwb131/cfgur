@@ -1,9 +1,11 @@
 import json
-from command import CommandTree,CommandMode,Command
+from command_tree import CommandTree
+from command_mode import CommandMode
+from command import Command
 from json_db import Encoder
 from const_cmdmodes import *
 from string import ascii_uppercase,ascii_letters
-from settings import DEBUG
+from settings import DEBUG,JSON_DEBUG
 
 APPENDIX_START  = 558
 APPENDIX_END    = 578
@@ -215,6 +217,8 @@ def init():
         
     print("Writing results to json...")
     f = open("cmd_tree.json","w")
+    if JSON_DEBUG:
+        print("root dict:\n----\n%s\n----\n" % (cmd_tree.__dict__.keys()))
     json.dump(cmd_tree,f,cls=enc)
     f.close()
     print("Complete!")

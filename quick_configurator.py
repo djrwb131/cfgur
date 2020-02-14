@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import gi
+
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
@@ -9,12 +10,15 @@ try:
     import json
     ctree = json.load(cfg,cls=Decoder)
     cfg.close()
-    
 except Exception as e:
-    print("ERROR LOADING JSON FILE: %s" % (e,))
+    print("ERROR LOADING JSON FILE: %s" % (str(e)))
+    
+try:
     import config_parser
     config_parser.init()
     ctree = config_parser.cmd_tree
+except Exception as e:
+    print("ERROR PARSING: %s" % (str(e)))
 
 def hello(button):
     print("Hello world!")

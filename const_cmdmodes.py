@@ -6,7 +6,7 @@
 # for it.
 #
 
-from command import CommandMode
+from command_mode import CommandMode
 
 user_desc           = \
 "Contains a limited set of commands to view basic system information."
