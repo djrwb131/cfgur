@@ -29,6 +29,8 @@
     </columns>
   </object>
   <object class="GtkWindow" id="mainWindow">
+    <property name="width_request">640</property>
+    <property name="height_request">480</property>
     <property name="can_focus">False</property>
     <signal name="destroy" handler="onMainWindowDestroy" swapped="no"/>
     <child>
@@ -52,6 +54,7 @@
             <property name="enable_tree_lines">True</property>
             <child internal-child="selection">
               <object class="GtkTreeSelection" id="commandModeSelection">
+                <signal name="changed" handler="commandListNeedsUpdate" object="commandListStore" after="yes" swapped="no"/>
                 <signal name="changed" handler="commandModeChanged" object="commandModeTree" swapped="no"/>
               </object>
             </child>
@@ -75,13 +78,31 @@
           </packing>
         </child>
         <child>
-          <object class="GtkTreeView" id="commandList">
+          <object class="GtkScrolledWindow">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="model">commandListStore</property>
-            <property name="show_expanders">False</property>
-            <child internal-child="selection">
-              <object class="GtkTreeSelection"/>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTreeView" id="commandList">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">commandListStore</property>
+                <property name="show_expanders">False</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection"/>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="lvc_commandname">
+                    <property name="title" translatable="yes">Command</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="lvc_cr_commandname"/>
+                      <attributes>
+                        <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+              </object>
             </child>
           </object>
           <packing>
