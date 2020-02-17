@@ -106,6 +106,9 @@ class CommandTree(CLIObject):
         else:
             self.modes[mode_clean].add_command(cmd)
             
+    def __getitem__(self,key):
+        return self.modes[key]
+    
     def get_all_modes(self):
         return self.modes.keys()
     
