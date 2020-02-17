@@ -7,6 +7,7 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 import json_db
 
+
 def load_json():
     return json_db.get_command_tree()
 
@@ -21,8 +22,10 @@ def reparse():
 # - you can make copies of widgets and windows by making new builders
 # - you can add specific parts of a glade file by including a tuple with
 #   add_objects_from_file(filename, tuple(objects))
+
+from settings import GLADE_FILENAME
 builder = Gtk.Builder()
-builder.add_objects_from_file("ui.glade", ("mainWindow","commandModeTreeStore","commandListStore") )
+builder.add_from_file(GLADE_FILENAME)
 
 from handler import Handler
 ctree = reparse()
