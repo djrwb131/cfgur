@@ -4,14 +4,13 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
+from settings import GLADE_FILENAME
 class Handler():
     def __init__(self,ct):
         self.selectedMode = str(ct.root_mode)
         self.commandTree = ct
-        print("Handler initialized.")
 
     def onMainWindowDestroy(self, *args):
-##        print("Handler heard an onDestroy. Exitting!")
         Gtk.main_quit()
 
     def on_commandList_row_activated(self, *args):
@@ -21,7 +20,7 @@ class Handler():
             cindex = view.get_columns().index(col)  
             cmd = self.commandTree[self.selectedMode][view.get_model()[path][cindex]]
             builder = Gtk.Builder()
-            builder.add_objects_from_file("ui.glade",("commandInfoDialog",))
+            builder.add_from_file(GLADE_FILENAME)
 
             builder.get_object("cid_tv_format").get_buffer().insert_at_cursor(cmd.fmtstr,len(cmd.fmtstr))
             builder.get_object("cid_tv_synopsis").get_buffer().insert_at_cursor(cmd.desc,len(cmd.desc))
@@ -29,7 +28,6 @@ class Handler():
             builder.connect_signals(self)
             
             dialog = builder.get_object("commandInfoDialog")
-            print("opening dialog for %s ... " % str(cmd))
             dialog.show_all()
 
     def on_cid_closeButton_clicked(self, *args):
