@@ -2,7 +2,8 @@
 #
 # Project-wide settings
 
-DEBUG = True
-JSON_DEBUG = True
+DEBUG = False
+JSON_DEBUG = False
 CLASS_KEY = "__SERIALISED_CLASS"
 JSON_FILENAME = "cmd_tree.json"
+GLADE_FILENAME = "ui.glade"
