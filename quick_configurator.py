@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import gi
-
 #TODO: add Gtk support in subclasses of Command*
 # or find another clean way of implementing UI connections
 
@@ -16,43 +15,20 @@ def reparse():
     config_parser.init()
     return config_parser.cmd_tree
 
-def hello(button):
-    print("Hello world!")
-    
-def goodbye(button):
-    print("Goodbye world!")
-    Gtk.main_quit()
-    
-def setSelectedCommandMode(commandModeTree):
-    global selected_mode
-    store, paths = commandModeTree.get_selection().get_selected_rows()
-    path = paths[0] # can't have mode than one mode active at a time
-    selected_mode = store[path][0]
-    print("Selected mode is now [ %s ]" % (str(selected_mode)))
-    pass
-
-def updateCommandList(commandList):
-    global ctree
-    global selected_mode
-    if not selected_mode:
-        return
-    commandList.clear()
-    print("Found %i commands" % ( len(ctree.modes[selected_mode].commands.keys())))
-    for cmd in ctree.modes[selected_mode].commands.keys():
-        r = commandList.append()
-        commandList.set(r, { 0:cmd } )
         
-handlers = {
-    "onMainWindowDestroy": goodbye,
-    "hello": hello,
-    "commandModeChanged": setSelectedCommandMode,
-    "commandListNeedsUpdate": updateCommandList
-    }
+# see https://mail.gnome.org/archives/gtk-app-devel-list/2012-December/msg00003.html
+# - use builders to get what you need, then toss them out asap
+# - you can make copies of widgets and windows by making new builders
+# - you can add specific parts of a glade file by including a tuple with
+#   add_objects_from_file(filename, tuple(objects))
 builder = Gtk.Builder()
-builder.add_from_file("ui.glade")
-builder.connect_signals(handlers)
+builder.add_objects_from_file("ui.glade", ("mainWindow","commandModeTreeStore","commandListStore") )
 
-ctree = reparse() 
+from handler import Handler
+ctree = reparse()
+h = Handler(ctree)
+builder.connect_signals(h)
+
 window = builder.get_object("mainWindow")
 gtree = builder.get_object("commandModeTreeStore")
 clist = builder.get_object("commandListStore")
@@ -75,7 +51,7 @@ def get_iter_by_value(tree,col,value,row=False):
     return None
 
 # solves the issue of a command mode's parent not being loaded
-# does several passes; if the list gets smaller, do another pass
+# does one or more passes; if the list gets smaller, do another pass
 while len(modepass) > 0:
     removed = []
     for i in modepass:
