@@ -2,6 +2,115 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.0"/>
+  <object class="GtkDialog" id="commandInfoDialog">
+    <property name="can_focus">False</property>
+    <property name="type_hint">dialog</property>
+    <signal name="destroy" handler="on_commandInfoDialog_destroy" swapped="no"/>
+    <child>
+      <placeholder/>
+    </child>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <object class="GtkButton" id="cid_closeButton">
+                <property name="label">gtk-close</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <property name="image_position">right</property>
+                <signal name="clicked" handler="on_cid_closeButton_clicked" object="commandInfoDialog" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="pack_type">end</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkTextView" id="cid_tv_format">
+            <property name="width_request">-1</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hexpand">True</property>
+            <property name="hscroll_policy">natural</property>
+            <property name="editable">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="width_request">-1</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hexpand">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTextView" id="cid_tv_synopsis">
+                <property name="width_request">-1</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="hexpand">True</property>
+                <property name="hscroll_policy">natural</property>
+                <property name="editable">False</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="width_request">-1</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hexpand">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTextView" id="cid_tv_termdef">
+                <property name="width_request">-1</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="hexpand">True</property>
+                <property name="hscroll_policy">natural</property>
+                <property name="editable">False</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
   <object class="GtkListStore" id="commandListStore">
     <columns>
       <!-- column-name Command -->
@@ -54,8 +163,8 @@
             <property name="enable_tree_lines">True</property>
             <child internal-child="selection">
               <object class="GtkTreeSelection" id="commandModeSelection">
-                <signal name="changed" handler="commandListNeedsUpdate" object="commandListStore" after="yes" swapped="no"/>
-                <signal name="changed" handler="commandModeChanged" object="commandModeTree" swapped="no"/>
+                <signal name="changed" handler="on_commandList_stale" object="commandListStore" after="yes" swapped="no"/>
+                <signal name="changed" handler="on_commandModeSelection_changed" object="commandModeTree" swapped="no"/>
               </object>
             </child>
             <child>
@@ -88,8 +197,10 @@
                 <property name="can_focus">True</property>
                 <property name="model">commandListStore</property>
                 <property name="show_expanders">False</property>
+                <signal name="row-activated" handler="on_commandList_row_activated" object="lvc_selection" swapped="no"/>
+                <signal name="show" handler="on_commandList_show" object="commandListStore" swapped="no"/>
                 <child internal-child="selection">
-                  <object class="GtkTreeSelection"/>
+                  <object class="GtkTreeSelection" id="lvc_selection"/>
                 </child>
                 <child>
                   <object class="GtkTreeViewColumn" id="lvc_commandname">
@@ -98,6 +209,28 @@
                       <object class="GtkCellRendererText" id="lvc_cr_commandname"/>
                       <attributes>
                         <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="lvc_default">
+                    <property name="title" translatable="yes">Default Value</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="lvc_cr_default"/>
+                      <attributes>
+                        <attribute name="text">2</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="lvc_current">
+                    <property name="title" translatable="yes">Current Value</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="lvc_cr_current"/>
+                      <attributes>
+                        <attribute name="text">3</attribute>
                       </attributes>
                     </child>
                   </object>
