@@ -30,3 +30,6 @@ class CommandMode(CLIObject):
     def add_param(self,param,chain):
         self.params.add_param(param,chain)
         pass
+
+    def __getitem__(self,key):
+        return self.commands[key]
